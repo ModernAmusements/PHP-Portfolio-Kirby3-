@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Snippets are a great way to store code snippets for reuse or to keep your templates clean.
  * This header snippet is reused in all templates. 
@@ -9,6 +10,7 @@
 
 <!doctype html>
 <html lang="en">
+
 <head>
 
   <meta charset="utf-8">
@@ -24,32 +26,29 @@
         More Kirby helpers: https://getkirby.com/docs/reference/templates/helpers -->
   <?= css(['assets/css/index.css', '@auto']) ?>
 
-  <script
-      src="https://code.jquery.com/jquery-3.5.0.min.js"
-      integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
-      crossorigin="anonymous"
-    ></script>
+  <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
 
 </head>
+
 <body>
 
-<grid-r columns=8 columns-s=4>
-  
-  <cell-r span=2>
+  <grid-r columns=8 columns-s=4>
+
+    <cell-r span=2>
       <!-- In this link we call `$site->url()` to create a link back to the homepage -->
       <h2 href="<?= $site->url() ?>"><?= $site->title() ?></h2>
-      </cell-r>
-      <cell-r span=7-8>
+    </cell-r>
+    <cell-r span=7-8>
       <nav class="menu text-left">
         <h3>
-            <?php foreach ($site->children()->listed() as $subpage): ?>
+          <?php foreach ($site->children()->listed() as $subpage) : ?>
             <a href="<?= $subpage->url() ?>"><?= $subpage->title() ?></a>
-            <?php endforeach ?>
-            </h3>
-        </nav>
-    
-  </cell-r>
- 
+          <?php endforeach ?>
+        </h3>
+      </nav>
+
+    </cell-r>
+
     <cell-r span=2 span-s=row>
       <p>
         I´m a multidisciplinary designer constantly exploring different possibilities,

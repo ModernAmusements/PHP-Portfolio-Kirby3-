@@ -10,12 +10,29 @@ title: Site
 columns:
   # The first column has one section for the subpages of the `photography` page in card layout
   # It reuses the pages section defined in `/site/blueprints/sections/albums.yml`
-  # - width: 1/2
-  #   sections:
-  #     albums: sections/albums
+  - width: 1/2
+     fields:
+      text:
+        label: Description
+        type: textarea
+        size: medium
 
+      contact:
+        label: Contact
+        type: textarea
+
+      clients:
+        label: Clients
+        type: textarea
+
+      phone:
+        label: Phone
+        type: tel
+
+     
+       
   # The second column has two sections, `notes` and `pages`
-  - width: 2/2
+  - width: 1/2
     sections:
       # The `notes` section reuses the pages section defined in `/site/blueprints/sections/notes.yml`
       notes: sections/notes
@@ -32,3 +49,4 @@ columns:
           - about
           - home
           - default
+          

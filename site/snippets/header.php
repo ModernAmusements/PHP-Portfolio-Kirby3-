@@ -51,42 +51,20 @@
 
     <cell-r span=2 span-s=row>
       <p>
-        I´m a multidisciplinary designer constantly exploring different possibilities,
-        working across disciplines
-        <br />
-        <br />
-        My aim is to communicate complex ideas in their simplest form.
-        Currently living and working in Germany. Feel free to contact for project inquiries.
+      <?= $site->text()->kt() ?>
       </p>
     </cell-r>
     <cell-r span=5-6 span-s=1-2>
       <h3>Contact</h3>
-      <br />
       <p>
-        s.tawfik@info.de
-        <br />
-        +31(0)639721282
-        <br />
-        instagram
-        <br />
-        ShadyType©
+      <?= $site->contact()->kt() ?>
       </p>
     </cell-r>
     <cell-r span=2>
       <h3>Clients</h3>
-      <br />
+      
       <p>
-        Typojanchi
-        <br />
-        Raycap
-        <br />
-        United Standard
-        <br />
-        Kitsune
-        <br />
-        Crack Magazine
-        <br />
-        Kaleidoscope
+      <?= $site->clients()->kt() ?>
       </p>
     </cell-r>
     <hr>

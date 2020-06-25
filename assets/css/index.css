@@ -226,34 +226,21 @@ grid-r > cell-r {
   -webkit-appearance: none;
 }
 
-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
-}
 
 
-header {
-  margin-bottom: 1.5rem;
+
+nav {
   display: flex;
   justify-content: space-between;
+  padding-top: 1.25rem;
+  
 }
 
-
-.menu {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-}
 
 .menu a {
+  display: block;
   margin-right: 1.5rem;
+  padding-top: 0.5rem;
 }
 
 
@@ -1862,6 +1849,136 @@ pre tt {
   white-space: pre;
   word-wrap: normal;
 }
+
+
+/* SUN
+================================================== */
+.desktop .sun-active #sun:hover line{
+	animation: none;
+}
+.desktop .sun-active #sun:hover svg path{
+  	fill: #999;
+  	animation: blinker-dark-sun .5s linear infinite;
+}
+/*
+.sun-active .glow{
+	animation: blinker .5s linear infinite;
+}*/
+.sun-active #loader,
+.sun-active,
+.sun-active header{
+	background: black;
+}
+.sun-active menu,
+.sun-active .type-row,
+.sun-active #purchase-options form,
+.sun-active #basket form .cart-item,
+.sun-active .sky-pilot-item{
+	border-bottom: 1px solid white;
+}
+.sun-active,
+.sun-active a,
+.desktop .sun-active #purchase-options form .product-select-wrap:hover select,
+.desktop .sun-active #purchase-options form .product-select-wrap:hover::after,
+.desktop .sun-active #purchase-options #mobile-select-product:hover::after,
+.sun-active .type-row .editable[placeholder]:empty:before,
+.desktop .sun-active #basket form .item-quantity-wrap:hover select,
+.desktop .sun-active #basket form .item-quantity-wrap:hover::after,
+.desktop .sun-active .sky-pilot-file-heading:hover,
+.desktop .sun-active .sky-pilot-file-heading:hover::after {
+	color: white;
+}
+.sun-active svg{
+  	fill: white;
+  	stroke: white !important;
+}
+.sun-active strong,
+.sun-active #purchase-options form,
+.sun-active #basket-wrap,
+.sun-active #checkout-wrap .basket-totals,
+.sun-active #basket form .cart-item,
+.sun-active .sky-pilot-item{
+	border-top: 1px solid white;
+}
+.sun-active #basket-button,
+.sun-active #basket-button-exemptify,
+.sun-active #basket-header .eu-vat{
+	border: 1px solid white;
+}
+.desktop .sun-active #basket-button:hover,
+.desktop .sun-active #basket-button-exemptify:hover{
+	color: black;
+  	background: white;
+}
+/*MS Track Styles*/
+.sun-active input[type=range]::-ms-thumb{
+	border: 1px solid white;
+  	background: black;
+}
+.sun-active input[type=range]::-ms-thumb:active{
+	cursor: grabbing;
+  	background: white;
+}
+.sun-active input[type=range]::-ms-track,
+.desktop .sun-active input[type=range]::-ms-thumb:hover{
+  	background: white;
+}
+/*Firefox Track Styles*/
+.sun-active input[type=range]::-moz-range-thumb{
+	border: 1px solid white;
+  	background: black;
+}
+.sun-active input[type=range]::-moz-range-thumb:active{
+  	cursor: grabbing;
+  	background: white;
+}
+.sun-active input[type=range]::-moz-range-track,
+.desktop .sun-active input[type=range]::-moz-range-thumb:hover{
+  	background: white;
+}
+/*Track Styles*/
+.sun-active input[type=range]::-webkit-slider-thumb{
+  	border: 1px solid white;
+  	background: black;
+}
+.sun-active input[type=range]::-webkit-slider-thumb:active{
+	cursor: grabbing;
+  	background: white;
+}
+.sun-active input[type=range]::-webkit-slider-runnable-track,
+.desktop .sun-active input[type=range]::-webkit-slider-thumb:hover{
+	background: white;
+}
+.sun-active #basket form .cart-item,
+.sun-active .sky-pilot-item{
+	background: none;
+}
+
+
+svg{
+	overflow: visible;
+}
+
+#sun-group .st0 {
+    fill: none;
+    stroke: #999;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 2px;
+}
+
+svg {
+
+  	height: 1.5em;
+}
+span{
+	line-height: normal;
+}
+#sun:hover line{
+  	animation: blinker .5s linear infinite;
+}
+
+
 
 @font-face {
   font-family: "Inter.var";

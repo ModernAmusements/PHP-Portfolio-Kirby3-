@@ -29,5 +29,7 @@ columns:
         extends: sections/notes
         headline: Published
         status: listed
+      
+
 
 # More about pages sections: https://getkirby.com/docs/reference/panel/sections/pages

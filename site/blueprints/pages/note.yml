@@ -43,4 +43,14 @@ columns:
         type: text
       description:
         type: textarea
-      tags: true
+      tags:
+        label: Tags
+        type: tags
+        options:
+          - Design
+          - Architecture
+          - Photography
+          - 3D
+          - Web
+        
+          

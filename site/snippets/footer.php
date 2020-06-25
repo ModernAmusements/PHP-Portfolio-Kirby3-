@@ -28,8 +28,8 @@
 
 
 
-<?= js('assets/js/swiper.min.js') ?>
-<script>
+
+<!-- <script>
   $(".work-content").each(function() {
     var $status = $(this).find(".text__count");
     var $slider = $(this).find(".slider");
@@ -51,11 +51,9 @@
       prevArrow: '<div class="slider__prev"></div>',
     });
   });
-</script>
+</script> -->
 
-
-
-<?= js('assets/js/main.js') ?>
+<?= js('assets/js/scripts.js') ?>
 </body>
 
 </html>

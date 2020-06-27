@@ -16,9 +16,7 @@ A small river named Duden flows by their place and supplies it with the necessar
 
 ----
 
-Cover:
-
-- desert-tree.jpg
+Cover: 
 
 ----
 
@@ -26,11 +24,15 @@ Headline:
 
 ----
 
-Description: 
+Client: Google
 
 ----
 
-Tags: water, nature, waterfalls, landscape
+Tags: Documentary, Animation
+
+----
+
+Description: 
 
 ----
 
@@ -39,3 +41,7 @@ Date: 2018-10-05 10:40
 ----
 
 Author: 
+
+----
+
+Gallery: - photography/waterfall

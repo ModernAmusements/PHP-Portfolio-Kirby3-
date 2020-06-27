@@ -12,37 +12,6 @@
 
 <?php snippet('header') ?>
 
-<main>
-  <?php snippet('intro') ?>
 
-
-  <?php 
-  // we always use an if-statement to check if a page exists to prevent errors 
-  // in case the page was deleted or renamed before we call a method like `children()` in this case
-  if ($photographyPage = page('photography')): ?>
-  <ul class="grid">
-    <?php foreach ($photographyPage->children()->listed() as $album): ?>
-    <li>
-      <a href="<?= $album->url() ?>">
-        <figure>
-          <?php 
-          // the `cover()` method defined in the `album.php` page model can be used 
-          // everywhere across the site for this type of page
-          if ($cover = $album->cover()): ?>
-          <?= $cover->resize(1024, 1024) ?>
-          <?php endif ?>
-          <figcaption>
-            <span>
-              <span class="example-name"><?= $album->title() ?></span>
-            </span>
-          </figcaption>
-        </figure>
-      </a>
-    </li>
-    <?php endforeach ?>
-  </ul>
-  <?php endif ?>
-
-</main>
 
 <?php snippet('footer') ?>

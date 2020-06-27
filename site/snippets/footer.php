@@ -9,9 +9,8 @@
  */
 ?>
 
-<cell-r span=row>
-  <footer style="margin-top:2.25rem">
-
+</div>
+  <footer>
     <h3>
       <a href="<?= url() ?>"><?= $site->title() ?>
     </h3>
@@ -20,8 +19,7 @@
     </div>
     </a>
   </footer>
-</cell-r>
-</grid-r>
+
 
 
 
@@ -53,7 +51,7 @@
   });
 </script> -->
 
-<?= js('assets/js/scripts.js') ?>
-</body>
+      <?= js('assets/js/scripts.js') ?>
+  </body>
 
 </html>

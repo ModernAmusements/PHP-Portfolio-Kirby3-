@@ -26,17 +26,20 @@
 </head>
 
 <body>
-  <div class="grid">
+  <grid-r columns=8 columns-s=4>
+    <cell-r span=row>
       <!-- In this link we call `$site->url()` to create a link back to the homepage -->
-      <header>
-        <menu>
-          <h2>
-          <a href="<?= $site->url() ?>"><?= $site->title() ?></a>
-          </h2>
-          <?php foreach ($site->children()->listed() as $subpage) : ?>
-            <h3><a href="<?= $subpage->url() ?>"><?= $subpage->title() ?></a></h3> 
-          <?php endforeach ?>
-            <span id="sun" class="right">
+      <div class="header">
+          <h2 href="<?= $site->url() ?>"><?= $site->title() ?></h2>
+          <nav>
+            <ul>
+              <?php foreach ($site->children()->listed() as $subpage) : ?>
+                <li>
+                <a href="<?= $subpage->url() ?>"><?= $subpage->title() ?></a>
+                </li>
+              <?php endforeach ?>
+            <li>
+            <span id="sun">
               <svg viewBox="0 0 50 50">
                 <g id="sun-group">
                   <path class="st0" d="M24.95,34.53c5.25,0,9.5-4.25,9.5-9.5s-4.25-9.5-9.5-9.5s-9.5,4.25-9.5,9.5S19.7,34.53,24.95,34.53z" />
@@ -51,7 +54,20 @@
                 </g>
               </svg>
             </span>
-            </menu>
-            </header>
-         
-  
+            </li>
+          </ul>
+          </nav>
+      </div>
+    </cell-r>
+    <cell-r span=3 span-s=row>
+      <?= $site->text()->kt() ?>
+    </cell-r>
+    <cell-r span=5-6 span-s=1-2>
+      <h3>Contact</h3>
+      <?= $site->contact()->kt() ?>
+    </cell-r>
+    <cell-r span=2>
+      <h3>Clients</h3>
+      <?= $site->clients()->kt() ?>
+    </cell-r>
+    <hr>

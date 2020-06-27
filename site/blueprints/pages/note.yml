@@ -39,18 +39,17 @@ columns:
       cover:
         type: files
         multiple: false
-      headline:
-        type: text
-      description:
+      client:
+        label: Clients
         type: textarea
       tags:
         label: Tags
         type: tags
         options:
-          - Design
-          - Architecture
-          - Photography
-          - 3D
-          - Web
+          - Film
+          - Documentary
+          - Advertising
+          - Animation
+          - Experiments
         
           

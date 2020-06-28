@@ -233,7 +233,7 @@ header {
 
 header menu {
   grid-template-columns: 12fr 3fr 3fr 2fr;
-  align-items: center;
+  align-items: baseline;
 }
 header h1{
   display: grid;
@@ -243,14 +243,30 @@ header h1{
 
 
 
-header svg {
-  
-}
+
 header h2,
 header h3,
 header span #sun  {
   margin-bottom: calc(var(--lineHeight)-10);
 }
+
+#sun {
+  display: flex;
+  justify-content: space-between;
+}
+
+header span #sun  {
+  position: relative;
+}
+
+header span #sun,
+header p {
+  display: flex;
+}
+
+
+
+
 
 
 footer,
@@ -505,6 +521,9 @@ svg{
 	overflow: visible;
 }
 
+
+
+
 #sun-group .st0 {
     fill: none;
     stroke: #999;
@@ -680,6 +699,11 @@ h1.xxxlarge,
   font-size: 0.85rem;
   line-height: var(--lineHeight);
 }
+/* small text */
+.medium {
+  font-size: 0.99rem;
+  line-height: var(--lineHeight);
+} 
 
 .xsmall {
   font-size: 0.8em;

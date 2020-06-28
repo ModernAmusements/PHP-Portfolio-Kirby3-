@@ -366,6 +366,7 @@ main {
 }
 
 
+
 .post-legend p {
   margin-bottom: 0.5em;
 }
@@ -377,6 +378,50 @@ main {
   white-space: nowrap;
   justify-items: flex-end;
 } 
+
+
+  #collection-information {
+    grid-area: 2 / 1 / 2 / 2;
+    display: none;
+    line-height: 1.3;
+    margin-bottom: calc(var(--baseline)*3);
+  }
+  #collection-information .collection-wrap {
+    display: flex;
+    flex-wrap: wrap-reverse;
+  }
+
+
+
+
+  #information-handler {
+  display: flex;
+  justify-content: space-between;
+  }
+  
+  
+  #information-handler strong {
+    /* margin: -1px 0 2.5em;
+    padding-bottom: 0; */
+  }
+  #information-handler svg {
+    position: relative;
+    /* height: 2em;
+    right: 0;
+    top: calc(50% + 0.25em); */
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  #information-handler svg.open {
+    transform: rotate(45deg);
+  }
+
+
+
+
+
+
+
 
 
 
@@ -393,6 +438,16 @@ main {
 .post-meta {
   font-size: 13px;
 }
+
+
+
+
+
+
+
+
+
+
 .post-thumbnail {
   position: fixed;
   top: 50%;

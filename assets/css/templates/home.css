@@ -1050,14 +1050,18 @@ button#catapultCookie {
 
 
 #information-handler {
-  position: relative;
+display: flex;
+justify-content: space-between;
 }
+
+
+
 #information-handler strong {
   /* margin: -1px 0 2.5em;
   padding-bottom: 0; */
 }
 #information-handler svg {
-  position: absolute;
+  position: relative;
   /* height: 2em;
   right: 0;
   top: calc(50% + 0.25em); */
@@ -1076,7 +1080,7 @@ button#catapultCookie {
   display: flex;
   flex-wrap: wrap-reverse;
 }
-/* #collection-information .info-opentype {
+#collection-information .info-opentype {
   column-count: 2;
 }
 #collection-information .information,
@@ -1109,8 +1113,8 @@ button#catapultCookie {
 #collection-information .language div {
   column-count: 4;
   column-gap: 1em;
-} */
-/*Information*/
+} 
+
 .template-page #content {
   /* padding: 0 1em 1em; */
 }

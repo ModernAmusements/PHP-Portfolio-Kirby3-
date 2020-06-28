@@ -38,7 +38,9 @@
           <?php foreach ($site->children()->listed() as $subpage) : ?>
             <h3><a href="<?= $subpage->url() ?>"><?= $subpage->title() ?></a></h3> 
           <?php endforeach ?>
-            <span id="sun" class="right">
+          <div id="sun">
+            <p class="small">Darkmode (off)</p>
+            <span class="right">
               <svg viewBox="0 0 50 50">
                 <g id="sun-group">
                   <path class="st0" d="M24.95,34.53c5.25,0,9.5-4.25,9.5-9.5s-4.25-9.5-9.5-9.5s-9.5,4.25-9.5,9.5S19.7,34.53,24.95,34.53z" />
@@ -53,6 +55,7 @@
                 </g>
               </svg>
             </span>
+            </div>
             </menu>
             </header>
          

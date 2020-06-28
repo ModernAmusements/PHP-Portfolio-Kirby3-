@@ -36,19 +36,16 @@
         (function (e) {
             ! function (n) {
                 function r() { }
-
                 function i(t, e) {
                     return function () {
                         t.apply(e, arguments)
                     }
                 }
-
                 function o(t) {
                     if ("object" != typeof this) throw new TypeError("Promises must be constructed via new");
                     if ("function" != typeof t) throw new TypeError("not a function");
                     this._state = 0, this._handled = !1, this._value = void 0, this._deferreds = [], h(t, this)
                 }
-
                 function s(t, e) {
                     for (; 3 === t._state;) t = t._value;
                     return 0 === t._state ? void t._deferreds.push(e) : (t._handled = !0, void l(function () {
@@ -63,7 +60,6 @@
                         a(e.promise, r)
                     }))
                 }
-
                 function a(t, e) {
                     try {
                         if (e === t) throw new TypeError("A promise cannot be resolved with itself.");
@@ -77,11 +73,9 @@
                         c(t, e)
                     }
                 }
-
                 function c(t, e) {
                     t._state = 2, t._value = e, u(t)
                 }
-
                 function u(t) {
                     2 === t._state && 0 === t._deferreds.length && l(function () {
                         t._handled || p(t._value)
@@ -89,11 +83,9 @@
                     for (var e = 0, n = t._deferreds.length; e < n; e++) s(t, t._deferreds[e]);
                     t._deferreds = null
                 }
-
                 function f(t, e, n) {
                     this.onFulfilled = "function" == typeof t ? t : null, this.onRejected = "function" == typeof e ? e : null, this.promise = n
                 }
-
                 function h(t, e) {
                     var n = !1;
                     try {
@@ -199,7 +191,6 @@
         function n() {
             h && u && (h = !1, u.length ? f = u.concat(f) : d = -1, f.length && r())
         }
-
         function r() {
             if (!h) {
                 var t = s(n);
@@ -211,11 +202,9 @@
                 u = null, h = !1, a(t)
             }
         }
-
         function i(t, e) {
             this.fun = t, this.array = e
         }
-
         function o() { }
         var s, a, c = t.exports = {};
         ! function () {
@@ -433,14 +422,14 @@
                 getHref: function (t) {
                     if (t) return t.getAttribute && "string" == typeof t.getAttribute("xlink:href") ? t.getAttribute("xlink:href") : "string" == typeof t.href ? t.href : void 0
                 },
-                onLinkClick: function (t) {
-                    for (var e = t.target; e && !this.getHref(e);) e = e.parentNode;
-                    if (this.preventCheck(t, e)) {
-                        t.stopPropagation(), t.preventDefault(), i.trigger("linkClicked", e, t);
-                        var n = this.getHref(e);
-                        this.goTo(n)
-                    }
-                },
+                // onLinkClick: function (t) {
+                //     for (var e = t.target; e && !this.getHref(e);) e = e.parentNode;
+                //     if (this.preventCheck(t, e)) {
+                //         t.stopPropagation(), t.preventDefault(), i.trigger("linkClicked", e, t);
+                //         var n = this.getHref(e);
+                //         this.goTo(n)
+                //     }
+                // },
                 preventCheck: function (t, e) {
                     if (!window.history.pushState) return !1;
                     var n = this.getHref(e);
@@ -557,7 +546,6 @@ var ScrollPosStyler = function (t, r) {
         f = "sps--abv",
         m = "sps--blw",
         u = "data-sps-offset";
-
     function l(s) {
         var e = [];
         o = r.pageYOffset;
@@ -577,7 +565,6 @@ var ScrollPosStyler = function (t, r) {
         }
         return e
     }
-
     function v(s) {
         for (var e = 0; s[e]; ++e) {
             var t = s[e];
@@ -613,72 +600,57 @@ var ScrollPosStyler = function (t, r) {
  * - Free for use in both personal and commercial projects
  */
 "use strict";
-
 function Lightbox() {
     function t() {
         return window.innerHeight || document.documentElement.offsetHeight
     }
-
     function e() {
         return window.innerWidth || document.documentElement.offsetWidth
     }
-
     function n(t, e, n, o) {
         t.addEventListener ? t.addEventListener(e, n, o || !1) : t.attachEvent && t.attachEvent("on" + e, n)
     }
-
     function o(t, e) {
         if (t && e) return new RegExp("(^|\\s)" + e + "(\\s|$)").test(t.className)
     }
-
     function i(t, e) {
         if (t && e) return t.className = t.className.replace(new RegExp("(?:^|\\s)" + e + "(?!\\S)"), ""), t
     }
-
     function r(t, e) {
         if (t && e) return o(t, e) || (t.className += " " + e), t
     }
-
     function a(t) {
         return void 0 !== t
     }
-
     function l(t, e) {
         if (!t || !a(t)) return !1;
         var n;
         return t.getAttribute ? n = t.getAttribute(e) : t.getAttributeNode && (n = t.getAttributeNode(e).value), !(!a(n) || "" === n) && n
     }
-
     function p(t, e) {
         if (!t || !a(t)) return !1;
         var n;
         return t.getAttribute ? n = t.getAttribute(e) : t.getAttributeNode && (n = t.getAttributeNode(e).value), "string" == typeof n
     }
-
     function c(t) {
         n(t, "click", function (e) {
             e.target.parentElement.parentElement.classList.toggle('lightbox-opened'), s(e), u(e), j = l(t, z + "-group") || !1, V = t, A(t, !1, !1, !1)
         }, !1)
     }
-
     function s(t) {
         t.stopPropagation ? t.stopPropagation() : t.returnValue = !1
     }
-
     function u(t) {
         t.preventDefault ? t.preventDefault() : t.returnValue = !1
     }
-
     function m(t) {
         for (var e = [], n = 0; n < W.thumbnails.length; n++) l(W.thumbnails[n], z + "-group") === t && e.push(W.thumbnails[n]);
         return e
     }
-
     function g(t, e) {
         for (var n = m(e), o = 0; o < n.length; o++)
             if (l(t, "src") === l(n[o], "src") && l(t, z + "-index") === l(n[o], z + "-index") && l(t, z) === l(n[o], z)) return o
     }
-
     function d() {
         if (j) {
             var t = new Image,
@@ -687,7 +659,6 @@ function Lightbox() {
             n === P.length - 1 ? (t.src = l(P[P.length - 1], z) || P[P.length - 1].src, e.src = l(P[0].src, z) || P[0].src) : 0 === n ? (t.src = l(P[P.length - 1], z) || P[P.length - 1].src, e.src = l(P[1], z) || P[1].src) : (t.src = l(P[n - 1], z) || P[n - 1].src, e.src = l(P[n + 1], z) || P[n + 1].src)
         }
     }
-
     function f() {
         if (!M) {
             h();
@@ -704,14 +675,12 @@ function Lightbox() {
             I = setTimeout(t, 500)
         }
     }
-
     function h() {
         if (!M && (i(W.box, O + "-loading"), !N && "string" != typeof W.opt.loadingAnimation && W.opt.loadingAnimation)) {
             clearInterval(w);
             for (var t = 0; t < q.length; t++) i(q[t], O + "-active")
         }
     }
-
     function v() {
         if (!X) {
             if (X = document.createElement("span"), r(X, O + "-next"), W.opt.nextImg) {
@@ -733,14 +702,12 @@ function Lightbox() {
         }
         r($, O + "-active")
     }
-
     function b() {
         if (W.opt.responsive && X && $) {
             var e = t() / 2 - X.offsetHeight / 2;
             X.style.top = e + "px", $.style.top = e + "px"
         }
     }
-
     function x(t) {
         function e(t) {
             return "boolean" != typeof t || t
@@ -798,7 +765,6 @@ function Lightbox() {
             R && (s(t), 39 === t.keyCode ? W.next() : 37 === t.keyCode ? W.prev() : 27 === t.keyCode && W.close())
         }, !1)
     }
-
     function A(t, e, i, p) {
         if (!t && !e) return !1;
         (j = e || j || l(t, z + "-group")) && (P = m(j), "boolean" != typeof t || t || (t = P[0])), D.img = new Image, V = t;
@@ -897,7 +863,6 @@ function Lightbox() {
 }
 // detect swipe
 function swipedetect(el, callback) {
-
     var touchsurface = el,
         swipedir,
         startX,
@@ -910,7 +875,6 @@ function swipedetect(el, callback) {
         elapsedTime,
         startTime,
         handleswipe = callback || function (swipedir) { }
-
     touchsurface.addEventListener('touchstart', function (e) {
         var touchobj = e.changedTouches[0]
         swipedir = 'none'
@@ -920,7 +884,6 @@ function swipedetect(el, callback) {
         startTime = new Date().getTime() // record time when finger first makes contact with surface
         // e.preventDefault()
     }, false)
-
     touchsurface.addEventListener('touchend', function (e) {
         var touchobj = e.changedTouches[0]
         distX = touchobj.pageX - startX // get horizontal dist traveled by finger while in contact with surface
@@ -937,7 +900,6 @@ function swipedetect(el, callback) {
         e.preventDefault()
     }, false)
 }
-
 // Cookies
 function catapultSetCookie(cookieName, cookieValue, nDays) {
     var today = new Date();
@@ -946,7 +908,6 @@ function catapultSetCookie(cookieName, cookieValue, nDays) {
     expire.setTime(today.getTime() + 3600000 * 24 * nDays);
     document.cookie = cookieName + "=" + escape(cookieValue) + ";expires=" + expire.toGMTString() + "; path=/";
 }
-
 function catapultReadCookie(cookieName) {
     var theCookie = " " + document.cookie;
     var ind = theCookie.indexOf(" " + cookieName + "=");
@@ -956,14 +917,12 @@ function catapultReadCookie(cookieName) {
     if (ind1 == -1) ind1 = theCookie.length;
     return unescape(theCookie.substring(ind + cookieName.length + 2, ind1));
 }
-
 function catapultDeleteCookie(cookieName) {
     var today = new Date();
     var expire = new Date() - 30;
     expire.setTime(today.getTime() - 3600000 * 24 * 90);
     document.cookie = cookieName + "=" + escape(cookieValue) + ";expires=" + expire.toGMTString();
 }
-
 function catapultAcceptCookies() {
     catapultSetCookie('mrCookie', true, 30);
     document.querySelector('#cookie-bar').classList.add('hide');

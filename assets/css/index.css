@@ -88,7 +88,6 @@ em,
 embed,
 fieldset,
 figcaption,
-figure,
 footer,
 form,
 grid,
@@ -199,7 +198,7 @@ body {
   scroll-behavior: smooth;
   overflow-x: hidden;
   padding: calc(var(--lineHeight) * 2);
-  padding-bottom: calc(var(--lineHeight) * 0.1);
+  padding-bottom: calc(var(--lineHeight) * 3);
   
 }
 
@@ -215,8 +214,7 @@ body {
 ================================================== */
 
 
-header menu
- {
+header menu {
   display: grid;
   grid-template-rows: min-content 1fr;
   grid-column-gap: var(--columnGap);
@@ -228,6 +226,7 @@ header {
   position: sticky;
   position: -webkit-sticky;
   top: 0;
+  padding-top: calc(var(--lineHeight) * 1);
   background: white;
   z-index: 9;
 }
@@ -239,15 +238,18 @@ header menu {
 header h1{
   display: grid;
   grid-template-columns: min-content 1fr;
-  align-items: center;
   white-space: nowrap;
-  justify-items: flex-end;
 }
+
+
+
 header svg {
-  height: 1.5em;
+  
 }
-header h1 span {
-  line-height: normal;
+header h2,
+header h3,
+header span #sun  {
+  margin-bottom: calc(var(--lineHeight)-10);
 }
 
 
@@ -263,9 +265,9 @@ footer,
       -ms-flex-align: baseline;
           align-items: baseline;
 }
-
-
-
+footer { 
+  padding-top: calc(var(--lineHeight) * 2);
+}
 /* block */
 address,
 article,
@@ -275,12 +277,10 @@ dd,
 dl,
 dt,
 fieldset,
-figure,
 form,
 h1,
 h2,
 h3,
-#sun,
 h4,
 h5,
 h6,

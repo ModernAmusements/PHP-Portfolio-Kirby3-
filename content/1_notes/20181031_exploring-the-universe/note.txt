@@ -14,13 +14,9 @@ The copy warned the Little Blind Text, that where it came from it would have bee
 
 ----
 
-Cover:
+Thumbnail:
 
-- hear-her_still_featured-960x540.jpg
-
-----
-
-Headline: Hallo 123
+- hp-home_featured-720x405.jpg
 
 ----
 
@@ -29,6 +25,14 @@ Client: Apple
 ----
 
 Tags: Documentary, Advertising
+
+----
+
+Cover: - hear-her_still_featured-960x540.jpg
+
+----
+
+Headline: Hallo 123
 
 ----
 

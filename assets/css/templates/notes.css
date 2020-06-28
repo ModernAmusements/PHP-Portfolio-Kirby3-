@@ -1,5 +1,6 @@
-/* 
+
 img {
+
   display: inline-block;
   max-width: 100%;
   height: auto
@@ -10,6 +11,8 @@ video {
   height: auto;
   outline: 0
 }
+
+/* 
 button {
   background: 0 0;
   border: 0;
@@ -348,14 +351,20 @@ main {
 
 
 .post-legend {
+  z-index: 10;
+  top: 5em;
+  position: sticky;
+  position: -webkit-sticky;
   display: grid;
   grid-column-gap: var(--columnGap);
   grid-row-gap: var(--rowGap);
   grid-template-columns: 12fr 3fr 3fr 2fr;
   border-bottom: 1px solid black;
   align-items: baseline;
+  background: white;
   margin-bottom: var(--blockSpacingBottom);
 }
+
 
 .post-legend p {
   margin-bottom: 0.5em;
@@ -399,7 +408,7 @@ main {
   opacity: 0;
   -webkit-transition: opacity .2s 0s, visibility 0s .2s, left 20s linear, top 20s linear;
   transition: opacity .2s 0s, visibility 0s .2s, left 20s linear, top 20s linear;
-  z-index: 9;
+  z-index: 11;
   pointer-events: none;
 }
 .post-content {

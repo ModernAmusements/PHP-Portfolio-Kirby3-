@@ -13,7 +13,7 @@
 ?>
 <?php snippet('header') ?>
 <div id="filter">
-  <div class="barba-container one left" data-namespace="index-page">
+  <div class="barba-container" data-namespace="index-page">
     <main id="index">
 
       <nav class="categories">
@@ -69,9 +69,10 @@
         <p>Field</p>
         <p>Year</p>
       </div>
+      
       <?php foreach ($page->children()->listed()->sortBy('date', 'desc') as $note) : ?>
         <article class="post" data-categories="<?= $tags = implode(' ', $note->tags()->split(','));?> all">
-          <div class="post-header">
+          <div class="post-header" id="information-handler">
             <!-- (TITLE) ------------------------------------->
             <h3>
             <a href="<?= $note->url() ?>"><?= $note->title() ?></a>
@@ -83,7 +84,7 @@
               <h4 class="medium"><?= $tag ?></h4>
             <?php endforeach ?>
             <!-- (YEAR) ------------------------------------->
-            <div id="information-handler" class="right">
+            <div class="flex">
             <p class="right"><time><?= $note->date()->toDate('Y') ?>
             </time></p>
             <svg viewBox="0 0 50 50" >
@@ -99,31 +100,21 @@
                 <line class="st0plus" x1="25" y1="49.5" x2="25" y2="0.5" />
             </svg>
             </div>
+            </div>
             
             <div id="collection-information">
+              <div class="post-content">
+                <div class="post-image">
+                  <img src="/img/20181114_WHYT018.jpg">
+                </div>
+                <div class="post-info">
                 <p>Kormelink is a delicate titling Roman serif which pays homage to a smorgasbord of
                     historical origins. Its underlying Roman architecture is a nod to Victor Lardent's
                     renowned 1931 typeface 'Times New Roman' whilst its inherent
                     grandeur is a hark back to the opulence of the Renaissance and Baroque.</p>
-                    <p>Kormelink is a delicate titling Roman serif which pays homage to a smorgasbord of
-                    historical origins. Its underlying Roman architecture is a nod to Victor Lardent's
-                    renowned 1931 typeface 'Times New Roman' whilst its inherent
-                    grandeur is a hark back to the opulence of the Renaissance and Baroque.</p>
-                    <p>Kormelink is a delicate titling Roman serif which pays homage to a smorgasbord of
-                    historical origins. Its underlying Roman architecture is a nod to Victor Lardent's
-                    renowned 1931 typeface 'Times New Roman' whilst its inherent
-                    grandeur is a hark back to the opulence of the Renaissance and Baroque.</p>
-                    <p>Kormelink is a delicate titling Roman serif which pays homage to a smorgasbord of
-                    historical origins. Its underlying Roman architecture is a nod to Victor Lardent's
-                    renowned 1931 typeface 'Times New Roman' whilst its inherent
-                    grandeur is a hark back to the opulence of the Renaissance and Baroque.</p>
-                    <p>Kormelink is a delicate titling Roman serif which pays homage to a smorgasbord of
-                    historical origins. Its underlying Roman architecture is a nod to Victor Lardent's
-                    renowned 1931 typeface 'Times New Roman' whilst its inherent
-                    grandeur is a hark back to the opulence of the Renaissance and Baroque.</p>
+                </div>
+              </div>
             </div>
-                
-          </div>
         </article>
       <?php endforeach ?>
     </main>

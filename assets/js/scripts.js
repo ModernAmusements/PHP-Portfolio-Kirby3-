@@ -54,7 +54,7 @@ function handlePosts(e) {
             })
         })
     }), r.forEach(function (i, e) {
-        var o = i.querySelector(".post");
+        var o = i.querySelector("image");
         i.children[0].addEventListener("mouseenter", function (e) {
             i.children[0].children[2] && !i.classList.contains("toggle") && (i.children[0].children[2].style.left = e.clientX + "px", i.children[0].children[2].style.top = e.clientY + "px")
         }), i.children[0].addEventListener("mouseleave", function (e) {
@@ -74,7 +74,7 @@ function handlePosts(e) {
             } else i.classList.remove("toggle"), i.removeAttribute("style"), document.body.classList.remove("post-toggled"), o && (o.pause(), o.currentTime = 0);
             setTimeout(function () {
                 i.children[0].scrollIntoView({
-                    behavior: "smooth",
+                    behavior: "instant",
                     block: "end"
                 })
             }, 500)
@@ -94,13 +94,13 @@ function handlePosts(e) {
 
 
 
-function handlePostCloseButton(e) {
-    Array.from(e.querySelectorAll(".close-post")).forEach(function (e) {
-        e.addEventListener("click", function () {
-            e.parentNode.parentNode.children[0].click()   // Close Section
-        })
-    })
-}
+// function handlePostCloseButton(e) {
+//     Array.from(e.querySelectorAll(".close-post")).forEach(function (e) {
+//         e.addEventListener("click", function () {
+//             e.parentNode.parentNode.children[0].click()   // Close Section
+//         })
+//     })
+// }
 
 function handleSliders(e) {
     var t = Array.from(e.querySelectorAll(".slider"));

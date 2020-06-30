@@ -21,7 +21,26 @@
   </footer>
 
 
+  <script>
+  
+  //Reload Page when "Go Back" button browser to prevent select option bug
+  window.addEventListener("pageshow", function (event) {
+      var historyTraversal = event.persisted || (typeof window.performance != "undefined" && window.performance.navigation.type === 2);
+      if (historyTraversal) {
+          window.location.reload();
+      }
+  });
 
+    
+      $("#information-handler .flex").click(function () {
+      $(this).toggleClass('open');
+      $(this).parent().next('#collection-information').slideToggle();
+      });
+
+
+
+            
+</script>
 
 
 
@@ -51,23 +70,7 @@
   });
 </script> -->
 
-<script>
-  
-      //Reload Page when "Go Back" button browser to prevent select option bug
-      window.addEventListener("pageshow", function (event) {
-          var historyTraversal = event.persisted || (typeof window.performance != "undefined" && window.performance.navigation.type === 2);
-          if (historyTraversal) {
-              window.location.reload();
-          }
-      });
-    
-      //Open Mobile Information
-      $("#information-handler svg").click(function () {
-          $(this).toggleClass('open');
-          $(this).parent().next('#collection-information').slideToggle();
-      });
-                
-</script>
+
 <?= js('assets/js/scripts.js') ?>
   </body>
   

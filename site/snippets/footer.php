@@ -10,44 +10,49 @@
 ?>
 
 </div>
-  <footer>
-    <h3>
-      <a href="<?= url() ?>"><?= $site->title() ?>
-    </h3>
-    <div class="text-right">
-      <p><?= date('Y') ?> &copy; All Rights Reserved</p>
-    </div>
-    </a>
-  </footer>
+<footer>
+  <h3>
+    <a href="<?= url() ?>"><?= $site->title() ?>
+  </h3>
+  <div class="text-right">
+    <p><?= date('Y') ?> &copy; All Rights Reserved</p>
+  </div>
+  </a>
+</footer>
 
 
-  <script>
-  
+<script>
   //Reload Page when "Go Back" button browser to prevent select option bug
-  window.addEventListener("pageshow", function (event) {
-      var historyTraversal = event.persisted || (typeof window.performance != "undefined" && window.performance.navigation.type === 2);
-      if (historyTraversal) {
-          window.location.reload();
-      }
+  window.addEventListener("pageshow", function(event) {
+    var historyTraversal = event.persisted || (typeof window.performance != "undefined" && window.performance.navigation.type === 2);
+    if (historyTraversal) {
+      window.location.reload();
+    }
   });
 
-    
-      $("#information-handler .flex").click(function () {
-      $(this).toggleClass('open');
-      $(this).parent().next('#collection-information').slideToggle();
-      });
 
+  $("#information-handler .flex").click(function() {
+    $(this).toggleClass('open');
+    $(this).parent().next('#collection-information').slideToggle();
+  });
 
+  $("#information-handler svg").click(function() {
+    $(this).toggleClass('open');
+  });
 
-            
+  setTimeout(function() {
+    $(".post-header").click(function() {
+      $(this).toggleClass('remove-line');
+    });
+  }, 250);
 </script>
 
+<?= js('assets/js/scripts.js') ?>
 
 
-
-
-<!-- <script>
-  $(".work-content").each(function() {
+<?= js('assets/js/swiper.min.js') ?>
+<script>
+  $(".post-image").each(function() {
     var $status = $(this).find(".text__count");
     var $slider = $(this).find(".slider");
 
@@ -68,11 +73,9 @@
       prevArrow: '<div class="slider__prev"></div>',
     });
   });
-</script> -->
+</script>
 
+</body>
 
-<?= js('assets/js/scripts.js') ?>
-  </body>
-  
 
 </html>

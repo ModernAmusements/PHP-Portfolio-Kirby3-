@@ -56,6 +56,21 @@
       <?= $page->text()->kt() ?>
     </div>
   </div>
+
+
+  <div class="post-image">
+                <div class="slider">
+                  <img src="/img/20181114_WHYT018.jpg" />
+                  <img src="/img/20181114_WHYT0182.jpg" />
+                </div>
+                <!-- Counter-->
+                <div class="text__count"></div>
+                </div>
+
+
+
+
+
 </main>
 
 <?php snippet('footer') ?>

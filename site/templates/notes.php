@@ -105,10 +105,27 @@
             <div id="collection-information">
               <div class="post-content">
                 <div class="post-image">
-                  <img src="/img/20181114_WHYT018.jpg">
+                <div class="slider">
+                  <img src="/img/20181114_WHYT018.jpg" />
+                  <img src="/img/20181114_WHYT0182.jpg" />
+                </div>
+                <!-- Counter-->
+                <div class="text__count"></div>
                 </div>
                 <div class="post-info">
-                <p>Kormelink is a delicate titling Roman serif which pays homage to a smorgasbord of
+                  <h4>Beschreibung:</h4>
+                  <p>Kormelink is a delicate titling Roman serif which pays homage to a smorgasbord of
+                    historical origins. Its underlying Roman architecture is a nod to Victor Lardent's
+                    renowned 1931 typeface 'Times New Roman' whilst its inherent
+                    grandeur is a hark back to the opulence of the Renaissance and Baroque.</p>
+                <h4>Mitwirkende:</h4>
+                <ol>
+                  <li><p>Peter Feldbuch</p></li>
+                  <li><p>Garnier Eecout</p></li>
+                  <li><p>Garnier Eecout</p></li>
+                </ol>
+                <h4>Beschreibung:</h4>
+                  <p>Kormelink is a delicate titling Roman serif which pays homage to a smorgasbord of
                     historical origins. Its underlying Roman architecture is a nod to Victor Lardent's
                     renowned 1931 typeface 'Times New Roman' whilst its inherent
                     grandeur is a hark back to the opulence of the Renaissance and Baroque.</p>

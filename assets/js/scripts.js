@@ -45,7 +45,7 @@ function handlePosts(e) {
     document.fonts.load('1rem "Surt Semi Bold"').then(function () {
       r.forEach(function (e, t) {
         e.children[0].children[0].offsetWidth >= e.children[0].offsetWidth
-      }); // show all kat.
+      });
     }),
     n &&
       r &&
@@ -101,10 +101,12 @@ function handlePosts(e) {
                 document.body.classList.remove("post-toggled"),
                 o && (o.pause(), (o.currentTime = 0));
 
+
+                
             setTimeout(function () {
-              i.children[1].scrollIntoView({
+              i.children[0].scrollIntoView({
                 behavior: "smooth",
-                block: "end"
+                block: "start"
               });
             }, 500);
           });

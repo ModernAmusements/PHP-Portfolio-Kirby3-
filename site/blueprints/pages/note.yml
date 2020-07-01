@@ -36,9 +36,13 @@ columns:
     # The second column contains a set of fields
     # List of all available field types: https://getkirby.com/docs/reference/panel/fields
     fields:
-      cover:
+      work:
         type: files
-        multiple: false
+        layout: cards
+        size: tiny
+        image:
+          ratio: 1/1
+          cover: true
       client:
         label: Clients
         type: textarea

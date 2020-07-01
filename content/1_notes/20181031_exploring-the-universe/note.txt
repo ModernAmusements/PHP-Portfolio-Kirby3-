@@ -1,4 +1,4 @@
-Title: Exploring the universe
+Title: Wowa der Stinker
 
 ----
 
@@ -14,9 +14,12 @@ The copy warned the Little Blind Text, that where it came from it would have bee
 
 ----
 
-Thumbnail:
+Work:
 
-- hp-home_featured-720x405.jpg
+- dslt0010_myspace_web7.jpg
+- dslt0010_myspace_web6.jpg
+- dietz_mock_up_02.jpg
+- dietz_mock_up_01.jpg
 
 ----
 
@@ -25,6 +28,19 @@ Client: Apple
 ----
 
 Tags: Documentary, Advertising
+
+----
+
+Project:
+
+- dslt0010_myspace_web7.jpg
+- dslt0010_myspace_web6.jpg
+- dietz_mock_up_02.jpg
+- dietz_mock_up_01.jpg
+
+----
+
+Thumbnail: - hp-home_featured-720x405.jpg
 
 ----
 

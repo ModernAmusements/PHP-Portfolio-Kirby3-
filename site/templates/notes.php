@@ -70,6 +70,7 @@
         <p>Year</p>
       </div>
       
+      
       <?php foreach ($page->children()->listed()->sortBy('date', 'desc') as $note) : ?>
         <article class="post" data-categories="<?= $tags = implode(' ', $note->tags()->split(','));?> all">
           <div class="post-header" id="information-handler">
@@ -122,7 +123,7 @@
                           <div class="vid-progress-bar" data-value="0" min="0"></div>
                       </div>
                   </div>
-              </div>
+                </div> 
               <div class="slider-wrapper">
                   <figure class="slider slider-0">
                       <img class="jslghtbx-thmb active"
@@ -170,6 +171,14 @@
                 </ol>
                 <h4>Beschreibung:</h4>
                   <p>Kormelink is a delicate titling Roman serif which pays homage to a smorgasbord of
+                    historical origins. Its underlying Roman architecture is a nod to Victor Lardent's
+                    renowned 1931 typeface 'Times New Roman' whilst its inherent
+                    grandeur is a hark back to the opulence of the Renaissance and Baroque.
+                    Kormelink is a delicate titling Roman serif which pays homage to a smorgasbord of
+                    historical origins. Its underlying Roman architecture is a nod to Victor Lardent's
+                    renowned 1931 typeface 'Times New Roman' whilst its inherent
+                    grandeur is a hark back to the opulence of the Renaissance and Baroque.
+                    Kormelink is a delicate titling Roman serif which pays homage to a smorgasbord of
                     historical origins. Its underlying Roman architecture is a nod to Victor Lardent's
                     renowned 1931 typeface 'Times New Roman' whilst its inherent
                     grandeur is a hark back to the opulence of the Renaissance and Baroque.</p>

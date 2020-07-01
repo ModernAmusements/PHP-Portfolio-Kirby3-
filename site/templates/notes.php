@@ -123,7 +123,38 @@
                       </div>
                   </div>
               </div>
-             
+              <div class="slider-wrapper">
+                  <figure class="slider slider-0">
+                      <img class="jslghtbx-thmb active"
+                          src="/img/DSC_0085.jpg"
+                          alt=""
+                          data-jslghtbx="/img/DSC_0085.jpg"
+                          data-jslghtbx-group="mygroup0"
+                          data-jslghtbx-caption="Henry Ponder &#8216;Home Poems&#8217;">
+                      <img class="jslghtbx-thmb "
+                          src="/img/DSC_0098.jpg"
+                          alt=""
+                          data-jslghtbx="/img/DSC_0098.jpg"
+                          data-jslghtbx-group="mygroup0"
+                          data-jslghtbx-caption="Henry Ponder &#8216;Home Poems&#8217;">
+                          <img class="jslghtbx-thmb "
+                          src="/img/DSC_0101.jpg"
+                          alt=""
+                          data-jslghtbx="/img/DSC_0101.jpg"
+                          data-jslghtbx-group="mygroup0"
+                          data-jslghtbx-caption="Henry Ponder &#8216;Home Poems&#8217;">
+              
+                  </figure>
+                  <div class="slider-controls">
+                      <button class="slider-control arrow-left">Left</button>
+                      <button class="slider-control arrow-right">Right</button>
+                  </div> 
+                  <ul class="current-indicator">
+                      <li class="active">Slide 1</li>
+                      <li class="">Slide 2</li>
+                      <li class="">Slide 3</li>
+                  </ul>
+              </div>
               </div>
                 <div class="post-info">
                   <h4>Beschreibung:</h4>

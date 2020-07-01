@@ -316,7 +316,6 @@ main {
 .current-indicator {
   position: absolute;
   left: 50%;
-  bottom: 20px;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
   z-index: 3;
@@ -331,11 +330,11 @@ main {
   overflow: hidden;
   text-indent: -9999px;
   opacity: .7;
-  background-color: #fff
+  background-color: #999
 }
 .current-indicator li.active {
   opacity: 1;
-  background-color: #0e4ff4
+  background-color: #8b59e7
 }
 .close-post {
   position: absolute;
@@ -512,8 +511,9 @@ main {
 }
 .jslghtbx.jslghtbx-active {
   visibility: visible;
-  background-color: rgba(255, 255, 255, .6)
+  background-color: rgba(255, 255, 255, .99)
 }
+
 .jslghtbx-loading-animation {
   margin-top: -60px;
   margin-left: -60px;
@@ -552,10 +552,10 @@ main {
   height: auto;
   margin-left: auto;
   margin-right: auto;
-  opacity: 0
+  opacity: 0;
 }
 .jslghtbx-contentwrapper.jslghtbx-wrapper-active {
-  visibility: visible
+  visibility: visible;
 }
 .jslghtbx-contentwrapper.jslghtbx-wrapper-active>img {
   display: block;
@@ -618,9 +618,9 @@ main {
 }
 .jslghtbx-next {
   right: 0;
-  background: url(../../images/icons/arrow-slider-r.svg) center no-repeat
+  background: url("/images/icons/arrow-slider-r.svg") center no-repeat
 }
 .jslghtbx-prev {
   left: 0;
-  background: url(../../images/icons/arrow-slider-l.svg) center no-repeat
+  background: url("/images/icons/arrow-slider-l.svg") center no-repeat
 }

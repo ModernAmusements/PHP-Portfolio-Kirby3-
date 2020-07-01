@@ -35,6 +35,7 @@
     $(this).toggleClass('open');
     $(this).parent().next('#collection-information').slideToggle();
   });
+  
 
   $("#information-handler svg").click(function() {
     $(this).toggleClass('open');
@@ -48,7 +49,6 @@
 </script>
 
 <?= js('assets/js/scripts.js') ?>
-
 
 <?= js('assets/js/swiper.min.js') ?>
 <script>
@@ -72,6 +72,7 @@
       nextArrow: '<div class="slider__next"></div>',
       prevArrow: '<div class="slider__prev"></div>',
     });
+    
   });
 </script>
 

@@ -104,14 +104,27 @@
             
             <div id="collection-information">
               <div class="post-content">
-                <div class="post-image">
-                <div class="slider">
-                  <img src="/img/20181114_WHYT018.jpg" />
-                  <img src="/img/20181114_WHYT0182.jpg" />
-                </div>
-                <!-- Counter-->
-                <div class="text__count"></div>
-                </div>
+              <div class="post-gallery">
+                <div class="video-wrapper post-video" data-state="not-init">
+                  <video playsinline preload="metadata"
+                      poster="https://iaingrantsound.com/wp-content/uploads/2020/05/HP-Home_Featured-960x540.jpg">
+                      <source
+                          src="https://iaingrantsound.com/wp-content/uploads/2020/06/ALL-FILMS-COMP-MASTER-2.mp4"
+                          type="video/mp4">
+                  </video>
+                  <button class="intro-play"><span>Play</span></button>
+                  <div class="vid-controls">
+                      <button class="vid-icon vid-playpause" data-state="play">Play</button>
+                      <button class="vid-icon vid-mute" data-state="mute">Sound</button>
+                      <button class="vid-icon vid-fullscreen"
+                          data-state="go-fullscreen">Fullscreen</button>
+                      <div class="vid-progress-wrap" max="14.53756">
+                          <div class="vid-progress-bar" data-value="0" min="0"></div>
+                      </div>
+                  </div>
+              </div>
+             
+              </div>
                 <div class="post-info">
                   <h4>Beschreibung:</h4>
                   <p>Kormelink is a delicate titling Roman serif which pays homage to a smorgasbord of

@@ -27,22 +27,31 @@ status:
 columns:
   - width: 2/3
     # This columns only has a single field
-    fields:
-      text:
-        type: textarea
-        size: large
+    sections:
+      ## The `images` files section shows all images of the current page that use the `image` template
+      images:
+        type: files
+        layout: cards
+        template: note-image
+        info: "{{ file.dimensions }}"
+        image:
+          ratio: 5/4
+          cover: true
+        min: 1
+        size: small
+      cover:
+        type: files
+        template: note-cover
+        info: "{{ file.dimensions }}"
+        layout: cards
+        image:
+          cover: true
+          ratio: 4/3
 
   - width: 1/3
     # The second column contains a set of fields
     # List of all available field types: https://getkirby.com/docs/reference/panel/fields
     fields:
-      work:
-        type: files
-        layout: cards
-        size: tiny
-        image:
-          ratio: 1/1
-          cover: true
       client:
         label: Clients
         type: textarea
@@ -55,5 +64,8 @@ columns:
           - Advertising
           - Animation
           - Experiments
+      text:
+        type: textarea
+        size: large
         
           

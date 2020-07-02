@@ -126,25 +126,37 @@
                 </div> 
               <div class="slider-wrapper">
                   <figure class="slider slider-0">
-                      <img class="jslghtbx-thmb active"
-                          src="/img/DSC_0085.jpg"
+
+    
+                  <?php if ($cover = $note->cover()) : ?>
+                  <img class="jslghtbx-thmb active"
+                          src="<?= $cover->url() ?>"
                           alt=""
-                          data-jslghtbx="/img/DSC_0085.jpg"
+                          data-jslghtbx="<?= $cover->url() ?>"
                           data-jslghtbx-group="mygroup0"
                           data-jslghtbx-caption="Henry Ponder &#8216;Home Poems&#8217;">
-                      <img class="jslghtbx-thmb "
-                          src="/img/DSC_0098.jpg"
+                  <?php endif ?>
+
+
+
+                  <?php foreach ($note->images()->template('note-image') as $image): ?>
+                     <img class="jslghtbx-thmb"
+                          src="<?= $image->url() ?>"
                           alt=""
-                          data-jslghtbx="/img/DSC_0098.jpg"
+                          data-jslghtbx="<?= $image->url() ?>"
                           data-jslghtbx-group="mygroup0"
                           data-jslghtbx-caption="Henry Ponder &#8216;Home Poems&#8217;">
-                          <img class="jslghtbx-thmb "
+
+                  <?php endforeach ?>
+
+                     
+                          <!-- <img class="jslghtbx-thmb "
                           src="/img/DSC_0101.jpg"
                           alt=""
                           data-jslghtbx="/img/DSC_0101.jpg"
                           data-jslghtbx-group="mygroup0"
-                          data-jslghtbx-caption="Henry Ponder &#8216;Home Poems&#8217;">
-              
+                          data-jslghtbx-caption="Henry Ponder &#8216;Home Poems&#8217;"> -->
+       
                   </figure>
                   <div class="slider-controls">
                       <button class="slider-control arrow-left">Left</button>

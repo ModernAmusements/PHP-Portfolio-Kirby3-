@@ -233,7 +233,7 @@ header {
 }
 
 header menu {
-  grid-template-columns: 12fr 2fr 4fr 2fr;
+  grid-template-columns: 10fr 3fr 3fr 2fr;
   align-items: baseline;
 }
 header h1{
@@ -777,7 +777,7 @@ h6 > a:hover,
 
 
 /* image */
-img,
+/* img,
 img:first-child,
 img:last-child {
   display: block;
@@ -797,7 +797,7 @@ img.fill,
 img.cover {
   -o-object-fit: cover;
   object-fit: cover;
-}
+} */
 
 
 /* list */

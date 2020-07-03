@@ -109,7 +109,7 @@
               <?php foreach ($note->videos()->template('note-videos') as $image): ?>
                 <div class="video-wrapper post-video" data-state="not-init">
                   <video playsinline preload="metadata"
-                      poster="">
+                      poster="<?= $image->url() ?>">
                       <source
                           src="<?= $image->url() ?>"
                           type="video/mp4">
@@ -133,10 +133,10 @@
                   <?php if ($cover = $note->cover()) : ?>
                   <img class="jslghtbx-thmb active"
                           src="<?= $cover->url() ?>"
-                          alt=""
+                          alt="<?= $cover->alt() ?>"
                           data-jslghtbx="<?= $cover->url() ?>"
                           data-jslghtbx-group="mygroup0"
-                          data-jslghtbx-caption="Henry Ponder &#8216;Home Poems&#8217;">
+                          data-jslghtbx-caption="<?= $cover->caption() ?>">
                   <?php endif ?>
 
 
@@ -144,10 +144,10 @@
                   <?php foreach ($note->images()->template('note-image') as $image): ?>
                      <img class="jslghtbx-thmb"
                           src="<?= $image->url() ?>"
-                          alt=""
+                          alt="<?= $image->alt() ?>"
                           data-jslghtbx="<?= $image->url() ?>"
                           data-jslghtbx-group="mygroup0"
-                          data-jslghtbx-caption="Henry Ponder &#8216;Home Poems&#8217;">
+                          data-jslghtbx-caption="<?= $image->caption() ?>">
 
                   <?php endforeach ?>
 
@@ -165,9 +165,12 @@
                       <button class="slider-control arrow-right">Right</button>
                   </div> 
                   <ul class="current-indicator">
-                      <li class="active">Slide 1</li>
-                      <li class="">Slide 2</li>
-                      <li class="">Slide 3</li>
+                      <?php if ($cover = $note->cover()) : ?>
+                        <li class="active"><?= $cover->caption() ?></li>
+                      <?php endif ?>
+                      <?php foreach ($note->images()->template('note-image') as $image): ?>
+                        <li class=""><?= $image->caption() ?></li>
+                      <?php endforeach ?>
                   </ul>
               </div>
               </div>

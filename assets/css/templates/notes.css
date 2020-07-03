@@ -133,7 +133,7 @@ main {
   display: grid;
   grid-column-gap: var(--columnGap);
   grid-row-gap: var(--rowGap);
-  grid-template-columns: 12fr 2fr 4fr 2fr;
+  grid-template-columns: 10fr 3fr 3fr 2fr;
   border-bottom: 1px solid black;
   align-items: baseline;
   background: white;
@@ -166,7 +166,7 @@ main {
   grid-column-gap: var(--columnGap);
   grid-row-gap: var(--rowGap);
   border-bottom: 1px solid black;
-  grid-template-columns: 12fr 2fr 4fr 2fr;
+  grid-template-columns: 10fr 3fr 3fr 2fr;
   align-items: baseline;
 }
 .post-header p h4 {
@@ -188,7 +188,7 @@ main {
 }
 .post-content {
   display: grid;
-  grid-template-columns: 12fr 2fr 4fr 2fr;
+  grid-template-columns: 10fr 3fr 3fr 2fr;
   grid-column-gap: var(--columnGap);
   grid-row-gap: var(--rowGap);
   padding-top: calc(var(--lineHeight) * 1);
@@ -356,7 +356,7 @@ main {
   display: inline-block;
   width: 11px;
   height: 11px;
-  background: url(../../images/icons/close.svg) center no-repeat;
+  background: url("/images/icons/close.svg") center no-repeat;
   background-size: contain
 }
 
@@ -466,7 +466,7 @@ main {
   display: none
 }
 .vid-fullscreen {
-  background-image: url(../../images/icons/fullscreen.svg);
+  background-image: url("/images/icons/fullscreen.svg");
   right: 21px;
   bottom: 16px;
   display: block;
@@ -476,10 +476,10 @@ main {
   overflow: hidden
 }
 [data-fullscreen=cancel-fullscreen] .vid-fullscreen {
-  background-image: url(../../images/icons/minimize.svg)
+  background-image: url("/images/icons/minimize.svg")
 }
 [data-fullscreen=go-fullscreen] .vid-fullscreen {
-  background-image: url(../../images/icons/fullscreen.svg)
+  background-image: url("/images/icons/fullscreen.svg")
 }
 .vid-progress-wrap {
   height: 20px;
@@ -587,25 +587,25 @@ main {
   -ms-transition: opacity .2s ease-in-out
 }
 .jslghtbx-contentwrapper>img.jslghtbx-animating-next {
-  opacity: 1
+  opacity: 1;
 }
 .jslghtbx-contentwrapper>img.jslghtbx-animating-prev {
-  opacity: 1
+  opacity: 1;
 }
 .jslghtbx-contentwrapper>img.jslghtbx-animate-init {
-  opacity: 1
+  opacity: 1;
 }
 .jslghtbx-contentwrapper>img.jslghtbx-animate-transition {
-  cursor: url(../../images/dot-hover.svg), auto
+  cursor: url("/images/dot-hover.svg"), auto;
 }
 .jslghtbx-close {
   position: fixed;
   top: 16px;
   right: 30px;
-  background: url(../../images/icons/close.svg) calc(100% - 10px) center no-repeat;
+  background: url("/images/icons/close.svg") calc(100% - 10px) center no-repeat;
   background-size: 11px 11px;
   padding: 10px 30px 10px 10px;
-  cursor: url(../../images/dot-hover.svg), auto
+  cursor: url("/images/dot-hover.svg"), auto;
 }
 .jslghtbx-next,
 .jslghtbx-prev {
@@ -614,7 +614,7 @@ main {
   top: calc(50% - 30px) !important;
   width: 101px;
   height: 60px;
-  cursor: url(../../images/dot-hover.svg), auto;
+  cursor: url("/images/dot-hover.svg"), auto;
   -webkit-transition: all .2s ease-in-out;
   -moz-transition: all .2s ease-in-out;
   -o-transition: all .2s ease-in-out;

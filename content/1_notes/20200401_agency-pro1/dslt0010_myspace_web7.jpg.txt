@@ -1,4 +1,20 @@
-Caption: 
+Caption: Album2
+
+----
+
+Alt: 
+
+----
+
+Photographer: 
+
+----
+
+License: 
+
+----
+
+Link: 
 
 ----
 

@@ -106,15 +106,14 @@
             <div id="collection-information">
               <div class="post-content">
               <div class="post-gallery">
+              <?php foreach ($note->videos()->template('note-videos') as $image): ?>
                 <div class="video-wrapper post-video" data-state="not-init">
-                  <?php foreach ($note->videos()->template('note-videos') as $image): ?>
                   <video playsinline preload="metadata"
                       poster="">
                       <source
                           src="<?= $image->url() ?>"
                           type="video/mp4">
                   </video>
-                  <?php endforeach ?>
                   <button class="intro-play"><span>Play</span></button>
                   <div class="vid-controls">
                       <button class="vid-icon vid-playpause" data-state="play">Play</button>
@@ -125,7 +124,8 @@
                           <div class="vid-progress-bar" data-value="0" min="0"></div>
                       </div>
                   </div>
-                </div> 
+                </div>
+                <?php endforeach ?> 
               <div class="slider-wrapper">
                   <figure class="slider slider-0">
 

@@ -13,8 +13,7 @@
 <?php snippet('header') ?>
 
 <main>
-
-
+    
 </main>
 
-<?php snippet('footer') ?>
+<?php snippet('footer') ?> 

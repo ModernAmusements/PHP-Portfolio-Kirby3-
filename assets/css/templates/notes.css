@@ -3,7 +3,7 @@ button {
   background: 0 0;
   border: 0;
   outline: 0;
-  color: #000;
+  color: var(--foreground-color);
 }
 main {
   min-height: calc(100vh - 249px);
@@ -72,7 +72,7 @@ main {
 /* Filter */
 .categories {
   width: 100%;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid var(--foreground-color);
   display: flex;
   align-content: center;
 }
@@ -101,12 +101,12 @@ main {
   opacity: 0;
 }
 .categories li.active .category-button {
-  background-color: #000;
-  color: #fff;
-  border-color: #000;
+  background-color: var(--foreground-color);
+  color: var(--background-color);
+  border-color: var(--foreground-color);
 }
 .categories .category-button {
-  border: 1px solid #000;
+  border: 1px solid var(--foreground-color);
   border-radius: 99em;
   /* padding: 0 10px; */
   line-height: 16px;
@@ -134,9 +134,9 @@ main {
   grid-column-gap: var(--columnGap);
   grid-row-gap: var(--rowGap);
   grid-template-columns: 10fr 3fr 3fr 2fr;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid var(--foreground-color);
   align-items: baseline;
-  background: white;
+  background: --background-color;
   margin-bottom: var(--blockSpacingBottom);
 }
 .post-legend p {
@@ -165,7 +165,7 @@ main {
   display: grid;
   grid-column-gap: var(--columnGap);
   grid-row-gap: var(--rowGap);
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid var(--foreground-color);
   grid-template-columns: 10fr 3fr 3fr 2fr;
   align-items: baseline;
 }
@@ -193,7 +193,7 @@ main {
   grid-row-gap: var(--rowGap);
   padding-top: calc(var(--lineHeight) * 1);
   padding-bottom: calc(var(--lineHeight) * 1);
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid var(--foreground-color);
 }
 #information-handler strong {
   /* margin: -1px 0 2.5em;

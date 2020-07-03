@@ -47,7 +47,7 @@
     });
   }, 250);
 </script>
-
+<?= js('assets/js/main.js') ?>
 <?= js('assets/js/scripts.js') ?>
 
 <?= js('assets/js/swiper.min.js') ?>

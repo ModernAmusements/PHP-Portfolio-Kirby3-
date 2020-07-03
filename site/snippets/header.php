@@ -42,7 +42,7 @@
             <h3><a href="<?= $subpage->url() ?>"><?= $subpage->title() ?></a></h3> 
           <?php endforeach ?>
           <div id="sun">
-            <p class="small">Darkmode (off)</p>
+            <p class="small">Darkmode:<span id="inverted-msg">Off</span></p>
             <span class="right">
               <svg viewBox="0 0 50 50">
                 <g id="sun-group">

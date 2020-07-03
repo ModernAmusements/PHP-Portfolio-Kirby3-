@@ -19,11 +19,7 @@
   --displayScale: 1;
   --pixel: 1px;
   --foreground-color-rgb: 0, 0, 0;
-  --foreground-color-a: 1;
-  --foreground-color: rgba(
-    var(--foreground-color-rgb),
-    var(--foreground-color-a)
-  );
+  --foreground-color: rgba( var(--foreground-color-rgb));
   --background-color: #fff;
 }
 @supports (font-variation-settings: normal) {
@@ -228,7 +224,7 @@ header {
   position: -webkit-sticky;
   top: 0;
   padding-top: calc(var(--lineHeight) * 1);
-  background: white;
+  background: var(--background-color);
   z-index: 9;
 }
 
@@ -241,9 +237,6 @@ header h1{
   grid-template-columns: min-content 1fr;
   white-space: nowrap;
 }
-
-
-
 
 header h2,
 header h3,
@@ -266,7 +259,9 @@ header p {
 }
 
 
-
+header span {
+  line-height: unset;
+}
 
 
 

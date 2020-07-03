@@ -18,7 +18,7 @@
 
       <nav class="categories">
         <button class="categories-title">
-          <span>Filter </span>
+          <span>Filter</span>
             <svg version="1.1" width="11px" height="11px" viewBox="0 0 11 11"
                 xmlns="http://www.w3.org/2000/svg">
                 <g fill="none" fill-rule="evenodd">

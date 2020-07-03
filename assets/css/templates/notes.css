@@ -228,10 +228,10 @@ main {
 .post-gallery,
 .video-wrapper,
 .slider-wrapper {
-  grid-area: 1 / 1 / 2 / 2;
+  grid-area: 1 / 2 / 3 / 5;
 }
 .post-info {
-  grid-area:  1 / 2 / 3 / 5;
+  grid-area:  1 / 1 / 2 / 2;
   max-width: calc(100% - 5em);
 }
 .jslghtbx-contentwrapper {

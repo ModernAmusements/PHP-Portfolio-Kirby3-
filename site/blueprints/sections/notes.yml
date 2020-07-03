@@ -1,7 +1,7 @@
 type: pages
 headline: Work
 parent: kirby.page("notes")
-info: "{{ page.client }} / {{ page.tags }} / {{ page.date.toDate('d.m.Y') }}"
+info: "Client:{{ page.client }} || Tags:{{ page.tags }} || Date:{{ page.date.toDate('d.m.Y') }}"
 template: note
 empty: No notes yet
 sortBy: date desc

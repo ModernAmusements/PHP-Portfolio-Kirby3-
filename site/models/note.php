@@ -7,3 +7,4 @@ class NotePage extends Page
         return $this->images()->findBy('template', 'note-cover') ?? $this->image();
     }
 }
+

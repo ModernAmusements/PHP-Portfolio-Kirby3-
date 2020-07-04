@@ -22,12 +22,19 @@ let css = `
       --base-grid-color2: rgba(240,155,255, 0.05);
     }
     `.trim()
-let style = document.createElement('style')
-style.appendChild(document.createTextNode(css))
-document.head.appendChild(style)
-let link = document.createElement('link')
-link.rel = "stylesheet"
-document.head.appendChild(link)
+        let style = document.createElement('style')
+        style.appendChild(document.createTextNode(css))
+        document.head.appendChild(style)
+        let link = document.createElement('link')
+        link.rel = "stylesheet"
+        document.head.appendChild(link)
+
+
+
+function setLabel(id, value) {
+    let label = document.getElementById(id)
+    label && (label.innerText = value)
+}
 
 
 let tapevent = 'PointerEvent' in window ? 'pointerdown' : 'click'
@@ -37,6 +44,9 @@ function bindTapableOption(msgname, fn) {
     label && label.parentElement.addEventListener(tapevent, fn)
 }
 
+$("#sun").click(function() { 
+    	$('body').toggleClass("sun-active"); 
+  	});
 
 function updateInvertedLabel() {
     let on = document.documentElement.classList.contains('inverted')
@@ -49,27 +59,8 @@ function toggleInvertedMode() {
 }
 
 
-
 bindTapableOption('inverted', toggleInvertedMode)
 
-
-/*
-
-function handleKeyPress(key) {
-    switch (key) {
-        case "d": case "D": toggleDebugMode(); return true
-        case "g": case "G": toggleBaseGrid(); return true
-        case "i": case "I": toggleInvertedMode(); return true
-        case "s": case "S": toggleSizeMode(); return true
-    }
-    return false
-}
-
-*/
-
-
-
-// main
 
 updateInvertedLabel()
 

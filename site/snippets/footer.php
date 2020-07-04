@@ -46,6 +46,7 @@
       $(this).toggleClass('remove-line');
     });
   }, 250);
+  
 </script>
 
 <?= js('assets/js/libs.js') ?>

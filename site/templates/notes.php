@@ -20,18 +20,10 @@
         <button class="categories-title">
           <span>Filter</span>
             <svg version="1.1" width="11px" height="11px" viewBox="0 0 11 11">
-                <g fill="none" fill-rule="evenodd">
-                <g transform="translate(-80 -112)">
-                <g transform="translate(40 109)">
-                <g transform="translate(40 3)">
-                <circle cx="5.5" cy="5.5" r="5.5" fill="#000" />
-                <rect class="vertical" id="a" x="5" y="2" width="1" height="7" fill="#fff" />
+                <circle cx="5.5" cy="5.5" r="5.5" />
+                <rect class="vertical" id="a" x="5" y="2" width="1" height="7"/>
                 <rect transform="translate(5.5 5.5) rotate(90) translate(-5.5 -5.5)" x="5" y="2"
-                      width="1" height="7" fill="#fff" />
-                </g>
-                </g>
-                </g>
-                </g>
+                      width="1" height="7" />
             </svg>
         </button>
         <!-- (FILTER) ---------------------------------------------------------------Filter---->
@@ -152,9 +144,17 @@
        
                   </figure>
                   <div class="slider-controls">
-                      <button class="slider-control arrow-left">Left</button>
-                      <button class="slider-control arrow-right">Right</button>
-                  </div> 
+                      <svg class="slider-control arrow-left" id="btnArrow" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" >
+                      <polyline points="10.5 5 13.5 8 10.5 11" transform="scale(-1,1) translate(-16,0)"></polyline>
+
+                      Left</svg>
+                      <svg class="slider-control arrow-right" id="btnArrow" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" >
+                      <polyline  points="10.5 5 13.5 8 10.5 11"></polyline>
+
+                      Right</svg>
+                  </div>
+                  
+                  
                   <ul class="current-indicator">
                       <?php if ($cover = $note->cover()) : ?>
                         <li class="active"><?= $cover->caption() ?></li>

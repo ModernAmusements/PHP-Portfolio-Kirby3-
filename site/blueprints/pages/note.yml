@@ -46,7 +46,6 @@ columns:
           ratio: 5/4
           query: file.videoposter
           cover: true
-        min: 1
         size: small
       images:
         type: files

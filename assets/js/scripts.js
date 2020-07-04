@@ -292,3 +292,4 @@ var MRTransition = Barba.BaseTransition.extend({
       this.done();
   },
 });
+

@@ -522,14 +522,13 @@ svg{
 
 #sun-group .st0 {
     fill: none;
-    stroke: #999;
+    stroke: var(--foreground-color);
     stroke-linecap: round;
     stroke-linejoin: round;
     stroke-width: 2px;
 }
 
 svg {
-
   	height: 1.5em;
   	margin-left: 0.5em;
 }
@@ -1233,4 +1232,3 @@ input {
 #singleFile .controls span.comment {
   color: #858585;
 }
-/*# sourceMappingURL=main.css.map */

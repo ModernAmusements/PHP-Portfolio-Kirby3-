@@ -19,8 +19,7 @@
       <nav class="categories">
         <button class="categories-title">
           <span>Filter</span>
-            <svg version="1.1" width="11px" height="11px" viewBox="0 0 11 11"
-                xmlns="http://www.w3.org/2000/svg">
+            <svg version="1.1" width="11px" height="11px" viewBox="0 0 11 11">
                 <g fill="none" fill-rule="evenodd">
                 <g transform="translate(-80 -112)">
                 <g transform="translate(40 109)">
@@ -89,14 +88,6 @@
             <p class="right"><time><?= $note->date()->toDate('Y') ?>
             </time></p>
             <svg viewBox="0 0 50 50" >
-                <style type="text/css">
-                    .st0plus {
-                        fill: none;
-                        stroke: #999;
-                        stroke-linecap: round;
-                        stroke-width: 2px;
-                    }
-                </style>
                 <line class="st0plus" x1="49.5" y1="25" x2="0.5" y2="25" />
                 <line class="st0plus" x1="25" y1="49.5" x2="25" y2="0.5" />
             </svg>

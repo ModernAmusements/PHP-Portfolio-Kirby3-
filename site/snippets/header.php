@@ -21,7 +21,6 @@
   <!-- Stylesheets can be included using the `css()` helper. Kirby also provides the `js()` helper to include script file. 
         More Kirby helpers: https://getkirby.com/docs/reference/templates/helpers -->
   <?= css(['assets/css/index.css', '@auto']) ?>
-  <?= js('assets/js/libs.js') ?>
   <!-- <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script> -->
     <script
       src="https://code.jquery.com/jquery-3.5.0.min.js"

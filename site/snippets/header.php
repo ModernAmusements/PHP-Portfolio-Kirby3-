@@ -40,8 +40,8 @@
           <?php foreach ($site->children()->listed() as $subpage) : ?>
             <h3><a href="<?= $subpage->url() ?>"><?= $subpage->title() ?></a></h3> 
           <?php endforeach ?>
+          <p class="small">Darkmode:<span id="inverted-msg">Off</span></p>
           <div id="sun">
-            <p class="small">Darkmode:<span id="inverted-msg">Off</span></p>
             <span class="right">
               <svg viewBox="0 0 50 50">
                 <g id="sun-group">
@@ -56,9 +56,12 @@
                   <line class="st0" x1="15.07" y1="35.86" x2="7.71" y2="43.23" />
                 </g>
               </svg>
-            </span>
-            </div>
-            </menu>
-            </header>
+          </span>
+        </div>
+      </menu>
+    </header>
+    <div class="barba-container" data-namespace="index-page">
+    <main id="index">
+        
          
   

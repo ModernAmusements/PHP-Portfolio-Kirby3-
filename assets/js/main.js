@@ -43,9 +43,6 @@ function bindOption(msgname, update) {
     label && label.parentElement.addEventListener(tapevent, update)
 }
 
-// $("#sun").click(function() { 
-//     	$('body').toggleClass("sun-active"); 
-//   	});
 
 function updateInvertedLabel() {
     let on = document.documentElement.classList.contains('inverted')
@@ -64,7 +61,10 @@ bindOption('inverted', toggleInvertedMode)
 updateInvertedLabel()
 
 
-
+$("#sun").click(function() { 
+    document.documentElement.classList.toggle('inverted');
+    updateInvertedLabel();
+});
 
 
 

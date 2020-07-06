@@ -42,9 +42,9 @@ function handlePosts(e) {
         t.parentElement.parentElement.classList.contains("active-filters") ||
           t.nextElementSibling.children[0].children[0].click(); // active filters!
     }),
-    document.fonts.load('1rem "Surt Semi Bold"').then(function () {
+    document.fonts.load('1rem "Inter var"').then(function () {
       r.forEach(function (e, t) {
-        e.children[0].children[0].offsetWidth >= e.children[0].offsetWidth
+        e.children[0].children[0].offsetWidth >= e.children[0].offsetWidth;
       });
     }),
     n &&
@@ -97,16 +97,12 @@ function handlePosts(e) {
               (i.dataset.height = i.children[1].offsetHeight + 50 + "px"),
                 i.classList.add("toggle"),
                 (i.style.height = i.dataset.height);
-            } else i.classList.remove("toggle"), i.removeAttribute("style"),
-                document.body.classList.remove("post-toggled"),
-                o && (o.pause(), (o.currentTime = 0));
+            } else i.classList.remove("toggle"), i.removeAttribute("style"), document.body.classList.remove("post-toggled"), o && (o.pause(), (o.currentTime = 0));
 
-
-                
             setTimeout(function () {
-              i.children[0].scrollIntoView({
+              i.children[1].scrollIntoView({
                 behavior: "smooth",
-                block: "start"
+                block: "end",
               });
             }, 500);
           });
@@ -129,88 +125,180 @@ function handlePosts(e) {
 }
 
 function handlePageVideos(e) {
-  document.createElement("video").canPlayType && Array.from(e.querySelectorAll(".post-video")).forEach(function (t) {
+  document.createElement("video").canPlayType &&
+    Array.from(e.querySelectorAll(".post-video")).forEach(function (t) {
       var n = t.querySelector(".vid-playpause"),
-          i = t.querySelector(".vid-mute"),
-          e = t.querySelector(".vid-fullscreen"),
-          o = t.querySelector(".intro-play"),
-          a = t.querySelector(".vid-progress-wrap"),
-          r = t.querySelector(".vid-progress-bar"),
-          s = t.querySelector("video");
-      !(document.fullscreenEnabled || document.mozFullScreenEnabled || document.msFullscreenEnabled || document.webkitSupportsFullscreen || document.webkitFullscreenEnabled || document.createElement("video").webkitRequestFullScreen) && (e.style.display = "none");
+        i = t.querySelector(".vid-mute"),
+        e = t.querySelector(".vid-fullscreen"),
+        o = t.querySelector(".intro-play"),
+        a = t.querySelector(".vid-progress-wrap"),
+        r = t.querySelector(".vid-progress-bar"),
+        s = t.querySelector("video");
+      !(
+        document.fullscreenEnabled ||
+        document.mozFullScreenEnabled ||
+        document.msFullscreenEnabled ||
+        document.webkitSupportsFullscreen ||
+        document.webkitFullscreenEnabled ||
+        document.createElement("video").webkitRequestFullScreen
+      ) && (e.style.display = "none");
 
       function c(e) {
-          t.setAttribute("data-fullscreen", e ? "cancel-fullscreen" : "go-fullscreen")
+        t.setAttribute(
+          "data-fullscreen",
+          e ? "cancel-fullscreen" : "go-fullscreen"
+        );
       }
 
       function l() {
-          document.fullScreen || document.webkitIsFullScreen || document.mozFullScreen || document.msFullscreenElement || document.fullscreenElement ? (document.exitFullscreen ? document.exitFullscreen() : document.mozCancelFullScreen ? document.mozCancelFullScreen() : document.webkitCancelFullScreen ? document.webkitCancelFullScreen() : document.msExitFullscreen && document.msExitFullscreen(), c(!1)) : (t.requestFullscreen ? t.requestFullscreen() : t.mozRequestFullScreen ? t.mozRequestFullScreen() : t.webkitRequestFullScreen ? s.webkitRequestFullScreen() : t.msRequestFullscreen && t.msRequestFullscreen(), c(!0))
+        document.fullScreen ||
+        document.webkitIsFullScreen ||
+        document.mozFullScreen ||
+        document.msFullscreenElement ||
+        document.fullscreenElement
+          ? (document.exitFullscreen
+              ? document.exitFullscreen()
+              : document.mozCancelFullScreen
+              ? document.mozCancelFullScreen()
+              : document.webkitCancelFullScreen
+              ? document.webkitCancelFullScreen()
+              : document.msExitFullscreen && document.msExitFullscreen(),
+            c(!1))
+          : (t.requestFullscreen
+              ? t.requestFullscreen()
+              : t.mozRequestFullScreen
+              ? t.mozRequestFullScreen()
+              : t.webkitRequestFullScreen
+              ? s.webkitRequestFullScreen()
+              : t.msRequestFullscreen && t.msRequestFullscreen(),
+            c(!0));
       }
-      e && e.addEventListener("click", function (e) {
-          l()
-      });
+      e &&
+        e.addEventListener("click", function (e) {
+          l();
+        });
 
       function d(e) {
-          "playpause" == e ? s.paused || s.ended ? n.innerHTML = "Play" : n.innerHTML = "Pause" : "mute" == e && i.setAttribute("data-state", s.muted ? "unmute" : "mute")
+        "playpause" == e
+          ? s.paused || s.ended
+            ? (n.innerHTML = "Play")
+            : (n.innerHTML = "Pause")
+          : "mute" == e &&
+            i.setAttribute("data-state", s.muted ? "unmute" : "mute");
       }
-      n && (s.addEventListener("play", function () {
-          d("playpause")
-      }, !1), s.addEventListener("pause", function () {  // pause
-          d("playpause")
-      }, !1), s.addEventListener("ended", function () {
-          s.currentTime = 0
-      }, !1), n.addEventListener("click", function (e) {
-          s.paused || s.ended ? s.play() : s.pause()
-      })), i && i.addEventListener("click", function (e) {   // player start
-          s.muted = !s.muted, d("mute")                    // mute 
-      }), o.addEventListener("click", function () {
-          t.dataset.state = "initialized", s.play(), isTouch && s.setAttribute("controls", !0)
-      }, !1), a && (s.addEventListener("loadedmetadata", function () {
-          a.setAttribute("max", s.duration)
-      }), s.addEventListener("timeupdate", function () {
-          a.getAttribute("max") || a.setAttribute("max", s.duration), a.value = s.currentTime, r.style.width = Math.floor(s.currentTime / s.duration * 100) + "%"
-      }), a.addEventListener("click", function (e) {
-          var t = (e.pageX - (this.offsetLeft + this.parentElement.parentElement.offsetLeft)) / this.offsetWidth;
-          s.currentTime = t * s.duration
-      })), document.addEventListener("fullscreenchange", function (e) {
-          c(!(!document.fullScreen && !document.fullscreenElement))
-      }), document.addEventListener("webkitfullscreenchange", function () {
-          c(!!document.webkitIsFullScreen)
-      }), document.addEventListener("mozfullscreenchange", function () {
-          c(!!document.mozFullScreen)
-      }), document.addEventListener("msfullscreenchange", function () {
-          c(!!document.msFullscreenElement)
-      })
-  })
+      n &&
+        (s.addEventListener(
+          "play",
+          function () {
+            d("playpause");
+          },
+          !1
+        ),
+        s.addEventListener(
+          "pause",
+          function () {
+            // pause
+            d("playpause");
+          },
+          !1
+        ),
+        s.addEventListener(
+          "ended",
+          function () {
+            s.currentTime = 0;
+          },
+          !1
+        ),
+        n.addEventListener("click", function (e) {
+          s.paused || s.ended ? s.play() : s.pause();
+        })),
+        i &&
+          i.addEventListener("click", function (e) {
+            // player start
+            (s.muted = !s.muted), d("mute"); // mute
+          }),
+        o.addEventListener(
+          "click",
+          function () {
+            (t.dataset.state = "initialized"),
+              s.play(),
+              isTouch && s.setAttribute("controls", !0);
+          },
+          !1
+        ),
+        a &&
+          (s.addEventListener("loadedmetadata", function () {
+            a.setAttribute("max", s.duration);
+          }),
+          s.addEventListener("timeupdate", function () {
+            a.getAttribute("max") || a.setAttribute("max", s.duration),
+              (a.value = s.currentTime),
+              (r.style.width =
+                Math.floor((s.currentTime / s.duration) * 100) + "%");
+          }),
+          a.addEventListener("click", function (e) {
+            var t =
+              (e.pageX -
+                (this.offsetLeft +
+                  this.parentElement.parentElement.offsetLeft)) /
+              this.offsetWidth;
+            s.currentTime = t * s.duration;
+          })),
+        document.addEventListener("fullscreenchange", function (e) {
+          c(!(!document.fullScreen && !document.fullscreenElement));
+        }),
+        document.addEventListener("webkitfullscreenchange", function () {
+          c(!!document.webkitIsFullScreen);
+        }),
+        document.addEventListener("mozfullscreenchange", function () {
+          c(!!document.mozFullScreen);
+        }),
+        document.addEventListener("msfullscreenchange", function () {
+          c(!!document.msFullscreenElement);
+        });
+    });
 }
-
 
 function handleSliders(e) {
-    var t = Array.from(e.querySelectorAll(".slider"));
-    0 < t.length && t.forEach(function (n) {
-        var e = n.nextElementSibling;
-        if (e) {
-            var t = e.children[0],
-                i = e.children[1],
-                o = n.nextElementSibling.nextElementSibling;
-            t.addEventListener("click", function () {
-                var e = n.querySelector(".active");      //Slider Selector Babra.js
-                e.previousElementSibling ? e.previousElementSibling.classList.add("active") : n.lastElementChild.classList.add("active"), e.classList.remove("active");
-                var t = o.querySelector(".active");
-                t.previousElementSibling ? t.previousElementSibling.classList.add("active") : o.lastElementChild.classList.add("active"), t.classList.remove("active")
-            }), i.addEventListener("click", function () {
-                var e = n.querySelector(".active");
-                e.nextElementSibling ? e.nextElementSibling.classList.add("active") : n.children[0].classList.add("active"), e.classList.remove("active");
-                var t = o.querySelector(".active");
-                t.nextElementSibling ? t.nextElementSibling.classList.add("active") : o.children[0].classList.add("active"), t.classList.remove("active")
-            }), isTouch && swipedetect(n, function (e) {
-                "right" == e ? t.click() : "left" == e && i.click()
-            })
-        }
-    })
+  var t = Array.from(e.querySelectorAll(".slider"));
+  0 < t.length &&
+    t.forEach(function (n) {
+      var e = n.nextElementSibling;
+      if (e) {
+        var t = e.children[0],
+          i = e.children[1],
+          o = n.nextElementSibling.nextElementSibling;
+        t.addEventListener("click", function () {
+          var e = n.querySelector(".active"); //Slider Selector Babra.js
+          e.previousElementSibling
+            ? e.previousElementSibling.classList.add("active")
+            : n.lastElementChild.classList.add("active"),
+            e.classList.remove("active");
+          var t = o.querySelector(".active");
+          t.previousElementSibling
+            ? t.previousElementSibling.classList.add("active")
+            : o.lastElementChild.classList.add("active"),
+            t.classList.remove("active");
+        }),
+          i.addEventListener("click", function () {
+            var e = n.querySelector(".active");
+            e.nextElementSibling
+              ? e.nextElementSibling.classList.add("active")
+              : n.children[0].classList.add("active"),
+              e.classList.remove("active");
+            var t = o.querySelector(".active");
+            t.nextElementSibling
+              ? t.nextElementSibling.classList.add("active")
+              : o.children[0].classList.add("active"),
+              t.classList.remove("active");
+          }),
+          isTouch &&
+            swipedetect(n, function (e) {
+              "right" == e ? t.click() : "left" == e && i.click();
+            });
+      }
+    });
 }
-
-
 
 iOSSafari && document.body.classList.add("ios-safari");
 var Landingview = Barba.BaseView.extend({
@@ -254,7 +342,6 @@ var Indexview = Barba.BaseView.extend({
   onLeaveCompleted: function () {},
 });
 
-
 Indexview.init(),
   Barba.Pjax.init(),
   Barba.Prefetch.init(),
@@ -292,4 +379,3 @@ var MRTransition = Barba.BaseTransition.extend({
       this.done();
   },
 });
-

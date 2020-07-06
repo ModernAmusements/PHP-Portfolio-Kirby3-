@@ -217,6 +217,7 @@ header menu {
   grid-column-gap: var(--columnGap);
   grid-row-gap: var(--rowGap);
 
+
 }
 
 header {
@@ -226,11 +227,11 @@ header {
   padding-top: calc(var(--lineHeight) * 1);
   background: var(--background-color);
   z-index: 9;
+  cursor: pointer;
 }
 
 header menu {
-  grid-template-columns: 10fr 3fr 3fr 2fr;
-  align-items: baseline;
+  grid-template-columns: 10fr 3fr 3fr 2fr 0.5fr;
 }
 header h1{
   display: grid;
@@ -244,18 +245,9 @@ header span #sun  {
   margin-bottom: calc(var(--lineHeight)-10);
 }
 
-#sun {
-  display: flex;
-  justify-content: space-between;
-}
 
 header span #sun  {
   position: relative;
-}
-
-header span #sun,
-header p {
-  display: flex;
 }
 
 

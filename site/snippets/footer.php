@@ -7,8 +7,7 @@
  * More about snippets: https://getkirby.com/docs/guide/templates/snippets
  */
 ?>
-</main>
-</div>
+<div class="grid">
 <footer>
   <h3>
     <a href="<?= url() ?>"><?= $site->title() ?>
@@ -18,6 +17,12 @@
   </div>
   </a>
 </footer>
+
+
+
+
+
+</div>
 <?= js('assets/js/global.js') ?>
 <?= js('assets/js/libs.js') ?>
 <?= js('assets/js/scripts.js') ?>

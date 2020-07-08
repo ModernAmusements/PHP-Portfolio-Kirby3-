@@ -1223,3 +1223,10 @@ input {
 #singleFile .controls span.comment {
   color: #858585;
 }
+
+
+
+body.night {
+  background: #00151f;
+  color: #fff;
+}

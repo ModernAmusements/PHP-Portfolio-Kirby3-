@@ -8,7 +8,7 @@
  */
 ?>
 <!doctype html>
-<html lang="en">
+<html lang="en" id="invertme">
 
 <head>
   <meta charset="utf-8">
@@ -27,6 +27,8 @@
       integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
 </head>
 
 <body>
@@ -42,7 +44,7 @@
           <?php endforeach ?>
           <p class="small">Darkmode:<span id="inverted-msg">Off</span></p>
           <div id="sun">
-            <span class="right">
+            <span id="inverted-msg">
               <svg viewBox="0 0 50 50">
                 <g id="sun-group">
                   <path class="st0" d="M24.95,34.53c5.25,0,9.5-4.25,9.5-9.5s-4.25-9.5-9.5-9.5s-9.5,4.25-9.5,9.5S19.7,34.53,24.95,34.53z" />
@@ -56,12 +58,11 @@
                   <line class="st0" x1="15.07" y1="35.86" x2="7.71" y2="43.23" />
                 </g>
               </svg>
-          </span>
+            </span>
         </div>
       </menu>
     </header>
-    <div class="barba-container" data-namespace="index-page">
-    <main id="index">
+    </div>
         
          
   

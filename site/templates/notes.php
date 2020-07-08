@@ -12,7 +12,9 @@
  */
 ?>
 <?php snippet('header') ?>
-
+<div class="grid">
+<div class="barba-container" data-namespace="index-page">
+<main id="index">
 
 <nav class="categories" id="filter">
   <button class="categories-title">
@@ -195,6 +197,8 @@
       </div>
       </article>
 <?php endforeach ?>
-
+</main>
+</div>
+</div>
 
 <?php snippet('footer') ?>

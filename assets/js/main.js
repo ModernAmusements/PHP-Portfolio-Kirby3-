@@ -21,12 +21,26 @@ let css = `
       --base-grid-color1: rgba(240,155,255, 0.1);
       --base-grid-color2: rgba(240,155,255, 0.05);
     }`.trim()
+
 let style = document.createElement('style')
 style.appendChild(document.createTextNode(css))
 document.head.appendChild(style)
+
+
 let link = document.createElement('link')
 link.rel = "stylesheet"
 document.head.appendChild(link)
+
+
+
+// Click Trigger
+let tapevent = 'PointerEvent' in window ? 'pointerdown' : 'click'
+
+
+function bindOption(msgname, update) {
+    let label = document.getElementById(msgname + '-msg')
+    label && label.parentElement.addEventListener(tapevent, update)
+}
 
 
 // Label Update 
@@ -35,12 +49,18 @@ function setLabel(id, value) {
     label && (label.innerText = value)
 }
 
-// Click Trigger
-let tapevent = 'PointerEvent' in window ? 'pointerdown' : 'click'
+function toggleInvertedMode() {
+    document.documentElement.classList.toggle('inverted')
+    $("#sun").toggleClass("active")
+    $.cookie("toggle", $("#sun").hasClass('active'));
+    updateInvertedLabel()
 
-function bindOption(msgname, update) {
-    let label = document.getElementById(msgname + '-msg')
-    label && label.parentElement.addEventListener(tapevent, update)
+}
+
+if ($.cookie("toggle") == "true") {
+    $("#sun").addClass("active");
+    $("#invertme").addClass("inverted");
+    updateInvertedLabel();
 }
 
 
@@ -49,30 +69,37 @@ function updateInvertedLabel() {
     setLabel('inverted-msg', on ? 'On' : 'Off')
 }
 
-function toggleInvertedMode() {
-    document.documentElement.classList.toggle('inverted')
-    updateInvertedLabel()
-}
-
-
 bindOption('inverted', toggleInvertedMode)
 
 
 updateInvertedLabel()
 
 
-$("#sun").click(function() { 
-    document.documentElement.classList.toggle('inverted');
+
+
+$("#sun").click(function() {
+    $("#sun").toggleClass("active");
+    $("#invertme").toggleClass("inverted");
+    $.cookie("toggle", $("#sun").hasClass('active'));
     updateInvertedLabel();
 });
 
 
 
 
+if ($.cookie("toggle") == "true") {
+    $("#sun").addClass("active");
+    $("#invertme").addClass("inverted");
+}
 
 
 
 
 
+
+// $("#sun").click(function() { 
+//     document.documentElement.classList.toggle('inverted');
+//     updateInvertedLabel();
+// });
 
 

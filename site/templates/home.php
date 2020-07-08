@@ -16,11 +16,11 @@
 <div id="content">
     <div id="information-wrap">
         <div id="information-content" class="information-content-wrap">
-            <div>
-                <div class="small">
-                    <div class="">
-                        <p><strong>About</strong></p>
-                        <p>WiseType is an independent digital type foundry established in 2019 by Jacob Wise as
+        <div>
+                <div class="xsmall">
+                    <div class="">      
+                        <h4>About</h4>    
+                        <p class="thin">WiseType is an independent digital type foundry established in 2019 by Jacob Wise as
                             a platform to distribute his own typefaces. The foundry is currently based in
                             Rotterdam, NL. From time to time, WiseType works on bespoke
                             typeface commissions as well as collaborating with other designers to expand its
@@ -29,7 +29,8 @@
                                 rel="noopener noreferrer">info@wisetype.nl</a>.</p>
                         <br>
                         <p>WiseType©<br>Lambertusstraat 49b<br>3061 WD<br>Rotterdam NL</p>
-                        <p><strong>Typeface Trials</strong></p>
+                        </div>
+                        <h4><strong>Typeface Trials</strong></h4>
                         <p>We currently use the web application ‘Fonts Ninja' to distribute trials safely and
                             securely. You can download a free trial to the app which allows you to instantly
                             sync the whole WiseType catalogue for use within your desktop
@@ -48,7 +49,7 @@
                         <p><a href="https://releases.fonts.ninja/FontsNinja-latest.exe%20for%20windows"
                                 title="Download Fonts Ninja for Windows">Download Fonts Ninja for Windows</a>
                         </p>
-                        <p><strong>Desktop Licensing</strong></p>
+                        <h4><strong>Desktop Licensing</strong></h4>
                         <p class="p1">The Desktop License is the most common license purchased by customers of
                             WiseType. It includes the most familiar file formats TTF &amp; OTF for easy use on a
                             wide variety of desktop applications / software and word processors
@@ -59,7 +60,7 @@
                             broadcasting, television, movies and documentaries. The license is intended for both
                             private and commercial usage. Please check the EULA for further
                             information on the Dekstop License.</p>
-                        <p class="p1"><strong>Web Licensing</strong></p>
+                        <h4><strong>Web Licensing</strong></h4>
                         <p class="p3">The Web License includes the file formats; WOFF, WOFF2 &amp; EOT and
                             permits the use of the WiseType font on one web domain via CSS rule ‘@font-face’
                             only. It is licensed depending on your websites estimated ‘page views
@@ -67,7 +68,7 @@
                             installation nor do they function with regular desktop applications such as
                             InDesign, Illustrator, Photoshop, and Word. <span>Please check the EULA
                                 for </span><span>further</span><span> information on the Web License.</span></p>
-                        <p class="p1"><strong>App Licensing</strong></p>
+                        <h4><strong>App Licensing</strong></h4>
                         <p class="p3">The App License includes the file formats TTF &amp; OTF and grants you the
                             right to embed the WiseType font in a software application, electronic document /
                             publication (ePub) or other self-self-contained electronic file
@@ -76,7 +77,7 @@
                             and e-books. The Application must be owned and controlled
                             by yourself and the font must be securely embedded so it cannot be made available
                             for extraction by third-parties.</p>
-                    </div>
+                    
                 </div>
             </div>
             <p>
@@ -91,8 +92,8 @@
         <div id="license" class="information-content-wrap">
             <meta charset="utf-8">
             <meta charset="utf-8">
-            <p><strong><em>1.2</em>Ownership and non-exclusive license</strong></p>
-            <p>The WiseType End User License Agreement (“EULA”) has been split into separate parts for ease of
+            <h4><strong><em>1.2</em>Ownership and non-exclusive license</strong></h4>
+            <p class="thin">The WiseType End User License Agreement (“EULA”) has been split into separate parts for ease of
                 use: This first section is a general license agreement which covers the fundamental terms and
                 conditions of all WiseType licenses. This
                 section alone does not cover the use of WiseType fonts, but enacts as a core to which the

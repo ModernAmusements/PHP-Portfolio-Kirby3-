@@ -9,7 +9,7 @@ main {
   min-height: calc(100vh - 249px);
 }
 #index {
-  /* padding: 70px 0 0; */
+   padding: 70px 0 0; 
   position: relative;
 }
 #index:before {
@@ -68,6 +68,13 @@ main {
 }
 #index.active-filters .categories .categories-title svg rect.vertical {
   display: none;
+}
+
+
+#index .categories-title svg {
+   width: 11px; 
+   height: 11px;
+
 }
 /* Filter */
 
@@ -142,8 +149,6 @@ rect {
 .post-legend {
   z-index: 10;
   top: 5em;
-  position: sticky;
-  position: -webkit-sticky;
   display: grid;
   grid-column-gap: var(--columnGap);
   grid-row-gap: var(--rowGap);
@@ -174,8 +179,6 @@ rect {
   opacity: 0 !important;
 }
 .post-header {
-  scroll-margin-top: 10rem;
-  scroll-snap-margin-top: 10em;
   display: grid;
   grid-column-gap: var(--columnGap);
   grid-row-gap: var(--rowGap);
@@ -261,10 +264,6 @@ rect {
 }
 /* ----------- */
 
-.post-gallery {
-  /* padding: 20px 126px 40px;
-  max-width: calc(100% - 252px) */
-}
 .post-gallery img,
 .post-gallery video {
   display: block;
@@ -358,7 +357,7 @@ rect {
 }
 .current-indicator li.active {
   opacity: 1;
-  background-color: #8b59e7
+  background-color: #8b59e7;
 }
 .close-post {
   position: absolute;
@@ -535,7 +534,7 @@ rect {
 }
 .jslghtbx.jslghtbx-active {
   visibility: visible;
-  background-color: rgba(255, 255, 255, .99)
+  background-color: var(--background-color);
 }
 
 .jslghtbx-loading-animation {
@@ -619,7 +618,7 @@ rect {
   top: 16px;
   right: 30px;
   background: url("/images/icons/close.svg") calc(100% - 10px) center no-repeat;
-  background-size: 11px 11px;
+  background-size: 25px 25px;
   padding: 10px 30px 10px 10px;
   cursor: url("/images/dot-hover.svg"), auto;
 }

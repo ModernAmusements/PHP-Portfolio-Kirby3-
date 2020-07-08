@@ -6,8 +6,7 @@
 <g transform="translate(0 216)">
 <g transform="translate(40 982)">
 <g transform="translate(44 4)">
-<circle cx="5.5" cy="5.5" r="5.5" fill="#000"/>
-<path transform="translate(5.5 5.5) rotate(45) translate(-5.5 -5.5)" d="m6 2v3h3v1h-3v3h-1v-3h-3v-1h3v-3h1z" fill="#fff"/>
+<path transform="translate(5.5 5.5) rotate(45) translate(-5.5 -5.5)" d="m6 2v3h3v1h-3v3h-1v-3h-3v-1h3v-3h1z" fill="#8b59e7"/>
 </g>
 </g>
 </g>

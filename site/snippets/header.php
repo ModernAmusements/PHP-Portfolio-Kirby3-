@@ -32,10 +32,11 @@
 </head>
 
 <body>
-  <div class="grid">
+
       <!-- In this link we call `$site->url()` to create a link back to the homepage -->
+      
+
       <header>
-        <menu>
           <h2>
           <a href="<?= $site->url() ?>"><?= $site->title() ?></a>
           </h2>
@@ -60,9 +61,8 @@
               </svg>
             </span>
         </div>
-      </menu>
+          </hr>
+     
     </header>
-    </div>
-        
          
   

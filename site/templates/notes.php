@@ -12,14 +12,13 @@
  */
 ?>
 <?php snippet('header') ?>
-<div class="grid">
 <div class="barba-container" data-namespace="index-page">
 <main id="index">
 
 <nav class="categories" id="filter">
   <button class="categories-title">
     <span>Filter</span>
-      <svg class="p-left" version="1.1" width="11px" height="11px" viewBox="0 0 11 11">
+      <svg class="p-left" version="1.1" viewBox="0 0 11 11">
           <circle cx="5.5" cy="5.5" r="5.5" />
           <rect class="vertical" id="a" x="5" y="2" width="1" height="7"/>
           <rect transform="translate(5.5 5.5) rotate(90) translate(-5.5 -5.5)" x="5" y="2"
@@ -199,6 +198,6 @@
 <?php endforeach ?>
 </main>
 </div>
-</div>
+
 
 <?php snippet('footer') ?>

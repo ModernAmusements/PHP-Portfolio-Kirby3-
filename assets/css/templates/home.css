@@ -43,6 +43,8 @@ margin-top: 2em;
 line-height: 1;
 }
 
+
+
 strong a{
 color:  var(--foreground-color);
 }
@@ -121,7 +123,7 @@ overflow: visible;
 #license {
     height: auto;
     display: grid;
-    margin-top: calc(-2em - 1px);
+    margin-top: calc(-0.2em - 1px);
     overflow: scroll;
     -webkit-overflow-scrolling: touch;
     scroll-behavior: smooth;

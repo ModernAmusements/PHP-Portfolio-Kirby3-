@@ -9,7 +9,7 @@
   --baseline: calc(var(--lineHeight) / 2);
   --blockSpacingTop: 0px;
   --blockSpacingBottom: var(--lineHeight);
-  --hrThickness: 2px;
+  --hrThickness: 1px;
   --h1-size: 2.8rem;
   --h2-size: 2.2rem;
   --h3-size: 1.4rem;
@@ -971,10 +971,7 @@ ol:not([start]) > li::before {
   align-self: flex-end;
 }
 
-hr {
-  height: 2px;
-  margin-top: calc(var(--lineHeight) * 0.2);
-}
+
 
 /* Typo Controls */
 /*---------------------------------------------------------------------------------------------------*/

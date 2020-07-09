@@ -1,4 +1,4 @@
-<?php if ($cover = $note->cover()->toFile()): ?>
+<?php if ($cover = $work->cover()->toFile()): ?>
 <figure>
   <a href="<?= $cover->url() ?>"></a>
 </figure>

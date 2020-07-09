@@ -100,9 +100,9 @@ function handlePosts(e) {
             } else i.classList.remove("toggle"), i.removeAttribute("style"), document.body.classList.remove("post-toggled"), o && (o.pause(), (o.currentTime = 0));
 
             setTimeout(function () {
-              i.children[1].scrollIntoView({
+              i.children[2].scrollIntoView({
                 behavior: "smooth",
-                block: "end",
+                block: "start",
               });
             }, 500);
           });

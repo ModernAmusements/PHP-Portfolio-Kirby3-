@@ -196,7 +196,7 @@ body {
   overflow-x: hidden;
   padding: calc(var(--lineHeight) * 2);
   padding-bottom: calc(var(--lineHeight) * 3);
-  
+
 }
 
 @media only screen and (max-width: 600px) {
@@ -227,7 +227,7 @@ header {
   align-items: baseline;
   padding-top: calc(var(--lineHeight) * 1);
   background: var(--background-color);
-  z-index: 9;
+  z-index: 25;
   cursor: pointer;
   border-bottom: 1px solid var(--foreground-color);
 }
@@ -270,6 +270,9 @@ footer,
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
+          left: 0;
+          bottom: 0;
+    
 }
 footer { 
   padding-top: calc(var(--lineHeight) * 2);
@@ -507,7 +510,7 @@ pre tt {
 }
 
 
-svg {
+svg{
 	overflow: visible;
 }
 
@@ -522,11 +525,9 @@ svg {
     stroke-width: 2px;
 }
 
-
 #sun svg {
-  height: 1.5em;
+  	height: 1.5em;
 } 
-
 
 span{
 	line-height: normal;
@@ -536,11 +537,9 @@ span{
 }
 
 
-
-
 h1,
 .h1 {
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: -0.05em;
   font-size: var(--h1-size);
   line-height: calc(var(--lineHeight) * 2);
@@ -652,22 +651,22 @@ h1.large,
 h1.xlarge,
 .h1.xlarge {
   --h1-size: 5.5rem;
-  line-height: calc(var(--lineHeight) * 4);
+  line-height: calc(var(--lineHeight) * 2);
   font-weight: 740;
 }
 
 h1.xxlarge,
 .h1.xxlarge {
   --h1-size: 7.5rem;
-  line-height: calc(var(--lineHeight) * 5);
+  line-height: calc(var(--lineHeight) * 4);
   font-weight: 750;
 }
 
 h1.xxxlarge,
 .h1.xxxlarge {
-  --h1-size: 10.5rem;
-  line-height: calc(var(--lineHeight) * 7);
-  font-weight: 760;
+  --h1-size: 9.5rem;
+  line-height: calc(var(--lineHeight) * 5);
+  font-weight: 500;
 }
 
 /* small text */
@@ -941,7 +940,9 @@ ol:not([start]) > li::before {
   -webkit-box-orient: vertical;
   flex-direction: column;
 }
-
+.left {
+  /*! text-align: left; */
+}
 .right {
   text-align: right;
 }

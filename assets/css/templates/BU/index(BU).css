@@ -507,7 +507,7 @@ pre tt {
 }
 
 
-svg {
+svg{
 	overflow: visible;
 }
 
@@ -522,12 +522,13 @@ svg {
     stroke-width: 2px;
 }
 
+svg {
+  	height: 1.5em;
+}
 
 #sun svg {
   height: 1.5em;
-} 
-
-
+}
 span{
 	line-height: normal;
 }
@@ -537,7 +538,9 @@ span{
 
 
 
-
+/**
+ * Typography
+ */
 h1,
 .h1 {
   font-weight: 300;

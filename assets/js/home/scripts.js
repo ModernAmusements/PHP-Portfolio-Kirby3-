@@ -1,6 +1,6 @@
 let avgX = [];
 let avgY = [];
-let previousCoords = [Math.random() * window.innerWidth, Math.random() * window.innerHeight];
+let previousCoords = [Math.random() * window.innerWidth , Math.random() * window.innerHeight ];
 let strokeWidth = 65;
 let lines = 0;
 let titles = ["(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧", "(☞ﾟ∀ﾟ)☞", "༼ つ ◕_◕ ༽つ", "(▀̿Ĺ̯▀̿ ̿)", "ᕦ(Ò_Óˇ)ᕤ", "☜(˚▽˚)☞", "☜(⌒▽⌒)☞", "(ノಠ益ಠ)ノ彡┻━┻"];
@@ -22,14 +22,14 @@ document.title = titles[Math.floor(Math.random() * titles.length)];
 
 if (document.getElementById('svg') != null) {
 
-    document.getElementById("svg").setAttribute("viewBox", "0 0 " + window.innerWidth + " " + window.innerHeight);
-    document.getElementById("svg").setAttribute("height", window.innerHeight);
-    document.getElementById("svg").setAttribute("width", window.innerWidth);
+    document.getElementById("svg").setAttribute("viewBox", "0 0 " + window.innerWidth + " " + window.innerHeight  );
+    document.getElementById("svg").setAttribute("height", window.innerHeight  );
+    document.getElementById("svg").setAttribute("width", window.innerWidth  );
 
     window.onresize = function() {
-        document.getElementById("svg").setAttribute("viewBox", "0 0 " + window.innerWidth + " " + window.innerHeight);
-        document.getElementById("svg").setAttribute("height", window.innerHeight);
-        document.getElementById("svg").setAttribute("width", window.innerWidth);
+        document.getElementById("svg").setAttribute("viewBox", "0 0 " + window.innerWidth   + " " + window.innerHeight  );
+        document.getElementById("svg").setAttribute("height", window.innerHeight  );
+        document.getElementById("svg").setAttribute("width", window.innerWidth  );
     }
 
 }
@@ -149,8 +149,8 @@ function saveAs(uri, filename) {
 
 
 function saveImage() {
-    let w = Math.max(document.documentElement.clientWidth, window.innerWidth);
-    let h = Math.max(document.documentElement.clientHeight, window.innerHeight);
+    let w = Math.max(document.documentElement.clientWidth, window.innerWidth  );
+    let h = Math.max(document.documentElement.clientHeight, window.innerWidth  );
 
     html2canvas(document.body, {
         width: w,

@@ -196,6 +196,7 @@ body {
   overflow-x: hidden;
   padding: calc(var(--lineHeight) * 2);
   padding-bottom: calc(var(--lineHeight) * 3);
+  padding-top: var(--lineHeight);
   
 }
 

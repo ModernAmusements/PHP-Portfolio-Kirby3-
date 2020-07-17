@@ -139,7 +139,7 @@
   }
   #license .information-section-wrap:first-of-type strong{
   border: none;
-  margin-top: calc(2em + 1px);
+  margin-top: calc(1em + 1px);
   }
   #license .license-title{
   float: left;

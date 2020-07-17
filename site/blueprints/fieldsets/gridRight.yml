@@ -1,0 +1,14 @@
+name: Text Grid Right
+preview:
+  snippet: blocks/gridRight
+  css: /assets/css/index.css
+fields:
+  columnRight:
+    label: Text Columns Right
+    type: builder
+    columns: 1
+    fieldsets:
+      textRight:
+        extends: fieldsets/textRight
+        name: Column
+

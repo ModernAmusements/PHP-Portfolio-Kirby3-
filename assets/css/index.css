@@ -1,6 +1,29 @@
 /* Raster v20 (release package) (rsms.me/raster) */
 @import url("https://rsms.me/inter/inter.css");
 @import url("https://rsms.me/res/fonts/iaw.css");
+@font-face {
+  font-family: "Ogg-Roman";
+  src: url("/fonts/Ogg-Roman.eot");
+  src: url("/fonts/Ogg-Roman.eot?#iefix") format("embedded-opentype"),
+    url("/fonts/Ogg-Roman.svg#Ogg-Roman") format("svg"),
+    url("/fonts/Ogg-Roman.ttf") format("truetype"),
+    url("/fonts/Ogg-Roman.woff") format("woff"),
+    url("/fonts/Ogg-Roman.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OggLore-Italic";
+  src: url("/fonts/OggLore-Italic.eot");
+  src: url("/fonts/OggLore-Italic.eot?#iefix") format("embedded-opentype"),
+    url("/fonts/OggLore-Italic.svg#OggLore-Italic") format("svg"),
+    url("/fonts/OggLore-Italic.ttf") format("truetype"),
+    url("/fonts/OggLore-Italic.woff") format("woff"),
+    url("/fonts/OggLore-Italic.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
 :root {
   --fontSize: 14px;
   --sansFont: "Inter";
@@ -21,6 +44,13 @@
   --foreground-color-rgb: 0, 0, 0;
   --foreground-color: rgba( var(--foreground-color-rgb));
   --background-color: #fff;
+  --trackBg: #bdbdbd;
+    --trackFocus: #cacaca;
+    --thumbBg: #666;
+    --trackHeight: 1px;
+    --thumbHeight: 12px;
+    --thumbTouchHeight: 48px;
+    --sliderComponentBg: #f4f4f4;
 }
 @supports (font-variation-settings: normal) {
   :root {
@@ -217,18 +247,19 @@ header {
   grid-template-rows: min-content 1fr;
   grid-column-gap: var(--columnGap);
   grid-row-gap: var(--rowGap);
+  
 
 
 }
 
 header {
   position: sticky;
-  position: -webkit-sticky;
   top: 0;
+  left: 0;
   align-items: baseline;
   padding-top: calc(var(--lineHeight) * 1);
   background: var(--background-color);
-  z-index: 9;
+  z-index: 10;
   cursor: pointer;
   border-bottom: 1px solid var(--foreground-color);
 }
@@ -537,7 +568,25 @@ span{
 }
 
 
+.text-xl-ogg {
+  word-wrap: break-word;
+  font-family: "Ogg-Roman";
+  font-size: 15vw;
+  line-height: 8vw;
+  letter-spacing: -0.9vw;
+}
 
+.text-l-ogg-italic {
+  word-wrap: initial;
+  font-family: "OggLore-Italic";
+  font-size: 15vw;
+  line-height: 11vw;
+  letter-spacing: -0.9vw;
+}
+
+.regular {
+  font-weight: 300;
+}
 
 h1,
 .h1 {
@@ -661,7 +710,7 @@ h1.xxlarge,
 .h1.xxlarge {
   --h1-size: 7.5rem;
   line-height: calc(var(--lineHeight) * 5);
-  font-weight: 750;
+  font-weight: 500;
 }
 
 h1.xxxlarge,
@@ -703,7 +752,7 @@ h1.xxxlarge,
 p,
 .p {
   font-size: 1em;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 /* anchor */
@@ -957,262 +1006,3 @@ ol:not([start]) > li::before {
 }
 
 
-
-/* Typo Controls */
-/*---------------------------------------------------------------------------------------------------*/
-.controls {
-  font-weight: 450;
-}
-
-#singleFile .controls {
-  width: 100%;
-  overflow: hidden !important;
-  display: -ms-grid;
-  display: grid;
-  line-height: 2em;
-}
-
-.test {
-  width: 100%;
-  font-size: 200pt;
-  line-height: 200pt;
-  letter-spacing: -20pt;
-  min-height: 30px;
-  background-color: transparent;
-  height: auto;
-  outline: none;
-  border: none;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  word-break: break-word;
-  white-space: normal;
-}
-
-.input {
-  font-size: var(--fontSize);
-  line-height: var(--lineHeight);
-  background: var(--background-color);
-  color: var(--foreground-color);
-}
-
-#singleFile .ccs-row {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 196px 196px auto;
-      grid-template-columns: 196px 196px auto;
-}
-
-#singleFile input[type="text"] {
-  font-size: 230px;
-  font-weight: 800;
-  border: 0px;
-  height: 375px;
-  font-weight: 800;
-  font-variation-settings: "MONO" 1, "CASL" 0, "slnt" 0, "CRSV" 0, "wght" 800;
-  text-align: center;
-  width: 100%;
-}
-
-#singleFile input[type="text"]:focus {
-  outline: none;
-}
-
-#singleFile input[type="range"] {
-  -webkit-appearance: none;
-  margin: calc(1em - var(--thumbTouchHeight) / 2);
-  margin-left: calc(-1 * var(--thumbTouchHeight) / 2);
-  margin-right: calc(-1 * var(--thumbTouchHeight) / 2);
-  width: calc(100% + var(--thumbTouchHeight) / 2);
-  max-width: 400px;
-  background: transparent;
-}
-
-#singleFile input[type="range"]:focus {
-  outline: none;
-  color: transparent;
-  text-shadow: 0 0 0 #000;
-}
-
-#singleFile input[type="range"]::-webkit-slider-runnable-track {
-  width: 100%;
-  height: var(--trackHeight);
-  cursor: pointer;
-  background: transparent;
-  background-image: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(transparent), color-stop(var(--trackBg)), color-stop(50%, var(--trackBg)), color-stop(50%, transparent)), -webkit-gradient(linear, right top, left top, from(transparent), color-stop(transparent), color-stop(var(--trackBg)), color-stop(50%, var(--trackBg)), color-stop(50%, transparent));
-  background-image: linear-gradient(to right, transparent, transparent calc(var(--thumbTouchHeight) / 2), var(--trackBg) calc(var(--thumbTouchHeight) / 2), var(--trackBg) 50%, transparent 50%), linear-gradient(to left, transparent, transparent calc(var(--thumbTouchHeight) / 2), var(--trackBg) calc(var(--thumbTouchHeight) / 2), var(--trackBg) 50%, transparent 50%);
-  border-radius: 1px;
-}
-
-#singleFile input[type="range"]:focus::-webkit-slider-runnable-track {
-  outline: none;
-  background-image: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(transparent), color-stop(var(--trackFocus)), color-stop(50%, var(--trackFocus)), color-stop(50%, transparent)), -webkit-gradient(linear, right top, left top, from(transparent), color-stop(transparent), color-stop(var(--trackFocus)), color-stop(50%, var(--trackFocus)), color-stop(50%, transparent));
-  background-image: linear-gradient(to right, transparent, transparent calc(var(--thumbTouchHeight) / 2), var(--trackFocus) calc(var(--thumbTouchHeight) / 2), var(--trackFocus) 50%, transparent 50%), linear-gradient(to left, transparent, transparent calc(var(--thumbTouchHeight) / 2), var(--trackFocus) calc(var(--thumbTouchHeight) / 2), var(--trackFocus) 50%, transparent 50%);
-}
-
-#singleFile input[type="range"]::-webkit-slider-thumb {
-  height: var(--thumbTouchHeight);
-  width: var(--thumbTouchHeight);
-  border-radius: var(--thumbTouchHeight);
-  border: none;
-  cursor: pointer;
-  -webkit-appearance: none;
-  margin-top: calc( -1 * (var(--thumbTouchHeight) / 2) + (var(--trackHeight) / 2));
-  background: none;
-  background-image: radial-gradient(var(--thumbBg) calc(var(--thumbHeight) / 2), transparent calc(var(--thumbHeight) / 2), transparent);
-}
-
-#singleFile input[type="range"]::-moz-range-track {
-  width: 100%;
-  height: var(--trackHeight);
-  border-radius: 1px;
-  cursor: pointer;
-  background-color: red;
-  background-image: linear-gradient(to right, var(--sliderComponentBg), var(--sliderComponentBg) 20px, var(--trackBg) 20px, var(--trackBg) 50%, transparent 50%), linear-gradient(to left, var(--sliderComponentBg), var(--sliderComponentBg) 20px, var(--trackBg) 20px, var(--trackBg) 50%, transparent 50%);
-}
-
-#singleFile input[type="range"]:focus::-moz-range-track {
-  background-image: linear-gradient(to right, var(--sliderComponentBg), var(--sliderComponentBg) 20px, var(--trackFocus) 20px, var(--trackFocus) 50%, transparent 50%), linear-gradient(to left, var(--sliderComponentBg), var(--sliderComponentBg) 20px, var(--trackFocus) 20px, var(--trackFocus) 50%, transparent 50%);
-}
-
-#singleFile input[type="range"]::-moz-focus-outer {
-  border: 0;
-}
-
-#singleFile input[type="range"]::-moz-range-thumb {
-  height: var(--thumbTouchHeight);
-  width: var(--thumbTouchHeight);
-  border: none;
-  border-radius: var(--thumbTouchHeight);
-  background: none;
-  background-image: radial-gradient(var(--thumbBg) calc(var(--thumbHeight) / 2), transparent calc(var(--thumbHeight) / 2), transparent);
-  cursor: pointer;
-}
-
-#singleFile input[type="range"]::-ms-track {
-  width: calc(100%- var(--thumbTouchHeight));
-  margin-left: calc(var(--thumbTouchHeight) / 2);
-  height: var(--trackHeight);
-  cursor: pointer;
-}
-
-#singleFile input[type="range"]::-ms-fill-lower {
-  background-color: #777;
-}
-
-#singleFile input[type="range"]::-ms-fill-upper {
-  background: #777;
-}
-
-#singleFile input[type="range"]::-ms-thumb {
-  width: var(--thumbHeight);
-  margin-left: calc(var(--thumbTouchHeight) / 2);
-  margin-right: calc(var(--thumbTouchHeight) / 2);
-  border-radius: 999px;
-  background-color: #222;
-  cursor: pointer;
-}
-
-/* TYPEVIEWER*/
-/*---------------------------------------------------------------------------------------------------*/
-input {
-  overflow: visible;
-}
-
-[hidden] {
-  display: none !important;
-}
-
-.d-none {
-  display: none !important;
-}
-
-.d-inline-block {
-  display: inline-block !important;
-}
-
-@media (min-width: 768px) {
-  .d-md-none {
-    display: none !important;
-  }
-  .d-md-inline {
-    display: inline !important;
-  }
-  .d-md-block {
-    display: block !important;
-  }
-}
-
-.visible {
-  visibility: visible !important;
-}
-
-#singleFile * {
-  overflow: visible !important;
-}
-
-#singleFile input[type="text"] {
-  font-size: 230px;
-  font-weight: 800;
-  border: 0px;
-  height: 375px;
-  font-weight: 800;
-  font-variation-settings: "MONO" 1, "CASL" 0, "slnt" 0, "CRSV" 0, "wght" 800;
-  text-align: center;
-  width: 100%;
-}
-
-#singleFile input[type="range"]:focus::-ms-fill-lower {
-  background: blue;
-}
-
-#singleFile input[type="range"]:focus::-ms-fill-upper {
-  background: blue;
-}
-
-#singleFile .controls .css {
-  width: 200px;
-}
-
-#singleFile .controls .css,
-#singleFile .controls .inputs {
-  display: inline-block;
-}
-
-#singleFile .controls .inputs {
-  position: relative;
-  top: -4px;
-  margin-right: 40px;
-}
-
-#singleFile .controls .radio {
-  border: 1px solid #bdbdbd;
-  width: 12px;
-  height: 12px;
-  border-radius: 12px;
-  display: inline-block;
-  cursor: pointer;
-}
-
-#singleFile .controls .radio.active {
-  background-color: #bdbdbd;
-}
-
-#singleFile .controls ul {
-  list-style-type: none;
-}
-
-#singleFile .controls span.comment:not(.not-aligned) {
-  position: absolute;
-  left: 500px;
-}
-
-#singleFile .controls span.comment {
-  color: #858585;
-}
-
-
-
-body.night {
-  background: #00151f;
-  color: #fff;
-}

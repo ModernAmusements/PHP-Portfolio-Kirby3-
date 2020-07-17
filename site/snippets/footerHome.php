@@ -50,13 +50,14 @@
 </script>
 
 <script src="https://bevacqua.github.io/dragula/dist/dragula.js"></script>
-<script>
+<!-- <script>
     var drake = dragula({
         isContainer: function (el) {
             return el.classList.contains('dragula-container2');
         }
     });
-</script>
+</script> -->
+
 <?= js('assets/js/main.js') ?>
 <?= js('assets/js/home/html2canvas.js') ?>
 <?= js('assets/js/home/scripts.js') ?>

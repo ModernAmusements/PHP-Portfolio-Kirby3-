@@ -132,21 +132,12 @@
         </div>
           <div class="post-info">
             <h4>Description:</h4>
-           
-            
               <?= $work->description()->kt() ?>
-              <hr>       
           <h4>Contributors:</h4>
-            
-            
               <?= $work->contributors()->kt() ?>
-              <hr>
           <h4>Concept:</h4>
-         
-            
               <?= $work->concept()->kt() ?>
               <a href="<?= $work->url() ?>">More</a>
-              
           </div>
         </div>
       </div>

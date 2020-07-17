@@ -67,40 +67,40 @@ Columnright:
       date: 2020-07-06
       _key: textRight
       _uid: textRight_1595007204433_337
+    - 
+      heading: Les Demoiselles
+      text: 'Zu den bekanntesten Werken Picassos gehört das Gemälde Les Demoiselles d’Avignon (1907). Es avancierte zum Schlüsselbild der Klassischen Moderne.[1] Mit Ausnahme des monumentalen Gemäldes Guernica (1937), einer künstlerischen Umsetzung der Schrecken des Spanischen Bürgerkriegs, hat kein anderes Kunstwerk des 20. Jahrhunderts die Forschung so herausgefordert wie die Demoiselles.[1] Das Motiv der Taube auf dem Plakat, das er im Jahr 1949 für den Pariser Weltfriedenskongress entwarf, wurde weltweit zum Friedenssymbol.'
+      date: 2020-07-06
+      _key: textRight
+      uniquekey: 0
+      showpreviewinitially: false
+      isnew: true
+      _uid: textRight_1595025116886_1350
+    - 
+      heading: Les Demoiselles
+      text: 'Zu den bekanntesten Werken Picassos gehört das Gemälde Les Demoiselles d’Avignon (1907). Es avancierte zum Schlüsselbild der Klassischen Moderne.[1] Mit Ausnahme des monumentalen Gemäldes Guernica (1937), einer künstlerischen Umsetzung der Schrecken des Spanischen Bürgerkriegs, hat kein anderes Kunstwerk des 20. Jahrhunderts die Forschung so herausgefordert wie die Demoiselles.[1] Das Motiv der Taube auf dem Plakat, das er im Jahr 1949 für den Pariser Weltfriedenskongress entwarf, wurde weltweit zum Friedenssymbol.'
+      date: 2020-07-06
+      _key: textRight
+      uniquekey: 1
+      showpreviewinitially: false
+      isnew: true
+      _uid: textRight_1595025142765_1557
+    - 
+      heading: Les Demoiselles
+      text: 'Zu den bekanntesten Werken Picassos gehört das Gemälde Les Demoiselles d’Avignon (1907). Es avancierte zum Schlüsselbild der Klassischen Moderne.[1] Mit Ausnahme des monumentalen Gemäldes Guernica (1937), einer künstlerischen Umsetzung der Schrecken des Spanischen Bürgerkriegs, hat kein anderes Kunstwerk des 20. Jahrhunderts die Forschung so herausgefordert wie die Demoiselles.[1] Das Motiv der Taube auf dem Plakat, das er im Jahr 1949 für den Pariser Weltfriedenskongress entwarf, wurde weltweit zum Friedenssymbol.'
+      date: 2020-07-06
+      _key: textRight
+      uniquekey: 2
+      showpreviewinitially: false
+      _uid: textRight_1595025162051_1740
+    - 
+      heading: Les Demoiselles
+      text: 'Zu den bekanntesten Werken Picassos gehört das Gemälde Les Demoiselles d’Avignon (1907). Es avancierte zum Schlüsselbild der Klassischen Moderne.[1] Mit Ausnahme des monumentalen Gemäldes Guernica (1937), einer künstlerischen Umsetzung der Schrecken des Spanischen Bürgerkriegs, hat kein anderes Kunstwerk des 20. Jahrhunderts die Forschung so herausgefordert wie die Demoiselles.[1] Das Motiv der Taube auf dem Plakat, das er im Jahr 1949 für den Pariser Weltfriedenskongress entwarf, wurde weltweit zum Friedenssymbol.'
+      date: 2020-07-06
+      _key: textRight
+      uniquekey: 3
+      showpreviewinitially: false
+      isnew: true
+      _uid: textRight_1595025165300_1898
   _key: gridRight
   _uid: gridRight_1595007202394_277
-- 
-  columnright:
-    - 
-      heading: Les Demoiselles
-      text: 'Zu den bekanntesten Werken Picassos gehört das Gemälde Les Demoiselles d’Avignon (1907). Es avancierte zum Schlüsselbild der Klassischen Moderne.[1] Mit Ausnahme des monumentalen Gemäldes Guernica (1937), einer künstlerischen Umsetzung der Schrecken des Spanischen Bürgerkriegs, hat kein anderes Kunstwerk des 20. Jahrhunderts die Forschung so herausgefordert wie die Demoiselles.[1] Das Motiv der Taube auf dem Plakat, das er im Jahr 1949 für den Pariser Weltfriedenskongress entwarf, wurde weltweit zum Friedenssymbol.'
-      date: 2020-07-11
-      _key: textRight
-      _uid: textRight_1595007211069_544
-  _key: gridRight
-  _uid: gridRight_1595007209726_484
-- 
-  columnright:
-    - 
-      heading: Les Demoiselles
-      text: 'Zu den bekanntesten Werken Picassos gehört das Gemälde Les Demoiselles d’Avignon (1907). Es avancierte zum Schlüsselbild der Klassischen Moderne.[1] Mit Ausnahme des monumentalen Gemäldes Guernica (1937), einer künstlerischen Umsetzung der Schrecken des Spanischen Bürgerkriegs, hat kein anderes Kunstwerk des 20. Jahrhunderts die Forschung so herausgefordert wie die Demoiselles.[1] Das Motiv der Taube auf dem Plakat, das er im Jahr 1949 für den Pariser Weltfriedenskongress entwarf, wurde weltweit zum Friedenssymbol.'
-      date: 2020-07-11
-      _key: textRight
-      _uid: textRight_1595024952657_914
-  _key: gridRight
-  uniquekey: 0
-  showpreviewinitially: false
-  _uid: gridRight_1595024952625_889
-- 
-  columnright:
-    - 
-      heading: Les Demoiselles
-      text: 'Zu den bekanntesten Werken Picassos gehört das Gemälde Les Demoiselles d’Avignon (1907). Es avancierte zum Schlüsselbild der Klassischen Moderne.[1] Mit Ausnahme des monumentalen Gemäldes Guernica (1937), einer künstlerischen Umsetzung der Schrecken des Spanischen Bürgerkriegs, hat kein anderes Kunstwerk des 20. Jahrhunderts die Forschung so herausgefordert wie die Demoiselles.[1] Das Motiv der Taube auf dem Plakat, das er im Jahr 1949 für den Pariser Weltfriedenskongress entwarf, wurde weltweit zum Friedenssymbol.'
-      date: 2020-07-11
-      _key: textRight
-      _uid: textRight_1595024955540_1132
-  _key: gridRight
-  uniquekey: 1
-  showpreviewinitially: false
-  isnew: true
-  _uid: gridRight_1595024955500_1107

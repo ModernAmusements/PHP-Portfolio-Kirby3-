@@ -110,7 +110,7 @@ document.addEventListener("visibilitychange", function() {
         for (let activeLink of document.getElementsByClassName("active")) {
             activeLink.classList.remove("active");
         }
-        document.title = "Talia Cotton";
+        document.title = "Shady Tawfik";
         document.getElementsByClassName("original")[0].classList.add("active");
         document.getElementsByTagName("body")[0].classList.remove("transition");
     } else {

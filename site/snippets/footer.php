@@ -28,7 +28,6 @@
 
 
 
-<?= js('assets/js/global.js') ?>
 <?= js('assets/js/libs.js') ?>
 <?= js('assets/js/scripts.js') ?>
 <?= js('assets/js/main.js') ?>

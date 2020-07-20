@@ -97,9 +97,3 @@ if ($.cookie("toggle") == "true") {
 
 
 
-// $("#sun").click(function() { 
-//     document.documentElement.classList.toggle('inverted');
-//     updateInvertedLabel();
-// });
-
-

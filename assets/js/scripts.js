@@ -1,4 +1,13 @@
 "use strict";
+
+$(document).ready(function(){ 
+	$(".post-header").click(function () {
+		$(this).parent().next().slideToggle('fast');
+		$(this).children().last().toggleClass('open');
+    });
+});
+
+
 var windowWidth = isNaN(window.innerWidth)
     ? window.clientWidth
     : window.innerWidth,
@@ -27,6 +36,7 @@ var ua = window.navigator.userAgent,
   iOS = !!ua.match(/iPad/i) || !!ua.match(/iPhone/i),
   webkit = !!ua.match(/WebKit/i),
   iOSSafari = iOS && webkit && !ua.match(/CriOS/i);
+  
 
 function getRandomInt(e, t) {
   return Math.floor(Math.random() * (t - e)) + e;
@@ -324,5 +334,5 @@ var Indexview = Barba.BaseView.extend({
 });
 
 Indexview.init(),
-  Barba.Pjax.init(),
-  Barba.Prefetch.init()
+Barba.Pjax.init(),
+Barba.Prefetch.init()

@@ -100,9 +100,9 @@ function handlePosts(e) {
             } else i.classList.remove("toggle"), i.removeAttribute("style"), document.body.classList.remove("post-toggled"), o && (o.pause(), (o.currentTime = 0));
 
             setTimeout(function () {
-              i.children[2].scrollIntoView({
+              i.parentElement.scrollIntoView({
                 behavior: "smooth",
-                block: "start",
+                block: "end",
               });
             }, 500);
           });
@@ -301,26 +301,8 @@ function handleSliders(e) {
 }
 
 iOSSafari && document.body.classList.add("ios-safari");
-var Landingview = Barba.BaseView.extend({
-  namespace: "landing-page",
-  onEnter: function () {
-    handleLandingSounds(this.container);
-  },
-  onEnterCompleted: function () {
-    document.body.insertAdjacentHTML(
-      "afterbegin",
-      '\n  \t\t<style type="text/css">\n\t\t\t  html, body {margin:0;height:100%;overflow:hidden}\n\t\t\t\tbody {position:fixed;-webkit-overflow-scrolling:touch;overflow-y:scroll;width:100%;}\n\t\t\t</style>\n  \t\t'
-    );
-  },
-  onLeave: function () {
-    document.body.removeChild(document.body.children[0]);
-  },
-  onLeaveCompleted: function () {
-    clearInterval(touchInterval);
-  },
-});
 
-Landingview.init();
+
 var Indexview = Barba.BaseView.extend({
   namespace: "index-page",
   onEnter: function () {
@@ -334,8 +316,7 @@ var Indexview = Barba.BaseView.extend({
     }
     handlePosts(e),
       handlePageVideos(e),
-      handleSliders(e),
-      handlePostCloseButton(e);
+      handleSliders(e)
   },
   onEnterCompleted: function () {},
   onLeave: function () {},
@@ -344,38 +325,4 @@ var Indexview = Barba.BaseView.extend({
 
 Indexview.init(),
   Barba.Pjax.init(),
-  Barba.Prefetch.init(),
-  (Barba.Pjax.originalPreventCheck = Barba.Pjax.preventCheck),
-  (Barba.Pjax.preventCheck = function (e, t) {
-    return (
-      !!Barba.Pjax.originalPreventCheck(e, t) &&
-      !/.pdf/.test(t.href.toLowerCase())
-    );
-  });
-var MRTransition = Barba.BaseTransition.extend({
-  start: function () {
-    document.body.classList.add("loading-initialized"),
-      document.body.classList.add("transition-started"),
-      Promise.all([this.newContainerLoading, this.minimalTimeout()]).then(
-        this.finish.bind(this)
-      );
-  },
-  minimalTimeout: function () {
-    var e = Barba.Utils.deferred();
-    return (
-      setTimeout(function () {
-        e.resolve();
-      }, 500),
-      e.promise
-    );
-  },
-  finish: function () {
-    this.oldContainer, this.newContainer;
-    window.scrollTo(0, 0),
-      document.body.classList.remove("loading-initialized"),
-      setTimeout(function () {
-        document.body.classList.remove("transition-started");
-      }, 500),
-      this.done();
-  },
-});
+  Barba.Prefetch.init()

@@ -556,15 +556,7 @@
                 t,
                 this.Dom.currentHTML
               ),
-              i.trigger("transitionCompleted", this.History.currentStatus()),
-              this.bindEvents();
-          },
-          bindEvents: function () {
-            document.addEventListener("click", this.onLinkClick.bind(this)),
-              window.addEventListener(
-                "popstate",
-                this.onStateChange.bind(this)
-              );
+              i.trigger("transitionCompleted", this.History.currentStatus());
           },
           getCurrentUrl: function () {
             return r.cleanLink(r.getCurrentUrl());

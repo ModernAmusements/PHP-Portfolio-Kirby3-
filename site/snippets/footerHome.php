@@ -59,7 +59,5 @@
 </script> -->
 
 <?= js('assets/js/main.js') ?>
-<?= js('assets/js/home/html2canvas.js') ?>
-<?= js('assets/js/home/scripts.js') ?>
 </body>
 </html>

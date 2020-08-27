@@ -14,6 +14,6 @@ mix.combine([
     'src/js/home/scripts.js',
     ], 'assets/js/main.js');
     
-mix.sass('src/scss/index.scss', 'assets/css');
+// mix.sass('src/scss/index.scss', 'assets/css');
 
-mix.browserSync('');
+mix.browserSync('http://k-master-test.ma/');

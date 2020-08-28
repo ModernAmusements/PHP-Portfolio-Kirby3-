@@ -16,46 +16,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#fafafa" />
     <link rel="shortcut icon" href="/images/favicons/favicon.ico" type="image/x-icon">
-    <?= css(['assets/css/index.css', '@auto']) ?>
-    <script src="https://code.jquery.com/jquery-3.5.0.min.js"
-        integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
-    <script type="text/javascript">
-        ! function (o, c) {
-            var n = c.documentElement,
-                t = " w-mod-";
-            n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n
-                .className += t + "touch")
-        }(window, document);
-    </script>
+    <?= css(['assets/css/index.css']) ?>
 </head>
 <body>
 <header>
-    <h2>
-        <a href="<?= $site->url() ?>"><?= $site->title() ?></a>
-    </h2>
-    <?php foreach ($site->children()->listed() as $subpage) : ?>
-    <h3><a href="<?= $subpage->url() ?>"><?= $subpage->title() ?></a></h3>
-    <?php endforeach ?>
-    <p class="small">Darkmode:<span id="inverted-msg">Off</span></p>
-    <div id="sun">
-      <span id="inverted-msg">
-          <svg viewBox="0 0 50 50">
-              <g id="sun-group">
-                  <path class="st0"
-                      d="M24.95,34.53c5.25,0,9.5-4.25,9.5-9.5s-4.25-9.5-9.5-9.5s-9.5,4.25-9.5,9.5S19.7,34.53,24.95,34.53z" />
-                  <line class="st0" x1="39.08" y1="25" x2="49.5" y2="25" />
-                  <line class="st0" x1="10.92" y1="25" x2="0.5" y2="25" />
-                  <line class="st0" x1="25" y1="39.08" x2="25" y2="49.5" />
-                  <line class="st0" x1="25" y1="10.92" x2="25" y2="0.5" />
-                  <line class="st0" x1="34.92" y1="14.14" x2="42.28" y2="6.78" />
-                  <line class="st0" x1="34.92" y1="35.86" x2="42.28" y2="43.23" />
-                  <line class="st0" x1="15.07" y1="14.14" x2="7.71" y2="6.78" />
-                  <line class="st0" x1="15.07" y1="35.86" x2="7.71" y2="43.23" />
-              </g>
-          </svg>
-      </span>
+    <a class="home">
+        <label class="switch">
+            <span class="sliderToggle">
+                <div id="circle"></div>
+            </span>
+        </label>
+        <h2>
+            <span id="inverted-msg"><?= $site->url() ?>"><?= $site->title() ?></span>
+        </h2>
+    </a>
+    <menu class="desktop-nav">
+        <nav>
+        <?php foreach ($site->children()->listed() as $subpage) : ?>
+            <a href="<?= $subpage->url() ?>"><?= $subpage->title() ?></a>
+        <?php endforeach ?>
+        </nav>
+    </menu>
+    <div class="langToggle">
+        <a href="#" class="lang">
+            DE
+        </a>
+        <a href="#" class="lang">
+            EN
+        </a>
     </div>
-    </hr>
+    <menu class="mobile-display">
+        <span id="burger">
+            <svg viewBox="0 0 50 50">
+                <g>
+                    <line class="burger-menu stroke-open" x1="49.5" y1="25" x2="0.5" y2="25" />
+                    <line class="burger-menu stroke-open" x1="0.5" y1="25" x2="49.5" y2="25" />
+                </g>
+                <line class="burger-menu stroke-close" x1="0.5" y1="8.5" x2="49.5" y2="8.5" />
+                <line class="burger-menu stroke-close" x1="0.5" y1="41.5" x2="49.5" y2="41.5" />
+            </svg>
+        </span>
+    </menu>
+    <nav id="mobile-nav">
+        <div class="navGridMenu">
+            <?php foreach ($site->children()->listed() as $subpage) : ?>
+                <a href="<?= $subpage->url() ?>"><?= $subpage->title() ?></a>
+            <?php endforeach ?>
+            <div class="navLang">
+                <a href="#" class="lang">
+                    DE
+                </a>
+                <a href="#" class="lang">
+                    EN
+                </a>
+            </div>
+        </div>
+    </nav>
 </header>

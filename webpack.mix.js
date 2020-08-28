@@ -6,14 +6,17 @@ mix.autoload({
     jquery: ['$', 'jQuery', 'window.jQuery'],
    });
 
-mix.combine([
-    'src/js/libs.js',
-    'src/js/main.js',
-    'src/js/scripts.js',
-    'src/js/home/html2canvas.js',
-    'src/js/home/scripts.js',
+mix.js([
+    'src/js/swiper.min.js',
+    'src/js/darkmode.js',
+    'src/js/mobile-nav.js',
+    'src/js/modal.js',
+    'src/js/work-page.js',
+    'src/js/plugins.js',
+    'src/js/current-device.min.js',
     ], 'assets/js/main.js');
-    
-// mix.sass('src/scss/index.scss', 'assets/css');
+
+
+mix.sass('src/scss/index.scss', 'assets/css');
 
 mix.browserSync('http://k-master-test.ma/');

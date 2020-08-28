@@ -50,7 +50,13 @@ html {
   p {
     margin: 0 0 20px 0;
   }
+
   
+  .honeypot {
+    position: absolute;
+    left: -9999px;
+}
+
 
   .form-img {
     z-index: -1;

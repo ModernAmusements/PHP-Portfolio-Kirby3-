@@ -12,25 +12,19 @@ return function($kirby, $pages, $page) {
         }
 
         $data = [
-            'name'  => get('name'),
-            'email' => get('email'),
-            'text'  => get('text')
+            'firstName'  => get('firstName'),
+            'lastName'   => get('lastName'),
+            'birthday'   => get('birthday'),
+            'email'      => get('email'),
+            'phoneNumber'=> get('phoneNumber'),
+            'interests'  => get('interests'),
+            'text'       => get('text')
         ];
 
-        $rules = [
-            'name'  => ['required', 'min' => 3],
-            'email' => ['required', 'email'],
-            'text'  => ['required', 'min' => 3, 'max' => 3000],
-        ];
-
-        $messages = [
-            'name'  => 'Please enter a valid name',
-            'email' => 'Please enter a valid email address',
-            'text'  => 'Please enter a text between 3 and 3000 characters'
-        ];
+       
 
         // some of the data is invalid
-        if($invalid = invalid($data, $rules, $messages)) {
+        if($invalid = invalid($data)) {
             $alert = $invalid;
 
             // the data is fine, let's send the email
@@ -41,10 +35,15 @@ return function($kirby, $pages, $page) {
                     'from'     => 'noreplyfffcorp@info.de',
                     'replyTo'  => $data['email'],
                     'to'       => 'st@zahnarzt-helden.de',
-                    'subject'  => esc($data['name']) . ' sent you a message from your contact form',
+                    'subject'  => esc($data['firstName']) . ' wants to work with you!',
                     'data'     => [
-                        'text'   => esc($data['text']),
-                        'sender' => esc($data['name'])
+                        'sender'        => esc($data['firstName']),
+                        'lastName'      => esc($data['lastName']),
+                        'birthday'      => esc($data['birthday']),
+                        'email'         => esc($data['email']),
+                        'phoneNumber'   => esc($data['phoneNumber']),
+                        'interests'     => esc($data['interests']),
+                        'text'          => esc($data['text'])
                     ]
                 ]);
 

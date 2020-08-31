@@ -109,8 +109,7 @@
       </article> 
     </section>
   </footer>
-
-<?= js('assets/js/main.js') ?>
 <?= js('assets/js/libs.js') ?>
+<?= js('assets/js/main.js') ?>
 </body>
 </html>

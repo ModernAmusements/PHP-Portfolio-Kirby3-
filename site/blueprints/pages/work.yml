@@ -55,7 +55,6 @@ columns:
         image:
           ratio: 5/4
           cover: true
-        min: 1
         size: small
 
   - width: 2/3
@@ -72,8 +71,8 @@ columns:
         options:
         - value: 'typography'
            text: Typography
-        - value: '3D'
-           text: 3D
+        - value: '3d'
+           text: 3d
         - value: 'animation'
            text: Animation
         - value: 'graphic'

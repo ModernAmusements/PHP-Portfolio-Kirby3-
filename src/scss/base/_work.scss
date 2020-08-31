@@ -4,6 +4,7 @@
 }
 
 nav.categories {
+  padding-top: 0.2em;
   border-bottom: 1px solid var(--foreground-color);
   display: grid;
   grid-template-columns: repeat(8, 1fr);

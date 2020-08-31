@@ -1,4 +1,4 @@
-Title: United Ravers Against Fascism
+Title: Transhuman Design
 
 ----
 
@@ -6,7 +6,7 @@ Client: U.R.A.F
 
 ----
 
-Tags: Documentary, Animation
+Tags: Animation, Graphic
 
 ----
 
@@ -36,6 +36,14 @@ While working from home, the team returned to Henry’s work and found many poem
 ----
 
 Date: 2020-08-21
+
+----
+
+Tag1: Typography
+
+----
+
+Tag2: Graphic
 
 ----
 

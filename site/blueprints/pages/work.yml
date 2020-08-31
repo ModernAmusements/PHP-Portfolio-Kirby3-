@@ -70,12 +70,23 @@ columns:
         label: Tags
         type: tags
         options:
-          - Film
-          - Documentary
-          - Advertising
-          - Animation
-          - Experiments
-        width: 1/2
+        - value: 'typography'
+           text: Typography
+        - value: '3D'
+           text: 3D
+        - value: 'animation'
+           text: Animation
+        - value: 'graphic'
+           text: Graphic
+        - value: 'experimental'
+           text: Experimental
+           options:
+              - Typography
+              - 3D
+              - Animation
+              - Graphic
+              - Experimental      
+          width: 1/2
       description:
         type: textarea
         size: medium

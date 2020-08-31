@@ -27,14 +27,22 @@
             </span>
         </label>
         <h2>
-            <span id="inverted-msg"><?= $site->url() ?>"><?= $site->title() ?></span>
+            <span id="inverted-msg"></span>
         </h2>
     </a>
     <menu class="desktop-nav">
         <nav>
-        <?php foreach ($site->children()->listed() as $subpage) : ?>
-            <a href="<?= $subpage->url() ?>"><?= $subpage->title() ?></a>
-        <?php endforeach ?>
+        <?php
+            $items = $site->children();
+            $items->prepend('home', page('home'));
+            if($items->isNotEmpty()):
+            ?>
+                    <?php foreach ($items->listed() as $item): ?>
+                    <a
+                    <?php ?> href="<?= $item->url() ?>"><?= $item->title()->html() ?>
+                    </a>
+            <?php endforeach ?>
+        <?php endif ?>
         </nav>
     </menu>
     <div class="langToggle">
@@ -59,9 +67,16 @@
     </menu>
     <nav id="mobile-nav">
         <div class="navGridMenu">
-            <?php foreach ($site->children()->listed() as $subpage) : ?>
-                <a href="<?= $subpage->url() ?>"><?= $subpage->title() ?></a>
-            <?php endforeach ?>
+            <?php
+                $items = $pages->listed();
+                if($items->isNotEmpty()):
+            ?>
+                    <?php foreach($items as $item): ?>
+                    <a
+                    <?php e($item->isOpen(), ' class="active"') ?> href="<?= $item->url() ?>"><?= $item->title()->html() ?>
+                    </a>
+                <?php endforeach ?>
+            <?php endif ?>
             <div class="navLang">
                 <a href="#" class="lang">
                     DE

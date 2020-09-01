@@ -23,11 +23,11 @@
     </div>
     <div class="subpage-description">
       <p class="small">Block B</p>
-      <h3 class="large"><?= $page->description()->kt() ?></h3>
+      <h3 class="large"><?= $page->description() ?></h3>
     </div>
     <div class="subpage-concept">
-      <p class="small">Block B</p>
-      <h3 class="large"><?= $page->concept()->kt() ?></h3>
+      <p class="small">Block C</p>
+      <h3 class="large"><?= $page->concept() ?></h3>
     </div>
     </article>
     </section>

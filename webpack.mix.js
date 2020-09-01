@@ -19,4 +19,4 @@ mix.js([
 
 mix.sass('src/scss/index.scss', 'assets/css');
 
-mix.browserSync('http://k-master-test.ma/');
+mix.browserSync('https://k-master-test.test/');

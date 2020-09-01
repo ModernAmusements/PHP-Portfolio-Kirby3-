@@ -291,24 +291,24 @@ h6>a:hover,
   color: inherit;
 }
 /* image */
-/* img,
-img:first-child,
-img:last-child {
-  display: block;
-  margin-top: var(--baseline);
-  margin-bottom: var(--baseline);
-}
-img:only-child {
-  margin: 0;
-}
-* + img {
-  margin-top: calc(var(--baseline) * -1);
-}
-img.fill,
-img.cover {
-  -o-object-fit: cover;
-  object-fit: cover;
-} */
+//  img,
+// img:first-child,
+// img:last-child {
+//   display: block;
+//   margin-top: var(--baseline);
+//   margin-bottom: var(--baseline);
+// }
+// img:only-child {
+//   margin: 0;
+// }
+// * + img {
+//   margin-top: calc(var(--baseline) * -1);
+// }
+// img.fill,
+// img.cover {
+//   -o-object-fit: cover;
+//   object-fit: cover;
+// } 
 /* list */
 li {
   margin-left: 1em;

@@ -1,48 +1,35 @@
 <?php
-
-/**
- * Templates render the content of your pages. 
- * They contain the markup together with some control structures like loops or if-statements.
- * This template is responsible for rendering all the subpages of the `notes` page.
- * The `$page` variable always refers to the currently active page. 
- * To fetch the content from each field we call the field name as a method on the `$page` object, e.g. `$page->title()`.
- * Snippets like the header and footer contain markup used in multiple templates. They also help to keep templates clean.
- * More about templates: https://getkirby.com/docs/guide/templates/basics
- */
 ?>
-
 <?php snippet('header') ?>
-
-
-
-
-
-    <h1><?= $page->title() ?></h1>
-
-
-
-    <time class=""><?= $page->date()->toDate('d F Y') ?></time>
- 
-
-
-    <div class="text-right">
-      <?php if ($page->tags()->isNotEmpty()) : ?>
-        <p class=""><?= $page->tags() ?>
-        </p>
-      <?php endif ?>
+<main class="work-subpage">
+<?php if ($cover = $page->cover()): ?>
+  <section class="cover">
+  <img data-lightbox class="img" src="<?= $cover->url() ?>" alt="">
+  <time class=""><?= $page->date()->toDate('d F Y') ?></time>
+</div>
+</section>
+<?php endif ?>
+<section class="work-subpage-content">
+  <article class="subpage-information">
+    <div class="subpage-meta">
+        <p class="small">Block A</p>
+        <h2 class="title"><?= $page->title() ?></h2>
+        <p class="small">Tags:</p>
+        <?php foreach ($page->tags()->split() as $tag): ?>
+        <a class="post-meta"
+          ><p class="tags small"><?= $tag ?></p></a
+        >
+        <?php endforeach ?>
     </div>
-
-
-    <?php if ($image = $page->cover()->toFile()) : ?>
-      <img src="<?= $image->url() ?>" alt="">
-    <?php endif ?>
-
-
-
-
-
-    <?= $page->description()->kt() ?>
-
-
-
+    <div class="subpage-description">
+      <p class="small">Block B</p>
+      <h3 class="large"><?= $page->description()->kt() ?></h3>
+    </div>
+    <div class="subpage-concept">
+      <p class="small">Block B</p>
+      <h3 class="large"><?= $page->concept()->kt() ?></h3>
+    </div>
+    </article>
+    </section>
+    </main>
 <?php snippet('footer') ?>

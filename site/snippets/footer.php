@@ -109,7 +109,38 @@
       </article> 
     </section>
   </footer>
+<?= js('assets/lightbox/lightbox.js') ?>
 <?= js('assets/js/libs.js') ?>
 <?= js('assets/js/main.js') ?>
+<script>
+    // Lightbox
+    let box = null;
+    let logo = document.querySelector(".logo");
+
+    Array.from(document.querySelectorAll("[data-lightbox]")).forEach(element => {
+      element.onclick = (e) => {
+        e.preventDefault();
+        box = basicLightbox.create(`<img src="${element.href}">`);
+        box.show();
+      };
+    });
+
+    logo.onclick = (e) => {
+      e.stopPropagation();
+    };
+
+    document.onclick = () => {
+      logo.removeAttribute("open");
+    };
+
+    document.onkeydown = (e) => {
+      if (e.key === "Escape") {
+        if (box) {
+          box.close();
+        }
+        logo.removeAttribute("open");
+      }
+    }
+</script>
 </body>
 </html>

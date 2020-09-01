@@ -185,10 +185,20 @@ nav.categories {
     grid-area: 1 / 6 / 1 / 9;
   }
 
-  .work-images,
-  .video-wrapper {
-    display: flex;
+  .post-gallery {
     grid-area: 1 / 1 / 3 / 6;
+    img, video{
+      display: block;
+      width: 100%;
+      border-radius: 8px;
+    }
+    video[poster] {
+      -o-object-fit: cover;
+      object-fit: cover
+    }
+  }
+  .video-wrapper {
+    width: 100%;
   }
 
   .text-counter {
@@ -234,6 +244,7 @@ nav.categories-mobile {
 // Slick Slider
 .slider {
   width: 100%;
+  border-radius: 8px;
 }
 
 .slider__next,
@@ -308,11 +319,16 @@ nav.categories-mobile {
 .slick-loading .slick-slide {
   visibility: hidden;
 }
-
+button {
+  background: 0 0;
+  border: 0;
+  outline: 0;
+  color: var(--foreground-color);
+}
 
 .post-video {
   position: relative;
-  /* display: inline-block; */
+  display: inline-block;
   margin-bottom: 1.3333em;
 }
 .post-video video {
@@ -380,7 +396,7 @@ nav.categories-mobile {
 .vid-controls {
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: 30px;
   width: 100%;
   opacity: 0;
   -webkit-transition: opacity .2s;
@@ -399,7 +415,7 @@ nav.categories-mobile {
   left: 20px
 }
 .vid-mute {
-  right: 48px
+  right: 20px;
 }
 .vid-mute:after {
   content: '';
@@ -415,20 +431,17 @@ nav.categories-mobile {
   display: none
 }
 .vid-fullscreen {
-  background-image: url("/images/icons/fullscreen.svg");
-  right: 21px;
-  bottom: 16px;
+  background-image: url('/images/icons/fullscreen.svg');
+  right: 60px;
   display: block;
-  width: 13px;
-  height: 13px;
   text-indent: -999px;
   overflow: hidden
 }
 [data-fullscreen=cancel-fullscreen] .vid-fullscreen {
-  background-image: url("/images/icons/minimize.svg")
+  background-image: url('/images/icons/minimize.svg')
 }
 [data-fullscreen=go-fullscreen] .vid-fullscreen {
-  background-image: url("/images/icons/fullscreen.svg")
+  background-image: url('/images/icons/fullscreen.svg')
 }
 .vid-progress-wrap {
   height: 20px;
@@ -736,12 +749,12 @@ nav.categories-mobile {
     grid-template-columns: repeat(4, 1fr);
   
 
-  .work-descriptsion {
+  .work-description {
     grid-area: 1 / 3 / 2 / 5;
   }
 
   .work-images,
-  .video-wrapper {
+  .post-gallery {
     grid-area: 1 / 1 / 3 / 3;
     margin-bottom: calc(var(--lineHeight) - calc(var(--hrThickness) / 2));
   }
@@ -799,7 +812,7 @@ nav.categories-mobile {
   }
 
   .work-images,
-  .video-wrapper {
+  .post-gallery {
     grid-area: 1 / 1 / 1 / 3;
     display: inline;
   }

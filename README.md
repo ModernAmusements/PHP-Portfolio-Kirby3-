@@ -1,4 +1,4 @@
-# Kirby CMS + Heroku Master File (Working)
+# Kirby CMS File (Working)
 
 ❯ git branch
 ❯ git checkout -b production

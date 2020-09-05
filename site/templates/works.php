@@ -67,20 +67,22 @@
         <section class="post-content">
           <article class="work-description">
             <hr>
-              <p class="medium">Datum: <?= $work->date()->toDate() ?></p>
+            <p class="right medium">Datum: <?= $work->date()->toDate() ?></p>
+            <p class="small">Block B</p>
             <hr>
-            <p class="large"><?= $work->description()->kt() ?></p>
+            <p class="large"><?= $work->description() ?></p>
             </article>
             <article class="work-subpage-link">
-              <a href="<?= $work->url() ?>"><p class="medium">More</p></a>
-              <hr>
+              <a class="btn" href="<?= $work->url() ?>">More</a>
+              <hr   class="half">
             </article>
         <section class="post-gallery">
         <article class="work-videos">
-                 <?php foreach ($work->videos()->template('work-videos') as
+              <?php foreach ($work->videos()->template('work-videos') as
               $image): ?>
               <div class="video-wrapper post-video" data-state="not-init">
                 <video
+                  loop
                   playsinline
                   preload="metadata"
                   poster=""

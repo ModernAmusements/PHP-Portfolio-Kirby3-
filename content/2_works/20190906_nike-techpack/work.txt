@@ -2,11 +2,11 @@ Title: NIKE TECHPACK
 
 ----
 
-Client: 
+Date: 2019-09-06
 
 ----
 
-Tags: 3d, Typography
+Tags: Typography, Animation
 
 ----
 
@@ -14,7 +14,10 @@ Description: Nike World HQ asked Golgotha to work with photographer Daniel Sannw
 
 ----
 
-Contributors: 
+Contributors:
+
+Pablo Picasso *(Direction)*
+Marie Curie *(Animation)*
 
 ----
 
@@ -22,4 +25,4 @@ Concept: Fascinated by technical materials and utilitarian clothing, Christopher
 
 ----
 
-Date: 2019-09-06
+Client: Apple

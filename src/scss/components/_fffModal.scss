@@ -328,12 +328,12 @@ html {
     vertical-align: middle;
     touch-action: manipulation;
     white-space: nowrap;
-    min-width: 15rem;
+    width: fit-content;
     border: solid 1px var(--foreground-color);
     border-radius: 99em;
     display: inline-block;
     text-align: center;
-    padding: 0.2rem 0;
+    padding: 0.2rem 1rem;
     font-size: 1.2rem;
     font-weight: 500;
     background: var(--background);

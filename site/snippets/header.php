@@ -17,6 +17,7 @@
     <meta name="theme-color" content="#fafafa" />
     <link rel="shortcut icon" href="/images/favicons/favicon.ico" type="image/x-icon">
     <?= css(['assets/css/index.css']) ?>
+    <?= css(['assets/lightbox/lightbox.css']) ?>
 </head>
 <body>
 <header>

@@ -2,23 +2,27 @@ Title: Étienne Garachon
 
 ----
 
-Client: 
+Client: Apple
 
 ----
 
-Tags: Animation, Experimental
+Tags: Experimental, Typography
 
 ----
 
-Description: Paris-based Étienne Garachon is a Franco-Swiss jewellery designer. In 2015, he worked with Golgotha to design a 3D jewellery collection, Glass & Gold. The series featured earrings and a necklace with a sleek design that emphasised the materials used. Framed in black and white, the eyes are drawn to the detailed interplay between transparency and the finish of the materials.
+Description: Nike World HQ asked Golgotha to work with photographer Daniel Sannwald for the 2019 NIKE Tech Pack Collection global campaign. To create cyber athletes, they applied digital make-up to models' skin. James gilt als eigenwilliger und etwas verschrobener Exzentriker. Er gibt nur ungern Interviews und die Aussagen, die er in ihnen macht, widersprechen sich häufig. Deswegen ist der Wahrheitsgehalt vieler biographischer Fakten stark umstritten. So entpuppten sich viele der dargestellten Eigenwilligkeiten als reine Gerüchte, die nach Medienberichten auftauchten, etwa dass er in einer umgebauten Bank lebt und ein gepanzertes Spähfahrzeug besitzen soll.
 
 ----
 
-Contributors: 
+Contributors:
+
+Shady Tawfik
+David Rudnick
+Tilman Kunkel
 
 ----
 
-Concept: Art direction: Golgotha 💍Jewel design: Étienne Garachon and Golgotha 💍CGI: Scott Renau and Golgotha
+Concept: James gilt als eigenwilliger und etwas verschrobener Exzentriker. Er gibt nur ungern Interviews und die Aussagen, die er in ihnen macht, widersprechen sich häufig. Deswegen ist der Wahrheitsgehalt vieler biographischer Fakten stark umstritten. So entpuppten sich viele der dargestellten Eigenwilligkeiten als reine Gerüchte, die nach Medienberichten auftauchten, etwa dass er in einer umgebauten Bank lebt und ein gepanzertes Spähfahrzeug besitzen soll.
 
 ----
 

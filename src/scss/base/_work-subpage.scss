@@ -1,4 +1,3 @@
-// Basic
 
 main.work-subpage {
   padding-top: 1em;
@@ -22,17 +21,19 @@ main.work-subpage {
     padding-bottom: 2em;
     
     .subpage-information {
+      hr {
+        margin: 0;
+      }
       display: grid;
       grid-template-columns: repeat(8, 1fr);
       grid-column-gap: 10px;
       .subpage-meta{
-        grid-area: 1 / 1 / 1 / 3;
+        grid-area: 1 / 1 / 3 / 3;
         display: flex;
         flex-direction: column;
         p:not(.tags) {
           border-bottom: 1px solid var(--foreground-color);
         }
-
         .post-meta {
           text-align: center;
           margin: 0.5em 0;
@@ -57,20 +58,36 @@ main.work-subpage {
           border-bottom: 1px solid var(--foreground-color);
         }
       }
-      .work-images {
+      #barba-wrapper {
         grid-area: 2 / 3 / 2 / 9;
         padding-top: calc(var(--lineHeight) * 0.5);
-        img {
+        img, video{
+          display: block;
+          width: 100%;
           border-radius: 8px;
         }
+        video[poster] {
+          -o-object-fit: cover;
+          object-fit: cover
+        }
       }
+      .video-wrapper {
+        width: 100%;
+      }
+      
       .work-legend {
         grid-area: 3 / 3 / 3 / 9;
       }
     }
   }
-
 }
+
+.half {
+  width: 50%;
+}
+
+
+
 
 @media (min-width: 320px) and (max-width: 720px) {
   main.work-subpage {
@@ -128,7 +145,7 @@ main.work-subpage {
             width: 100%;
           }
         }
-        .work-images {
+        #barba-wrapper {
           grid-area: 4 / 1 / 4 / 3;
           padding-top: calc(var(--lineHeight) * 0.5);
           img {

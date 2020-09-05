@@ -10,7 +10,6 @@ return function($kirby, $pages, $page) {
             go($page->url());
             exit;
         }
-
         $data = [
             'firstName'  => get('firstName'),
             'lastName'   => get('lastName'),

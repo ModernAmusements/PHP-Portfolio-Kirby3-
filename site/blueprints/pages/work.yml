@@ -36,7 +36,6 @@ columns:
         layout: cards
         image:
           cover: true
-          ratio: 4/3
       videos:
         type: files
         layout: list
@@ -61,31 +60,22 @@ columns:
     # The second column contains a set of fields
     # List of all available field types: https://getkirby.com/docs/reference/panel/fields
     fields:
-      client:
-        label: Clients
-        type: textarea
+      date:
+        label: Date
+        type: date
         width: 1/2
       tags:
         label: Tags
-        type: tags
+        type: multiselect
+        min: 1
+        max: 2
+        width: 1/2
         options:
-        - value: 'typography'
-           text: Typography
-        - value: '3d'
-           text: 3d
-        - value: 'animation'
-           text: Animation
-        - value: 'graphic'
-           text: Graphic
-        - value: 'experimental'
-           text: Experimental
-           options:
-              - Typography
-              - 3D
-              - Animation
-              - Graphic
-              - Experimental      
-          width: 1/2
+          Typography: Typography
+          3d: 3d
+          Animation: Animation
+          Graphic: Graphic
+          Experimental: Experimental     
       description:
         type: textarea
         size: medium
@@ -99,9 +89,11 @@ columns:
         type: textarea
         size: medium
         width: 1/2
-      date:
-        label: Date
-        type: date
-        width: 1/2
+      client:
+        label: Clients
+        type: textarea
+        width: 1/2 
+      line:
+       type: line   
         
           

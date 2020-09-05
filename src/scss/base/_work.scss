@@ -167,9 +167,10 @@ nav.categories {
 }
 
 .post-meta-information {
-  grid-area: 1 / 6 / 1 / 8;
+  grid-area: 1 / 5 / 1 / 8;
   display: grid;
-  grid-auto-flow: column;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 10px;
 }
 
 .post-content {
@@ -208,32 +209,6 @@ nav.categories {
   .work-subpage-link {
     grid-area: 2 / 6 / 2 / 9;
     align-self: start;
-
-    a {
-      margin: 0;
-      text-decoration: underline;
-    }
-
-    a:link {
-      color: var(--foreground-color);
-    }
-
-    a:visited {
-      opacity: 20%;
-    }
-
-    a:hover {
-      text-decoration: none;
-      color: var(--primary-color);
-    }
-
-    a:active {
-      color: var(--primary-color);
-    }
-
-    hr {
-      // margin-bottom: 0
-    }
   }
 }
 
@@ -390,7 +365,7 @@ button {
   line-height: 76px;
   border-radius: 50%;
   color: #fff;
-  background-color: #8b59e7;
+  background-color: var(--primary-color);
   font-size: 16px;
 }
 .vid-controls {
@@ -406,7 +381,7 @@ button {
   position: absolute;
   bottom: 2px;
   padding: 10px 0;
-  color: #8b59e7;
+  color: var(--primary-color);
   font-size: 16px;
   background-repeat: no-repeat;
   background-position: center center
@@ -425,7 +400,7 @@ button {
   position: absolute;
   left: 0;
   top: calc(50% - 0px);
-  background-color: #8b59e7
+  background-color: var(--primary-color);
 }
 .vid-mute[data-state=unmute]:after {
   display: none
@@ -455,7 +430,7 @@ button {
   width: 0%;
   float: left;
   height: 3px;
-  background-color: #8b59e7;
+  background-color: var(--primary-color);
   margin-top: 8px;
   position: relative
 }
@@ -808,12 +783,12 @@ button {
   }
 
   .work-description {
-    grid-area: 2 / 1 / 2 / 3;
+    grid-area: 1 / 1 / 1 / 3;
   }
 
   .work-images,
   .post-gallery {
-    grid-area: 1 / 1 / 1 / 3;
+    grid-area: 2 / 1 / 2 / 3;
     display: inline;
   }
 }

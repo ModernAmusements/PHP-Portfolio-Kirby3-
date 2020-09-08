@@ -1,4 +1,4 @@
-<?php snippet('blog/header') ?>
+<?php snippet('header') ?>
 
 <?php if ($cover = $page->cover()): ?>
 <a href="<?= $cover->url() ?>" data-lightbox class="img" style="--w:2; --h:1">

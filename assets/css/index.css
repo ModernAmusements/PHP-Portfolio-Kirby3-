@@ -170,6 +170,7 @@
   --primary-color: #FF4D00;
   --overlay: rgba(0, 0, 0, 0.5);
   --error-form: #f91153;
+  --sub-headline: #7b7b81;
   --active-form-visited: #2afc85;
   --trackBg: #bdbdbd;
   --trackFocus: #cacaca;
@@ -627,7 +628,7 @@ h1.xxxlarge,
 .h1.xxxlarge {
   --h1-size: 10.5rem;
   line-height: calc(var(--lineHeight) * 7);
-  font-weight: 760;
+  font-weight: 500;
 }
 
 /* small text */
@@ -2459,20 +2460,8 @@ main.work-subpage .work-subpage-content .subpage-information .work-legend {
   }
 }
 
-.grid {
-  --columns: 12;
-  --gutter: 3rem;
-  display: grid;
-  grid-gap: var(--gutter);
-  grid-template-columns: 1fr;
-}
-
-.grid > .column {
-  margin-bottom: var(--gutter);
-}
-
 .autogrid {
-  --gutter: 3rem;
+  --gutter: ;
   --min: 10rem;
   display: grid;
   grid-gap: var(--gutter);
@@ -2486,59 +2475,124 @@ main.work-subpage .work-subpage-content .subpage-information .work-legend {
 
 ul.grid {
   list-style: none;
-  padding: 0;
+  padding-top: 2rem;
+  padding-left: 0;
 }
 
 ul.grid li {
   margin: 0;
 }
 
-@media screen and (min-width: 60rem) {
-  .grid {
-    grid-template-columns: repeat(12, 1fr);
-  }
-
-  .grid > .column {
-    grid-column: span var(--columns);
-  }
+.grid {
+  border-top: 1px solid var(--foreground-color);
+  --gutter: 10px;
+  display: grid;
+  grid-gap: var(--gutter);
+  grid-template-columns: 1fr;
 }
 
-.blog-article {
-  max-width: 35rem;
-  margin: 0 auto;
+.grid > .column {
+  margin-bottom: var(--gutter);
+  --columns: 4;
 }
 
-.blog-article-header {
-  padding-top: 3rem;
-  margin-bottom: 3rem;
-}
-
-.blog-article-footer {
-  padding: 6rem 0;
-}
-
-.blog-article-date {
-  color: var(--color-text-grey);
-}
-
-.blog-article-tags {
+.blog-article-excerpt > a {
+  flex-grow: 1;
   display: flex;
-  margin-bottom: 1.5rem;
+  flex-direction: column;
 }
 
-.blog-article-tags li {
-  margin-right: 0.5rem;
+.blog-article-excerpt .image {
+  position: relative;
+  --w: 9;
+  --h: 9;
+  padding-bottom: calc(100% / var(--w) * var(--h));
 }
 
-.blog-article-tags a {
-  padding: 0.5rem 1rem;
+.blog-article-excerpt .image .data-link {
+  color: var(--foreground-color);
   display: block;
-  background: var(--color-light);
+  background: var(--background-color);
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 0 10px;
+  line-height: 22px;
+  border-radius: 12px;
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  z-index: 1;
 }
 
-.blog-article-tags a:hover {
-  background: var(--color-black);
-  color: var(--color-white);
+.blog-article-excerpt .image img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 0;
+  border-radius: 4px;
+  transform: scale(1);
+}
+
+.blog-article-excerpt:hover .image img {
+  -webkit-filter: invert(100%);
+  transform: scale(1.01);
+  transition: 0.4s;
+}
+
+.blog-article-excerpt-subheadline {
+  color: var(--sub-headline);
+  font-weight: 500;
+}
+
+.blog-article-excerpt-subheadline,
+.bottom {
+  border-bottom: 1px solid var(--foreground-color);
+  border-top: 1px solid var(--foreground-color);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.blog-article-excerpt-title {
+  margin: 0;
+  line-height: calc(var(--lineHeight) * 1.5);
+  padding: calc(var(--lineHeight) * 0.5) 0;
+}
+
+.blog-article-excerpt-text {
+  color: var(--sub-headline);
+  margin: 0;
+}
+
+.blog-article-excerpt .text {
+  padding-top: 1rem;
+  position: relative;
+  min-height: 15rem;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+}
+
+.blog-article-excerpt .label {
+  display: block;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.blog-article-excerpt .bottom {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.blog-article-excerpt .tags,
+.blog-article-excerpt .date {
+  display: table;
+  display: block;
 }
 
 .blog-pagination {
@@ -2562,6 +2616,31 @@ ul.grid li {
   background: var(--color-black);
   color: var(--color-white);
   border-color: var(--color-black);
+}
+
+@media (min-width: 960px) and (max-width: 1150px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .grid > .column {
+    grid-column: span var(--columns);
+  }
+
+  .grid > .column {
+    margin-bottom: var(--gutter);
+    --columns: 2;
+  }
+}
+
+@media screen and (min-width: 1150px) {
+  .grid {
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .grid > .column {
+    grid-column: span var(--columns);
+  }
 }
 
 html {

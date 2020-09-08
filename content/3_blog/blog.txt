@@ -2,15 +2,11 @@ Title: Blog
 
 ----
 
-Description: Just like Medium, but better
+Heading: Archive
 
 ----
 
-Heading: Around the world
-
-----
-
-Subheading: in 80 ways
+Subheading: 2020
 
 ----
 
@@ -22,8 +18,12 @@ Dateformat: d M, Y
 
 ----
 
-Twitter: getkirby
+Twitter: 
 
 ----
 
-Instagram: getkirby
+Instagram: 
+
+----
+
+Description: Just like Medium, but better

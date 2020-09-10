@@ -1,0 +1,13 @@
+name: Column 2 Text
+fields:
+  heading:
+    label: Heading
+    type: text
+  text:
+    label: Text Right
+    type: textarea
+    size: medium
+    buttons: false
+  date:
+    label: Date
+    type: date

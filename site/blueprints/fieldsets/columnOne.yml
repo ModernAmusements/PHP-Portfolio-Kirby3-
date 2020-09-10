@@ -1,0 +1,22 @@
+name: Column 1
+preview:
+  snippet: blocks/columnOne
+  css: /assets/css/index.css
+fields:
+  columnOne:
+    label: Column 1 Text
+    type: builder
+    fieldsets:
+      columnOneText:
+        extends: fieldsets/columnOneText
+        name: Column 1 Text
+  
+        
+
+
+
+
+
+
+
+        

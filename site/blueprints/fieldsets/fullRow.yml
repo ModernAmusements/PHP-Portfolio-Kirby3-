@@ -1,0 +1,15 @@
+name: Full Row 
+label: Archive Files
+preview:
+  snippet: blocks/fullRow
+  css: /assets/css/index.css
+defaultView: preview
+fields:
+  fullRow:
+    label: Archive Section Builder
+    type: builder
+    fieldsets:
+      fullRowText:
+        extends: fieldsets/fullRowtext
+        name: Full Row Sections "3"
+

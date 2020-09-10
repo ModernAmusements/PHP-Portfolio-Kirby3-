@@ -9,14 +9,20 @@ columns:
             fieldsets:    
               gridLeft: fieldsets/gridLeft
     
-    
- 
-  - width: 2/3
+  - width: 1/3
         fields:
           columnRight:
             label: Column Right
             type: builder
             fieldsets:
               gridRight: fieldsets/gridRight
+  
+  - width: 1/3
+        fields:
+          columnThree:
+            label: Column 3
+            type: builder
+            fieldsets:
+              columnThree: fieldsets/columnThree
     
     

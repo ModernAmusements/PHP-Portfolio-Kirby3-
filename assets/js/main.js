@@ -14254,6 +14254,20 @@ $(".work-images").each(function () {
     prevArrow: '<div class="slider__prev"></div>'
   });
 });
+$(".blog-article-overview").each(function () {
+  var $status = $(this).find(".text-counter");
+  var $slider = $(this).find(".slider");
+  $slider.on("init reInit afterChange", function (event, slick, currentSlide, nextSlide) {
+    var i = (currentSlide ? currentSlide : 0) + 1;
+    $status.text(i + "/" + slick.slideCount);
+  });
+  $slider.slick({
+    speed: 0,
+    arrows: true,
+    nextArrow: '<div class="slider__next"></div>',
+    prevArrow: '<div class="slider__prev"></div>'
+  });
+});
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 
 /***/ }),

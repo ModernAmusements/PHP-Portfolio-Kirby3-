@@ -20,13 +20,14 @@ columns:
         type: text
       cover:
         type: files
+        width: 1/2
         max: 1
         uploads:
           template: blog-article-image
-      text:
-        type: editor
-        uploads:
-          template: blog-article-image
+      images:
+        type: files
+        width: 1/2
+        template: blog-article-image
 
   - width: 1/3
     sections:
@@ -38,11 +39,52 @@ columns:
             time: true
             default: now
           author:
-            type: users
+            type: text
           tags:
             type: tags
             options: query
             query: page.siblings.pluck("tags", ",", true)
-      images:
-        type: files
-        template: blog-article-image
+          theme:
+            type: text
+          description:
+            type: textarea
+            size: medium
+            buttons: true     
+      
+
+  - width: 3/3
+        fields:
+
+          fullRow:
+            label: Archive Section Master
+            type: builder
+            width: 3/3
+            fieldsets:
+             fullRow: fieldsets/fullRow
+           
+          columnOne:
+            label: A-Section Individuell 01
+            type: builder
+            width: 1/3
+            fieldsets:    
+              columnOne: fieldsets/columnOne
+              columnTwo: fieldsets/columnTwo
+              columnThree: fieldsets/columnThree
+            
+          columnTwo:
+            label: A-Section Individuell 02
+            type: builder
+            width: 1/3
+            fieldsets:
+              columnOne: fieldsets/columnOne
+              columnTwo: fieldsets/columnTwo
+              columnThree: fieldsets/columnThree
+            
+          columnThree:
+            label: A-Section Individuell 03
+            type: builder
+            width: 1/3
+            fieldsets:
+              columnOne: fieldsets/columnOne
+              columnTwo: fieldsets/columnTwo
+              columnThree: fieldsets/columnThree   

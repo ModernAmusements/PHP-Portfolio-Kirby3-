@@ -1,0 +1,14 @@
+name: Column 2
+preview:
+  snippet: blocks/columnTwo
+  css: /assets/css/index.css
+fields:
+  columnTwo:
+    label: Column 2 Text
+    type: builder
+    columns: 1
+    fieldsets:
+      columnTwoText:
+        extends: fieldsets/columnTwoText
+        name: Column 2 Text
+

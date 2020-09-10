@@ -2,7 +2,7 @@
   <a href="<?= $article->url() ?>">
     <div class="image">
       <?php if ($cover = $article->cover()): ?>
-      <?= $cover->crop(180, 180) ?>
+      <?= $cover->crop(600, 600) ?>
       <?php endif ?>
       <div
         data-link=""
@@ -13,7 +13,9 @@
     </div>
     <div class="text">
       <div class="blog-article-excerpt-subheadline">
-        <span class="label">Visual Experiments between Analog & Digital</span>
+      <?php if ($article->subheading()->isNotEmpty()): ?>
+        <span class="label"><?= $article->subheading() ?></span>
+        <?php endif ?>
       </div>
       <h2 class="blog-article-excerpt-title"><?= $article->title() ?></h2>
       <?php if (($excerpt ?? true) !== false): ?>
@@ -30,7 +32,7 @@
             ><?= $article->date() ?></time
           >
         </span>
-        <span class="tags">Tags: 3D, Animation, Rendering</span>
+        <span class="tags">Tags: <?= $article->tags() ?></span>
       </div>
     </div>
   </a>

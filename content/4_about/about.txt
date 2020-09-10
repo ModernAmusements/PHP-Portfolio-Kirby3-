@@ -104,3 +104,18 @@ Columnright:
       _uid: textRight_1595025165300_1898
   _key: gridRight
   _uid: gridRight_1595007202394_277
+
+----
+
+Columnthree:
+
+- 
+  columnthree:
+    - 
+      heading: Test
+      cover:
+        - master_shake.jpg
+      _key: columnThreeText
+      _uid: columnThreeText_1599579868158_977
+  _key: columnThree
+  _uid: columnThree_1599579866253_917

@@ -12,6 +12,12 @@
             <?php snippet('blocks/' . $block->_key(), ['data' => $block]) ?>
         <?php endforeach?>
     </div>
+    <div id="license" class="information-content-wrap">
+    <meta charset="utf-8">
+        <?php foreach ($page->columnThree()->toBuilderBlocks() as $block): ?>
+            <?php snippet('blocks/' . $block->_key(), ['data' => $block]) ?>
+        <?php endforeach?>
+    </div>
 </div>
 <script>
     $('#license').find('strong').parent('p').addClass('information-section-wrap');

@@ -11,18 +11,19 @@
 
 
    <div class="slider">
-    <?php if ($cover = $page->cover()) : ?>
-      <img src="<?= $cover->url() ?>"
-          alt="<?= $cover->alt() ?>"
-      />
+      <?php if ($cover = $page->cover()) : ?>
+        <img src="<?= $cover->url() ?>"
+            alt="<?= $cover->alt() ?>"
+        />
       <?php endif ?>
+
       <?php foreach ($page->images()->template('blog-article-image') as
         $image): ?>
       <img src="<?= $image->url() ?>" 
-          alt="<?= $image->alt() ?>"
       />
       <?php endforeach ?>
     </div>
+
 
 
 

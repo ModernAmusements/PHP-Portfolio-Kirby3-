@@ -1,0 +1,21 @@
+Caption: Test
+
+----
+
+Alt: 
+
+----
+
+Photographer: 
+
+----
+
+License: 
+
+----
+
+Link: 
+
+----
+
+Template: blog-article-cover

@@ -2,30 +2,29 @@ name: Full Row
 fields:
 
   headingC1:
-    label: Heading col. 1 "Description"
+    label: H-Col. 1 "Description"
     type: text
     width: 1/4
-    buttons: true 
   textC1:
-    label: Text col.1
+    label: T-Col.1
     type: textarea
     minlength: 02
     maxlength: 100
     size: small
     width: 1/4
-    buttons: true 
+    buttons: false 
   headingC2:
-    label: Heading Col. 2 "Section Number"
+    label: H-Col. 2 "Number"
     type: text
     width: 1/4
   textC2:
-    label: Text col.2
+    label: T-Col.2
     type: textarea
     minlength: 02
     maxlength: 100
     size: small
     width: 1/4
-    buttons: true 
+    buttons: false
   line-a:
     type: line
 
@@ -40,7 +39,7 @@ fields:
     size: medium
     width: 3/4
     buttons: true 
-  cover:
+  coverBuilder:
       type: files
       multiple: true
     headline:

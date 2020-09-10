@@ -19,7 +19,7 @@
     <?php if ($data->headingC3()->isNotEmpty()): ?>
     <p class="sub-heading"><?= $data->headingC3() ?></p>
     <?php endif ?>
-    <?= $data->cover()->toFile() ?>
+    <?= $data->coverBuilder()->toFile() ?>
     <p> <?= $data->textC3()->kt() ?></p>
   </div>
 </section>

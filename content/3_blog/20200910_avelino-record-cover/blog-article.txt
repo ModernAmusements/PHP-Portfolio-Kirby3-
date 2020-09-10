@@ -1,0 +1,76 @@
+Title: AVELINO Record Cover
+
+----
+
+Subheading: Artwork for Avelino's single with Dave
+
+----
+
+Cover:
+
+- >
+  butt-studio-en_masse_d_call-me_020-3877-0644.jpg
+
+----
+
+Fullrow:
+
+- 
+  fullrow:
+    - 
+      headingc1: FP01
+      textc1: Introduction
+      headingc2: Section 001
+      textc2: "01"
+      headingc3: Part 001
+      textc3: >
+        Lorem ipsum dolor sit amet, consetetur
+        sadipscing elitr, sed diam nonumy eirmod
+        tempor invidunt ut labore et dolore
+        magna aliquyam erat, sed diam voluptua.
+        At vero eos et accusam et justo duo
+        dolores et ea rebum. Stet clita kasd
+        gubergren, no sea takimata sanctus est
+        Lorem ipsum dolor sit amet. Lorem ipsum
+        dolor sit amet, consetetur sadipscing
+        elitr, sed diam nonumy eirmod tempor
+        invidunt ut labore et dolore magna
+        aliquyam erat, sed diam voluptua. At
+        vero eos et accusam et justo duo dolores
+        et ea rebum. Stet clita kasd gubergren,
+        no sea takimata sanctus est Lorem ipsum
+        dolor sit amet. Lorem ipsum dolor sit
+        amet, consetetur sadipscing elitr, sed
+        diam nonumy eirmod tempor invidunt ut
+        labore et dolore magna aliquyam erat,
+        sed diam voluptua. At vero eos et
+        accusam et justo duo dolores et ea
+        rebum. Stet clita kasd gubergren, no sea
+        takimata sanctus est Lorem ipsum dolor
+        sit amet.
+      coverbuilder: [ ]
+      _key: fullRowText
+      line-a: null
+      _uid: fullRowText_1599755585740_1771
+  _key: fullRow
+  _uid: fullRow_1599755583989_1711
+
+----
+
+Date: 2020-09-10 16:30
+
+----
+
+Author: David Rudnick, Shady Tawfik
+
+----
+
+Tags: Animation, Design
+
+----
+
+Theme: Neo Human
+
+----
+
+Description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.

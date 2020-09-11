@@ -2,13 +2,15 @@
   <a href="<?= $article->url() ?>">
     <div class="image">
       <?php if ($cover = $article->cover()): ?>
-      <?= $cover->crop(600, 600) ?>
+      <?= $cover->crop(300, 300, ['quality' => 50]) ?>
       <?php endif ?>
+      <?php if ($article->pills()->isNotEmpty()): ?>
       <div
         data-link=""
         class="data-link"
       >
-        NEW
+        <p><?= $article->pills() ?></p>
+        <?php endif ?>
       </div>
     </div>
     <div class="text">
@@ -20,7 +22,7 @@
       <h2 class="blog-article-excerpt-title"><?= $article->title() ?></h2>
       <?php if (($excerpt ?? true) !== false): ?>
       <p class="blog-article-excerpt-text">
-        <?= $article->description()->blocks()->excerpt(180) ?>
+        <?= $article->description()->blocks()->excerpt(220) ?>
       </p>
       <?php endif ?>
       <div class="bottom">

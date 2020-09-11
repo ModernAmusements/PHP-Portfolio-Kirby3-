@@ -26,13 +26,13 @@
  </section>
   <footer class="blog-article-footer">
     <?php if (!empty($tags)): ?>
-    <ul class="blog-article-tags">
+    <div class="blog-article-tags">
       <?php foreach ($tags as $tag): ?>
-      <li>
+
         <a href="<?= url('blog', ['params' => ['tag' => $tag]]) ?>"><?= $tag ?></a>
-      </li>
+
       <?php endforeach ?>
-    </ul>
+    </div>
     <?php endif ?>
 
     <time class="blog-article-date" datetime="<?= $page->date('c') ?>">Published on <?= $page->date() ?></time>

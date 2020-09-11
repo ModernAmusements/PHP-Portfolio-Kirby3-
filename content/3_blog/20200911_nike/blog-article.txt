@@ -1,0 +1,166 @@
+Title: NIKE
+
+----
+
+Cover:
+
+- >
+  butt-studio-bandcamp-a_call-me_020-3877-0644.jpg
+
+----
+
+Fullrow:
+
+- 
+  fullrow:
+    - 
+      headingc1: FP01
+      textc1: Introduction
+      headingc2: Section 001
+      textc2: "01"
+      headingc3: Part 001
+      textc3: >
+        Lorem ipsum dolor sit amet, consetetur
+        sadipscing elitr, sed diam nonumy eirmod
+        tempor invidunt ut labore et dolore
+        magna aliquyam erat, sed diam voluptua.
+        At vero eos et accusam et justo duo
+        dolores et ea rebum. Stet clita kasd
+        gubergren, no sea takimata sanctus est
+        Lorem ipsum dolor sit amet. Lorem ipsum
+        dolor sit amet, consetetur sadipscing
+        elitr, sed diam nonumy eirmod tempor
+        invidunt ut labore et dolore magna
+        aliquyam erat, sed diam voluptua. At
+        vero eos et accusam et justo duo dolores
+        et ea rebum. Stet clita kasd gubergren,
+        no sea takimata sanctus est Lorem ipsum
+        dolor sit amet. Lorem ipsum dolor sit
+        amet, consetetur sadipscing elitr, sed
+        diam nonumy eirmod tempor invidunt ut
+        labore et dolore magna aliquyam erat,
+        sed diam voluptua. At vero eos et
+        accusam et justo duo dolores et ea
+        rebum. Stet clita kasd gubergren, no sea
+        takimata sanctus est Lorem ipsum dolor
+        sit amet.
+      imagebuilder: [ ]
+      _key: fullRowText
+      line-a: null
+      _uid: fullRowText_1599824831786_939
+  _key: fullRow
+  _uid: fullRow_1599824830614_879
+- 
+  fullrow:
+    - 
+      headingc1: FP02
+      textc1: Production
+      headingc2: Section 002
+      textc2: "02"
+      headingc3: Part 002
+      textc3: >
+        Lorem ipsum dolor sit amet, consetetur
+        sadipscing elitr, sed diam nonumy eirmod
+        tempor invidunt ut labore et dolore
+        magna aliquyam erat, sed diam voluptua.
+        At vero eos et accusam et justo duo
+        dolores et ea rebum. Stet clita kasd
+        gubergren, no sea takimata sanctus est
+        Lorem ipsum dolor sit amet. Lorem ipsum
+        dolor sit amet, consetetur sadipscing
+        elitr, sed diam nonumy eirmod tempor
+        invidunt ut labore et dolore magna
+        aliquyam erat, sed diam voluptua.
+      imagebuilder: [ ]
+      _key: fullRowText
+      line-a: null
+      _uid: fullRowText_1599827008377_2976
+  _key: fullRow
+  uniquekey: 1
+  isnew: true
+  _uid: fullRow_1599827008367_2951
+- 
+  fullrow:
+    - 
+      headingc1: FP03
+      textc1: Imagery
+      headingc2: Section 002
+      textc2: "03"
+      headingc3: Part 003
+      textc3: >
+        Lorem ipsum dolor sit amet, consetetur
+        sadipscing elitr, sed diam nonumy eirmod
+        tempor invidunt ut labore et dolore
+        magna aliquyam erat, sed diam voluptua.
+        At vero eos et accusam et justo duo
+        dolores et ea rebum. Stet clita kasd
+        gubergren, no sea takimata sanctus est
+        Lorem ipsum dolor sit amet. Lorem ipsum
+        dolor sit amet, consetetur sadipscing
+        elitr, sed diam nonumy eirmod tempor
+        invidunt ut labore et dolore magna
+        aliquyam erat, sed diam voluptua.
+      imagebuilder:
+        - >
+          butt-studio-dua-lipa-a_call-me_020-3877-0644.jpg
+      _key: fullRowText
+      line-a: null
+      _uid: fullRowText_1599824869639_1339
+  _key: fullRow
+  uniquekey: 0
+  _uid: fullRow_1599824869628_1314
+- 
+  fullrow:
+    - 
+      headingc1: FP04
+      textc1: Design
+      headingc2: Section 004
+      textc2: "04"
+      headingc3: Part 004
+      textc3: >
+        Lorem ipsum dolor sit amet, consetetur
+        sadipscing elitr, sed diam nonumy eirmod
+        tempor invidunt ut labore et dolore
+        magna aliquyam erat, sed diam voluptua.
+        At vero eos et accusam et justo duo
+        dolores et ea rebum. Stet clita kasd
+        gubergren, no sea takimata sanctus est
+        Lorem ipsum dolor sit amet. Lorem ipsum
+        dolor sit amet, consetetur sadipscing
+        elitr.
+      imagebuilder: [ ]
+      _key: fullRowText
+      line-a: null
+      _uid: fullRowText_1599844624013_5000
+  _key: fullRow
+  uniquekey: 0
+  isnew: true
+  _uid: fullRow_1599844624002_4975
+
+----
+
+Subheading: Tech Collective
+
+----
+
+Date: 2020-09-11 11:40
+
+----
+
+Pills: 
+
+----
+
+Author: Joseph Higgins
+
+----
+
+Tags: Animation, Neo-Humanism
+
+----
+
+Theme: Futura
+
+----
+
+Description: As part of Nike's Tech Collective I was asked to create a short animation to respond to the new TechPack clothing range. I focussed on technology and innovative fabrics through a mixture of high resolution scanning, formula-based image making and 3D animation. The work has gone up in a special exhibition in the NikeTown store throughout late 2018.

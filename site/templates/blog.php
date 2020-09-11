@@ -1,5 +1,4 @@
 <?php snippet('header') ?>
-
 <div class="cover">
   <?php if (empty($tag) === false): ?>
   <h1 class="xxxlarge">

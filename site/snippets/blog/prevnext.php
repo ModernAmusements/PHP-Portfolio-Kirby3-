@@ -1,5 +1,5 @@
-<nav class="blog-prevnext">
-  <h2 class="h2">Keep on reading</h2>
+<div class="blog-prevnext">
+  <h2 class="h2">KEEP ON REEDING</h2>
 
   <div class="autogrid" style="--gutter: 1.5rem">
     <?php if ($prev = $page->prevListed()): ?>
@@ -10,4 +10,4 @@
     <?php snippet('blog/excerpt', ['article' => $next, 'excerpt' => true])  ?>
     <?php endif ?>
   </div>
-</nav>
+</div>

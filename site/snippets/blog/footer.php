@@ -1,3 +1,3 @@
-  </main>
+
 
 <?php snippet('footer') ?>

@@ -39,9 +39,9 @@ fields:
     size: medium
     width: 3/4
     buttons: true 
-  coverBuilder:
+  imageBuilder:
       type: files
-      multiple: true
+      multiple: false
     headline:
       type: text
     description:

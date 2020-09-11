@@ -18,7 +18,7 @@
       <h2 class="blog-article-excerpt-title"><?= $article->title() ?></h2>
       <?php if (($excerpt ?? true) !== false): ?>
       <p class="blog-article-excerpt-text">
-        <?= $article->text()->blocks()->excerpt(180) ?>
+        <?= $article->text()->blocks()->excerpt(220) ?>
       </p>
       <?php endif ?>
       <div class="bottom">

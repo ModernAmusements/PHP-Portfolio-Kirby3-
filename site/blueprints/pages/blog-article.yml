@@ -44,6 +44,8 @@ columns:
             type: date
             time: true
             default: now
+          pills:
+            type: text
           author:
             type: text
           tags:

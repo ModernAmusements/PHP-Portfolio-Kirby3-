@@ -7,7 +7,7 @@
     <main id="index">
       <nav class="categories">
         <div class="categories-title">
-          <p class="medium">Filter:</p>
+          <p class="small">Filter:</p>
           <svg viewBox="0 0 23 19" xmlns="http://www.w3.org/2000/svg">
             <path d="M11.5001 19L0.674805 0.25L22.3254 0.250002L11.5001 19Z" />
           </svg>
@@ -67,14 +67,22 @@
         <section class="post-content">
           <article class="work-description">
             <hr>
-            <p class="right medium">Datum: <?= $work->date()->toDate() ?></p>
-            <p class="small">Block B</p>
+            <p class="right small">Datum: <?= $work->date()->toDate() ?></p>
+            <p class="medium">Block A</p>
             <hr>
             <p class="large"><?= $work->description() ?></p>
             </article>
             <article class="work-subpage-link">
-              <a class="btn" href="<?= $work->url() ?>">More</a>
-              <hr   class="half">
+            <a class="" href="<?= $work->url() ?>"> 
+            
+            <span class="more">
+            Learn More
+                <svg>
+                <use xlink:href="images/icons/icons-16px.svg#btnArrow">
+                </svg>
+              </span>
+              </a> 
+            <hr class="half">
             </article>
         <section class="post-gallery">
         <article class="work-videos">

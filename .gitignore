@@ -9,9 +9,11 @@ Icon
 
 /media/*
 !/media/index.html
+/.id.php
 
 # Lock files
 # ---------------
+
 .lock
 
 # -------------SECURITY-------------
@@ -27,8 +29,7 @@ Icon
 # Accounts
 # ---------------
 
-/site/accounts/*
-!/site/accounts/index.html
+/site/accounts/.logins
 
 # Sessions
 # ---------------
@@ -38,48 +39,12 @@ Icon
 
 # License
 # ---------------
+
 /site/config/.license
+
+# Custom
+# ---------------
+
+/scripts
+/site/config/config.trykirby.test.php
 node_modules
-
-node_modules/
-.node_modules
-
-
-
-# Windows image file caches
-Thumbs.db
-ehthumbs.db
-
-# Folder config file
-Desktop.ini
-
-
-# =========================
-# Operating System Files
-# =========================
-
-# OSX
-# =========================
-
-.DS_Store
-.AppleDouble
-.LSOverride
-
-# Thumbnails
-._*
-
-# Files that might appear in the root of a volume
-.DocumentRevisions-V100
-.fseventsd
-.Spotlight-V100
-.TemporaryItems
-.Trashes
-.VolumeIcon.icns
-
-# Directories potentially created on remote AFP share
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
-

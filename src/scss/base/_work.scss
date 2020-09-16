@@ -54,7 +54,6 @@ nav.categories {
     background-color: var(--foreground-color);
     color: var(--background-color);
     border-color: var(--foreground-color);
-    cursor: crosshair;
   }
 }
 
@@ -252,8 +251,9 @@ nav.categories {
   .plus-toggle {
     stroke: var(--primary-color);
   }
-  cursor: crosshair;
 }
+
+
 
 .work-subpage-link:hover {
   .more svg {
@@ -287,11 +287,11 @@ nav.categories-mobile {
 
 .slider__next {
   right: 0;
-  cursor: e-resize;
+  // cursor: e-resize;
 }
 
 .slider__prev {
-  cursor: w-resize;
+  // cursor: w-resize;
 }
 
 .slick-slider {
@@ -765,7 +765,6 @@ button {
     p,
     svg {
       fill: var(--primary-color);
-      cursor: crosshair;
     }
   }
 

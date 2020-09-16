@@ -16,9 +16,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#fafafa" />
     <link rel="shortcut icon" href="/images/favicons/favicon.ico" type="image/x-icon">
+    <?= js('assets/js/jquery.js') ?>
     <?= css(['assets/css/index.css']) ?>
     <?= css(['assets/lightbox/lightbox.css']) ?>
 </head>
+<div id="cursor" class="cursor-container">
+      <p class="cursor-text"></p>
+    </div>
 <body>
 <header>
     <a class="home">
@@ -39,8 +43,8 @@
             if($items->isNotEmpty()):
             ?>
                     <?php foreach ($items->listed() as $item): ?>
-                    <a
-                    <?php ?> href="<?= $item->url() ?>"><?= $item->title()->html() ?>
+                        <a
+                    <?php e($item->isOpen(), ' class="active"') ?> href="<?= $item->url() ?>"><?= $item->title()->html() ?>
                     </a>
             <?php endforeach ?>
         <?php endif ?>

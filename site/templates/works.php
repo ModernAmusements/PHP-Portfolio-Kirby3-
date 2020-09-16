@@ -47,7 +47,8 @@
         class="post"
         data-categories="<?= $tags = implode(' ', $work->tags()->split(','));?> all"
       >
-        <header class="post-header">
+        <header 
+          data-cursortext="<?= $work->title() ?>" class="post-header">
           <h1 class="post-title"><?= $work->title() ?></h1>
           <div class="post-meta-information">
             <?php foreach ($work->tags()->split() as $tag): ?>
@@ -65,7 +66,7 @@
           </svg>
         </header>
         <section class="post-content">
-          <article class="work-description">
+          <article data-cursortext="arrowRight" class="work-description">
             <hr>
             <p class="right small">Datum: <?= $work->date()->toDate() ?></p>
             <p class="medium">Block A</p>
@@ -85,7 +86,7 @@
             <hr class="half">
             </article>
         <section class="post-gallery">
-        <article class="work-videos">
+        <article data-cursortext="btnPlay" class="work-videos">
               <?php foreach ($work->videos()->template('work-videos') as
               $image): ?>
               <div class="video-wrapper post-video" data-state="not-init">

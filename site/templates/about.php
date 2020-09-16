@@ -1,27 +1,60 @@
 <?php snippet('header') ?>
-<div id="content">
-<div id="information-wrap">
-    <div id="information-content" class="information-content-wrap">
-        <?php foreach ($page->columnLeft()->toBuilderBlocks() as $block): ?>
-            <?php snippet('blocks/' . $block->_key(), ['data' => $block]) ?>
-        <?php endforeach?>
-    </div>
-    <div id="license" class="information-content-wrap">
-    <meta charset="utf-8">
-        <?php foreach ($page->columnRight()->toBuilderBlocks() as $block): ?>
-            <?php snippet('blocks/' . $block->_key(), ['data' => $block]) ?>
-        <?php endforeach?>
-    </div>
-    <div id="license" class="information-content-wrap">
-    <meta charset="utf-8">
-        <?php foreach ($page->columnThree()->toBuilderBlocks() as $block): ?>
-            <?php snippet('blocks/' . $block->_key(), ['data' => $block]) ?>
-        <?php endforeach?>
-    </div>
-</div>
-<script>
-    $('#license').find('strong').parent('p').addClass('information-section-wrap');
-    $('#license').find('em').parents('p').addClass('information-section');
-</script>
-</div>
+<main class="about-page">
+    <section class="cover-animation">
+        <div class="type-loop"><span
+                class="cover-heading loop-right">––––<?= $page->heading()->html() ?>––––––––<?= $page->heading()->html() ?>––––––––<?= $page->heading()->html() ?>––––</span>
+        </div>
+        <div class="type-loop"><span
+                class="cover-heading loop-left">––––<?= $page->subheading()->html() ?>––––––––<?= $page->subheading()->html() ?>––––––––<?= $page->subheading()->html() ?>––––</span>
+        </div>
+    </section>
+    <section class="work-subpage-content">
+        <article class="subpage-information">
+            <div class="subpage-meta">
+                <p class="small">Block A</p>
+                <h2 class="large title"><?= $page->about() ?></h2>
+            </div>
+            <div class="subpage-description">
+                <p class="small">Block B</p>
+                <h3 class="large"><?= $page->info() ?></h3>
+            </div>
+            <div class="subpage-concept">
+                <p class="small">Block C</p>
+                <h3 class="large"><?= $page->cv() ?></h3>
+            </div>
+            <div class="subpage-capabilities">
+                <p class="small"><?= $page->capabilitiesHeading() ?></p>
+                <ul>
+                    <?php foreach ($page->capabilities()->toStructure() as $profile): ?>
+                    <li>
+                        <h3 class="large"><?= $profile->capabilities() ?></h3>
+                    </li>
+                    <?php endforeach ?>
+                </ul>
+            </div>
+            <div class="subpage-contact">
+                <p class="small">Get In Touch</p>
+                <h3 class="large">
+                    <?= $page->street() ?><br>
+                    <?= $page->zip() ?> <?= $page->city() ?><br>
+                    <?= $page->country() ?>
+                </h3>
+                <h3 class="large">
+                    Email: <?= Html::email($page->email()) ?><br>
+                    Phone: <?= Html::tel($page->phone()) ?><br>
+                </h3>
+            </div>
+            <?php if ($image = $page->image()): ?>
+            <article class="work-images">
+                <img src="<?= $image->url() ?>" alt="<?= $image->alt() ?>" />
+                <?php endif ?>
+                <div class="work-legend">
+                    <h3 class="large"><?= $page->company() ?></h3>
+                    <h3 class="flex-start large">Designer<br>
+                        Enjoying VR</h3>
+                </div>
+            </article>
+    </section>
+</main>
+
 <?php snippet('footer') ?>

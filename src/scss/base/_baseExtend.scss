@@ -226,7 +226,7 @@ h1.xxxlarge,
 }
 /* small text */
 .small {
-  font-size: 1rem;
+  font-size: 0.85rem;
   line-height: var(--lineHeight);
 }
 /* small text */
@@ -567,10 +567,10 @@ header:not(.post-header) {
     background-color: var(--foreground-color);
   }
   #inverted-msg {
-    cursor: pointer;
+    // cursor: pointer;
   }
   #circle {
-    cursor: pointer;
+    // cursor: pointer;
     position: absolute;
     content: "";
     height: 26px;
@@ -587,6 +587,8 @@ header:not(.post-header) {
     background-color: var(--background-color) !important;
   }
 }
+
+
 
 .desktop-nav,
 .langToggle {
@@ -637,172 +639,52 @@ span {
 }
 
 .cta {
+  border-bottom: 1px solid var(--foreground-color);
   border-top: 1px solid var(--foreground-color);
-  grid-area: 4 / 1 / 4 / 9;
-  display: flex;
-  white-space: nowrap;
-  justify-content: space-between;
+  grid-template-columns: repeat(8, 1fr);
+  display: grid;
+  grid-column-gap: 10px;
+  grid-row-gap: var(--rowGap);
   align-items: center;
-  padding-top: 1.5em;
+  padding: calc(var(--lineHeight) * 0.5) 0;
   h3 {
-    font-size: 2vw;
+    grid-area: 1 / 1 / 1 / 5;
+    font-size: 1.7vw;
     margin: 0;
     text-transform: uppercase;
   }
   svg {
-    max-width: 20vw;
+    grid-area: 1 / 5 / 1 / 7;
+    max-width: 23vw;
     fill: var(--foreground-color);
+  }
+  .buttons {
+    grid-area: 1 / 7 / 1 / 9;
+    .btn-cta {
+      padding: 8px 24px;
+      width: 23vw;
+    }
+  }
+  .buttons:hover {
+    .btn-1 {
+      background: var(--primary-color-hover);
+    }
   }
 }
 
 
 
-// .divider {
-//   grid-area: 4 / 1 / 4 / 9;
-//   border-bottom: 1px solid var(--foreground-color);
-// }
-// .controlsPage {
-//   padding-top: calc(var(--lineHeight) * 1);
-//   display: grid;
-//   grid-template-columns: repeat(8, 1fr);
-//   grid-column-gap: 10px;
-//   grid-row-gap: var(--rowGap);
-//   align-items: center;
-// }
-// .blurOption {
-//   grid-area: 1 / 1 / 1 / 3;
-//   display: flex;
-//   grid-auto-flow: column;
-//   justify-self: start;
-// }
-// .shapeOption {
-//   grid-area: 1 / 7 / 1 / 9;
-//   display: grid;
-//   grid-auto-flow: column;
-//   justify-self: end;
-//   a {
-//     margin-right: 2;
-//   }
-// }
-// .backgroundOption {
-//   grid-area: 1 / 3 / 1 / 6;
-//   display: grid;
-//   grid-auto-flow: column;
-//   justify-self: start;
-// }
-// .shapeOption {
-//   a {
-//     width: 11rem;
-//   }
-// }
-// .controls {
-//   align-items: center;
-// }
-// .sliderToggle {
-//   border-radius: 34px;
-// }
-// .sliderToggle:before {
-//   border-radius: 50%;
-// }
-// input[type=range] {
-//   -webkit-appearance: none;
-//   width: 100%;
-//   background: transparent;
-// }
-// input[type=range]::-webkit-slider-thumb {
-//   -webkit-appearance: none;
-// }
-// input[type=range]:focus {
-//   outline: none;
-// }
-// input[type=range]::-ms-track {
-//   width: 100%;
-//   cursor: pointer;
-//   background: transparent;
-//   border-color: transparent;
-//   color: transparent;
-// }
-// input[type=range] {
-//   height: 1em;
-//   -webkit-appearance: none;
-//   width: 100%;
-//   margin-left: 2rem;
-//   min-width: 13vw;
-// }
-// input[type=range]:focus {
-//   outline: none;
-// }
-// input[type=range]::-ms-track {
-//   width: 100%;
-//   height: 1px;
-//   animate: 0.2s;
-//   background: var(--foreground-color);
-// }
-// input[type=range]::-moz-range-track {
-//   width: 100%;
-//   height: 1px;
-//   animate: 0.2s;
-//   background: var(--foreground-color);
-// }
-// input[type=range]::-webkit--runnable-track {
-//   width: 100%;
-//   height: 1px;
-//   animate: 0.2s;
-//   background: var(--foreground-color);
-// }
-// input[type=range]::-ms-thumb {
-//   border: 1px solid var(--foreground-color);
-//   height: 1em;
-//   width: 1em;
-//   border-radius: 1em;
-//   background: var(--background-color);
-//   cursor: grab;
-//   -webkit-appearance: none;
-//   margin-top: -.5em;
-// }
-// input[type=range]::-moz-range-thumb {
-//   border: 1px solid var(--foreground-color);
-//   height: 1em;
-//   width: 1em;
-//   border-radius: 1em;
-//   background: var(--background-color);
-//   cursor: grab;
-//   -webkit-appearance: none;
-//   margin-top: -.5em;
-// }
-// input[type=range]::-webkit-slider-thumb {
-//   border: 1px solid var(--foreground-color);
-//   height: 1em;
-//   width: 1em;
-//   border-radius: 1em;
-//   background: var(--background-color);
-//   cursor: grab;
-//   -webkit-appearance: none;
-//   margin-top: -.5em;
-// }
-// input[type=range]::-ms-thumb:active {
-//   cursor: grabbing;
-//   background: var(--foreground-color);
-// }
-// input[type=range]::-moz-range-thumb:active {
-//   cursor: grabbing;
-//   background: var(--foreground-color);
-// }
-// input[type=range]::-webkit-slider-thumb:active {
-//   cursor: grabbing;
-//   background: var(--foreground-color);
-// }
-/* Footer Desktop */
+
 footer {
   text-transform: uppercase;
   padding: calc(var(--lineHeight) * 1) 0;
-  border-top: 1px solid var(--foreground-color);
   strong {
     display: block;
     border-bottom: 1px solid var(--foreground-color);
     break-before: column;
   }
   section#desktop {
+    grid-template-columns: repeat(8, 1fr);
     display: grid;
     grid-column-gap: 10px;
     grid-row-gap: var(--rowGap);
@@ -839,7 +721,7 @@ footer {
     border-bottom: 1px solid var(--foreground-color);
   }
   a {
-    cursor: pointer;
+    // cursor: pointer;
   }
   p {
     margin: 0;
@@ -863,7 +745,7 @@ footer {
   }
   #burger svg {
     height: 2em;
-    cursor: pointer;
+    // cursor: pointer;
   }
   #burger.open svg .burger-menu {
     transition: transform .1s linear;
@@ -957,6 +839,23 @@ footer {
     min-width: 11rem;
   }
 
+  .cta {
+    grid-template-columns: repeat(2, 1fr);
+    h3{
+      grid-area: 1 / 1 / 1 / 2;
+      font-size: 2.5vw;
+    }
+    svg {
+      display: none;
+    }
+    .buttons {
+      grid-area: 1 / 2 / 1 / 3;
+      .btn-cta {
+        width: 44vw;
+      }
+    }
+  }
+
 }
 @media only screen and (max-width: 720px) {
   header:not(.post-header) {
@@ -1039,14 +938,16 @@ footer {
     }
   }
 
+
   .cta {
+    border-bottom: 0;
     h3{
-      font-size: inherit;
+      font-size: 3.5vw;
       white-space: normal;
-    }
-    svg {
-      display: none;
+      line-height: normal;
     }
   }
+
+
 
 }

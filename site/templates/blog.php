@@ -1,5 +1,6 @@
 <?php snippet('header') ?>
-<div class="cover">
+<div class="blog-page">
+<section class="cover-animation">
   <?php if (empty($tag) === false): ?>
   <h1 class="xxxlarge">
     <small>Tag:</small>
@@ -7,13 +8,15 @@
     <a href="<?= $page->url() ?>">&times;</a>
   </h1>
   <?php else: ?>
-  <h1 class="xxxlarge"><?= $page->heading()->html() ?></h1>
-  <?php if ($page->subheading()->isNotEmpty()): ?>
-  <h1 class="xxxlarge"><?= $page->subheading()->html() ?></h1>
+    <div class="type-loop"><span
+                class="cover-heading loop-right">––––<?= $page->heading()->html() ?>––––––––<?= $page->heading()->html() ?>––––––––<?= $page->heading()->html() ?>––––</span>
+        </div>
+        <div class="type-loop"><span
+                class="cover-heading loop-left">––––<?= $page->subheading()->html() ?>––––––––<?= $page->subheading()->html() ?>––––––––<?= $page->subheading()->html() ?>––––</span>
+        </div>
   <?php endif ?>
-  <?php endif ?>
+</section>
 </div>
-
 <ul class="grid">
   <?php foreach ($articles as $article): ?>
   <li class="column">
@@ -22,8 +25,6 @@
   </li>
   <?php endforeach ?>
 </ul>
-
 <?php snippet('blog/pagination', ['pagination' =>
 $articles->pagination()]) ?>
-
 <?php snippet('blog/footer') ?>

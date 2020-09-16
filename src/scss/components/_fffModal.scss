@@ -45,7 +45,7 @@ html {
   input[type='submit'],
   input[type='file'],
   button {
-    cursor: pointer;
+    // cursor: pointer;
   }
   .honeypot {
     position: absolute;
@@ -59,7 +59,7 @@ html {
   .form-img  img {
     width: 100%;
     display: block;
-    border-radius: 0 5px 5px 0 ;
+    border-radius: 0 5px 0px 0;
   }
   textarea {
     --background: #f2f2ec;
@@ -106,7 +106,7 @@ html {
     outline: none;
   }
   .form-field:disabled {
-    cursor: not-allowed;
+    // cursor: not-allowed;
     pointer-events: none;
   }
   textarea:hover,
@@ -248,14 +248,14 @@ html {
     transition: border 0.3s ease, color 0.3s ease, background 0.3s ease;
     padding-right: 34px;
     width: 100%;
-    cursor: pointer;
+    // cursor: pointer;
   }
   .form-select select:focus {
     border-color: var(--primary-color);
     background: var(--background-color-dark); 
   }
   .form-select select:disabled {
-    cursor: not-allowed;
+    // cursor: not-allowed;
     pointer-events: none;
   }
   .form-select select:hover {
@@ -347,7 +347,6 @@ html {
     font-size: 16px;
     line-height: 25px;
     font-weight: 600;
-    min-width: 120px;
     border-radius: 99em;
     transition: color 0.3s ease, background 0.3s ease, transform 0.3s ease,
       opacity 0.3s ease;
@@ -355,6 +354,7 @@ html {
     background: var(--primary-color);
     color: var(--background-color);
   }
+ 
   .btn:link,
   .btn:active,
   .btn:visited,
@@ -362,8 +362,7 @@ html {
     color: var(--foreground-color);
   }
   .btn:hover {
-    color: var(--foreground-color);
-    background-color: var(--primary-color);
+    background: var(--primary-color-hover);
   }
   .btn:active {
 
@@ -479,7 +478,7 @@ html {
     height: 24px;
     border-radius: 99em;
     background: var(--foreground-color);
-    cursor: pointer;
+    // cursor: pointer;
     z-index: 2;
     top: 16px;
     right: 16px;
@@ -502,7 +501,7 @@ html {
     --rotate: -45deg;
   }
   .modal .close:hover {
-    background: var(--primary-color);
+    background: var(--primary-color-hover);
   }
   .modal-wrapper {
     display: none;
@@ -637,6 +636,41 @@ html {
     }
   }
 
+.list {
+
+     border-radius:0 0 8px 0; 
+    padding: 22px;
+ 
+}
+
+
+  .checklist {
+
+    padding: 0;
+    list-style: none
+}
+
+.checklist li {
+    position: relative;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 0 0 0 28px;
+    margin-left: 0;
+}
+
+
+
+.checklist li svg {
+    width: 18px;
+    height: 18px;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 3px;
+    color: var(--primary-color)
+}
+
+
   .form-parsley {
     position: relative;
   }
@@ -722,7 +756,7 @@ html {
     background-size: 50% 100%;
     background-repeat: no-repeat;
     border-radius: 2px;
-    cursor: pointer;
+    // cursor: pointer;
     -webkit-appearance: none;
   }
   input[type='range']::-webkit-slider-runnable-track {
@@ -788,7 +822,7 @@ html {
   }
   @media (max-width: 767px) {
     #fffModal .form-img img {
-      border-radius: 8px 8px 0 0;
+      border-radius: 0;
     }
   }
   #fffModal .form {

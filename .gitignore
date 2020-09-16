@@ -7,9 +7,9 @@ Icon
 # Temporary files
 # ---------------
 
-/media/*
-!/media/index.html
-/.id.php
+# /media/*
+# !/media/index.html
+# /.id.php
 
 # Lock files
 # ---------------
@@ -29,7 +29,7 @@ Icon
 # Accounts
 # ---------------
 
-/site/accounts/.logins
+# /site/accounts/.logins
 
 # Sessions
 # ---------------

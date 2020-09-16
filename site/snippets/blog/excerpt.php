@@ -25,7 +25,9 @@
         <?= $article->description()->blocks()->excerpt(220) ?>
       </p>
       <?php endif ?>
-      <div class="bottom">
+    </div>
+    <span class="tags">Tags: <?= $article->tags() ?></span>
+    <div class="bottom">
         <span class="date"
           >Datum:
           <time
@@ -34,8 +36,7 @@
             ><?= $article->date() ?></time
           >
         </span>
-        <span class="tags">Tags: <?= $article->tags() ?></span>
+    
       </div>
-    </div>
   </a>
 </article>

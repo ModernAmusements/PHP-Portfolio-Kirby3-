@@ -11,6 +11,16 @@
   --h2-size: 2.2rem;
   --h3-size: 1.4rem;
   --h4-size: 1.1rem;
+  --ratio: 1.25;
+  --ms-0: 1rem;
+  --ms--1: calc(var(--ms-0) / var(--ratio));
+  --ms-1: calc(var(--ms-0) * var(--ratio));
+  --ms-2: calc(var(--ms-1) * var(--ratio));
+  --ms-3: calc(var(--ms-2) * var(--ratio));
+  --ms-4: calc(var(--ms-3) * var(--ratio));
+  --ms-5: calc(var(--ms-4) * var(--ratio));
+  --ms-6: calc(var(--ms-5) * var(--ratio));
+  --ms-7: calc(var(--ms-6) * var(--ratio));
   --columnGap: calc(var(--lineHeight) * 2);
   --rowGap: var(--lineHeight);
   --displayScale: 1;
@@ -18,8 +28,10 @@
   --foreground-color-rgb: 0, 0, 0;
   --foreground-color: rgba( var(--foreground-color-rgb));
   --background-color: #F2F2EC;
+  --background-color-elevated:#fbfbf9;
   --background-color-dark: #d5d5cd;
   --primary-color: #FF4D00;
+  --primary-color-hover: #bd3900;
   --overlay: rgba(0, 0, 0, 0.5);
   --error-form: #f91153;
   --sub-headline: #7b7b81;
@@ -60,6 +72,30 @@
   :root {
     --displayScale: 4;
     --pixel: 0.25px;
+  }
+}
+
+@media (min-width:35rem) {
+  :root {
+      --ms-0: .75rem
+  }
+}
+
+@media (min-width:45rem) {
+  :root {
+      --ms-0: .9rem
+  }
+}
+
+@media (min-width:70rem) {
+  :root {
+      --ms-0: 1.1rem
+  }
+}
+
+@media (min-width:95rem) {
+  :root {
+      --ms-0: 1.15rem
   }
 }
 
@@ -173,6 +209,15 @@ a:visited {
 }
 
 
+.active {
+  color: var(--background-color)!important;
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color) !important;
+  border-radius: 99em;
+}
+
+
+
 /* document */
 html {
   font-family: var(--sansFont), -system-ui, system-ui, sans-serif;
@@ -193,7 +238,6 @@ body {
   padding: calc(var(--lineHeight) * 2);
   padding-bottom: calc(var(--lineHeight) * 3);
   padding-top: var(--lineHeight);
-  
 }
 
 html {
@@ -201,7 +245,8 @@ html {
 }
 
 * {
-  box-sizing: border-box
+  box-sizing: border-box;
+  cursor: none;
 }
 
 *:before,
@@ -211,7 +256,7 @@ html {
 
 
 main {
-  min-height: calc(100vh - 350px)
+  min-height: calc(100vh - 400px)
 }
 
  @media only screen and (max-width: 600px) {
@@ -223,4 +268,42 @@ main {
     min-height: calc(100vh - 200px)
   }
 
+}
+
+
+
+.cursor-container {
+  top: 0;
+  left: 0;
+  height: 23px;
+  position: fixed;
+  display: flex;
+  z-index: 6000;
+  pointer-events: none;
+  background-color: var(--primary-color);
+  transition: width .2s;
+  border-radius: 99em;
+  overflow: hidden;
+  font-size: var(--ms-0)
+}
+
+.cursor-text {
+  color: var(--background-color);
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 7000;
+  transition: 190ms opacity;
+  padding: 0 0.5em;
+  text-transform: uppercase;
+}
+
+.cursor-text path {
+  fill: var(--background-color);
+}
+
+.cursor-text svg {
+  position: relative;
+  width: 1em;
+    top: 2.5px;
+    left: 1px;
 }

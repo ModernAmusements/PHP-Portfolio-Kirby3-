@@ -14,13 +14,17 @@ const css = `
       /*--background-color: #101214;
       --foreground-color-rgb: 250,255,240;*/
 
+      /*--background-color: #101214;
+      --foreground-color-rgb: 250,255,240;*/
+
       /*--background-color: #131310;
       --foreground-color-rgb: 210,230,255;*/
 
       /*--background-color: #111;
       --foreground-color-rgb: 255,255,255;*/
 
-      --background-color: #111;
+      --background-color: #17171d;
+      --background-color-elevated: #121217;
       --foreground-color-rgb: 242,240,236;
       --background-color-dark: #000;
 

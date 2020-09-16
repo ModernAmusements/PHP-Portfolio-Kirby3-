@@ -17,6 +17,7 @@
   <?php endif ?>
 </section>
 </div>
+<main>
 <ul class="grid">
   <?php foreach ($articles as $article): ?>
   <li class="column">
@@ -27,4 +28,5 @@
 </ul>
 <?php snippet('blog/pagination', ['pagination' =>
 $articles->pagination()]) ?>
+</main>
 <?php snippet('blog/footer') ?>

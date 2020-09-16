@@ -176,6 +176,7 @@
   --foreground-color-rgb: 0, 0, 0;
   --foreground-color: rgba( var(--foreground-color-rgb));
   --background-color: #F2F2EC;
+  --background-color-alpha: (242 242 236 / 0.9);
   --background-color-elevated: #fbfbf9;
   --background-color-dark: #d5d5cd;
   --primary-color: #FF4D00;
@@ -386,9 +387,7 @@ body {
   transition: 0.4s;
   scroll-behavior: smooth;
   overflow-x: hidden;
-  padding: calc(var(--lineHeight) * 2);
-  padding-bottom: calc(var(--lineHeight) * 3);
-  padding-top: var(--lineHeight);
+  min-height: 100vh;
 }
 
 html {
@@ -407,16 +406,14 @@ html {
 
 main {
   min-height: calc(100vh - 400px);
+  padding: calc(var(--lineHeight) * 0.5) calc(var(--lineHeight) * 2);
 }
 
-@media only screen and (max-width: 600px) {
-  body {
-    padding: var(--lineHeight);
-    padding-bottom: calc(var(--lineHeight)*2);
-  }
-
+@media only screen and (max-width: 720px) {
   main {
     min-height: calc(100vh - 200px);
+    padding: var(--lineHeight);
+    padding-bottom: calc(var(--lineHeight)*2);
   }
 }
 
@@ -994,9 +991,12 @@ header:not(.post-header) {
   grid-column-gap: 10px;
   grid-row-gap: var(--rowGap);
   align-items: center;
+  padding: 0 calc(var(--lineHeight) * 2);
   padding-top: calc(var(--lineHeight) * 1);
   border-bottom: 1px solid var(--foreground-color);
-  background: var(--background-color);
+  background: var(--background-color-alpha);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+          backdrop-filter: saturate(180%) blur(20px);
   z-index: 5;
 }
 
@@ -1079,7 +1079,7 @@ header:not(.post-header) .lang:focus {
   border: solid 1px var(--foreground-color);
   transition: 0.4s;
   text-indent: -99999px;
-  background-color: var(--background-color);
+  background-color: var(--background-color-aplha);
 }
 
 .home .sliderToggleActive {
@@ -1176,7 +1176,7 @@ span {
 
 .cta h3 {
   grid-area: 1/1/1/5;
-  font-size: 1.7vw;
+  font-size: 1.75vw;
   margin: 0;
   text-transform: uppercase;
 }
@@ -1202,7 +1202,7 @@ span {
 
 footer {
   text-transform: uppercase;
-  padding: calc(var(--lineHeight) * 1) 0;
+  padding: 0 calc(var(--lineHeight) * 2);
 }
 
 footer strong {
@@ -1423,8 +1423,9 @@ footer p {
 
 @media only screen and (max-width: 720px) {
   header:not(.post-header) {
-    padding-top: calc(var(--lineHeight) * 0.5);
+    padding: calc(var(--lineHeight) * 0.5) var(--lineHeight);
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
   }
 
   .home {
@@ -1461,7 +1462,8 @@ footer p {
   }
 
   footer {
-    border-top: 0 !important;
+    padding: var(--lineHeight);
+    padding-bottom: calc(var(--lineHeight)*2);
   }
 
   footer strong {
@@ -1559,8 +1561,10 @@ footer p {
   }
 }
 
-#index {
-  padding: 0.5rem 0 0;
+#index:not(.div#index) {
+  padding: calc(var(--lineHeight) * 2);
+  padding-bottom: calc(var(--lineHeight) * 3);
+  padding-top: calc(var(--lineHeight) * 0.4);
 }
 
 nav.categories {
@@ -2376,7 +2380,7 @@ button {
   }
 
   nav.categories .categories-pills.active-filters {
-    width: calc(100% + 30px);
+    width: calc(100% + 60px);
     margin: 0 -15px;
     display: flex;
     clear: both;
@@ -2392,6 +2396,10 @@ button {
 
   nav.categories .categories-pills.active-filters::-webkit-scrollbar {
     display: none;
+  }
+
+  .post-video {
+    margin-bottom: 0;
   }
 
   .post-content {
@@ -2416,6 +2424,12 @@ button {
   .post-content .post-gallery {
     grid-area: 2/1/2/3;
     display: inline;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .div.subpage-gallery {
+    padding: 0;
   }
 }
 
@@ -2650,7 +2664,7 @@ main.work-subpage .work-subpage-content .subpage-information .work-legend {
   }
 }
 
-main.about-page {
+.about-page {
   padding-top: 1em;
   display: grid;
   grid-template-columns: repeat(8, 1fr);
@@ -2658,7 +2672,7 @@ main.about-page {
   grid-row-gap: var(--rowGap);
 }
 
-main.about-page .cover-animation {
+.about-page .cover-animation {
   padding-bottom: 1em;
   overflow: hidden;
   position: relative;
@@ -2666,7 +2680,7 @@ main.about-page .cover-animation {
   border-bottom: 1px solid var(--foreground-color);
 }
 
-main.about-page .cover-animation .type-loop {
+.about-page .cover-animation .type-loop {
   position: relative;
   top: 0;
   right: 0;
@@ -2678,17 +2692,17 @@ main.about-page .cover-animation .type-loop {
   box-sizing: border-box;
 }
 
-main.about-page .cover-animation .type-loop span.loop-right {
+.about-page .cover-animation .type-loop span.loop-right {
   -webkit-animation: typeloop-right infinite 20s linear;
           animation: typeloop-right infinite 20s linear;
 }
 
-main.about-page .cover-animation .type-loop span.loop-left {
+.about-page .cover-animation .type-loop span.loop-left {
   -webkit-animation: typeloop-left infinite 20s linear;
           animation: typeloop-left infinite 20s linear;
 }
 
-main.about-page .cover-animation span.cover-heading {
+.about-page .cover-animation span.cover-heading {
   font-size: 16vw;
   line-height: calc(var(--lineHeight) * 7);
   font-weight: 500;
@@ -2698,32 +2712,32 @@ main.about-page .cover-animation span.cover-heading {
   position: relative;
 }
 
-main.about-page .work-subpage-content {
+.about-page .work-subpage-content {
   grid-area: 3/1/3/9;
   padding-bottom: 2em;
 }
 
-main.about-page .work-subpage-content .subpage-information {
+.about-page .work-subpage-content .subpage-information {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-column-gap: 10px;
 }
 
-main.about-page .work-subpage-content .subpage-information hr {
+.about-page .work-subpage-content .subpage-information hr {
   margin: 0;
 }
 
-main.about-page .work-subpage-content .subpage-information .subpage-meta {
+.about-page .work-subpage-content .subpage-information .subpage-meta {
   grid-area: 1/1/3/3;
   display: flex;
   flex-direction: column;
 }
 
-main.about-page .work-subpage-content .subpage-information .subpage-meta p:not(.tags) {
+.about-page .work-subpage-content .subpage-information .subpage-meta p:not(.tags) {
   border-bottom: 1px solid var(--foreground-color);
 }
 
-main.about-page .work-subpage-content .subpage-information .subpage-meta .post-meta {
+.about-page .work-subpage-content .subpage-information .subpage-meta .post-meta {
   text-align: center;
   margin: 0.5em 0;
   border-radius: 99em;
@@ -2735,57 +2749,57 @@ main.about-page .work-subpage-content .subpage-information .subpage-meta .post-m
   max-width: fit-content;
 }
 
-main.about-page .work-subpage-content .subpage-information .subpage-description {
+.about-page .work-subpage-content .subpage-information .subpage-description {
   grid-area: 1/3/1/6;
 }
 
-main.about-page .work-subpage-content .subpage-information .subpage-concept {
+.about-page .work-subpage-content .subpage-information .subpage-concept {
   grid-area: 1/6/1/9;
 }
 
-main.about-page .work-subpage-content .subpage-information .subpage-capabilities {
+.about-page .work-subpage-content .subpage-information .subpage-capabilities {
   grid-area: 2/3/2/6;
 }
 
-main.about-page .work-subpage-content .subpage-information .subpage-capabilities ul,
-main.about-page .work-subpage-content .subpage-information .subpage-capabilities li {
+.about-page .work-subpage-content .subpage-information .subpage-capabilities ul,
+.about-page .work-subpage-content .subpage-information .subpage-capabilities li {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-main.about-page .work-subpage-content .subpage-information .subpage-contact {
+.about-page .work-subpage-content .subpage-information .subpage-contact {
   grid-area: 2/6/2/9;
 }
 
-main.about-page .work-subpage-content .subpage-information .subpage-description,
-main.about-page .work-subpage-content .subpage-information .subpage-concept,
-main.about-page .work-subpage-content .subpage-information .subpage-capabilities,
-main.about-page .work-subpage-content .subpage-information .subpage-contact {
+.about-page .work-subpage-content .subpage-information .subpage-description,
+.about-page .work-subpage-content .subpage-information .subpage-concept,
+.about-page .work-subpage-content .subpage-information .subpage-capabilities,
+.about-page .work-subpage-content .subpage-information .subpage-contact {
   display: flex;
   flex-direction: column;
   padding-bottom: 1rem;
 }
 
-main.about-page .work-subpage-content .subpage-information .subpage-description p,
-main.about-page .work-subpage-content .subpage-information .subpage-concept p,
-main.about-page .work-subpage-content .subpage-information .subpage-capabilities p,
-main.about-page .work-subpage-content .subpage-information .subpage-contact p {
+.about-page .work-subpage-content .subpage-information .subpage-description p,
+.about-page .work-subpage-content .subpage-information .subpage-concept p,
+.about-page .work-subpage-content .subpage-information .subpage-capabilities p,
+.about-page .work-subpage-content .subpage-information .subpage-contact p {
   border-bottom: 1px solid var(--foreground-color);
 }
 
-main.about-page .work-subpage-content .subpage-information .work-images {
+.about-page .work-subpage-content .subpage-information .work-images {
   grid-area: 3/3/3/9;
   padding-top: calc(var(--lineHeight) * 0.5);
 }
 
-main.about-page .work-subpage-content .subpage-information .work-images img {
+.about-page .work-subpage-content .subpage-information .work-images img {
   display: block;
   width: 100%;
   border-radius: 8px;
 }
 
-main.about-page .work-subpage-content .subpage-information .work-legend {
+.about-page .work-subpage-content .subpage-information .work-legend {
   padding-top: 1rem;
   grid-area: 3/3/3/9;
   display: flex;
@@ -2793,7 +2807,7 @@ main.about-page .work-subpage-content .subpage-information .work-legend {
   justify-content: space-between;
 }
 
-main.about-page .work-subpage-content .subpage-information .work-legend h3 {
+.about-page .work-subpage-content .subpage-information .work-legend h3 {
   width: 50%;
 }
 
@@ -2802,65 +2816,65 @@ main.about-page .work-subpage-content .subpage-information .work-legend h3 {
 }
 
 @media (min-width: 320px) and (max-width: 720px) {
-  main.about-page {
+  .about-page {
     padding-top: 1em;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 10px;
   }
 
-  main.about-page .cover-animation {
+  .about-page .cover-animation {
     grid-area: 1/1/1/3;
   }
 
-  main.about-page .cover-animation span.cover-heading {
+  .about-page .cover-animation span.cover-heading {
     font-size: 45vw;
   }
 
-  main.about-page .work-subpage-content {
+  .about-page .work-subpage-content {
     grid-area: 2/1/2/3;
   }
 
-  main.about-page .work-subpage-content .subpage-information {
+  .about-page .work-subpage-content .subpage-information {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-row-gap: calc(var(--rowGap) * 2);
   }
 
-  main.about-page .work-subpage-content .subpage-information .subpage-meta {
+  .about-page .work-subpage-content .subpage-information .subpage-meta {
     grid-area: 1/1/1/3;
   }
 
-  main.about-page .work-subpage-content .subpage-information .subpage-description {
+  .about-page .work-subpage-content .subpage-information .subpage-description {
     grid-area: 2/1/2/3;
   }
 
-  main.about-page .work-subpage-content .subpage-information .subpage-concept {
+  .about-page .work-subpage-content .subpage-information .subpage-concept {
     grid-area: 3/1/3/3;
   }
 
-  main.about-page .work-subpage-content .subpage-information .subpage-capabilities {
+  .about-page .work-subpage-content .subpage-information .subpage-capabilities {
     grid-area: 4/1/4/3;
   }
 
-  main.about-page .work-subpage-content .subpage-information .subpage-contact {
+  .about-page .work-subpage-content .subpage-information .subpage-contact {
     grid-area: 5/1/5/3;
   }
 
-  main.about-page .work-subpage-content .subpage-information .subpage-description p,
-  main.about-page .work-subpage-content .subpage-information .subpage-concept p {
+  .about-page .work-subpage-content .subpage-information .subpage-description p,
+  .about-page .work-subpage-content .subpage-information .subpage-concept p {
     width: 100%;
   }
 
-  main.about-page .work-subpage-content .subpage-information .work-images {
+  .about-page .work-subpage-content .subpage-information .work-images {
     grid-area: 6/1/6/3;
   }
 
-  main.about-page .work-subpage-content .subpage-information .work-legend {
+  .about-page .work-subpage-content .subpage-information .work-legend {
     grid-area: 7/1/7/3;
   }
 
-  main.about-page .work-subpage-content .subpage-information .work-legend h3 {
+  .about-page .work-subpage-content .subpage-information .work-legend h3 {
     width: 50%;
   }
 }
@@ -2937,7 +2951,6 @@ ul.grid li {
 }
 
 .grid {
-  border-top: 1px solid var(--foreground-color);
   --gutter: 10px;
   display: grid;
   grid-gap: var(--gutter);
@@ -3143,7 +3156,6 @@ ul.grid li {
 }
 
 .blog-article-overview {
-  border-top: 1px solid var(--foreground-color);
   padding: calc(var(--lineHeight) * 1) 0;
   display: grid;
   grid-template-columns: repeat(8, 1fr);

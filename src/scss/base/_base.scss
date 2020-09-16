@@ -28,6 +28,7 @@
   --foreground-color-rgb: 0, 0, 0;
   --foreground-color: rgba( var(--foreground-color-rgb));
   --background-color: #F2F2EC;
+  --background-color-alpha: (242 242 236 / 0.9);
   --background-color-elevated:#fbfbf9;
   --background-color-dark: #d5d5cd;
   --primary-color: #FF4D00;
@@ -235,9 +236,7 @@ body {
   transition: .4s;
   scroll-behavior: smooth;
   overflow-x: hidden;
-  padding: calc(var(--lineHeight) * 2);
-  padding-bottom: calc(var(--lineHeight) * 3);
-  padding-top: var(--lineHeight);
+  min-height: 100vh;
 }
 
 html {
@@ -256,21 +255,33 @@ html {
 
 
 main {
-  min-height: calc(100vh - 400px)
+  min-height: calc(100vh - 400px);
+  padding: calc(var(--lineHeight) * 0.5) calc(var(--lineHeight) * 2);
+  
 }
+// padding: calc(var(--lineHeight) * 2);
+//   padding-bottom: calc(var(--lineHeight) * 3);
+//   padding-top: var(--lineHeight);
 
- @media only screen and (max-width: 600px) {
-  body {
+
+//  @media only screen and (max-width: 600px) {
+//   body {
+//     padding: var(--lineHeight);
+//     padding-bottom: calc(var(--lineHeight)*2);
+//   }
+//   main {
+//     min-height: calc(100vh - 200px);
+//   }
+// }
+
+@media only screen and (max-width: 720px) {
+  
+  main {
+    min-height: calc(100vh - 200px);
     padding: var(--lineHeight);
     padding-bottom: calc(var(--lineHeight)*2);
   }
-  main {
-    min-height: calc(100vh - 200px)
-  }
-
 }
-
-
 
 .cursor-container {
   top: 0;

@@ -1,6 +1,6 @@
 <?php snippet('header') ?>
-<main class="about-page">
-    <section class="cover-animation">
+<div class="about-page">
+<section class="cover-animation">
         <div class="type-loop"><span
                 class="cover-heading loop-right">––––<?= $page->heading()->html() ?>––––––––<?= $page->heading()->html() ?>––––––––<?= $page->heading()->html() ?>––––</span>
         </div>
@@ -8,6 +8,9 @@
                 class="cover-heading loop-left">––––<?= $page->subheading()->html() ?>––––––––<?= $page->subheading()->html() ?>––––––––<?= $page->subheading()->html() ?>––––</span>
         </div>
     </section>
+    </div>
+<main>
+    <div class="about-page">
     <section class="work-subpage-content">
         <article class="subpage-information">
             <div class="subpage-meta">
@@ -55,6 +58,7 @@
                 </div>
             </article>
     </section>
+    </div>
 </main>
 
 <?php snippet('footer') ?>

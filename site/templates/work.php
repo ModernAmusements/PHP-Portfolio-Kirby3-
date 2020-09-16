@@ -38,7 +38,7 @@
       </div>
       <div id="barba-wrapper">
         <div class="barba-container one left" data-namespace="index-page">
-          <main id="index">
+          <div class="subpage-gallery" id="index">
             <section class="post-gallery">
               <article class="work-videos">
                 <?php foreach ($page->videos()->template('work-videos') as
@@ -62,9 +62,9 @@
                       <div class="vid-progress-bar" data-value="0" min="0"></div>
                     </div>
                   </div>
-                  <hr>
-                  <p class="small">Exercitation incididunt consectetur culpa ipsum sit eiusmod enim.</p>
                 </div>
+                <hr>
+                  <p class="small">Exercitation incididunt consectetur culpa ipsum sit eiusmod enim.</p>
                 <?php endforeach ?>
               </article>
               <article class="work-images">
@@ -81,7 +81,7 @@
                 </div>
               </article>
             </section>
-          </main>
+          </div>
         </div>
       </div>
     </article>

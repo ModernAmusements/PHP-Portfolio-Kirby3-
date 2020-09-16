@@ -14,7 +14,7 @@
     left: 0%;
   }
 }
-main.about-page {
+.about-page {
   padding-top: 1em;
   display: grid;
   grid-template-columns: repeat(8, 1fr);
@@ -135,7 +135,7 @@ main.about-page {
   width: 50%;
 }
 @media (min-width: 320px) and (max-width: 720px) {
-  main.about-page {
+  .about-page {
     padding-top: 1em;
     display: grid;
     grid-template-columns: repeat(2, 1fr);

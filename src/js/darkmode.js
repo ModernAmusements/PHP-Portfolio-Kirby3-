@@ -22,7 +22,8 @@ const css = `
 
       /*--background-color: #111;
       --foreground-color-rgb: 255,255,255;*/
-
+      
+      --background-color-alpha: rgb(23,23,29, 0.9);
       --background-color: #17171d;
       --background-color-elevated: #121217;
       --foreground-color-rgb: 242,240,236;

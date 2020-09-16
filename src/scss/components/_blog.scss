@@ -59,7 +59,6 @@ ul.grid {
   }
 }
 .grid {
-  border-top: 1px solid var(--foreground-color);
   --gutter: 10px;
   display: grid;
   grid-gap: var(--gutter);

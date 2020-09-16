@@ -1,4 +1,5 @@
 <?php snippet('header') ?>
+<main>
 <article class="blog-article">
   <section class="blog-article-overview">
   <div class="slider">
@@ -54,4 +55,5 @@
   </footer>
   <?php snippet('blog/prevnext') ?>
 </article>
+</main>
 <?php snippet('blog/footer') ?>

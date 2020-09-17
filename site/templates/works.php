@@ -122,13 +122,13 @@
             <article class="work-images">
               <div class="slider">
               <?php if ($cover = $work->cover()) : ?>
-                <img src="<?= $cover->url() ?>"
+                <img data-lazy="<?= $cover->url() ?>"
                      alt="<?= $cover->alt() ?>"
                 />
                 <?php endif ?>
                 <?php foreach ($work->images()->template('work-image') as
                   $image): ?>
-                <img src="<?= $image->url() ?>" 
+                <img data-lazy="<?= $image->url() ?>" 
                      alt="<?= $cover->alt() ?>"
                 />
                 <?php endforeach ?>

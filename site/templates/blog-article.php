@@ -4,11 +4,11 @@
   <section class="blog-article-overview">
   <div class="slider">
       <?php if ($cover = $page->cover()) : ?>
-      <img src="<?= $cover->crop(854, 480, ['quality' => 50])->url() ?>" alt="<?= $cover->alt() ?>" />
+      <img class="lazy" data-lazy="<?= $cover->crop(854, 480, ['quality' => 100])->url() ?>" alt="<?= $cover->alt() ?>" />
       <?php endif ?>
       <?php foreach ($page->images()->template('blog-article-image') as $image):
       ?>
-      <img src="<?= $image->crop(854, 480, ['quality' => 50])->url() ?>" />
+      <img class="lazy" data-lazy="<?= $image->crop(854, 480, ['quality' => 100])->url() ?>" />
       <?php endforeach ?>
     </div>
     <div class="col-2">

@@ -1,8 +1,8 @@
 <article class="blog-article-excerpt">
   <a href="<?= $article->url() ?>">
     <div class="image">
-      <?php if ($cover = $article->cover()): ?>
-      <?= $cover->crop(300, 300, ['quality' => 50]) ?>
+      <?php if ($cover = $article->cover()->crop(600, 600, ['quality' => 100])): ?>
+        <img class="lazy" data-src="<?= $cover->url() ?>" />
       <?php endif ?>
       <?php if ($article->pills()->isNotEmpty()): ?>
       <div

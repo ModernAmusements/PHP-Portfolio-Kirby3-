@@ -74,6 +74,7 @@ ul.grid {
   flex-direction: column;
 }
 .blog-article-excerpt .image {
+  overflow: hidden;
   position: relative;
   --w: 9;
   --h: 9;
@@ -98,14 +99,13 @@ ul.grid {
     height: 100%;
     object-fit: cover;
     border: 0;
-    border-radius: 4px;
-    transform: scale(1);
+    border-radius: 4px 4px 0 0 ;
+    filter: saturate(180%) blur(20px);
   }
 }
 .blog-article-excerpt:hover {
-  cursor: crosshair;
   .image img {
-    -webkit-filter: invert(100%);
+    filter: saturate(100%) blur(0px);
     transition: 0.4s;
   }
 }

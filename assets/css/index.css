@@ -453,6 +453,16 @@ main {
   left: 1px;
 }
 
+.lazy {
+  opacity: 0;
+  transition: all 500ms;
+}
+
+.blur {
+  opacity: 1;
+  transition: all 500ms;
+}
+
 /* block */
 
 address,
@@ -2969,6 +2979,7 @@ ul.grid li {
 }
 
 .blog-article-excerpt .image {
+  overflow: hidden;
   position: relative;
   --w: 9;
   --h: 9;
@@ -2999,16 +3010,14 @@ ul.grid li {
   -o-object-fit: cover;
      object-fit: cover;
   border: 0;
-  border-radius: 4px;
-  transform: scale(1);
-}
-
-.blog-article-excerpt:hover {
-  cursor: crosshair;
+  border-radius: 4px 4px 0 0;
+  -webkit-filter: saturate(180%) blur(20px);
+          filter: saturate(180%) blur(20px);
 }
 
 .blog-article-excerpt:hover .image img {
-  -webkit-filter: invert(100%);
+  -webkit-filter: saturate(100%) blur(0px);
+          filter: saturate(100%) blur(0px);
   transition: 0.4s;
 }
 

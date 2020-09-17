@@ -18,7 +18,6 @@
     <link rel="shortcut icon" href="/images/favicons/favicon.ico" type="image/x-icon">
     <?= js('assets/js/jquery.js') ?>
     <?= css(['assets/css/index.css']) ?>
-    <?= css(['assets/lightbox/lightbox.css']) ?>
 </head>
 <div id="cursor" class="cursor-container">
       <p class="cursor-text"></p>

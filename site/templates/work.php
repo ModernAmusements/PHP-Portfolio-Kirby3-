@@ -2,13 +2,10 @@
 ?>
 <?php snippet('header') ?>
 <main class="work-subpage">
-  <?php if ($cover = $page->cover()): ?>
+  <?php if ($cover = $page->cover()->resize(1080)): ?>
   <section class="cover">
-    <a href="<?= $cover->url() ?>" data-lightbox class="img">
-      <?= $cover ?>
-    </a>
-    <time class=""><?= $page->date()->toDate('d F Y') ?></time>
-    </div>
+    <img class="lazy" data-src="<?= $cover->url() ?>" />
+  <time class=""><?= $page->date()->toDate('d F Y') ?></time>
   </section>
   <?php endif ?>
   <section class="work-subpage-content">
@@ -69,10 +66,11 @@
               </article>
               <article class="work-images">
                 <div class="slider">
-                  <?php foreach ($page->images()->template('work-image') as
-              $image): ?>
-                  <img src="<?= $image->url() ?>" alt="<?= $cover->alt() ?>" />
+                <?php if ($image = $page->image()->resize(1080)): ?>
+                  <?php foreach ($page->images()->template('work-image') as $image): ?>
+                  <img data-lazy="<?= $image->url() ?>" alt="<?= $cover->alt() ?>" />
                   <?php endforeach ?>
+                  <?php endif ?>
                 </div>
                 <div class="text-counter"></div>
                 <hr>

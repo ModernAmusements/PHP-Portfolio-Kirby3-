@@ -16,8 +16,8 @@
     <p class="sub-heading"><?= $data->headingC3() ?></p>
     <?php endif ?>
 
-    <?php if ($data->imageBuilder()->isNotEmpty()): ?>
-    <?= $data->imageBuilder()->crop(500, ['quality' => 50])->toFile() ?>
+    <?php if ($imageBuilder = $data->imageBuilder()->toFile()->resize(720)): ?>
+      <img class="lazy" data-src="<?= $imageBuilder->url() ?>" />
     <?php endif ?>
 
     <?php if ($data->textC3()->isNotEmpty()): ?>

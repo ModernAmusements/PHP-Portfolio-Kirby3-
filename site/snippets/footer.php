@@ -284,6 +284,11 @@
     var s = { modal: null, phone: null };
   });
 </script>
+<script>
+  $('.lazy').slick({
+  lazyLoad: 'anticipated',
+});
+</script>
 <footer>
     <section class="cta">
         <h3>Do You NEED A Visual Translator for you Project?</h3>
@@ -430,6 +435,7 @@
         </article>
     </section>
 </footer>
+<?= js('assets/intersectionObserver.js') ?>
 <?= js('assets/canvasCursor.js') ?>
 <?= js('assets/site.js') ?>
 <?= js('assets/js/libs.js') ?>

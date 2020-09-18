@@ -2,6 +2,72 @@ Title: FFF-Corp
 
 ----
 
+Description: Creativity is no longer spontaneous. Find out how our method achieves outstanding strategy and design so as to boost innovation in your company.
+
+----
+
+Additionaldescription: At Lúcid the digital product is an important part of the global customer experience, it is their virtual point of contact with the service
+
+----
+
+Behanceid: FFF-Corp
+
+----
+
+Image:
+
+- >
+  butt-studio-chloe_2_call-me_020-3877-0644.jpg
+
+----
+
+Social:
+
+- 
+  platform: Behance
+  link: https://www.behance.net/fnagel1992256a
+- 
+  platform: Instagram
+  link: >
+    https://www.instagram.com/fffcorp/feed/?hl=de
+
+----
+
+Email: hello@fffcorp.de
+
+----
+
+Emailpress: press@fffcorp.de
+
+----
+
+Phone: (+31) 6 46 79 52 91
+
+----
+
+Popupimage:
+
+- >
+  butt-studio-timedance_a_call-me_020-3877-0644.jpg
+
+----
+
+Dateformat: 
+
+----
+
+Twitter: 
+
+----
+
+Instagram: 
+
+----
+
+Subheading: 
+
+----
+
 Text:
 
 I´m a multidisciplinary designer constantly exploring different possibilities, working across disciplines
@@ -27,14 +93,6 @@ United Standard
 Kitsune
 Crack Magazine
 Kaleidoscope
-
-----
-
-Phone: 
-
-----
-
-Email: 
 
 ----
 

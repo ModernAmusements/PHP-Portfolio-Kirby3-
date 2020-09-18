@@ -9,6 +9,8 @@ mix.autoload({
 mix.js([
     'src/js/swiper.min.js',
     'src/js/darkmode.js',
+    'src/js/intersectionObserver.js',
+    'src/js/canvasCursor.js',
     'src/js/mobile-nav.js',
     'src/js/modal.js',
     'src/js/work-page.js',

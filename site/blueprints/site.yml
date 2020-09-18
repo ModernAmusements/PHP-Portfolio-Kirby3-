@@ -13,6 +13,53 @@ tabs:
             status: listed
             parent: site
             info: "{{ page.description }}"
-  info:
-    label: Info          
-          
+  options:
+    columns:
+      - width: 1/2
+        fields:
+          description:
+            type: textarea
+            icon: title
+          additionalDescription:
+            type: textarea
+            icon: title  
+          behanceID:
+            type: text
+            icon: title
+          image:
+            type: files
+            layout: list
+            template: work-image
+            info: "{{ file.dimensions }}"
+            image:
+              ratio: 5/4
+              cover: true
+            size: small  
+      - width: 1/2
+        fields:
+          social:
+            label: Profiles
+            type: structure
+            fields:
+              platform:
+                type: text
+              link:
+                type: url
+          email:
+            type: email
+            width: 1/2
+          emailPress:
+            type: email
+            width: 1/2
+          phone:
+            type: tel
+            width: 1/2
+          popUpImage:
+            type: files
+            layout: list
+            template: work-image
+            info: "{{ file.dimensions }}"
+            image:
+              ratio: 5/4
+              cover: true
+            size: small   

@@ -221,7 +221,7 @@ a:visited {
 
 /* document */
 html {
-  font-family: var(--sansFont), -system-ui, system-ui, sans-serif;
+  font-family: var(--sansFont), Helvetica, Arial, sans-serif;
   font-size: var(--fontSize);
   line-height: var(--lineHeight);
   background: var(--background-color);
@@ -237,6 +237,12 @@ body {
   scroll-behavior: smooth;
   overflow-x: hidden;
   min-height: 100vh;
+}
+
+body.touch-device {
+  .cursor-container {
+    display: none;
+  }
 }
 
 html {
@@ -295,30 +301,26 @@ main {
   transition: width .2s;
   border-radius: 99em;
   overflow: hidden;
-  font-size: var(--ms-0)
+  font-size: var(--ms-0);
+  .cursor-text {
+    color: var(--background-color);
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 7000;
+    transition: 190ms opacity;
+    padding: 0 0.5em;
+    text-transform: uppercase;
+    path {
+      fill: var(--background-color);
+    }
+    svg {
+      position: relative;
+      width: 1em;
+        top: 2.5px;
+        left: 1px;
+    }
+  }
 }
-
-.cursor-text {
-  color: var(--background-color);
-  white-space: nowrap;
-  pointer-events: none;
-  z-index: 7000;
-  transition: 190ms opacity;
-  padding: 0 0.5em;
-  text-transform: uppercase;
-}
-
-.cursor-text path {
-  fill: var(--background-color);
-}
-
-.cursor-text svg {
-  position: relative;
-  width: 1em;
-    top: 2.5px;
-    left: 1px;
-}
-
 
 .lazy {
   opacity: 0;

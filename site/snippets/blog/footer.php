@@ -130,9 +130,8 @@
         </article>
     </section>
 </footer>
-<?= js('assets/intersectionObserver.js') ?>
-<?= js('assets/canvasCursor.js') ?>
-<?= js('assets/site.js') ?>
+
+
 <?= js('assets/js/libs.js') ?>
 <?= js('assets/js/main.js') ?>
 </body>

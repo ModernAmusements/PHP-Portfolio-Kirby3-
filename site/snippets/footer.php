@@ -1,5 +1,117 @@
-
-  <?php if($success): ?>
+<!-- FOOTER -->
+<footer>
+    <section class="cta">
+        <h3>Do You NEED A Visual Translator for you Project?</h3>
+        <svg width="402" height="42" viewBox="0 0 402 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M397 23.5002H0V18.5002H397V23.5002Z" />
+            <path d="M398.506 17.6775L401.335 20.5059L380.828 41.012L378 38.1836L398.506 17.6775Z" />
+            <path d="M401.335 20.5059L398.506 23.3345L378 2.82843L380.828 0L401.335 20.5059Z" />
+        </svg>
+        <div class="buttons">
+            <a href="#fffModal" category="header-navigation" action="home" label="consultation-modal" rel="modal:open">
+                <button class="btn-1 btn-cta consultation">HIT ME UP</button>
+            </a>
+        </div>
+    </section>
+    <section id="mobile">
+        <article class="information">
+            <div class="row-1">
+                <strong><p class="medium"><?= date('Y') ?></p></strong>
+            </div>
+            <div class="row-2">
+                <a><p>Develop</p></a>
+                <a><p>Shady Tawfik</p></a>
+                <p>All Rights Reserved©</p>
+            </div>
+        </article>
+        <article class="information-1">
+            <div class="row-1">
+                <strong><p class="medium">Follow Me</p></strong>
+            </div>
+            <div class="row-2">
+            <?php foreach ($site->social()->toStructure() as $profile): ?>
+                <a href="<?= $profile->link() ?>"><p><?= $profile->platform() ?></p></a>
+            <?php endforeach ?>
+            </div>
+        </article>
+        <article class="information-2">
+            <div class="row-1">
+                <strong> <p class="medium">Work with Me</p> </strong>
+            </div>
+            <div class="row-2">
+                <a> <p><?= Html::email($site->email()) ?></p></a>
+            </div>
+        </article>
+        <article class="information-3">
+            <div class="row-1">
+                <strong> <p class="medium">Write about me</p></strong>
+            </div>
+            <div class="row-2">
+                <a><p><?= Html::email($site->emailPress()) ?></p></a>
+            </div>
+        </article>
+        <article class="information-4">
+            <div class="row-1">
+                <strong><p class="medium">Legal</p></strong>
+            </div>
+            <div class="row-2">
+              <a><p>Datenschutz</p></a>
+              <a><p>Impressum</p></a>
+              <a><p><?= $site->title() ?></p></a>
+            </div>
+        </article>
+    </section>
+    <section id="desktop">
+        <article class="information">
+            <div class="row-1">
+                <strong><p class="medium"><?= date('Y') ?></p></strong>
+            </div>
+            <div class="row-2">
+                <a><p>Develop</p></a>
+                <a><p>Shady Tawfik</p></a>
+                <p>All Rights Reserved©</p>
+            </div>
+        </article>
+        <article class="information-1">
+            <div class="row-1">
+                <strong><p class="medium">Follow me</p></strong>
+            </div>
+            <div class="row-2">
+              <?php foreach ($site->social()->toStructure() as $profile): ?>
+                  <a href="<?= $profile->link() ?>" target="_blank"><p><?= $profile->platform() ?></p></a>
+              <?php endforeach ?>
+            </div>
+            <br>
+            <strong>
+                <p class="medium">Legal</p>
+            </strong>
+            </div>
+            <div class="row-2">
+              <a><p>Datenschutz</p></a>
+              <a><p>Impressum</p></a>
+            </div>
+        </article>
+        <article class="information-2">
+            <div class="row-1">
+                <strong> <p class="medium">Work With Me</p> </strong>
+            </div>
+            <div class="row-2">
+              <a><p><?= Html::email($site->email()) ?></p></a>
+              <a><p><?= Html::tel($site->phone()) ?></p></a>
+            </div>
+            <br>
+            <strong>
+                <p class="medium">Write About Me</p>
+            </strong>
+            </div>
+            <div class="row-2">
+              <a><p><?= Html::email($site->emailPress()) ?></p></a>
+            </div>
+        </article>
+    </section>
+</footer>
+<!-- POP-UP MODAL -->
+<?php if($success): ?>
   <div class="overlay">
   <div id="confirmModal" class="modal show">
     <img src="/2019/img/skeumins/letter.svg" alt="" />
@@ -11,12 +123,9 @@
     >
   </div>
   </div>
-  
   <?php else: ?>
-
   <?php if (isset($alert['error'])): ?>
   <div><?= $alert['error'] ?></div>
-
   <?php endif ?>
   <div class="modal-wrapper">
     <div id="fffModal" class="modal">
@@ -44,7 +153,17 @@
         </ul>
     </div>
       <div class="form-img">
-        <img src="media/pages/blog/headline/286952144-1599824012/butt-studio-timedance_a_call-me_020-3877-0644.jpg" />
+
+      <?php if ($popUpImage = $site->popUpImage()->resize(600)): ?>
+
+        <img class="lazy" data-src="<?= $popUpImage->url() ?>" />
+
+
+      <?php endif ?>
+
+
+
+        <img class="lazy" data-src="media/pages/blog/headline/286952144-1599824012/butt-studio-timedance_a_call-me_020-3877-0644.jpg" />
       </div>
       <div class="form">
         <form
@@ -57,7 +176,6 @@
             <label for="website">Website <abbr title="required">*</abbr></label>
             <input type="website" id="website" name="website" />
           </div>
-
           <div class="form-parsley firstname">
             <label for="firstName">Vorname*</label>
             <input
@@ -68,7 +186,6 @@
             data-parsley-pattern-message="Ungültig (0-9,+,-,() nicht erlaubt)."
             value="<?= $data['firstName'] ?? '' ?>" required="">
           </div>
-
           <div class="form-parsley lastname">
             <label for="lastName">Nachname*</label>
             <input
@@ -169,6 +286,7 @@
     </div>
   </div>
   <?php endif ?>
+<!-- POP-UP SCRIPT -->
 <script>
   (function() {
     if (window.localStorage && window.sessionStorage) {
@@ -284,161 +402,13 @@
     var s = { modal: null, phone: null };
   });
 </script>
+<!-- LAZY-LOADER FOR SLIDER -->
 <script>
   $('.lazy').slick({
   lazyLoad: 'anticipated',
 });
 </script>
-<footer>
-    <section class="cta">
-        <h3>Do You NEED A Visual Translator for you Project?</h3>
-        <svg width="402" height="42" viewBox="0 0 402 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M397 23.5002H0V18.5002H397V23.5002Z" />
-            <path d="M398.506 17.6775L401.335 20.5059L380.828 41.012L378 38.1836L398.506 17.6775Z" />
-            <path d="M401.335 20.5059L398.506 23.3345L378 2.82843L380.828 0L401.335 20.5059Z" />
-        </svg>
-        <div class="buttons">
-            <a href="#fffModal" category="header-navigation" action="home" label="consultation-modal" rel="modal:open">
-                <button class="btn-1 btn-cta consultation">
-                    HIT ME UP
-                </button>
-            </a>
-        </div>
-    </section>
-    <section id="mobile">
-        <article class="information">
-            <div class="row-1">
-                <strong><p class="medium"><?= date('Y') ?></p></strong>
-            </div>
-            <div class="row-2">
-                <a><p>Develop</p></a>
-                <a><p>Shady Tawfik</p></a>
-                <p>All Rights Reserved©</p>
-            </div>
-        </article>
-        <article class="information-1">
-            <div class="row-1">
-                <strong><p class="medium">Follow Me</p></strong>
-            </div>
-            <div class="row-2">
-                <a><p>Instagram</p></a>
-                <a><p>Behance</p></a>
-            </div>
-        </article>
-        <article class="information-2">
-            <div class="row-1">
-                <strong>
-                    <p class="medium">Work with Me</p>
-                </strong>
-            </div>
-            <div class="row-2">
-                <a>
-                    <p>info@FFFCORP.de</p>
-                </a>
-            </div>
-        </article>
-        <article class="information-3">
-            <div class="row-1">
-                <strong>
-                    <p class="medium">Write about me</p>
-                </strong>
-            </div>
-            <div class="row-2">
-                <a>
-                    <p>press@FFFCORP.de</p>
-                </a>
-            </div>
-        </article>
-        <article class="information-4">
-            <div class="row-1">
-                <strong>
-                    <p class="medium">Legal</p>
-                </strong>
-            </div>
-            <div class="row-2">
-                <a href="<?= url() ?>"><?= $site->title() ?><p>Datenschutz</p></a>
-                <a>
-                    <p>Impressum</p>
-                </a>
-            </div>
-        </article>
-    </section>
-    <section id="desktop">
-        <article class="information">
-            <div class="row-1">
-                <strong>
-                    <p class="medium">2020</p>
-                </strong>
-            </div>
-            <div class="row-2">
-                <a>
-                    <p>Develop</p>
-                </a>
-                <a>
-                    <p>Shady Tawfik</p>
-                </a>
-                <p>All Rights Reserved©</p>
-            </div>
-        </article>
-        <article class="information-1">
-            <div class="row-1">
-                <strong>
-                    <p class="medium">Follow me</p>
-                </strong>
-            </div>
-            <div class="row-2">
-                <a>
-                    <p>Instagram</p>
-                </a>
-                <a>
-                    <p>Behance</p>
-                </a>
-            </div>
-            <br>
-            <strong>
-                <p class="medium">Legal</p>
-            </strong>
-            </div>
-            <div class="row-2">
-                <a>
-                    <p>Datenschutz</p>
-                </a>
-                <a>
-                    <p>Impressum</p>
-                </a>
-            </div>
-        </article>
-        <article class="information-2">
-            <div class="row-1">
-                <strong>
-                    <p class="medium">Work With Me</p>
-                </strong>
-            </div>
-            <div class="row-2">
-                <a>
-                    <p>Info@fffcorp.de</p>
-                </a>
-                <a>
-                    <p>@fffcorp</p>
-                </a>
-            </div>
-            <br>
-            <strong>
-                <p class="medium">Write About Me</p>
-            </strong>
-            </div>
-            <div class="row-2">
-                <a>
-                    <p>Press@fffcorp.de</p>
-                </a>
-            </div>
-        </article>
-    </section>
-</footer>
-<?= js('assets/intersectionObserver.js') ?>
-<?= js('assets/canvasCursor.js') ?>
-<?= js('assets/site.js') ?>
 <?= js('assets/js/libs.js') ?>
-<?= js('assets/js/main.js') ?>
+<?= js('assets/js/main.js', ['async' => false, 'defer' => true ]) ?>
 </body>
 </html>

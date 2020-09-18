@@ -154,7 +154,7 @@
     </div>
       <div class="form-img">
 
-      <?php if ($popUpImage = $site->popUpImage()->resize(600)): ?>
+      <?php if ($popUpImage = $site->popUpImage()->toFile()->resize(600)): ?>
 
         <img class="lazy" data-src="<?= $popUpImage->url() ?>" />
 
@@ -163,7 +163,6 @@
 
 
 
-        <img class="lazy" data-src="media/pages/blog/headline/286952144-1599824012/butt-studio-timedance_a_call-me_020-3877-0644.jpg" />
       </div>
       <div class="form">
         <form

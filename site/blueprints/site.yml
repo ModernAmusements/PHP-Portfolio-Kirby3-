@@ -29,7 +29,6 @@ tabs:
           image:
             type: files
             layout: list
-            template: work-image
             info: "{{ file.dimensions }}"
             image:
               ratio: 5/4
@@ -57,7 +56,6 @@ tabs:
           popUpImage:
             type: files
             layout: list
-            template: work-image
             info: "{{ file.dimensions }}"
             image:
               ratio: 5/4

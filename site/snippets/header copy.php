@@ -2,7 +2,6 @@
 ?>
 <!doctype html>
 <html lang="de" id="invertme">
-
 <head>
     <!-- Meta Styling -->
     <meta charset="utf-8">
@@ -23,7 +22,6 @@
     <!-- Stylesheets CSS-->
     <?= css('assets/css/index.css', true) ?>
 </head>
-
 <body>
     <header>
         <a class="home">
@@ -36,13 +34,12 @@
         </a>
         <menu class="desktop-nav">
             <nav>
-                <?php $items = $site->children(); $items->prepend('home', page('home'));
+            <?php $items = $site->children(); $items->prepend('home', page('home'));
                   if ($items->isNotEmpty()) :?>
                 <?php foreach ($items->listed() as $item) : ?>
-                <a <?php e($item->isOpen(), 'class="active"') ?>
-                    href="<?= $item->url() ?>"><?= $item->title()->html() ?></a>
+                    <a <?php e($item->isOpen(), 'class="active"') ?> href="<?= $item->url() ?>"><?= $item->title()->html() ?></a>
                 <?php endforeach ?>
-                <?php endif ?>
+            <?php endif ?>
             </nav>
         </menu>
         <div class="langToggle">
@@ -50,15 +47,15 @@
             <a href="#" class="lang">EN</a>
         </div>
         <menu class="mobile-display">
-            <span id="mobileIcon" class="menuicon">
-                <label class="menuicon-label">
-                    <span class="menuicon-bread menuicon-bread-top">
-                        <span class="menuicon-bread-crust menuicon-bread-crust-top"></span>
-                    </span>
-                    <span class="menuicon-bread menuicon-bread-bottom">
-                        <span class="menuicon-bread-crust menuicon-bread-crust-bottom"></span>
-                    </span>
-                </label>
+            <span id="burger">
+                <svg viewBox="0 0 50 50">
+                    <g>
+                        <line class="burger-menu stroke-open" x1="49.5" y1="25" x2="0.5" y2="25" />
+                        <line class="burger-menu stroke-open" x1="0.5" y1="25" x2="49.5" y2="25" />
+                    </g>
+                    <line class="burger-menu stroke-close" x1="0.5" y1="8.5" x2="49.5" y2="8.5" />
+                    <line class="burger-menu stroke-close" x1="0.5" y1="41.5" x2="49.5" y2="41.5" />
+                </svg>
             </span>
         </menu>
         <nav id="mobile-nav">
@@ -67,10 +64,9 @@
                 $items = $pages->listed();
                 if ($items->isNotEmpty()) :
                 ?>
-                <?php foreach ($items as $item) : ?>
-                <a <?php e($item->isOpen(), 'class="active"') ?>
-                    href="<?= $item->url() ?>"><?= $item->title()->html() ?> </a>
-                <?php endforeach ?>
+                    <?php foreach ($items as $item) : ?>
+                        <a <?php e($item->isOpen(), 'class="active"') ?> href="<?= $item->url() ?>"><?= $item->title()->html() ?> </a>
+                    <?php endforeach ?>
                 <?php endif ?>
                 <div class="navLang">
                     <a href="#" class="lang">DE</a>

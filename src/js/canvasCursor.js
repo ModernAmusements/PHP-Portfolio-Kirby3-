@@ -30,14 +30,16 @@ const btnPlay = `<svg id="btnPlay" viewBox="0 0 16 16" xmlns="http://www.w3.org/
 
 
 function animate() {
+    if (innerWidth > 768) {
     requestAnimationFrame(animate);
     drawCursor(mousePos)
+  }
 };
 
 function drawCursor(mouse) {
     let x = mouse.x;
     let y = mouse.y;
-    if (innerWidth > 1024) {
+    if (innerWidth > 768) {
     const ratio = (mouse.x / window.innerWidth);
     document.body.style.fontVariationSettings = `'tong' ${100 + (ratio * 100)}`
 
@@ -50,7 +52,7 @@ function drawCursor(mouse) {
 function initCursor() {
     cursor.el = document.querySelector('.cursor-container')
     cursor.textEl = document.querySelector('.cursor-text')
-    if (innerWidth > 1024) {
+    if (innerWidth > 768) {
     let activeElements = document.querySelectorAll('[data-cursorText]');
     activeElements.forEach(el => {
         el.addEventListener('mouseover', (e) => {

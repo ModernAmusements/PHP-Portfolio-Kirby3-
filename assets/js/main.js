@@ -11038,8 +11038,10 @@ var arrowLeft = "<svg id=\"Layer_1\" data-name=\"Layer 1\" xmlns=\"http://www.w3
 var btnPlay = "<svg id=\"btnPlay\" viewBox=\"0 0 16 16\" xmlns=\"http://www.w3.org/2000/svg\"><path transform=\"translate(4.000000, 2.000000)\" fill=\"currentColor\" d=\"M0.783,0.088 C0.630002114,-0.0170415713 0.431410671,-0.0286996621 0.267173326,0.0577189663 C0.102935981,0.144137595 7.5196355e-05,0.314414227 -8.8817842e-16,0.5 L-8.8817842e-16,11.5 C0.00034089524,11.6856642 0.103531693,11.855852 0.268,11.942 C0.339356371,11.9801972 0.419063363,12.0001239 0.5,12 C0.601058826,11.9999404 0.699727531,11.9692589 0.783,11.912 L8.783,6.412 C8.91865945,6.31871934 8.9997051,6.16463526 8.9997051,6 C8.9997051,5.83536474 8.91865945,5.68128066 8.783,5.588 L0.783,0.088 Z\"></path></svg>";
 
 function animate() {
-  requestAnimationFrame(animate);
-  drawCursor(mousePos);
+  if (innerWidth > 768) {
+    requestAnimationFrame(animate);
+    drawCursor(mousePos);
+  }
 }
 
 ;
@@ -11048,7 +11050,7 @@ function drawCursor(mouse) {
   var x = mouse.x;
   var y = mouse.y;
 
-  if (innerWidth > 1024) {
+  if (innerWidth > 768) {
     var ratio = mouse.x / window.innerWidth;
     document.body.style.fontVariationSettings = "'tong' ".concat(100 + ratio * 100);
     cursor.el.style.transform = "translateX(calc(".concat(x, "px - 50%)) translateY(").concat(y, "px)");
@@ -11061,7 +11063,7 @@ function initCursor() {
   cursor.el = document.querySelector('.cursor-container');
   cursor.textEl = document.querySelector('.cursor-text');
 
-  if (innerWidth > 1024) {
+  if (innerWidth > 768) {
     var activeElements = document.querySelectorAll('[data-cursorText]');
     activeElements.forEach(function (el) {
       el.addEventListener('mouseover', function (e) {
@@ -11487,7 +11489,7 @@ targets.forEach(lazyLoad);
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {var $mobileNav = $('#mobile-nav');
-var $bugerMenu = $('#burger');
+var $bugerMenu = $('#mobileIcon');
 $bugerMenu.click(function () {
   $bugerMenu.toggleClass('open');
   $mobileNav.slideToggle('medium', function () {
@@ -14471,7 +14473,7 @@ function handlePosts(baseElement) {
       });
     });
   }), post.forEach(function (item, baseElement) {
-    var openSvg = item.querySelector('svg');
+    var openSvg = item.querySelector('label');
     var o = item.querySelector('video');
     item.children[0].addEventListener('mouseenter', function (baseElement) {
       item.children[0].children[2] && !item.classList.contains('toggle') && (item.children[0].children[2].style.left = baseElement.clientX + 'px', item.children[0].children[2].style.top = baseElement.clientY + 'px');

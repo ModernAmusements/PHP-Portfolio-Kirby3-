@@ -110,6 +110,10 @@
         </article>
     </section>
 </footer>
+<!-- Canvas Cursor -->
+<div id="cursor" class="cursor-container">
+    <p class="cursor-text"></p>
+</div>
 <!-- POP-UP MODAL -->
 <?php if($success): ?>
   <div class="overlay">
@@ -404,7 +408,7 @@
 <!-- LAZY-LOADER FOR SLIDER -->
 <script>
   $('.lazy').slick({
-  lazyLoad: 'anticipated',
+  lazyLoad: 'ondemand',
 });
 </script>
 <?= js('assets/js/libs.js') ?>

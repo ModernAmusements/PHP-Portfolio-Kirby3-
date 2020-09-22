@@ -28,7 +28,7 @@
   --foreground-color-rgb: 0, 0, 0;
   --foreground-color: rgba( var(--foreground-color-rgb));
   --background-color: #F2F2EC;
-  --background-color-alpha: (242 242 236 / 0.9);
+  --background-color-alpha: rgba(242,242,236, 0.9);
   --background-color-elevated:#fbfbf9;
   --background-color-dark: #d5d5cd;
   --primary-color: #FF4D00;
@@ -221,7 +221,7 @@ a:visited {
 
 /* document */
 html {
-  font-family: var(--sansFont), Helvetica, Arial, sans-serif;
+  font-family: var(--sansFont), "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-size: var(--fontSize);
   line-height: var(--lineHeight);
   background: var(--background-color);
@@ -241,7 +241,7 @@ body {
 
 body.touch-device {
   .cursor-container {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -251,7 +251,7 @@ html {
 
 * {
   box-sizing: border-box;
-  cursor: none;
+  cursor: mouse;
 }
 
 *:before,
@@ -287,6 +287,9 @@ main {
     padding: var(--lineHeight);
     padding-bottom: calc(var(--lineHeight)*2);
   }
+  .cursor-container {
+    display: none !important;
+}
 }
 
 .cursor-container {
@@ -324,10 +327,10 @@ main {
 
 .lazy {
   opacity: 0;
-  transition: all 500ms;
+  transition: all 1ms;
 }
 .blur {
   opacity: 1.0;
-  transition: all 500ms;
+  transition: all 1ms;
 }
 

@@ -102,7 +102,7 @@ function handlePosts(baseElement) {
         }
       ),
       post.forEach(function (item, baseElement) {
-        var openSvg = item.querySelector('svg');
+        var openSvg = item.querySelector('label');
         var o = item.querySelector('video');
         item.children[0].addEventListener('mouseenter', function (baseElement) {
           item.children[0].children[2] &&

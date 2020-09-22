@@ -6,11 +6,12 @@
     <main id="index">
       <nav class="categories">
         <div class="categories-title">
-          <strong>
-           <a>Filter:</a>
-          </strong>
+          <p class="small">Filter:</p>
+          <svg viewBox="0 0 23 19" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11.5001 19L0.674805 0.25L22.3254 0.250002L11.5001 19Z" />
+          </svg>
         </div>
-        <ul class="categories-pills">
+        <div class="categories-pills">
           <li class="category-li active">
             <button class="button category-button" data-slug="all">All</button>
           </li>
@@ -37,7 +38,7 @@
               Experimental
             </button>
           </li>
-        </ul>
+        </div>
       </nav>
       <?php foreach ($page->children()->listed()->sortBy('date', 'desc') as
       $work) : ?>
@@ -58,23 +59,19 @@
               ><p class="small"><?= $work->date()->toDate('Y') ?></p></a
             >
           </div>
+          <div>
           <label class="post-header-toggle">
               <span class="ac-ln-menucta-chevron"></span>
           </label>
+            </div>
         </header>
         <section class="post-content">
           <article data-cursortext="arrowRight" class="work-description">
-          
-            <p class="medium">Block A</p>
             <hr>
             <p class="right small">Datum: <?= $work->date()->toDate() ?></p>
-               <?php foreach ($work->tags()->split() as $tag): ?>
-            
-            <p class="medium"><?= $tag ?></p>
-     
-            <?php endforeach ?>
+            <p class="medium">Block A</p>
             <hr>
-            <p class="small"><?= $work->description() ?></p>
+            <p class="large"><?= $work->description() ?></p>
             </article>
             <article class="work-subpage-link">
             <a class="" href="<?= $work->url() ?>"> 

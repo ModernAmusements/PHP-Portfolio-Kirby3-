@@ -1,6 +1,6 @@
 
 var $mobileNav = $('#mobile-nav');
-var $bugerMenu = $('#burger');
+var $bugerMenu = $('#mobileIcon');
 
 $bugerMenu.click(function () {
   $bugerMenu.toggleClass('open')

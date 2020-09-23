@@ -119,4 +119,11 @@
     </symbol>
 
 
+         <symbol id="ctaArrow" viewBox="0 0 402 42" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M397 23.5002H0V18.5002H397V23.5002Z" />
+            <path d="M398.506 17.6775L401.335 20.5059L380.828 41.012L378 38.1836L398.506 17.6775Z" />
+            <path d="M401.335 20.5059L398.506 23.3345L378 2.82843L380.828 0L401.335 20.5059Z" />
+        </symbol>
+
+
 </svg>

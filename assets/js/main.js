@@ -11350,7 +11350,9 @@ var aol = $.browser.aol(),
 var inverted = localStorage.getItem('inverted');
 var invertedToggle = document.querySelector('#circle');
 var slider = document.querySelector('.sliderToggle');
-var css = "\n    html {\n        --pointer - move - line - color: #03f;\n    }\n    html.inverted {\n        --pointer - move - line - color: #f3a;\n\n      /*--background-color: #101214;\n      --foreground-color-rgb: 250,255,240;*/\n\n      /*--background-color: #101214;\n      --foreground-color-rgb: 250,255,240;*/\n\n      /*--background-color: #131310;\n      --foreground-color-rgb: 210,230,255;*/\n\n      /*--background-color: #111;\n      --foreground-color-rgb: 255,255,255;*/\n      \n      --background-color-alpha: rgb(23,23,29, 0.9);\n      --background-color: #17171d;\n      --background-color-elevated: #121217;\n      --foreground-color-rgb: 242,240,236;\n      --background-color-dark: #000;\n\n      --foreground-color-a: 0.8;\n      --base-grid-color1: rgba(240,155,255, 0.1);\n      --base-grid-color2: rgba(240,155,255, 0.05);\n    }\n    html.size-mode-relative {\n      --fontSize: calc(100vw / 80);\n      --hrThickness: 0.17rem;\n    }\n    .settings c:nth-child(2n+2) {\n        font - feature - settings:'ss02' 1;\n      user-select:none;\n    }\n    .baselineBeacon {\n        height: var(--baseline);\n      overflow: hidden;\n      display: none;\n      position: absolute;\n    }\n    .pointerMoveLine {\n        height: 1px;\n      pointer-events: none;\n      visibility: hidden;\n      position: absolute;\n      left:0; top:0; right:0;\n      background: var(--pointer-move-line-color);\n      transform: translate3d(0,0,0);\n      opacity:0.4;\n    }\n    .pointerMoveLine.active {visibility:visible; }\n    .pointerMoveLine.pressed {\n        opacity:0.8;\n      box-shadow:\n        0 1px 0 0 var(--pointer-move-line-color),\n        0 -1px 0 0 var(--pointer-move-line-color);\n    }\n    ".trim();
+var homeLogo = document.querySelector('.home-logo');
+var tapevent = 'PointerEvent';
+var css = "\n    html {\n        --pointer - move - line - color: #03f;\n    }\n    html.inverted {\n        --pointer - move - line - color: #f3a;\n\n      /*--background-color: #101214;\n      --foreground-color-rgb: 250,255,240;*/\n\n      /*--background-color: #101214;\n      --foreground-color-rgb: 250,255,240;*/\n\n      /*--background-color: #131310;\n      --foreground-color-rgb: 210,230,255;*/\n\n      /*--background-color: #111;\n      --foreground-color-rgb: 255,255,255;*/\n      \n      --background-color-alpha: rgb(23,23,29, 0.7);\n      --background-color: #17171d;\n      --background-color-elevated: #121217;\n      --foreground-color-rgb: 242,240,236;\n      --background-color-dark: #000;\n\n      --foreground-color-a: 0.8;\n      --base-grid-color1: rgba(240,155,255, 0.1);\n      --base-grid-color2: rgba(240,155,255, 0.05);\n    }\n    html.size-mode-relative {\n      --fontSize: calc(100vw / 80);\n      --hrThickness: 0.17rem;\n    }\n    .settings c:nth-child(2n+2) {\n        font - feature - settings:'ss02' 1;\n      user-select:none;\n    }\n    .baselineBeacon {\n        height: var(--baseline);\n      overflow: hidden;\n      display: none;\n      position: absolute;\n    }\n    .pointerMoveLine {\n        height: 1px;\n      pointer-events: none;\n      visibility: hidden;\n      position: absolute;\n      left:0; top:0; right:0;\n      background: var(--pointer-move-line-color);\n      transform: translate3d(0,0,0);\n      opacity:0.4;\n    }\n    .pointerMoveLine.active {visibility:visible; }\n    .pointerMoveLine.pressed {\n        opacity:0.8;\n      box-shadow:\n        0 1px 0 0 var(--pointer-move-line-color),\n        0 -1px 0 0 var(--pointer-move-line-color);\n    }\n    ".trim();
 var style = document.createElement('style');
 style.appendChild(document.createTextNode(css));
 document.head.appendChild(style);
@@ -11379,7 +11381,7 @@ if (inverted === 'enabled') {
   enableInverted();
 }
 
-invertedToggle.addEventListener('click', function () {
+homeLogo.addEventListener('click', function () {
   invertedToggle.classList.toggle('darkmodeSlide');
   slider.classList.toggle('sliderToggleActive');
   inverted = localStorage.getItem('inverted');
@@ -11392,7 +11394,6 @@ invertedToggle.addEventListener('click', function () {
     updateInvertedLabel();
   }
 });
-var tapevent = 'PointerEvent' in window ? 'pointerdown' : 'click';
 
 function bindTapableOption(msgname, fn) {
   var label = document.getElementById(msgname + '-msg');
@@ -11405,48 +11406,15 @@ function updateInvertedLabel() {
 }
 
 function toggleInvertedMode() {
-  invertedToggle.classList.toggle('darkmodeSlide');
-  slider.classList.toggle('sliderToggleActive');
-  inverted = localStorage.getItem('inverted');
-
   if (inverted !== 'enabled') {
-    enableInverted();
     updateInvertedLabel();
   } else {
-    disableInverted();
     updateInvertedLabel();
   }
 }
 
-bindTapableOption('inverted', toggleInvertedMode); // function handleKeyPress (key) {
-//   switch (key) {
-//     case 'i':
-//     case 'I':
-//       toggleInvertedMode()
-//       return true
-//   }
-//   return false
-// }
-// document.addEventListener(
-//   'keypress',
-//   (ev) => {
-//     if (!ev.metaKey && !ev.ctrlKey && !ev.altKey && handleKeyPress(ev.key)) {
-//       ev.preventDefault()
-//       ev.stopPropagation()
-//     }
-//   },
-//   { passive: false, capture: true }
-// )
-
-updateInvertedLabel(); // var $filterMenu = $('.categories-mobile')
-// var $filterMenuContent = $('.categories-pills-mobile')
-// $filterMenu.click(function () {
-//   $filterMenuContent.slideToggle('medium', function () {
-//     if ($filterMenuContent.is(':visible')) {
-//       $filterMenuContent.css('display', 'flex')
-//     } else { $filterMenuContent.css('display', 'none') }
-//   })
-// })
+bindTapableOption('inverted', toggleInvertedMode);
+updateInvertedLabel();
 
 /***/ }),
 

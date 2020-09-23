@@ -2,21 +2,21 @@
 <footer>
     <section class="cta">
         <h3>Do You NEED A Visual Translator for you Project?</h3>
-        <svg width="402" height="42" viewBox="0 0 402 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg viewBox="0 0 402 42" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M397 23.5002H0V18.5002H397V23.5002Z" />
             <path d="M398.506 17.6775L401.335 20.5059L380.828 41.012L378 38.1836L398.506 17.6775Z" />
             <path d="M401.335 20.5059L398.506 23.3345L378 2.82843L380.828 0L401.335 20.5059Z" />
         </svg>
         <div class="buttons">
             <a href="#fffModal" category="header-navigation" action="home" label="consultation-modal" rel="modal:open">
-                <button class="btn-1 btn-cta consultation">HIT ME UP</button>
+                <button class="btn-large btn-cta consultation">HIT ME UP</button>
             </a>
         </div>
     </section>
     <section id="mobile">
         <article class="information">
             <div class="row-1">
-                <strong><p class="medium"><?= date('Y') ?></p></strong>
+                <strong><p><?= date('Y') ?></p></strong>
             </div>
             <div class="row-2">
                 <a><p>Develop</p></a>
@@ -26,7 +26,7 @@
         </article>
         <article class="information-1">
             <div class="row-1">
-                <strong><p class="medium">Follow Me</p></strong>
+                <strong><p>Follow Me</p></strong>
             </div>
             <div class="row-2">
             <?php foreach ($site->social()->toStructure() as $profile): ?>
@@ -36,7 +36,7 @@
         </article>
         <article class="information-2">
             <div class="row-1">
-                <strong> <p class="medium">Work with Me</p> </strong>
+                <strong> <p>Work with Me</p> </strong>
             </div>
             <div class="row-2">
                 <a> <p><?= Html::email($site->email()) ?></p></a>
@@ -44,7 +44,7 @@
         </article>
         <article class="information-3">
             <div class="row-1">
-                <strong> <p class="medium">Write about me</p></strong>
+                <strong> <p>Write about me</p></strong>
             </div>
             <div class="row-2">
                 <a><p><?= Html::email($site->emailPress()) ?></p></a>
@@ -52,7 +52,7 @@
         </article>
         <article class="information-4">
             <div class="row-1">
-                <strong><p class="medium">Legal</p></strong>
+                <strong><p>Legal</p></strong>
             </div>
             <div class="row-2">
               <a><p>Datenschutz</p></a>
@@ -64,7 +64,7 @@
     <section id="desktop">
         <article class="information">
             <div class="row-1">
-                <strong><p class="medium"><?= date('Y') ?></p></strong>
+                <strong><p><?= date('Y') ?></p></strong>
             </div>
             <div class="row-2">
                 <a><p>Develop</p></a>
@@ -74,7 +74,7 @@
         </article>
         <article class="information-1">
             <div class="row-1">
-                <strong><p class="medium">Follow me</p></strong>
+                <strong><p>Follow me</p></strong>
             </div>
             <div class="row-2">
               <?php foreach ($site->social()->toStructure() as $profile): ?>
@@ -83,7 +83,7 @@
             </div>
             <br>
             <strong>
-                <p class="medium">Legal</p>
+                <p>Legal</p>
             </strong>
             </div>
             <div class="row-2">
@@ -117,15 +117,12 @@
 <!-- POP-UP MODAL -->
 <?php if($success): ?>
   <div class="overlay">
-  <div id="confirmModal" class="modal show">
-    <img src="/2019/img/skeumins/letter.svg" alt="" />
-    <h4>Vielen Dank!</h4>
-    <p><?= $success ?></p>
-    <p>Deine E-Mail-Adresse wurde<br />erfolgreich bestätigt.</p>
-    <a href="<?= $site->url() ?>" rel="modal:close" class="btn center"
-      >Fenster schließen</a
-    >
-  </div>
+    <div id="confirmModal" class="modal show">
+      <img class="confirm-img" src="content/2_works/20190906_nike-techpack/b1-960x640.jpg" alt="" />
+      <h3>Thank You!</h3>
+      <p><?= $success ?></br>Deine E-Mail-Adresse wurde erfolgreich bestätigt.</p>
+      <a href="<?= $site->url() ?>" rel="modal:close">close</a>
+    </div>
   </div>
   <?php else: ?>
   <?php if (isset($alert['error'])): ?>
@@ -135,6 +132,7 @@
     <div id="fffModal" class="modal">
       <a href="" class="close" rel="modal:close"></a>
       <div class="list">
+      <h3>WORK WITH ME</h3>
         <ul class="checklist">
             <li>
                 <svg>
@@ -155,18 +153,11 @@
                 Erhalte Antworten auf alle deine Fragen
             </li>
         </ul>
-    </div>
+      </div>
       <div class="form-img">
-
       <?php if ($popUpImage = $site->popUpImage()->toFile()->resize(600)): ?>
-
         <img class="lazy" data-src="<?= $popUpImage->url() ?>" />
-
-
       <?php endif ?>
-
-
-
       </div>
       <div class="form">
         <form
@@ -258,11 +249,11 @@
           </div>
           <small
             >Mit dem Abschicken meiner Daten erkläre ich meine
-            <a href="#disclaimerModal" rel="modal:open">Einwilligung</a> zur
-            Kontaktaufnahme durch Shady Tawfik.
+            <a class="accept" href="#disclaimerModal" rel="modal:open">Einwilligung</a> zur
+            Kontaktaufnahme durch Florian Nagel.
           </small>
           <button
-            class="btn-1 consultation-modal"
+            class="btn-large consultation-modal"
             name="submit"
             value="validate"
             type="submit"
@@ -274,18 +265,34 @@
     </div>
     <div id="disclaimerModal" class="modal">
       <a href="" class="close" rel="modal:close"></a>
-      <h4>Einwilligungserklärung</h4>
-      <p>
-        Mit der Eingabe deiner Daten erklärst du dich damit einverstanden, dass
-        wir dich per Telefon und E-Mailkontaktieren dürfen.
-        <br />
-        Wir geben deine Daten nicht an Dritte weiter. Wir verwenden deine Daten
-        ausschließlich zur Kontaktaufnahme verwenden. Du kannst der
-        Kontaktaufnahme jederzeit widersprechen. Am besten per Mail an
-        info@fffcorp.de. Weitere Informationen zum Datenschutz findest du in
-        unserer Datenschutzerklärung.
-      </p>
-      <a href="" rel="modal:close" class="btn">Close</a>
+      <h2>Einwilligungserklärung</h2>
+      <ul class="checklist">
+        <li>
+            <svg>
+                <use xlink:href="images/icons/icons.svg#iconCheckmark"></use>
+            </svg>
+            Wir geben deine Daten nicht an Dritte weiter.
+        </li>
+        <li>
+            <svg>
+                <use xlink:href="images/icons/icons.svg#iconCheckmark"></use>
+            </svg>
+            Wir verwenden deine Daten ausschließlich zu Beratungs- und Informationszwecken über eine Zusammenarbeit mit FFF-Corp.
+        </li>
+        <li>
+            <svg>
+                <use xlink:href="images/icons/icons.svg#iconCheckmark"></use>
+            </svg>
+            Du kannst der Kontaktaufnahme jederzeit widersprechen. Am besten per Mail an <a class="accept" href="mailto:support@ottonova.de">info@fff-corp.de</a>.
+        </li>
+        <li>
+            <svg>
+                <use xlink:href="images/icons/icons.svg#iconCheckmark"></use>
+            </svg>
+            Weitere Informationen zum Datenschutz findest du in unserer <a class="accept" href="/datenschutz" target="_blank">Datenschutzerklärung</a>.
+        </li>
+    </ul>
+      <a href="" rel="modal:close" class="btn-normal">Ok</a>
     </div>
   </div>
   <?php endif ?>

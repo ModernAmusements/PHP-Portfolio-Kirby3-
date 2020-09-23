@@ -26,7 +26,7 @@
 
 <body>
     <header>
-        <a class="home">
+        <a class="home-logo">
             <label class="switch">
                 <span class="sliderToggle">
                     <div id="circle"></div>
@@ -49,6 +49,7 @@
             <a href="#" class="lang">DE</a>
             <a href="#" class="lang">EN</a>
         </div>
+        <!-- Mobile Menu -->
         <menu class="mobile-display">
             <span id="mobileIcon" class="menuicon">
                 <label class="menuicon-label">

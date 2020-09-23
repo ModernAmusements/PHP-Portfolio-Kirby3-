@@ -1,8 +1,9 @@
 // DarkMode
-
 let inverted = localStorage.getItem('inverted')
 const invertedToggle = document.querySelector('#circle')
 const slider = document.querySelector('.sliderToggle')
+const homeLogo = document.querySelector('.home-logo')
+const tapevent = 'PointerEvent'
 
 const css = `
     html {
@@ -23,7 +24,7 @@ const css = `
       /*--background-color: #111;
       --foreground-color-rgb: 255,255,255;*/
       
-      --background-color-alpha: rgb(23,23,29, 0.9);
+      --background-color-alpha: rgb(23,23,29, 0.7);
       --background-color: #17171d;
       --background-color-elevated: #121217;
       --foreground-color-rgb: 242,240,236;
@@ -93,7 +94,7 @@ if (inverted === 'enabled') {
   enableInverted()
 }
 
-invertedToggle.addEventListener('click', () => {
+homeLogo.addEventListener('click', () => {
   invertedToggle.classList.toggle('darkmodeSlide')
   slider.classList.toggle('sliderToggleActive')
   inverted = localStorage.getItem('inverted')
@@ -107,8 +108,6 @@ invertedToggle.addEventListener('click', () => {
   }
 })
 
-const tapevent = 'PointerEvent' in window ? 'pointerdown' : 'click'
-
 function bindTapableOption (msgname, fn) {
   const label = document.getElementById(msgname + '-msg')
   label && label.parentElement.addEventListener(tapevent, fn)
@@ -119,51 +118,14 @@ function updateInvertedLabel () {
   setLabel('inverted-msg', on ? 'NNNCorp™' : 'FFFCorp™')
 }
 function toggleInvertedMode () {
-  invertedToggle.classList.toggle('darkmodeSlide')
-  slider.classList.toggle('sliderToggleActive')
-  inverted = localStorage.getItem('inverted')
-
   if (inverted !== 'enabled') {
-    enableInverted()
     updateInvertedLabel()
   } else {
-    disableInverted()
     updateInvertedLabel()
   }
 }
 
 bindTapableOption('inverted', toggleInvertedMode)
 
-// function handleKeyPress (key) {
-//   switch (key) {
-//     case 'i':
-//     case 'I':
-//       toggleInvertedMode()
-//       return true
-//   }
-//   return false
-// }
-
-// document.addEventListener(
-//   'keypress',
-//   (ev) => {
-//     if (!ev.metaKey && !ev.ctrlKey && !ev.altKey && handleKeyPress(ev.key)) {
-//       ev.preventDefault()
-//       ev.stopPropagation()
-//     }
-//   },
-//   { passive: false, capture: true }
-// )
-
 updateInvertedLabel()
 
-// var $filterMenu = $('.categories-mobile')
-// var $filterMenuContent = $('.categories-pills-mobile')
-
-// $filterMenu.click(function () {
-//   $filterMenuContent.slideToggle('medium', function () {
-//     if ($filterMenuContent.is(':visible')) {
-//       $filterMenuContent.css('display', 'flex')
-//     } else { $filterMenuContent.css('display', 'none') }
-//   })
-// })

@@ -59,37 +59,33 @@
             >
           </div>
           <label class="post-header-toggle">
-              <span class="ac-ln-menucta-chevron"></span>
+              <span class="post-chevron"></span>
           </label>
         </header>
         <section class="post-content">
           <article data-cursortext="arrowRight" class="work-description">
-          
             <p class="medium">Block A</p>
             <hr>
             <p class="right small">Datum: <?= $work->date()->toDate() ?></p>
                <?php foreach ($work->tags()->split() as $tag): ?>
             
             <p class="medium"><?= $tag ?></p>
-     
             <?php endforeach ?>
             <hr>
             <p class="small"><?= $work->description() ?></p>
             </article>
             <article class="work-subpage-link">
             <a class="" href="<?= $work->url() ?>"> 
-            
-            <span class="more">
-            Learn More
-                <svg>
+            <span class="more">Learn More
+              <svg class="link-arrow">
                 <use xlink:href="images/icons/icons-16px.svg#btnArrow">
-                </svg>
-              </span>
-              </a> 
+              </svg>
+            </span>
+            </a> 
             <hr class="half">
             </article>
         <section class="post-gallery">
-        <article data-cursortext="btnPlay" class="work-videos">
+          <article data-cursortext="btnPlay" class="work-videos">
               <?php foreach ($work->videos()->template('work-videos') as
               $image): ?>
               <div class="video-wrapper post-video" data-state="not-init">

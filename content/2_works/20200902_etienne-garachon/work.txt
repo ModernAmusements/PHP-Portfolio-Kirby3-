@@ -2,7 +2,7 @@ Title: Étienne Garachon
 
 ----
 
-Client: Apple
+Date: 2020-09-02
 
 ----
 
@@ -14,11 +14,7 @@ Description: Nike World HQ asked Golgotha to work with photographer Daniel Sannw
 
 ----
 
-Contributors:
-
-Shady Tawfik
-David Rudnick
-Tilman Kunkel
+Contributors: Shady Tawfik, David Rudnick
 
 ----
 
@@ -26,4 +22,4 @@ Concept: James gilt als eigenwilliger und etwas verschrobener Exzentriker. Er gi
 
 ----
 
-Date: 2020-09-02
+Client: Apple

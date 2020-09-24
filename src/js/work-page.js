@@ -102,6 +102,7 @@ function handlePosts(baseElement) {
         }
       ),
       post.forEach(function (item, baseElement) {
+        var fontSizeTransition = item.querySelector('.post-title');
         var openSvg = item.querySelector('label');
         var o = item.querySelector('video');
         item.children[0].addEventListener('mouseenter', function (baseElement) {
@@ -124,6 +125,7 @@ function handlePosts(baseElement) {
             ) {
               document.body.classList.add('post-toggled');
               openSvg.classList.add('toggle');
+              fontSizeTransition.classList.add('toggle');
               var categoriesTitle = post.find(function (baseElement) {
                 return baseElement.classList.contains('toggle');
               });
@@ -131,14 +133,15 @@ function handlePosts(baseElement) {
                 categoriesTitle.classList.remove('toggle'),
                   categoriesTitle.removeAttribute('style');
                   categoriesTitle.firstElementChild.lastChild.previousElementSibling.classList.remove('toggle');
+                  categoriesTitle.firstElementChild.firstElementChild.classList.remove('toggle');
                 var categories = categoriesTitle.querySelector('video');
                 categories &&
                   (categories.pause(), (categories.currentTime = 0));
               }
-              (item.dataset.height = item.children[1].offsetHeight + 50 + 'px'),
+              (item.dataset.height = item.children[1].offsetHeight + 125 + 'px'),
                 item.classList.add('toggle'),
                 (item.style.height = item.dataset.height);
-            } else item.classList.remove('toggle'), openSvg.classList.remove('toggle'), item.removeAttribute('style'), document.body.classList.remove('post-toggled'), o && (o.pause(), (o.currentTime = 0));
+            } else item.classList.remove('toggle'), fontSizeTransition.classList.remove('toggle'), openSvg.classList.remove('toggle'), item.removeAttribute('style'), document.body.classList.remove('post-toggled'), o && (o.pause(), (o.currentTime = 0));
             setTimeout(function () {
               item.children[0].scrollIntoView({
                 behavior: 'smooth',

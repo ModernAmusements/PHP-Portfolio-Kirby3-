@@ -9,7 +9,7 @@
         </svg>
         <div class="buttons">
             <a href="#fffModal" category="header-navigation" action="home" label="consultation-modal" rel="modal:open">
-                <button class="btn-large btn-cta consultation">HIT ME UP</button>
+                <button class="btn-large consultation">HIT ME UP</button>
             </a>
         </div>
     </section>

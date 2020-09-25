@@ -33,6 +33,7 @@
   --background-color-dark: #d5d5cd;
   --primary-color: #ff4d00;
   --primary-color-hover: #bd3900;
+  --primary-color-hover-light: #ff3300;
   --overlay: rgba(0, 0, 0, 0.5);
   --error-form: #f91153;
   --sub-headline: #7b7b81;
@@ -45,6 +46,7 @@
   --thumbHeight: 12px;
   --thumbTouchHeight: 48px;
   --sliderToggleComponentBg: #f4f4f4;
+  --shadow-dark: rgba(143, 54, 2, 0.3);
 }
 @supports (font-variation-settings: normal) {
   :root {
@@ -240,6 +242,10 @@ body.touch-device {
   .cursor-container {
     display: none !important;
   }
+}
+
+body.modal-show {
+  position: fixed;
 }
 
 html {

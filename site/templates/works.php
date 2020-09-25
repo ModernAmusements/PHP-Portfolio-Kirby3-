@@ -49,14 +49,14 @@
           data-cursortext="<?= $work->title() ?>" class="post-header">
           <h1 class="post-title"><?= $work->title() ?></h1>
           <div class="post-meta-information">
+            <a class="post-meta"
+              ><p class="small"><?= $work->date()->toDate('Y') ?></p></a
+            >
             <?php foreach ($work->tags()->split() as $tag): ?>
             <a class="post-meta"
               ><p class="small"><?= $tag ?></p></a
             >
             <?php endforeach ?>
-            <a class="post-meta"
-              ><p class="small"><?= $work->date()->toDate('Y') ?></p></a
-            >
           </div>
           <label class="post-header-toggle">
               <span class="post-chevron"></span>

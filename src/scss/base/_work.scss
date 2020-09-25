@@ -52,6 +52,7 @@ nav.categories-mobile {
 .toggle.post-header:before {
   opacity: 0;
 }
+
 .post-header {
   display: grid;
   grid-column-gap: 10px;
@@ -59,10 +60,13 @@ nav.categories-mobile {
   grid-template-columns: repeat(8, 1fr);
   overflow: hidden;
   height: 5em;
+  transition: height 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
   .post-title {
     display: grid;
     grid-column: 1 / 5;
     margin: 0;
+    font-size: var(--h1-size);
+    transition: font-size 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
   }
   .post-meta-information {
     grid-column: 5 / 8;
@@ -159,6 +163,19 @@ nav.categories-mobile {
     color: var(--background-color);
   }
 }
+
+.post.toggle {
+  .post-header {
+    height: 8rem;
+    transition: height 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+}
+.post-title.toggle {
+  padding-top: var(--line-height);
+  font-size: 3.5rem;
+  transition: font-size 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
 .toggle.post-title {
   white-space: initial;
 }
@@ -287,7 +304,7 @@ nav.categories-mobile {
   position: absolute;
   height: 100%;
   width: 50%;
-  z-index: 1000;
+  z-index: 10;
   top: 0;
 }
 .slider__next {
@@ -685,7 +702,7 @@ button {
   }
   .post-title.toggle {
     padding-top: var(--line-height);
-    font-size: 3.5rem;
+    font-size: 3rem;
     transition: font-size 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
   }
   .post {

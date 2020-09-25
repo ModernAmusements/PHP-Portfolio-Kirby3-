@@ -138,7 +138,7 @@ function handlePosts(baseElement) {
                 categories &&
                   (categories.pause(), (categories.currentTime = 0));
               }
-              (item.dataset.height = item.children[1].offsetHeight + 125 + 'px'),
+              (item.dataset.height = item.children[1].offsetHeight + 110 + 'px'),
                 item.classList.add('toggle'),
                 (item.style.height = item.dataset.height);
             } else item.classList.remove('toggle'), fontSizeTransition.classList.remove('toggle'), openSvg.classList.remove('toggle'), item.removeAttribute('style'), document.body.classList.remove('post-toggled'), o && (o.pause(), (o.currentTime = 0));

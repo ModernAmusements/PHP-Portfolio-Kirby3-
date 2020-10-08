@@ -175,46 +175,7 @@ function handlePostCloseButton(e) {
   });
 }
 
-function handleSliders(e) {
-  var t = Array.from(e.querySelectorAll('.slider'));
-  t.length > 0 &&
-    t.forEach(function (n) {
-      var e = n.nextElementSibling;
-      if (e) {
-        var t = e.children[0];
-        var i = e.children[1];
-        var o = n.nextElementSibling.nextElementSibling;
-        t.addEventListener('click', function () {
-          var e = n.querySelector('.active');
-          e.previousElementSibling
-            ? e.previousElementSibling.classList.add('active')
-            : n.lastElementChild.classList.add('active'),
-            e.classList.remove('active');
-          var t = o.querySelector('.active');
-          t.previousElementSibling
-            ? t.previousElementSibling.classList.add('active')
-            : o.lastElementChild.classList.add('active'),
-            t.classList.remove('active');
-        }),
-          i.addEventListener('click', function () {
-            var e = n.querySelector('.active');
-            e.nextElementSibling
-              ? e.nextElementSibling.classList.add('active')
-              : n.children[0].classList.add('active'),
-              e.classList.remove('active');
-            var t = o.querySelector('.active');
-            t.nextElementSibling
-              ? t.nextElementSibling.classList.add('active')
-              : o.children[0].classList.add('active'),
-              t.classList.remove('active');
-          }),
-          isTouch &&
-            swipedetect(n, function (e) {
-              e == 'right' ? t.click() : e == 'left' && i.click();
-            });
-      }
-    });
-}
+
 
 function handlePageVideos(e) {
   document.createElement('video').canPlayType &&
@@ -379,7 +340,6 @@ var Indexview = Barba.BaseView.extend({
     }
     handlePosts(e),
       handlePageVideos(e),
-      handleSliders(e),
       handlePostCloseButton(e);
   },
   onEnterCompleted: function () {},

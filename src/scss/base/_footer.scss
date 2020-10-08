@@ -10,13 +10,14 @@
   padding: calc(var(--lineHeight) * 0.5) 0;
   h3 {
     grid-column: 1 / 5;
-    font-size: 1.75vw;
+    font-size: 1.7vw;
     margin: 0;
     white-space: nowrap;
   }
   svg {
     grid-column: 5 / 7;
     fill: var(--foreground-color);
+    width: 100%;
   }
   .buttons {
     grid-column: 7 / 9;

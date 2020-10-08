@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "input-range-scss": "^1.5.2",
-    "jquery": "^3.5.1"
+    "jquery": "^3.5.1",
+    "gsap": "^3.2.6"
   }
 }

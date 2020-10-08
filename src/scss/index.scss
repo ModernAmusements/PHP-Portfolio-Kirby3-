@@ -1,7 +1,6 @@
 @charset "UTF-8";
 
 @import
-  'base/fonts',
   'base/base',
   'base/header',
   'base/footer',
@@ -12,6 +11,7 @@
 
 
 @import
+  'components/bauhausCanvas',
   'components/blog',
   'components/menuMobile',
   'components/blogSubpage',

@@ -121,7 +121,7 @@
       <img class="confirm-img" src="content/2_works/20190906_nike-techpack/b1-960x640.jpg" alt="" />
       <h3>Thank You!</h3>
       <p><?= $success ?></br>Deine E-Mail-Adresse wurde erfolgreich bestätigt.</p>
-      <a href="<?= $site->url() ?>" rel="modal:close">close</a>
+      <a href="<?= $page->url() ?>" rel="modal:close">close</a>
     </div>
   </div>
   <?php else: ?>
@@ -161,7 +161,7 @@
       </div>
       <div class="form">
         <form
-          action="<?= $site->url() ?>"
+          action="<?= $page->url() ?>"
           method="post"
           data-consultation="sales"
           data-parsley-validate
@@ -411,12 +411,6 @@
         .trigger('change');
     var s = { modal: null, phone: null };
   });
-</script>
-<!-- LAZY-LOADER FOR SLIDER -->
-<script>
-  $('.lazy').slick({
-  lazyLoad: 'ondemand',
-});
 </script>
 <?= js('assets/js/libs.js') ?>
 <?= js('assets/js/main.js', ['async' => false, 'defer' => true ]) ?>

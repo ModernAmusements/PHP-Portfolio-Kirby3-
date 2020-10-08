@@ -47,7 +47,7 @@ columns:
           pills:
             type: text
           author:
-            type: text
+            type: tags
           tags:
             type: tags
             options: query

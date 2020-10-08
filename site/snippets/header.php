@@ -21,7 +21,10 @@
     <!-- jQeury Async-->
     <?= js('assets/js/jquery.js', true) ?>
     <!-- Stylesheets CSS-->
+    <link rel="stylesheet" href="https://use.typekit.net/yxr4ufi.css">
     <?= css('assets/css/index.css', true) ?>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+
 </head>
 
 <body>

@@ -42,6 +42,8 @@ main.work-subpage {
           background: var(--foreground-color);
           color: var(--background-color);
           max-width: fit-content;
+          max-width:  intrinsic;         /* Safari/WebKit */
+          max-width:  -moz-max-content;  /* Firefox/Gecko */
         }
       }
       .subpage-description {

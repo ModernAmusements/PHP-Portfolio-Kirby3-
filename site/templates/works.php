@@ -1,4 +1,5 @@
 <?php
+
 ?>
 <?php snippet('header') ?>
 <div id="barba-wrapper">
@@ -120,14 +121,16 @@
             </article>
             <article class="work-images">
               <div class="slider">
-              <?php if ($cover = $work->cover()) : ?>
+              <?php if ($cover = $work->cover()->resize(1080)) : ?>
                 <img data-lazy="<?= $cover->url() ?>"
                      alt="<?= $cover->alt() ?>"
                 />
                 <?php endif ?>
+
+                
                 <?php foreach ($work->images()->template('work-image') as
                   $image): ?>
-                <img data-lazy="<?= $image->url() ?>" 
+                <img data-lazy="<?= $image->resize(1080)->url() ?>" 
                      alt="<?= $cover->alt() ?>"
                 />
                 <?php endforeach ?>

@@ -1,9 +1,9 @@
 // DarkMode
-let inverted = localStorage.getItem('inverted')
-const invertedToggle = document.querySelector('#circle')
-const slider = document.querySelector('.sliderToggle')
-const homeLogo = document.querySelector('.home-logo')
-const tapevent = 'PointerEvent'
+let inverted = localStorage.getItem('inverted');
+const invertedToggle = document.querySelector('#circle');
+const slider = document.querySelector('.sliderToggle');
+const homeLogo = document.querySelector('.home-logo');
+const tapevent = 'PointerEvent';
 
 const css = `
     html {
@@ -65,67 +65,81 @@ const css = `
         0 1px 0 0 var(--pointer-move-line-color),
         0 -1px 0 0 var(--pointer-move-line-color);
     }
-    `.trim()
-const style = document.createElement('style')
-style.appendChild(document.createTextNode(css))
-document.head.appendChild(style)
-const link = document.createElement('link')
-link.rel = 'stylesheet'
-document.head.appendChild(link)
+    `.trim();
+const style = document.createElement('style');
+style.appendChild(document.createTextNode(css));
+document.head.appendChild(style);
+const link = document.createElement('link');
+link.rel = 'stylesheet';
+document.head.appendChild(link);
 
-function setLabel (id, value) {
-  const label = document.getElementById(id)
-  label && (label.innerText = value)
+function setLabel(id, value) {
+  const label = document.getElementById(id);
+  label && (label.innerText = value);
 }
 
 const enableInverted = () => {
-  document.documentElement.classList.add('inverted')
-  invertedToggle.classList.add('darkmodeSlide')
-  slider.classList.add('sliderToggleActive')
-  localStorage.setItem('inverted', 'enabled')
-}
+  document.documentElement.classList.add('inverted');
+  invertedToggle.classList.add('darkmodeSlide');
+  slider.classList.add('sliderToggleActive');
+  localStorage.setItem('inverted', 'enabled');
+};
 
 const disableInverted = () => {
-  document.documentElement.classList.remove('inverted')
-  localStorage.setItem('inverted', null)
-}
+  document.documentElement.classList.remove('inverted');
+  localStorage.setItem('inverted', null);
+};
 
 if (inverted === 'enabled') {
-  enableInverted()
+  enableInverted();
 }
+
+// muss verbessert werden ÜBERGANG
+$('#dark').click(function() {
+  invertedToggle.classList.toggle('darkmodeSlide');
+  slider.classList.toggle('sliderToggleActive');
+  inverted = localStorage.getItem('inverted');
+
+  if (inverted !== 'enabled') {
+    enableInverted();
+    updateInvertedLabel();
+  } else {
+    disableInverted();
+    updateInvertedLabel();
+  }
+});
 
 homeLogo.addEventListener('click', () => {
-  invertedToggle.classList.toggle('darkmodeSlide')
-  slider.classList.toggle('sliderToggleActive')
-  inverted = localStorage.getItem('inverted')
+  invertedToggle.classList.toggle('darkmodeSlide');
+  slider.classList.toggle('sliderToggleActive');
+  inverted = localStorage.getItem('inverted');
 
   if (inverted !== 'enabled') {
-    enableInverted()
-    updateInvertedLabel()
+    enableInverted();
+    updateInvertedLabel();
   } else {
-    disableInverted()
-    updateInvertedLabel()
+    disableInverted();
+    updateInvertedLabel();
   }
-})
+});
 
-function bindTapableOption (msgname, fn) {
-  const label = document.getElementById(msgname + '-msg')
-  label && label.parentElement.addEventListener(tapevent, fn)
+function bindTapableOption(msgname, fn) {
+  const label = document.getElementById(msgname + '-msg');
+  label && label.parentElement.addEventListener(tapevent, fn);
 }
 
-function updateInvertedLabel () {
-  const on = document.documentElement.classList.contains('inverted')
-  setLabel('inverted-msg', on ? 'NNNCorp™' : 'FFFCorp™')
+function updateInvertedLabel() {
+  const on = document.documentElement.classList.contains('inverted');
+  setLabel('inverted-msg', on ? 'NNNCorp™' : 'FFFCorp™');
 }
-function toggleInvertedMode () {
+function toggleInvertedMode() {
   if (inverted !== 'enabled') {
-    updateInvertedLabel()
+    updateInvertedLabel();
   } else {
-    updateInvertedLabel()
+    updateInvertedLabel();
   }
 }
 
-bindTapableOption('inverted', toggleInvertedMode)
+bindTapableOption('inverted', toggleInvertedMode);
 
-updateInvertedLabel()
-
+updateInvertedLabel();

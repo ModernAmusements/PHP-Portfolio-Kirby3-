@@ -10,14 +10,16 @@
     <?php else: ?>
     <div class="type-loop">
       <span class="cover-heading loop-right"
-        >––––<?= $page->heading()->html() ?>––––––––<?= $page->heading()->html()
-        ?>––––––––<?= $page->heading()->html() ?>––––</span
+        >––––<?= $page->heading()->html() ?>––––––––<?= $page->heading()->html()?>––––––––<?= $page->heading()->html()
+        ?>––––––––<?= $page->heading()->html() ?>––––––––<?= $page->heading()->html()?>––––––––<?= $page->heading()->html()
+        ?>––––</span
       >
     </div>
     <div class="type-loop">
       <span class="cover-heading loop-left"
-        >––––<?= $page->subheading()->html() ?>––––––––<?= $page->subheading()->html()
-        ?>––––––––<?= $page->subheading()->html() ?>––––</span
+        >––––<?= $page->subheading()->html() ?>––––––––<?= $page->subheading()->html()?>––––––––<?= $page->subheading()->html()
+        ?>––––––––<?= $page->subheading()->html() ?>––––––––<?= $page->subheading()->html()?>––––––––<?= $page->subheading()->html()
+        ?>––––</span
       >
     </div>
     <?php endif ?>
@@ -35,4 +37,4 @@
   <?php snippet('blog/pagination', ['pagination' =>
   $articles->pagination()]) ?>
 </main>
-<?php snippet('blog/footer') ?>
+<?php snippet('footer') ?>

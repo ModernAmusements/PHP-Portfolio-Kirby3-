@@ -3,7 +3,7 @@
 }
 // Nav Filter
 nav.categories {
-  padding-top: 0.2em;
+  padding: calc(var(--lineHeight) * 0.1) 0;
   border-bottom: 1px solid var(--foreground-color);
   display: grid;
   .categories-pills {
@@ -16,11 +16,6 @@ nav.categories {
   li {
     display: inline-flex;
   }
-  li.active .category-button {
-    background-color: var(--primary-color);
-    color: var(--background-color);
-    border-color: var(--primary-color);
-  }
   .category-button {
     border: 1px solid var(--foreground-color);
     border-radius: 99em;
@@ -31,6 +26,23 @@ nav.categories {
     background-color: var(--foreground-color);
     color: var(--background-color);
     border-color: var(--foreground-color);
+  }
+  li.active {
+    .category-button {
+      background-color: var(--primary-color);
+      color: var(--foreground-color);
+      border-color: var(--foreground-color);
+    }
+    .category-button:hover {
+      background-color: var(--foreground-color);
+      color: var(--background-color);
+      border-color: var(--foreground-color);
+    }
+  }
+  .category-button:active {
+    background-color: var(--primary-color);
+    color: var(--foreground-color);
+    border-color: var(--primary-color);
   }
 }
 nav.categories-mobile {
@@ -533,12 +545,12 @@ button {
     background-color: rgba(255, 255, 255, 0.25);
   }
 }
-// Repo Layout
-@media (min-width: 320px) and (max-width: 768px) {
-    // Post Catego
+
+@media (min-width: 320px) and (max-width: 877px) {
+  // Pre Layout
+  // Post Categories
   nav.categories {
-    display: grid;
-    padding: calc(var(--lineHeight) * 0.5) 0;
+    padding: calc(var(--lineHeight) * 0.25) 0;
     grid-template-columns: repeat(4, 1fr);
     grid-row-gap: var(--rowGap);
     button {
@@ -554,7 +566,8 @@ button {
       visibility: hidden;
       grid-column: 1 / 5;
       grid-row: 1;
-      transition: opacity 0.2s 0s, visibility 0s 0s, height 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0ms;
+      transition: opacity 0.2s 0s, visibility 0s 0s,
+        height 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0ms;
       li {
         opacity: 0;
       }
@@ -574,7 +587,8 @@ button {
       grid-auto-flow: column;
       visibility: visible;
       opacity: 1;
-      transition: opacity 0.2s 0s, visibility 0s 0s, height 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0ms;
+      transition: opacity 0.2s 0s, visibility 0s 0s,
+        height 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0ms;
       -ms-overflow-style: none; /* IE and Edge */
       scrollbar-width: none; /* Firefox */
     }
@@ -667,7 +681,10 @@ button {
       fill: var(--primary-color);
     }
   }
-    // Post Header
+}
+// Repo Layout
+@media (min-width: 320px) and (max-width: 768px) {
+  // Post Header
   .post-header {
     .post-meta-information {
       display: none;

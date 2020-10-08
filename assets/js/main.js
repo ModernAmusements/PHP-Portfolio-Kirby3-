@@ -11344,9 +11344,9 @@ var aol = $.browser.aol(),
   !*** ./src/js/darkmode.js ***!
   \****************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-// DarkMode
+/* WEBPACK VAR INJECTION */(function($) {// DarkMode
 var inverted = localStorage.getItem('inverted');
 var invertedToggle = document.querySelector('#circle');
 var slider = document.querySelector('.sliderToggle');
@@ -11379,8 +11379,22 @@ var disableInverted = function disableInverted() {
 
 if (inverted === 'enabled') {
   enableInverted();
-}
+} // muss verbessert werden ÜBERGANG
 
+
+$('#dark').click(function () {
+  invertedToggle.classList.toggle('darkmodeSlide');
+  slider.classList.toggle('sliderToggleActive');
+  inverted = localStorage.getItem('inverted');
+
+  if (inverted !== 'enabled') {
+    enableInverted();
+    updateInvertedLabel();
+  } else {
+    disableInverted();
+    updateInvertedLabel();
+  }
+});
 homeLogo.addEventListener('click', function () {
   invertedToggle.classList.toggle('darkmodeSlide');
   slider.classList.toggle('sliderToggleActive');
@@ -11415,6 +11429,35 @@ function toggleInvertedMode() {
 
 bindTapableOption('inverted', toggleInvertedMode);
 updateInvertedLabel();
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
+
+/***/ }),
+
+/***/ "./src/js/fontPreloader.js":
+/*!*********************************!*\
+  !*** ./src/js/fontPreloader.js ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// jshint ignore: start
+
+/* eslint-disable */
+var preloadFonts = function preloadFonts(id) {
+  return new Promise(function (resolve, reject) {
+    WebFont.load({
+      typekit: {
+        id: id
+      },
+      active: resolve
+    });
+  });
+};
+
+preloadFonts('yxr4ufi').then(function () {
+  document.body.classList.remove('loading');
+  console.log('Neue Haas Unica Loaded');
+});
 
 /***/ }),
 
@@ -14497,32 +14540,6 @@ function handlePostCloseButton(e) {
   });
 }
 
-function handleSliders(e) {
-  var t = Array.from(e.querySelectorAll('.slider'));
-  t.length > 0 && t.forEach(function (n) {
-    var e = n.nextElementSibling;
-
-    if (e) {
-      var t = e.children[0];
-      var i = e.children[1];
-      var o = n.nextElementSibling.nextElementSibling;
-      t.addEventListener('click', function () {
-        var e = n.querySelector('.active');
-        e.previousElementSibling ? e.previousElementSibling.classList.add('active') : n.lastElementChild.classList.add('active'), e.classList.remove('active');
-        var t = o.querySelector('.active');
-        t.previousElementSibling ? t.previousElementSibling.classList.add('active') : o.lastElementChild.classList.add('active'), t.classList.remove('active');
-      }), i.addEventListener('click', function () {
-        var e = n.querySelector('.active');
-        e.nextElementSibling ? e.nextElementSibling.classList.add('active') : n.children[0].classList.add('active'), e.classList.remove('active');
-        var t = o.querySelector('.active');
-        t.nextElementSibling ? t.nextElementSibling.classList.add('active') : o.children[0].classList.add('active'), t.classList.remove('active');
-      }), isTouch && swipedetect(n, function (e) {
-        e == 'right' ? t.click() : e == 'left' && i.click();
-      });
-    }
-  });
-}
-
 function handlePageVideos(e) {
   document.createElement('video').canPlayType && Array.from(e.querySelectorAll('.post-video')).forEach(function (t) {
     var n = t.querySelector('.vid-playpause');
@@ -14607,7 +14624,7 @@ var Indexview = Barba.BaseView.extend({
       new Lightbox().load(t);
     }
 
-    handlePosts(e), handlePageVideos(e), handleSliders(e), handlePostCloseButton(e);
+    handlePosts(e), handlePageVideos(e), handlePostCloseButton(e);
   },
   onEnterCompleted: function onEnterCompleted() {},
   onLeave: function onLeave() {},
@@ -14631,12 +14648,13 @@ Indexview.init(), Barba.Pjax.init(), Barba.Prefetch.init(), Barba.Pjax.originalP
 /***/ }),
 
 /***/ 0:
-/*!***********************************************************************************************************************************************************************************************************************************************************!*\
-  !*** multi ./src/js/swiper.min.js ./src/js/darkmode.js ./src/js/intersectionObserver.js ./src/js/canvasCursor.js ./src/js/mobile-nav.js ./src/js/modal.js ./src/js/work-page.js ./src/js/plugins.js ./src/js/current-device.min.js ./src/scss/index.scss ***!
-  \***********************************************************************************************************************************************************************************************************************************************************/
+/*!*************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** multi ./src/js/fontPreloader.js ./src/js/swiper.min.js ./src/js/darkmode.js ./src/js/intersectionObserver.js ./src/js/canvasCursor.js ./src/js/mobile-nav.js ./src/js/modal.js ./src/js/work-page.js ./src/js/plugins.js ./src/js/current-device.min.js ./src/scss/index.scss ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(/*! /Users/shady/Desktop/K-CMS-Master/src/js/fontPreloader.js */"./src/js/fontPreloader.js");
 __webpack_require__(/*! /Users/shady/Desktop/K-CMS-Master/src/js/swiper.min.js */"./src/js/swiper.min.js");
 __webpack_require__(/*! /Users/shady/Desktop/K-CMS-Master/src/js/darkmode.js */"./src/js/darkmode.js");
 __webpack_require__(/*! /Users/shady/Desktop/K-CMS-Master/src/js/intersectionObserver.js */"./src/js/intersectionObserver.js");

@@ -1,122 +1,158 @@
-
-<!DOCTYPE html>
-<html lang="en" >
-
-<head>
-
-  <meta charset="UTF-8">
-  
-<link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
-<meta name="apple-mobile-web-app-title" content="CodePen">
-
-<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
-
-<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
-
-
-  <title>CodePen - Animated plus/minus toggle (CSS)</title>
-  
-  
-  
-  
-<style>
-.closed .vertical {
-  transition: all 0.5s ease-in-out;
-  transform: rotate(-90deg);
-}
-.closed .horizontal {
-  transition: all 0.5s ease-in-out;
-  transform: rotate(-90deg);
-  opacity: 1;
-}
-
-.opened {
-  opacity: 1;
-}
-.opened .vertical {
-  transition: all 0.5s ease-in-out;
-  transform: rotate(90deg);
-}
-.opened .horizontal {
-  transition: all 0.5s ease-in-out;
-  transform: rotate(90deg);
-  opacity: 0;
-}
-
-.circle-plus {
-  height: 4em;
-  width: 4em;
-  font-size: 1em;
-  opacity: .7;
-}
-
-.circle-plus .circle {
-  position: relative;
-  width: 2.55em;
-  height: 2.5em;
-  border-radius: 100%;
-  border: solid .5em #DFDAD7;
-}
-
-.circle-plus .circle .horizontal {
-  position: absolute;
-  background-color: red;
-  width: 30px;
-  height: 5px;
-  left: 50%;
-  margin-left: -15px;
-  top: 50%;
-  margin-top: -2.5px;
-}
-
-.circle-plus .circle .vertical {
-  position: absolute;
-  background-color: red;
-  width: 5px;
-  height: 30px;
-  left: 50%;
-  margin-left: -2.5px;
-  top: 50%;
-  margin-top: -15px;
-}
-</style>
-
-  <script>
-  window.console = window.console || function(t) {};
-</script>
-
-  
-  
-  <script>
-  if (document.location.search.match(/type=embed/gi)) {
-    window.parent.postMessage("resize", "*");
-  }
-</script>
-
-
-</head>
-
-<body translate="no" >
-  <div class="circle-plus closed">
-  <div class="circle">
-    <div class="horizontal"></div>
-    <div class="vertical"></div>
-  </div>
+<?php snippet('header') ?>
+<div id="preload-homepage">
+  <span class="medium">(Click to Enter)</span>
 </div>
-    <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
-
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-  
-      <script id="rendered-js" >
-$('.circle-plus').on('click', function () {
-  $(this).toggleClass('opened');
-});
-//# sourceURL=pen.js
-    </script>
-
-  
-
-</body>
-
-</html>
- 
+</div>
+<main>
+  <article class="pageContent">
+    <div class="bg">
+      <div id="coords" data-html2canvas-ignore="true">(0,0)</div>
+      <svg id="bauhausShapes"></svg>
+      <img id="img" />
+      <a href="#" class="type-lg" id="save" target="_blank">HIT "S" TO SAVE</a>
+    </div>
+    <section class="homeSvg">
+      <svg id="homeSVG" viewBox="0 0 1250 640" fill="none" stroke="var(--foreground-color)" stroke-width="1px"
+        xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M.47,472V179.61H638.31V80.83h-86V.47h697.18V527.11H1109.09V477H756.33V639.53H238.61V558.72h29.92V472Z" />
+      </svg>
+    </section>
+    <section class="credentialsName">
+      <h1 class="displayText">
+        Florian Nagel
+        <br />
+        Graphic Design
+      </h1>
+    </section>
+    <section class="credentialsTime">
+      <h1 class="displayText">
+        2017-
+        <br />
+        2020
+      </h1>
+    </section>
+    <section class="credentialsDate">
+      <h1 class="displayText">
+        Archiv+
+        <br />
+        Visual Diary
+      </h1>
+    </section>
+    <section class="controlsPage">
+      <span class="blur-slider">Blur:
+        <span id="output"></span>
+        <label class="slide">
+          <input class="svg-blur" type="range" min="0" max="220" value="30" step="1" id="blur" />
+        </label>
+      </span>
+      <span class="spacing-slider">Spacing:
+        <span id="output-spacing"></span>
+        <label class="slide">
+          <input type="range" id="spacing" min="0" max="200" value="0" />
+        </label>
+      </span>
+      <span class="rotation-slider">Rotation:
+        <span id="output-rotation"></span>
+        <label class="slide">
+          <input type="range" id="rotation" min="0" max="360" value="0" />
+        </label>
+      </span>
+      <a id="b1" onclick="changeColor()">Background</a>
+      <a id="b2" onclick="removeChild()">Remove Shape</a>
+      <a>Save PNG</a>
+    </section>
+  </article>
+</main>
+<script>
+  var btn2 = document.querySelector("#b2");
+  function removeChild() {
+    var list = document.getElementById("bauhausShapes"), item = list.lastElementChild;
+    list.removeChild(item);
+  }
+  btn2.onclick = function () { removeChild() };
+  var homeSVG = document.querySelector("#homeSVG");
+  var btn = document.querySelector("#b1");
+  function changeColor() {
+    let newArray = ["rgb(255, 214, 0)", "rgb(36, 0, 255)", "rgb(255, 77, 0)", "rgb(36, 31, 33)", "rgb(238, 222, 203)", "rgb(244, 244, 240)", "rgb(219, 223, 226)"];
+    let random = Math.floor(Math.random() * Math.floor(newArray.length - 1));
+    homeSVG.classList.add("home-svg-blur");
+    if (homeSVG.style.fill != newArray[random]) {
+      homeSVG.style.fill = newArray[random];
+      console.log(homeSVG.style.fill);
+    } else {
+      changeColor();
+    }
+  }
+  btn.onclick = function () { changeColor() };
+  var sliderRotation = document.getElementById('rotation');
+  var outputRotation = document.getElementById('output-rotation');
+  var sliderSpacing = document.getElementById('spacing');
+  var outputSpacing = document.getElementById('output-spacing');
+  var slider = document.getElementById('blur');
+  var output = document.getElementById('output');
+  sliderSpacing.oninput = function () {
+    outputSpacing.innerHTML = this.value;
+  };
+  sliderRotation.oninput = function () {
+    outputRotation.innerHTML = this.value;
+  };
+  slider.oninput = function () {
+    output.innerHTML = this.value;
+  };
+  outputRotation.innerHTML = sliderRotation.value;
+  outputSpacing.innerHTML = sliderSpacing.value;
+  output.innerHTML = slider.value;
+  const inputs = [].slice.call(
+    document.querySelectorAll('input#blur,input#spacing')
+  );
+  const inputRotation = document.querySelectorAll('#rotation');
+  inputRotation.forEach(input => input.addEventListener('change', handleUpdateRotation));
+  inputRotation.forEach(input => input.addEventListener('mousemove', handleUpdateRotation));
+  inputs.forEach(input => input.addEventListener('change', handleUpdate));
+  inputs.forEach(input => input.addEventListener('mousemove', handleUpdate));
+  function handleUpdate(e) {
+    const suffix = this.id === 'base' ? '' : 'px';
+    document
+      .getElementById('bauhausShapes')
+      .style.setProperty(`--${this.id}`, this.value + suffix);
+  };
+  function handleUpdateRotation(e) {
+    const suffixDeg = this.id === 'base' ? '' : 'deg';
+    document
+      .getElementById('bauhausShapes')
+      .style.setProperty(`--${this.id}`, this.value + suffixDeg);
+  };
+  $('#preload-homepage').click(function () {
+    $(this)
+      .fadeOut('300')
+      .remove();
+  });
+  //loader
+  setTimeout(function () {
+    $('#loader').fadeOut();
+  }, 1000);
+  setTimeout(function () {
+    $('#loader').remove();
+  }, 2000);
+  //Remove Splash on devices
+  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
+    /*GENERAL*/
+    $('#splash').remove();
+    $('#container').removeClass('blur');
+  }
+  // //Sun
+  // $("#sun").click(function() {
+  // 	$('body').toggleClass("sun-active");
+  // });
+  // //Open Mobile Menu
+  // $( "#burger" ).click(function() {
+  //   $(this).toggleClass('open');
+  //   $('#menu-mobile').slideToggle('fast');
+  // });
+</script>
+<?= js('assets/js/loader.js') ?>
+<!-- <script src="assets/js/demo1.js"></script> -->
+<script src="assets/js/html2canvas.js"></script>
+<script src="assets/js/scripts.js"></script>
+<?php snippet('footer') ?>

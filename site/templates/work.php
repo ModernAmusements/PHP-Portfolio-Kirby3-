@@ -102,4 +102,5 @@
     </article>
   </section>
 </main>
-<?php snippet('footer') ?>
+<?php snippet('subpageFooter/subpage') ?>
+<?php snippet('footer/workFooter') ?>

@@ -136,19 +136,19 @@
         <ul class="checklist">
             <li>
                 <svg>
-                    <use xlink:href="images/icons/icons.svg#iconCheckmark"></use>
+                    <use xlink:href="../images/icons/icons.svg#iconCheckmark"></use>
                 </svg>
                 Entwicklung von Kommunikationskonzepten
             </li>
             <li>
                 <svg>
-                    <use xlink:href="images/icons/icons.svg#iconCheckmark"></use>
+                    <use xlink:href="../images/icons/icons.svg#iconCheckmark"></use>
                 </svg>
                 Multidisziplinäre Arbeitsweise
             </li>
             <li>
                 <svg>
-                    <use xlink:href="images/icons/icons.svg#iconCheckmark"></use>
+                    <use xlink:href="../images/icons/icons.svg#iconCheckmark"></use>
                 </svg>
                 Erhalte Antworten auf alle deine Fragen
             </li>
@@ -269,25 +269,25 @@
       <ul class="checklist">
         <li>
             <svg>
-                <use xlink:href="images/icons/icons.svg#iconCheckmark"></use>
+                <use xlink:href="../images/icons/icons.svg#iconCheckmark"></use>
             </svg>
             Wir geben deine Daten nicht an Dritte weiter.
         </li>
         <li>
             <svg>
-                <use xlink:href="images/icons/icons.svg#iconCheckmark"></use>
+                <use xlink:href="../images/icons/icons.svg#iconCheckmark"></use>
             </svg>
             Wir verwenden deine Daten ausschließlich zu Beratungs- und Informationszwecken über eine Zusammenarbeit mit FFF-Corp.
         </li>
         <li>
             <svg>
-                <use xlink:href="images/icons/icons.svg#iconCheckmark"></use>
+                <use xlink:href="../images/icons/icons.svg#iconCheckmark"></use>
             </svg>
             Du kannst der Kontaktaufnahme jederzeit widersprechen. Am besten per Mail an <a class="accept" href="mailto:support@ottonova.de">info@fff-corp.de</a>.
         </li>
         <li>
             <svg>
-                <use xlink:href="images/icons/icons.svg#iconCheckmark"></use>
+                <use xlink:href="../images/icons/icons.svg#iconCheckmark"></use>
             </svg>
             Weitere Informationen zum Datenschutz findest du in unserer <a class="accept" href="/datenschutz" target="_blank">Datenschutzerklärung</a>.
         </li>

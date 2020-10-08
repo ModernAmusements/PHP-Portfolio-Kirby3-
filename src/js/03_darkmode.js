@@ -83,11 +83,13 @@ const enableInverted = () => {
   invertedToggle.classList.add('darkmodeSlide');
   slider.classList.add('sliderToggleActive');
   localStorage.setItem('inverted', 'enabled');
+  console.log('Darkemode: ON');
 };
 
 const disableInverted = () => {
   document.documentElement.classList.remove('inverted');
   localStorage.setItem('inverted', null);
+  console.log('Darkemode: OFF');
 };
 
 if (inverted === 'enabled') {

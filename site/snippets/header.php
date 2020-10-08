@@ -10,10 +10,10 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon//favicon-16x16.png">
-    <link rel="manifest" href="images/favicon/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon//favicon-16x16.png">
+    <link rel="manifest" href="/images/favicon/site.webmanifest">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#da532c">
     <!-- Meta Information-->
@@ -21,9 +21,9 @@
     <!-- jQeury Async-->
     <?= js('assets/js/jquery.js', true) ?>
     <!-- Stylesheets CSS-->
-    <link rel="stylesheet" href="https://use.typekit.net/yxr4ufi.css">
+    <link rel="stylesheet preconnect" href="https://use.typekit.net/yxr4ufi.css">
     <?= css('assets/css/index.css', true) ?>
-    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" async></script>
 
 </head>
 

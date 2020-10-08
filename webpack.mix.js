@@ -7,20 +7,21 @@ mix.autoload({
    });
 
 mix.js([
-    'src/js/fontPreloader.js',
-    'src/js/swiper.min.js',
-    'src/js/darkmode.js',
-    'src/js/intersectionObserver.js',
-    'src/js/canvasCursor.js',
-    'src/js/mobile-nav.js',
-    'src/js/modal.js',
-    'src/js/work-page.js',
-    'src/js/plugins.js',
-    'src/js/current-device.min.js'
+    'src/js/01_fontPreloader.js',
+    'src/js/02_swiper.min.js',
+    'src/js/03_darkmode.js',
+    'src/js/04_intersectionObserver.js',
+    'src/js/05_canvasCursor.js',
+    'src/js/06_mobile-nav.js',
+    'src/js/07_modal.js',
+    'src/js/08_work-page.js',
+    'src/js/09_plugins.js',
+    'src/js/10_current-device.min.js'
     ], 'assets/js/main.js');
 
 mix.js([
-    'src/js/homePageScripts.js'
+    'src/js/01_homePageScripts.js',
+    'src/js/02_homeHtml2Canvas.js'
     ], 'assets/js/homePageScripts.js');
     
 

@@ -1,6 +1,5 @@
 // jshint ignore: start
 /* eslint-disable */
-
 // Vars
 let avgX = [];
 let avgY = [];
@@ -166,37 +165,20 @@ document.onclick = function(e) {
   }
 };
 
-// for (let anyLink of document.getElementsByTagName("a")) {
-//     anyLink.onclick = function(e) {
-//         // e.preventDefault();
-//         if (e.srcElement.id == "save") {
-//             saveImage();
-//         } else if (e.srcElement.classList.contains("collapse")) {
-//             e.preventDefault();
-//             let imagesDivId = this.getAttribute("data-target");
-//             this.classList.toggle("show-minus");
-//             document.getElementById(imagesDivId).classList.toggle("hide");
-//         } else (e.srcElement.classList.contains("view-more"))
-//           {
-//             e.preventDefault();
-//         }
+// document.addEventListener('visibilitychange', function() {
+//   if (document.hidden) {
+//     // console.log("Browser tab is hidden" + new Date());
+//     for (let activeLink of document.getElementsByClassName('active')) {
+//       activeLink.classList.remove('active');
 //     }
-// }
-
-document.addEventListener('visibilitychange', function() {
-  if (document.hidden) {
-    // console.log("Browser tab is hidden" + new Date());
-    for (let activeLink of document.getElementsByClassName('active')) {
-      activeLink.classList.remove('active');
-    }
-    document.title = 'Florian Nagel';
-    document.getElementsByClassName('original')[0].classList.add('active');
-    document.getElementsByTagName('body')[0].classList.remove('transition');
-  } else {
-    // console.log("Browser tab is visible" + new Date())
-    document.title = titles[Math.floor(Math.random() * titles.length)];
-  }
-});
+//     document.title = 'Florian Nagel';
+//     document.getElementsByClassName('original')[0].classList.add('active');
+//     document.getElementsByTagName('body')[0].classList.remove('transition');
+//   } else {
+//     // console.log("Browser tab is visible" + new Date())
+//     document.title = titles[Math.floor(Math.random() * titles.length)];
+//   }
+// });
 
 function saveAs(uri, filename) {
   var link = document.createElement('a');
@@ -217,6 +199,8 @@ function saveAs(uri, filename) {
     window.open(uri);
   }
 }
+
+import html2canvas from './02_homeHtml2Canvas';
 
 function saveImage() {
   let w = Math.max(document.documentElement.clientWidth, window.innerWidth);
@@ -343,3 +327,8 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
   $('#splash').remove();
   $('#container').removeClass('blur');
 }
+
+
+
+
+

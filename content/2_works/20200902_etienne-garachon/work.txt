@@ -10,10 +10,6 @@ Tags: Experimental, Typography
 
 ----
 
-Description: Nike World HQ asked Golgotha to work with photographer Daniel Sannwald for the 2019 NIKE Tech Pack Collection global campaign. To create cyber athletes, they applied digital make-up to models' skin. James gilt als eigenwilliger und etwas verschrobener Exzentriker. Er gibt nur ungern Interviews und die Aussagen, die er in ihnen macht, widersprechen sich häufig. Deswegen ist der Wahrheitsgehalt vieler biographischer Fakten stark umstritten. So entpuppten sich viele der dargestellten Eigenwilligkeiten als reine Gerüchte, die nach Medienberichten auftauchten, etwa dass er in einer umgebauten Bank lebt und ein gepanzertes Spähfahrzeug besitzen soll.
-
-----
-
 Contributors: Shady Tawfik, David Rudnick
 
 ----
@@ -23,3 +19,35 @@ Concept: James gilt als eigenwilliger und etwas verschrobener Exzentriker. Er gi
 ----
 
 Client: Apple
+
+----
+
+Additionaldescription: Test
+
+----
+
+Behanceid: 
+
+----
+
+Image: 
+
+----
+
+Social: 
+
+----
+
+Email: 
+
+----
+
+Emailpress: 
+
+----
+
+Phone: 
+
+----
+
+Popupimage: 

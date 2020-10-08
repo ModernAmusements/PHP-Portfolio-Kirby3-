@@ -223,6 +223,7 @@ a:visited {
 
 html {
   font-family: var(--sansFont), "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-display: swap;
   font-size: var(--fontSize);
   line-height: var(--lineHeight);
   background: var(--background-color);

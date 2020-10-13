@@ -14,13 +14,6 @@ Behanceid: FFF-Corp
 
 ----
 
-Image:
-
-- >
-  butt-studio-bandcamp-a_call-me_020-3877-0644.jpg
-
-----
-
 Social:
 
 - 
@@ -45,10 +38,70 @@ Phone: (+31) 6 46 79 52 91
 
 ----
 
-Popupimage:
+Metaimage:
 
-- >
-  butt-studio-timedance_a_call-me_020-3877-0644.jpg
+- 5stoneoflead_still2-960x400.jpg
 
 ----
 
+Popupheadline: WORK WITH ME
+
+----
+
+Popupsubheadline01: Entwicklung von Kommunikationskonzepten
+
+----
+
+Popupsubheadline02: Multidisziplinäre Arbeitsweise
+
+----
+
+Popupsubheadline03: Erhalte Antworten auf alle deine Fragen
+
+----
+
+Popupimage:
+
+- dietz_mock_up_02.jpg
+
+----
+
+Altpopup: Moz Keyword Explorer tool for SEO keyword research
+
+----
+
+Succesimage:
+
+- dietz_mock_up_01.jpg
+
+----
+
+Altsucces: Moz Keyword Explorer tool for SEO keyword research
+
+----
+
+Consent: Einwilligungserklärung
+
+----
+
+Consentdeclaration01: Wir geben deine Daten nicht an Dritte weiter.
+
+----
+
+Consentdeclaration02: Wir verwenden deine Daten ausschließlich zu Beratungs- und Informationszwecken über eine Zusammenarbeit mit FFF-Corp.
+
+----
+
+Consentdeclaration03: Du kannst der Kontaktaufnahme jederzeit widersprechen. Am besten per Mail an (link: mailto:info@fff-corp.de text: info@fff-corp.de).
+
+----
+
+Consentdeclaration04: Weitere Informationen zum Datenschutz findest du in unserer (link: /datenschutz text: Datenschutzerklärung).
+
+----
+
+Metaimagetext: Find out how our method achieves outstanding strategy and design so as to boost innovation in your company.
+
+----
+
+Successimagetext: Find out how our method achieves outstanding strategy and design so as to boost innovation in your company.

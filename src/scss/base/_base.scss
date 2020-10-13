@@ -288,43 +288,8 @@ main {
     padding-top: 0;
     padding-bottom: calc(var(--lineHeight) * 2);
   }
-  .cursor-container {
-    display: none !important;
-  }
 }
 
-.cursor-container {
-  top: 0;
-  left: 0;
-  height: 23px;
-  position: fixed;
-  display: flex;
-  z-index: 999999;
-  pointer-events: none;
-  background-color: var(--primary-color);
-  transition: width 0.2s;
-  border-radius: 99em;
-  overflow: hidden;
-  font-size: var(--ms-0);
-  .cursor-text {
-    color: var(--background-color);
-    white-space: nowrap;
-    pointer-events: none;
-    z-index: 999999;
-    transition: 190ms opacity;
-    padding: 0 0.5em;
-    text-transform: uppercase;
-    path {
-      fill: var(--background-color);
-    }
-    svg {
-      position: relative;
-      width: 1em;
-      top: 2.5px;
-      left: 1px;
-    }
-  }
-}
 .lazy {
   opacity: 0;
   transition: all 1ms;

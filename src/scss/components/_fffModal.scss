@@ -532,7 +532,6 @@ textarea:hover,
   box-shadow: 0 var(--shadowPos) var(--shadowBlur) 0 var(--shadow-dark);
   transform: translateY(var(--y)) translateZ(0);
   background: var(--primary-color);
-  color: var(--background-color);
 }
 
 .btn-large:hover {

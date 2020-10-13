@@ -290,46 +290,6 @@ main {
     padding-top: 0;
     padding-bottom: calc(var(--lineHeight) * 2);
   }
-
-  .cursor-container {
-    display: none !important;
-  }
-}
-
-.cursor-container {
-  top: 0;
-  left: 0;
-  height: 23px;
-  position: fixed;
-  display: flex;
-  z-index: 999999;
-  pointer-events: none;
-  background-color: var(--primary-color);
-  transition: width 0.2s;
-  border-radius: 99em;
-  overflow: hidden;
-  font-size: var(--ms-0);
-}
-
-.cursor-container .cursor-text {
-  color: var(--background-color);
-  white-space: nowrap;
-  pointer-events: none;
-  z-index: 999999;
-  transition: 190ms opacity;
-  padding: 0 0.5em;
-  text-transform: uppercase;
-}
-
-.cursor-container .cursor-text path {
-  fill: var(--background-color);
-}
-
-.cursor-container .cursor-text svg {
-  position: relative;
-  width: 1em;
-  top: 2.5px;
-  left: 1px;
 }
 
 .lazy {
@@ -1108,7 +1068,7 @@ header:not(.post-header) .langToggle .lang:focus {
   padding: calc(var(--lineHeight) * 0.5) 0;
 }
 
-.cta h3 {
+.cta h1 {
   grid-column: 1/5;
   font-size: 1.7vw;
   margin: 0;
@@ -1198,7 +1158,7 @@ footer p {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .cta h3 {
+  .cta h1 {
     grid-column: 1/2;
     font-size: 2.5vw;
     white-space: normal;
@@ -1218,7 +1178,7 @@ footer p {
     border-bottom: 0;
   }
 
-  .cta h3 {
+  .cta h1 {
     font-size: 3.5vw;
     white-space: normal;
     line-height: normal;
@@ -1318,7 +1278,8 @@ footer p {
 /* Main */
 
 #preload-homepage {
-  z-index: 999999;
+  display: none;
+  z-index: 1001;
   position: fixed;
   top: 0;
   left: 0;
@@ -1333,26 +1294,48 @@ footer p {
           backdrop-filter: saturate(180%) blur(5px);
 }
 
-#preload-homepage .menu {
+#preload-homepage .intro {
   align-items: center;
   grid-auto-flow: row;
   grid-template-columns: repeat(3, 1fr);
   padding: calc(var(--lineHeight) * 1);
-  padding-left: calc(var(--lineHeight) * 2);
-  padding-right: calc(var(--lineHeight) * 0.1);
 }
 
-#preload-homepage .menu .menu__item {
+#preload-homepage .intro .intro-items {
   display: grid;
+  text-align: center;
 }
 
-#preload-homepage .menu .menu__item .menu__text {
-  font-size: 0.9rem;
-  font-weight: 500;
+.svg-home-bg {
+  display: grid;
+  grid-column: 1/9;
+  grid-row: 1/4;
+  height: 100%;
+  width: 100%;
 }
 
-#preload-homepage .menu .menu__item .menu__text text {
-  fill: var(--foreground-color);
+.svg-home-bg #coords,
+.svg-home-bg .coords {
+  position: fixed;
+  font-size: 1.3rem;
+  line-height: 1.3rem;
+  z-index: 999999;
+  left: -100vw;
+  pointer-events: none;
+}
+
+.svg-home-bg .repo-svg {
+  position: fixed;
+  pointer-events: none;
+}
+
+.svg-home-bg .repo-svg #bauhausShapes circle,
+.svg-home-bg .repo-svg #bauhausShapes rect,
+.svg-home-bg .repo-svg #bauhausShapes polygon {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .pageContent {
@@ -1373,9 +1356,20 @@ footer p {
 }
 
 .homeSvg {
+  stroke-width: 1px;
   grid-column: 1/9;
   grid-row: 1/4;
   z-index: -2;
+}
+
+.stroke {
+  fill: none;
+  stroke: var(--foreground-color);
+}
+
+.fill {
+  fill: var(--foreground-color);
+  stroke: var(--foreground-color);
 }
 
 .credentialsName {
@@ -1394,11 +1388,126 @@ footer p {
   white-space: nowrap;
 }
 
+.blur,
+.background,
+button {
+  grid-auto-flow: column;
+  display: grid;
+  align-items: center;
+}
+
+.blur {
+  justify-content: start;
+}
+
+.slide {
+  justify-content: start;
+}
+
+.slide input {
+  border: solid 1px var(--foreground-color);
+  border-radius: 99em;
+  padding: 0.75rem 1.2rem;
+  width: 100%;
+  align-self: center;
+}
+
+p,
+span {
+  margin: 0;
+}
+
+button.controller {
+  border: solid 1px var(--foreground-color);
+  width: 100%;
+  position: relative;
+  border-radius: 99em;
+  display: inline-block;
+  text-align: center;
+  padding: 0 1.2rem;
+  white-space: nowrap;
+  text-transform: uppercase;
+  max-height: 2rem;
+}
+
+button.controller:hover {
+  color: var(--background-color);
+  background-color: var(--foreground-color);
+  border: 1px solid var(--foreground-color);
+  transition: color 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0ms;
+}
+
+.background {
+  justify-content: start;
+}
+
+.home-svg-toggle {
+  display: flex;
+  justify-self: start;
+  align-items: center;
+}
+
+.home-svg-toggle .fillSwitch,
+.home-svg-toggle .switchBackground {
+  position: relative;
+  width: 53px;
+  height: 24px;
+}
+
+.home-svg-toggle .fillSwitch input,
+.home-svg-toggle .switchBackground input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.home-svg-toggle .switchBackground {
+  margin-left: 2rem;
+}
+
+.home-svg-toggle .fillSlider {
+  border-radius: 99em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: solid 1px var(--foreground-color);
+  transition: 0.4s;
+  text-indent: -99999px;
+  background-color: var(--background-color-aplha);
+}
+
+.home-svg-toggle .sliderToggleActive {
+  background-color: var(--foreground-color);
+}
+
+.home-svg-toggle #home-svg-toggle-circle {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 3px;
+  border-radius: 99em;
+  background-color: var(--foreground-color);
+  transition: 0.4s;
+}
+
+.home-svg-toggle .fillSlide {
+  transform: translateX(26px);
+  background-color: var(--background-color) !important;
+}
+
+.home-svg-toggle h2 {
+  margin-left: 0.2em;
+}
+
 .controlsPage {
   grid-column: 1/9;
   grid-row: 4;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(8, 1fr);
   grid-row-gap: var(--rowGap);
   grid-column-gap: 10px;
   border-top: 1px solid var(--foreground-color);
@@ -1413,14 +1522,27 @@ footer p {
 
 .controlsPage span {
   display: grid;
-  grid-auto-flow: column;
 }
 
-.controlsPage .blur-slider {
-  grid-row: 1;
+.controlsPage #btn-remove-svg {
+  grid-column: 8/9;
 }
 
-.controlsPage .spacing-slider {
+.controlsPage #save {
+  grid-column: 7/8;
+}
+
+.controlsPage .home-svg-toggle {
+  grid-column: 4/5;
+}
+
+.controlsPage .fillSwitch {
+  margin-right: 1rem;
+}
+
+.controlsPage .home-svg-toggle,
+.controlsPage #btn-remove-svg,
+.controlsPage #save {
   grid-row: 1;
 }
 
@@ -1600,60 +1722,6 @@ footer p {
   background: var(--foreground-color);
 }
 
-.controlsPage .blur,
-.controlsPage .background,
-.controlsPage a {
-  grid-auto-flow: column;
-  display: grid;
-  align-items: center;
-}
-
-.controlsPage .blur {
-  justify-content: start;
-}
-
-.controlsPage .slide {
-  justify-content: start;
-}
-
-.controlsPage .slide input {
-  border: solid 1px var(--foreground-color);
-  border-radius: 99em;
-  padding: 0.75rem 1.2rem;
-  width: 100%;
-  align-self: center;
-}
-
-.controlsPage p {
-  margin: 0;
-}
-
-.controlsPage span {
-  margin: 0;
-}
-
-.controlsPage a {
-  border: solid 1px var(--foreground-color);
-  width: 100%;
-  position: relative;
-  border-radius: 99em;
-  display: inline-block;
-  text-align: center;
-  padding: 0 1.2rem;
-  white-space: nowrap;
-}
-
-.controlsPage a:hover {
-  color: var(--background-color);
-  background-color: var(--foreground-color);
-  border: 1px solid var(--foreground-color);
-  transition: color 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0ms;
-}
-
-.controlsPage .background {
-  justify-content: start;
-}
-
 .blur-me {
   -webkit-filter: blur(var(--blur));
           filter: blur(var(--blur));
@@ -1675,46 +1743,33 @@ footer p {
   }
 }
 
-canvas,
-#img {
-  position: fixed;
-  left: -200vw;
-  top: -200vh;
-}
-
-.bg {
-  position: fixed;
-  z-index: -1;
-  top: 0px;
-  left: 0px;
-  width: 100vw;
-  height: 100vh;
-}
-
-#coords,
-#avg,
-.coords {
-  position: fixed;
-  font-size: 1.3rem;
-  line-height: 1.3rem;
-  z-index: 999999;
-  left: -100vw;
-  pointer-events: none;
-}
-
-#svg {
-  position: fixed;
-  pointer-events: none;
-  top: 0px;
-  left: 0px;
-  z-index: -150;
-}
-
-/* important */
-
 @media screen and (max-width: 415px) {
   #coords {
     display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .controlsPage {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .controlsPage #btn-remove-svg {
+    grid-column: 1/3;
+    grid-row: 4;
+  }
+
+  .controlsPage #save {
+    grid-column: 1/3;
+    grid-row: 5;
+  }
+
+  .controlsPage .home-svg-toggle {
+    grid-column: 2/3;
+  }
+
+  .controlsPage .fillSwitch {
+    margin-right: 1rem;
   }
 }
 
@@ -4395,7 +4450,6 @@ textarea:hover,
   box-shadow: 0 var(--shadowPos) var(--shadowBlur) 0 var(--shadow-dark);
   transform: translateY(var(--y)) translateZ(0);
   background: var(--primary-color);
-  color: var(--background-color);
 }
 
 .btn-large:hover {

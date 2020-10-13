@@ -88,8 +88,14 @@ document.onmousemove = function(e) {
 
 // Click to Generate
 document.onclick = function(e) {
-  if (e.target.tagName != 'A' && e.target.tagName != 'INPUT') {
-    
+  if (
+    e.target.tagName != 'A' &&
+    e.target.tagName != 'INPUT' &&
+    e.target.tagName != 'BUTTON' &&
+    e.target.tagName != 'SPAN' &&
+    e.target.tagName != 'DIV' &&
+    e.target.tagName != 'LABEL'
+  ) {
     document.getElementById('save').style.opacity = 1;
 
     document.onkeypress = function() {
@@ -165,21 +171,6 @@ document.onclick = function(e) {
   }
 };
 
-// document.addEventListener('visibilitychange', function() {
-//   if (document.hidden) {
-//     // console.log("Browser tab is hidden" + new Date());
-//     for (let activeLink of document.getElementsByClassName('active')) {
-//       activeLink.classList.remove('active');
-//     }
-//     document.title = 'Florian Nagel';
-//     document.getElementsByClassName('original')[0].classList.add('active');
-//     document.getElementsByTagName('body')[0].classList.remove('transition');
-//   } else {
-//     // console.log("Browser tab is visible" + new Date())
-//     document.title = titles[Math.floor(Math.random() * titles.length)];
-//   }
-// });
-
 function saveAs(uri, filename) {
   var link = document.createElement('a');
 
@@ -232,42 +223,48 @@ function saveImage() {
   });
 }
 
-
 // Homepage Control
-
-var btn2 = document.querySelector('#b2');
+// Remove Shapes
+var btnRemoveSvg = document.querySelector('#btn-remove-svg');
 function removeChild() {
   var list = document.getElementById('bauhausShapes'),
     item = list.lastElementChild;
   list.removeChild(item);
 }
-btn2.onclick = function() {
+btnRemoveSvg.onclick = function() {
   removeChild();
 };
-var homeSVG = document.querySelector('#homeSVG');
-var btn = document.querySelector('#b1');
-function changeColor() {
-  let newArray = [
-    'rgb(255, 214, 0)',
-    'rgb(36, 0, 255)',
-    'rgb(255, 77, 0)',
-    'rgb(36, 31, 33)',
-    'rgb(238, 222, 203)',
-    'rgb(244, 244, 240)',
-    'rgb(219, 223, 226)',
-  ];
-  let random = Math.floor(Math.random() * Math.floor(newArray.length - 1));
-  homeSVG.classList.add('home-svg-blur');
-  if (homeSVG.style.fill != newArray[random]) {
-    homeSVG.style.fill = newArray[random];
-    console.log(homeSVG.style.fill);
-  } else {
-    changeColor();
+
+// Fill BG
+
+
+
+// Fill Home 
+var homeSvg = document.getElementById('homeSVG');
+var msg = document.getElementById("fill-msg")
+const svgFillToggle = document.querySelector('#home-svg-toggle-circle');
+const svgFillSlider = document.querySelector('.fillSlider');
+const homeSvgToggle = document.querySelector('.home-svg-toggle');
+
+function toggle() {
+  if (homeSvg.classList == 'stroke') {
+    homeSvg.classList.add('fill')
+    msg.innerHTML = "Shape:</br> Filled"
+  }
+  else {
+    homeSvg.classList.remove('fill');
+    msg.innerHTML = "Shape:</br> Stroked"
   }
 }
-btn.onclick = function() {
-  changeColor();
-};
+
+homeSvgToggle.addEventListener('click', () => {
+  svgFillToggle.classList.toggle('fillSlide');
+  svgFillSlider.classList.toggle('sliderToggleActive');
+  toggle();
+});
+
+
+// Slider Controls
 var sliderRotation = document.getElementById('rotation');
 var outputRotation = document.getElementById('output-rotation');
 var sliderSpacing = document.getElementById('spacing');
@@ -311,24 +308,24 @@ function handleUpdateRotation(e) {
     .style.setProperty(`--${this.id}`, this.value + suffixDeg);
 }
 
-// Preload
-$('#preload-homepage').click(function() {
-  $(this)
-    .fadeOut('300')
-    .remove();
+// Preloader
+$(function() {
+  $('#preload-homepage').click(function() {
+    $(this)
+      .fadeOut('300')
+      .remove();
+  });
+  if (!sessionStorage.getItem('homePagePreloader')) {
+    sessionStorage.setItem('homePagePreloader', true);
+    $('#preload-homepage').css('display', 'block');
+    setTimeout(function() {
+      $('#preload-homepage').fadeOut();
+    }, 2000);
+    setTimeout(function() {
+      $('#preload-homepage').remove();
+    }, 2500);
+  } else {
+    $('#preload-homepage').css('display', 'none');
+  }
+
 });
-setTimeout(function() {
-  $('#loader').fadeOut();
-}, 1000);
-setTimeout(function() {
-  $('#loader').remove();
-}, 2000);
-if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
-  $('#splash').remove();
-  $('#container').removeClass('blur');
-}
-
-
-
-
-

@@ -8,7 +8,7 @@
   grid-row-gap: var(--rowGap);
   align-items: center;
   padding: calc(var(--lineHeight) * 0.5) 0;
-  h3 {
+  h1 {
     grid-column: 1 / 5;
     font-size: 1.7vw;
     margin: 0;
@@ -82,7 +82,7 @@ footer {
   // Footer
   .cta {
     grid-template-columns: repeat(2, 1fr);
-    h3 {
+    h1 {
       grid-column: 1 / 2;
       font-size: 2.5vw;
       white-space: normal;
@@ -99,7 +99,7 @@ footer {
   // Footer
   .cta {
     border-bottom: 0;
-    h3 {
+    h1 {
       font-size: 3.5vw;
       white-space: normal;
       line-height: normal;

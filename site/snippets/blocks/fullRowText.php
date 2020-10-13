@@ -17,7 +17,7 @@
     <?php endif ?>
 
     <?php if ($imageBuilder = $data->imageBuilder()->toFile()->resize(720)): ?>
-      <img class="lazy" data-src="<?= $imageBuilder->url() ?>" />
+      <img class="lazy" data-src="<?= $imageBuilder->url() ?>" alt="<?= $data->imageBuilderAlt() ?>" />
     <?php endif ?>
 
     <?php if ($data->textC3()->isNotEmpty()): ?>

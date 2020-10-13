@@ -10,6 +10,10 @@ Tags: Experimental, Typography
 
 ----
 
+Description: Das Frühwerk bis zur Mitte der 1860er Jahre umfasst realistische Bilder, von denen Monet einige im Pariser Salon ausstellen durfte. Ende der 1860er Jahre begann Claude Monet, impressionistische Bilder zu malen. Ein Beispiel seiner Bilder dieser Schaffensphase ist Impression, Sonnenaufgang, eine Hafenansicht von Le Havre, welche der gesamten Bewegung den Namen gab. So entfernte er sich vom durch die traditionellen Kunstakademien geprägten Zeitgeschmack, was seine finanzielle Situation verschlechterte.
+
+----
+
 Contributors: Shady Tawfik, David Rudnick
 
 ----
@@ -21,33 +25,3 @@ Concept: James gilt als eigenwilliger und etwas verschrobener Exzentriker. Er gi
 Client: Apple
 
 ----
-
-Additionaldescription: Test
-
-----
-
-Behanceid: 
-
-----
-
-Image: 
-
-----
-
-Social: 
-
-----
-
-Email: 
-
-----
-
-Emailpress: 
-
-----
-
-Phone: 
-
-----
-
-Popupimage: 

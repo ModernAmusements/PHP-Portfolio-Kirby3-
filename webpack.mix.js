@@ -11,7 +11,6 @@ mix.js([
     'src/js/02_swiper.min.js',
     'src/js/03_darkmode.js',
     'src/js/04_intersectionObserver.js',
-    // 'src/js/05_canvasCursor.js',
     'src/js/06_mobile-nav.js',
     'src/js/07_modal.js',
     'src/js/08_work-page.js',

@@ -1,5 +1,5 @@
 title: About
-icon: ☎
+
 
 status:
   draft: Locked
@@ -43,7 +43,7 @@ columns:
         type: tel
         width: 1/2
 
-  - width: 1/3
+  - width: 2/3
     fields:
       about:
         label: About Me
@@ -54,9 +54,6 @@ columns:
       cv:
         label: Curriculum Vitae
         type: textarea      
-      location:
-        label: Map
-        type: locator
       lineC:
         type: line
       capabilitiesHeading:
@@ -69,14 +66,14 @@ columns:
           capabilities:
             type: text
 
-  - width: 1/3
+  - width: 3/3
 
     sections:
       imageabout:
         type: files
         template: work-cover
         info: "{{ file.dimensions }}"
-        layout: cards
+        layout: lists
         image:
           cover: true
     

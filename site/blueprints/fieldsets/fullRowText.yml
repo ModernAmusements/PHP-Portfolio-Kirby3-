@@ -42,6 +42,9 @@ fields:
   imageBuilder:
       type: files
       multiple: false
+  imageBuilderAlt:
+      label: Blog Alt Text ((Seo))
+      type: text 
     headline:
       type: text
     description:

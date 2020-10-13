@@ -4,3 +4,28 @@ title: Home
 
 num: date
 
+sections:
+  content:
+    type: fields
+    fields:
+      heading:
+        type: text
+      panelHeading1:
+        label: Panel heading
+        type: text
+        width: 1/2
+      aboutHeading1:
+        label: About heading
+        type: text
+        width: 1/2
+      panelText1:
+        label: Panel text
+        type: textarea
+        size: large
+        width: 1/2
+      aboutText1:
+        label: About text
+        type: textarea
+        size: large
+        width: 1/2
+

@@ -23,6 +23,7 @@ Fullrow:
       imagebuilder:
         - >
           butt-studio-timedance_c_call-me_020-3877-0644.jpg
+      imagebuilderalt: "A short sting for Boiler Room's social and web."
       _key: fullRowText
       line-a: null
       _uid: fullRowText_1599825193045_2955
@@ -64,6 +65,7 @@ Fullrow:
       imagebuilder:
         - >
           butt-studio-timedance_e_call-me_020-3877-0644.jpg
+      imagebuilderalt: ""
       _key: fullRowText
       line-a: null
       _uid: fullRowText_1599825262970_3444
@@ -82,6 +84,9 @@ Fullrow:
       imagebuilder:
         - >
           butt-studio-nike-c_call-me_020-3877-0644.gif
+      imagebuilderalt: >
+        CCTV, marking specific behaviour and
+        activities against their file.
       _key: fullRowText
       line-a: null
       _uid: fullRowText_1599826862458_795

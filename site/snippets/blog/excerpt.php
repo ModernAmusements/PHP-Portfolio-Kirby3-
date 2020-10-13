@@ -2,7 +2,7 @@
   <a href="<?= $article->url() ?>">
     <div class="image">
       <?php if ($cover = $article->cover()->crop(600, 600, ['quality' => 100])): ?>
-        <img class="lazy" data-src="<?= $cover->url() ?>" />
+        <img class="lazy" data-src="<?= $cover->url() ?>" alt="<?= $cover->alt() ?>" />
       <?php endif ?>
       <?php if ($article->pills()->isNotEmpty()): ?>
       <div

@@ -4,7 +4,7 @@
 <main class="work-subpage">
   <?php if ($cover = $page->cover()->resize(1080)): ?>
   <section class="cover">
-    <img class="lazy" data-src="<?= $cover->url() ?>" />
+    <img class="lazy" data-src="<?= $cover->url() ?>" alt="<?= $cover->alt() ?>" />
     <time class=""><?= $page->date()->toDate('d F Y') ?></time>
   </section>
   <?php endif ?>
@@ -15,15 +15,15 @@
         <h2 class="title"><?= $page->title() ?></h2>
         <p>Tags:</p>
         <?php foreach ($page->tags()->split() as $tag): ?>
-        <a class="post-meta">
+        <tags class="post-meta">
           <p class="tags small"><?= $tag ?></p>
-        </a>
+        </tags>
         <?php endforeach ?>
         <br />
         <p>Client:</p>
-        <h4><?= $page->client() ?></h4>
+        <h3><?= $page->client() ?></h3>
         <p>Involved:</p>
-        <h4><?= $page->contributors() ?></h4>
+        <h3><?= $page->contributors() ?></h3>
       </div>
       <div class="subpage-description">
         <p>Block B</p>

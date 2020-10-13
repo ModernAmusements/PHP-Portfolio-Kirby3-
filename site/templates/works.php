@@ -8,7 +8,7 @@
       <nav class="categories">
         <div class="categories-title">
           <strong>
-           <a>Filter:</a>
+           <span>Filter:</span>
           </strong>
         </div>
         <ul class="categories-pills">
@@ -50,12 +50,12 @@
           class="post-header">
           <h1 class="post-title"><?= $work->title() ?></h1>
           <div class="post-meta-information">
-            <a class="post-meta"
-              ><p class="small"><?= $work->date()->toDate('Y') ?></p></a
+            <tags class="post-meta"
+              ><p class="small"><?= $work->date()->toDate('Y') ?></p></tags
             >
             <?php foreach ($work->tags()->split() as $tag): ?>
-            <a class="post-meta"
-              ><p class="small"><?= $tag ?></p></a
+            <tags class="post-meta"
+              ><p class="small"><?= $tag ?></p></tags
             >
             <?php endforeach ?>
           </div>
@@ -77,7 +77,7 @@
             </article>
             <article class="work-subpage-link">
             <a class="" href="<?= $work->url() ?>"> 
-            <span class="more">Learn More
+            <span class="more">Explore Project
               <svg class="link-arrow">
                 <use xlink:href="images/icons/icons-16px.svg#btnArrow">
               </svg>

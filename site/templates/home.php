@@ -113,5 +113,5 @@
     </div>
   </div>
 </div>
-<?= js('assets/js/homePageScripts.js') ?>
+<?= js('assets/js/homePageScripts.js', true) ?>
 <?php snippet('footer') ?>

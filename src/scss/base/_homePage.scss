@@ -31,7 +31,7 @@
   grid-column: 1 / 9;
   grid-row: 1 / 4;
   height: 100%;
-  width: 100%;
+  z-index: -1;
   #coords,
   .coords {
     position: fixed;

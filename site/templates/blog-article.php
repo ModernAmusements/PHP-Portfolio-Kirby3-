@@ -15,6 +15,7 @@
         <img
           class="lazy"
           data-lazy="<?= $image->crop(854, 480, ['quality' => 100])->url() ?>"
+          alt="<?= $image->alt() ?>"
         />
         <?php endforeach ?>
       </div>
@@ -42,9 +43,9 @@
         <div class="blog-subpage-meta">
           <p class="tags">Tags:</p>
           <?php foreach ($page->tags()->split() as $tag): ?>
-          <a class="post-meta">
+          <tags class="post-meta">
             <p class="tags small"><?= $tag ?></p>
-          </a>
+          </tags>
           <?php endforeach ?>
         </div>
       </div>
@@ -58,7 +59,7 @@
   <!-- TAGS -->
   <?php if (!empty($tags)): ?>
   <div class="footer-tags">
-    <h4 class="blog-footer-tags-heading"><?= $page->subheading() ?></h4>
+    <h1 class="medium blog-footer-tags-heading"><?= $page->subheading() ?></h1>
     <div class="blog-article-tags">
       <?php foreach ($tags as $tag): ?>
       <a href="<?= url('blog', ['params' => ['tag' => $tag]]) ?>"
@@ -77,12 +78,12 @@
           </strong>
         </div>
         <div class="row-2">
-          <a>
+          <span>
             <p><?= $page->date() ?></p>
-          </a>
-          <a>
+          </span>
+          <span>
             <p><?= $page->title() ?></p>
-          </a>
+          </span>
           <p>All Rights Reserved©</p>
         </div>
       </article>
@@ -94,9 +95,9 @@
         </div>
         <div class="row-2">
           <?php foreach ($page->author()->split() as $tag): ?>
-          <a>
+          <span>
             <p><?= $tag ?></p>
-          </a>
+          </span>
           <?php endforeach ?>
         </div>
       </article>
@@ -107,9 +108,9 @@
           </strong>
         </div>
         <div class="row-2">
-          <a>
+          <span>
             <p><?= $page->theme() ?></p>
-          </a>
+          </span>
         </div>
       </article>
     </section>
@@ -121,12 +122,12 @@
           </strong>
         </div>
         <div class="row-2">
-          <a>
+          <span>
             <p><?= $page->date() ?></p>
-          </a>
-          <a>
+          </span>
+          <span>
             <p><?= $page->title() ?></p>
-          </a>
+          </span>
           <p>All Rights Reserved©</p>
         </div>
       </article>
@@ -138,9 +139,9 @@
         </div>
         <div class="row-2">
           <?php foreach ($page->author()->split() as $tag): ?>
-          <a>
+          <span>
             <p><?= $tag ?></p>
-          </a>
+          </span>
           <?php endforeach ?>
         </div>
       </article>
@@ -151,13 +152,13 @@
           </strong>
         </div>
         <div class="row-2">
-          <a>
+          <span>
             <p><?= $page->theme() ?></p>
-          </a>
+          </span>
         </div>
       </article>
     </section>
     <?php snippet('blog/prevnext') ?>
   </footer-blog-subpage>
 </main>
-<?php snippet('footer') ?>
+<?php snippet('subpageFooter/subpage') ?>

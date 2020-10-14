@@ -55,9 +55,9 @@
                 <strong><p>Legal</p></strong>
             </div>
             <div class="row-2">
-              <a aria-label="Read more about Seminole tax hike" href="test"><p>Datenschutz</p></a>
-              <a aria-label="Read more about Seminole tax hike" href="test"><p>Impressum</p></a>
-              <a aria-label="Read more about Seminole tax hike" href="test"><p><?= $site->title() ?></p></a>
+              <a aria-label="Read more about Seminole tax hike" href="imprint"><p>Datenschutz</p></a>
+              <a aria-label="Read more about Seminole tax hike" href="imprint"><p>Impressum</p></a>
+              <a aria-label="Read more about Seminole tax hike" href="<?= $site->url() ?>"><p><?= $site->title() ?></p></a>
             </div>
         </article>
     </section>
@@ -87,8 +87,8 @@
             </strong>
             </div>
             <div class="row-2">
-              <a aria-label="Read more about Seminole tax hike" href="/datenschutz"><p>Datenschutz</p></a>
-              <a aria-label="Read more about Seminole tax hike" href="/datenschutz"><p>Impressum</p></a>
+              <a aria-label="Read more about Seminole tax hike" href="imprint"><p>Datenschutz</p></a>
+              <a aria-label="Read more about Seminole tax hike" href="imprint"><p>Impressum</p></a>
             </div>
         </article>
         <article class="information-2">
@@ -110,6 +110,11 @@
         </article>
     </section>
 </footer>
+<div id="consent-popup" class="hidden">
+  <p>We use cookies for analysis and marketing purposes. Please accept <a href="#">Terms and Conditions</a> these before using the site.
+  </p>
+  <a id="accept" href="#">Accept</a>
+</div>
 <?php snippet('popUp') ?>
 <?= js('assets/js/libs.js') ?>
 <?= js('assets/js/main.js', ['async' => false, 'defer' => true ]) ?>

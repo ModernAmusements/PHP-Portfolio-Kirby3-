@@ -18,10 +18,10 @@
     <meta name="theme-color" content="#da532c">
     <!-- Meta Information-->
     <?php echo $page->metaTags() ?>
-    <!-- Stylesheets CSS-->
+    <!-- Stylesheets Async CSS-->
     <?= css('assets/css/index.css', true) ?>
-    <!-- jQeury Async-->
-    <?= js('assets/js/jquery.js', true) ?>
+    <!-- jQeury-->
+    <?= js('assets/js/jquery.js') ?>
     <!-- Typekit Preloader-->
     <link rel="stylesheet preconnect" href="https://use.typekit.net/yxr4ufi.css">
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" async></script>

@@ -14327,6 +14327,81 @@ var aol = $.browser.aol(),
 
 /***/ }),
 
+/***/ "./src/js/11_cookieConsent.js":
+/*!************************************!*\
+  !*** ./src/js/11_cookieConsent.js ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+// jshint ignore: start
+
+/* eslint-disable */
+var cookieStorage = {
+  getItem: function getItem(item) {
+    var cookies = document.cookie.split(';').map(function (cookie) {
+      return cookie.split('=');
+    }).reduce(function (acc, _ref) {
+      var _ref2 = _slicedToArray(_ref, 2),
+          key = _ref2[0],
+          value = _ref2[1];
+
+      return _objectSpread(_objectSpread({}, acc), {}, _defineProperty({}, key.trim(), value));
+    }, {});
+    return cookies[item];
+  },
+  setItem: function setItem(item, value) {
+    document.cookie = "".concat(item, "=").concat(value, ";");
+  }
+};
+var storageType = cookieStorage;
+var consentPropertyName = 'jdc_consent';
+
+var shouldShowPopup = function shouldShowPopup() {
+  return !storageType.getItem(consentPropertyName);
+};
+
+var saveToStorage = function saveToStorage() {
+  return storageType.setItem(consentPropertyName, true);
+};
+
+window.onload = function () {
+  var acceptFn = function acceptFn(event) {
+    saveToStorage(storageType);
+    consentPopup.classList.add('hidden');
+  };
+
+  var consentPopup = document.getElementById('consent-popup');
+  var acceptBtn = document.getElementById('accept');
+  acceptBtn.addEventListener('click', acceptFn);
+
+  if (shouldShowPopup(storageType)) {
+    setTimeout(function () {
+      consentPopup.classList.remove('hidden');
+    }, 2000);
+  }
+};
+
+/***/ }),
+
 /***/ "./src/scss/index.scss":
 /*!*****************************!*\
   !*** ./src/scss/index.scss ***!
@@ -14339,9 +14414,9 @@ var aol = $.browser.aol(),
 /***/ }),
 
 /***/ 0:
-/*!***************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** multi ./src/js/01_fontPreloader.js ./src/js/02_swiper.min.js ./src/js/03_darkmode.js ./src/js/04_intersectionObserver.js ./src/js/06_mobile-nav.js ./src/js/07_modal.js ./src/js/08_work-page.js ./src/js/09_plugins.js ./src/js/10_current-device.min.js ./src/scss/index.scss ***!
-  \***************************************************************************************************************************************************************************************************************************************************************************************/
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** multi ./src/js/01_fontPreloader.js ./src/js/02_swiper.min.js ./src/js/03_darkmode.js ./src/js/04_intersectionObserver.js ./src/js/06_mobile-nav.js ./src/js/07_modal.js ./src/js/08_work-page.js ./src/js/09_plugins.js ./src/js/10_current-device.min.js ./src/js/11_cookieConsent.js ./src/scss/index.scss ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -14354,6 +14429,7 @@ __webpack_require__(/*! /Users/shady/Desktop/K-CMS-Master/src/js/07_modal.js */"
 __webpack_require__(/*! /Users/shady/Desktop/K-CMS-Master/src/js/08_work-page.js */"./src/js/08_work-page.js");
 __webpack_require__(/*! /Users/shady/Desktop/K-CMS-Master/src/js/09_plugins.js */"./src/js/09_plugins.js");
 __webpack_require__(/*! /Users/shady/Desktop/K-CMS-Master/src/js/10_current-device.min.js */"./src/js/10_current-device.min.js");
+__webpack_require__(/*! /Users/shady/Desktop/K-CMS-Master/src/js/11_cookieConsent.js */"./src/js/11_cookieConsent.js");
 module.exports = __webpack_require__(/*! /Users/shady/Desktop/K-CMS-Master/src/scss/index.scss */"./src/scss/index.scss");
 
 

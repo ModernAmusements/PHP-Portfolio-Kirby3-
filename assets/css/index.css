@@ -1355,6 +1355,9 @@ footer p {
 .svg-home-bg .repo-svg {
   position: fixed;
   pointer-events: none;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .svg-home-bg .repo-svg #bauhausShapes circle,

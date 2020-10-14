@@ -7,9 +7,15 @@ Icon
 # Temporary files
 # ---------------
 
-# /media/*
-# !/media/index.html
-# /.id.php
+/media/*
+!/media/index.html
+/.id.php
+
+# node_modules
+# ---------------
+
+node_modules
+
 
 # Lock files
 # ---------------
@@ -42,9 +48,3 @@ Icon
 
 /site/config/.license
 
-# Custom
-# ---------------
-
-/scripts
-/site/config/config.trykirby.test.php
-node_modules

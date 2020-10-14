@@ -1,0 +1,114 @@
+Title: Club Brugge — World in motion
+
+----
+
+Cover:
+
+- dietz_mock_up_01.jpg
+
+----
+
+Fullrow:
+
+- 
+  fullrow:
+    - 
+      headingc1: FP01
+      textc1: STRATEGY
+      headingc2: Section 01
+      textc2: "01"
+      headingc3: Part 001
+      textc3: ""
+      imagebuilder:
+        - dslt0010_myspace_web7.jpg
+      imagebuilderalt: The Club badge was off limits.
+      _key: fullRowText
+      line-a: null
+      _uid: fullRowText_1602682825707_655
+  _key: fullRow
+  _uid: fullRow_1602682824736_595
+- 
+  fullrow:
+    - 
+      headingc1: FP02
+      textc1: DESIGN
+      headingc2: Section 02
+      textc2: "02"
+      headingc3: Part 002
+      textc3: >
+        The new look and feel adds a
+        contemporary edge to the club’s
+        branding. Arrows are used to great
+        effect, combined with bold typography, a
+        more stylised approach to photography,
+        and a strong colour palette – led by
+        the club’s traditional blue and black,
+        with flashes of white. Motion graphics
+        are crisp and dynamic, with snappy
+        transitions suggesting a positive
+        attitude. The arrows became a unifying
+        graphic motif across the various teams
+        in the Club Brugge family – including
+        CLUB YLA (the women’s team) and CLUB
+        NXT (the youth academy).
+      imagebuilder: [ ]
+      imagebuilderalt: ""
+      _key: fullRowText
+      line-a: null
+      _uid: fullRowText_1602683067128_2096
+  _key: fullRow
+  uniquekey: 0
+  _uid: fullRow_1602683067119_2071
+- 
+  fullrow:
+    - 
+      headingc1: FP03
+      textc1: RESULTS
+      headingc2: Section 03
+      textc2: "03"
+      headingc3: Part 003
+      textc3: >
+        The new look and feel has created a
+        much-improved presence online and across
+        social media; adding a new dimension to
+        their motion graphics, ensuring the
+        visual brand reflects the club’s
+        on-field achievements.
+      imagebuilder: [ ]
+      imagebuilderalt: ""
+      _key: fullRowText
+      line-a: null
+      _uid: fullRowText_1602683176213_2793
+  _key: fullRow
+  uniquekey: 1
+  showpreviewinitially: false
+  isnew: true
+  _uid: fullRow_1602683176200_2768
+
+----
+
+Subheading: Match-fit brand
+
+----
+
+Date: 2020-10-14 13:35
+
+----
+
+Pills: New
+
+----
+
+Author: Florian Nagel
+
+----
+
+Tags: Future, Neohumanism
+
+----
+
+Theme: Alternativ
+
+----
+
+Description: Founded in 1891, Club Brugge is one of Belgium’s oldest and most successful football clubs, winning the league on 16 occasions. The club has become a regular feature in the UEFA Champions League – a prestigious competition with a global audience. Seeking to meet the media demands placed upon today’s elite clubs, especially in the digital realm, Club Brugge chose Studio Dumbar to refresh its brand.

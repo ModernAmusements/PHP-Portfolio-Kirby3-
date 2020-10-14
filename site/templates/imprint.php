@@ -23,45 +23,45 @@
       <article class="subpage-information">
         <div class="subpage-meta">
           <p class="sub-sub-heading small">Diensteanbieter gemäß § 5 TMG</p>
-          <h2 class="medium title"><?= $page->about()->kt() ?></h2>
+         <?= $page->about()->kt() ?>
         </div>
         <div class="subpage-description">
           <p class="sub-sub-heading small">I. Haftungsausschluss</p>
-          <h3 class="medium"><?= $page->info()->kt() ?></h3>
+        <?= $page->info()->kt() ?>
         </div>
         <div class="subpage-concept">
           <p class="sub-sub-heading small">II. Urheberrecht</p>
-          <h3 class="medium"><?= $page->cv()->kt() ?></h3>
+         <?= $page->cv()->kt() ?>
         </div>
         <div class="subpage-capabilities">
           <p class="sub-sub-heading small">III. Datenschutz</p>
-              <h3 class="large"><?= $page->capabilities()->kt() ?></h3>
+             <?= $page->capabilities()->kt() ?>
         </div>
         <div class="subpage-contact">
           <p class="sub-sub-heading small">IV. Cookies</p>
-          <h3 class="large"><?= $page->cookies()->kt() ?></h3>
+        <?= $page->cookies()->kt() ?>
         </div>        
       </article>
       <article class="subpage-information">
         <div class="subpage-meta">
           <p class="sub-sub-heading small">Diensteanbieter gemäß § 5 TMG</p>
-          <h2 class="medium title"><?= $page->googleAnalytics()->kt() ?></h2>
+        <?= $page->googleAnalytics()->kt() ?>
         </div>
         <div class="subpage-description">
           <p class="sub-sub-heading small">I. Google Analytics</p>
-          <h3 class="medium"><?= $page->googleAnalyticsConsent()->kt() ?></h3>
+         <?= $page->googleAnalyticsConsent()->kt() ?>
         </div>
         <div class="subpage-concept">
           <p class="sub-sub-heading small">II. Widerspruch Werbe-Mails</p>
-          <h3 class="medium"><?= $page->noConsent()->kt() ?></h3>
+         <?= $page->noConsent()->kt() ?>
         </div>
         <div class="subpage-capabilities">
           <p class="sub-sub-heading small">III. Zweck der Verarbeitung</p>
-              <h3 class="large"><?= $page->reason()->kt() ?></h3>
+              <?= $page->reason()->kt() ?>
         </div>
         <div class="subpage-contact">
           <p class="sub-sub-heading small">IV. Instagram</p>
-          <h3 class="large"><?= $page->instagram()->kt() ?></h3>
+          <?= $page->instagram()->kt() ?>
         </div>        
       </article>
     </section>

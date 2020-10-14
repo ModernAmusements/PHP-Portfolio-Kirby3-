@@ -16,7 +16,7 @@
     <p class="sub-heading"><?= $data->headingC3() ?></p>
     <?php endif ?>
 
-    <?php if ($imageBuilder = $data->imageBuilder()->toFile()->resize(720)): ?>
+    <?php if ($imageBuilder = $data->imageBuilder()->toFile()): ?>
       <img class="lazy" data-src="<?= $imageBuilder->url() ?>" alt="<?= $data->imageBuilderAlt() ?>" />
     <?php endif ?>
 

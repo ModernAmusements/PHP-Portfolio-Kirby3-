@@ -8,7 +8,7 @@
       <nav class="categories">
         <div class="categories-title">
           <strong>
-           <span>Filter:</span>
+           <a>Filter:</a>
           </strong>
         </div>
         <ul class="categories-pills">

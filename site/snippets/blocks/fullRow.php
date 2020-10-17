@@ -1,5 +1,5 @@
-<?php foreach ($data->fullRow()->toBuilderBlocks() as $column): ?>
-  <?php snippet('blocks/' . $column->_key(), ['data' => $column]) ?>
+<?php foreach ($data->fullRow()->toBuilderBlocks() as $block): ?>
+  <?php snippet('blocks/' . $block->_key(), ['data' => $block]) ?>
 <?php endforeach ?>
 
 

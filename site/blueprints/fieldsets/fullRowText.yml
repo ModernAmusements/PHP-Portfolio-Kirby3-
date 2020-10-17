@@ -1,6 +1,5 @@
 name: Full Row 
 fields:
-
   headingC1:
     label: H-Col. 1 "Description"
     type: text
@@ -27,7 +26,6 @@ fields:
     buttons: false
   line-a:
     type: line
-
   headingC3:
     label: Heading Col. 3 "Part"
     type: text

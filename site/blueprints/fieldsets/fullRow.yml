@@ -1,9 +1,9 @@
 name: Full Row 
+ preview:
+   snippet: blocks/fullRow
+   css: /assets/css/index.css
+ defaultView: preview
 label: Archive Files
-preview:
-  snippet: blocks/fullRow
-  css: /assets/css/index.css
-defaultView: preview
 fields:
   fullRow:
     label: Archive Section Builder

@@ -51,9 +51,13 @@
       </div>
     </section>
 
-    <?php foreach ($page->fullRow()->toBuilderBlocks() as $column): ?>
-    <?php snippet('blocks/' . $column->_key(), ['data' => $column]) ?>
+    <?php foreach ($page->fullRow()->toBuilderBlocks() as $block): ?>
+        <?php snippet('blocks/' . $block->_key(), ['data' => $block]) ?>
     <?php endforeach ?>
+
+
+
+
   </article>
   <!-- FOOTER BLOG -->
   <!-- TAGS -->

@@ -25,7 +25,6 @@ columns:
         layout: cards
         image:
           cover: true
-
       fullRow:
         label: Archive Section Master
         type: builder

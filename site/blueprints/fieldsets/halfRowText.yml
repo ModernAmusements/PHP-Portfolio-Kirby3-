@@ -1,9 +1,4 @@
-name: Full Row 
-label: Archive Files
-preview:
-  snippet: blocks/fullRow
-  css: /assets/css/index.css
-defaultView: preview
+name: Half Row
 fields:
   headingC1:
     label: H-Col. 1 "Description"
@@ -53,8 +48,6 @@ fields:
     description:
       type: textarea
     tags: true  
-
-
 
 
 

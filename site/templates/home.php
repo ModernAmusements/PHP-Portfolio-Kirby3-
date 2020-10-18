@@ -98,7 +98,6 @@
         </label>
       </span>
       <button class="controller" id="btn-remove-svg">Remove Shape</button>
-      <button class="controller" id="save">"⇧+S" to Save</button>
     </section>
   </article>
 </main>

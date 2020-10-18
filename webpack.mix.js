@@ -21,7 +21,6 @@ mix.js([
 
 mix.js([
     'src/js/01_homePageScripts.js',
-    'src/js/02_homeHtml2Canvas.js'
     ], 'assets/js/homePageScripts.js');
     
 

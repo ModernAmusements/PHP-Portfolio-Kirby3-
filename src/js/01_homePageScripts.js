@@ -96,14 +96,14 @@ document.onclick = function(e) {
     e.target.tagName != 'DIV' &&
     e.target.tagName != 'LABEL'
   ) {
-    document.getElementById('save').style.opacity = 1;
+    // document.getElementById('save').style.opacity = 1;
 
-    document.onkeypress = function() {
-      var x = event.which || event.keyCode;
-      if (x == 83) {
-        saveImage();
-      }
-    };
+    // document.onkeypress = function() {
+    //   var x = event.which || event.keyCode;
+    //   if (x == 83) {
+    //     saveImage();
+    //   }
+    // };
 
     if (previousCoords.length > 0) {
       if (Math.random() <= 0.3) {
@@ -171,57 +171,57 @@ document.onclick = function(e) {
   }
 };
 
-function saveAs(uri, filename) {
-  var link = document.createElement('a');
+// function saveAs(uri, filename) {
+//   var link = document.createElement('a');
 
-  if (typeof link.download === 'string') {
-    link.href = uri;
-    link.download = filename;
+//   if (typeof link.download === 'string') {
+//     link.href = uri;
+//     link.download = filename;
 
-    //Firefox requires the link to be in the body
-    document.body.appendChild(link);
+//     //Firefox requires the link to be in the body
+//     document.body.appendChild(link);
 
-    //simulate click
-    link.click();
+//     //simulate click
+//     link.click();
 
-    //remove the link when done
-    document.body.removeChild(link);
-  } else {
-    window.open(uri);
-  }
-}
+//     //remove the link when done
+//     document.body.removeChild(link);
+//   } else {
+//     window.open(uri);
+//   }
+// }
 
-import html2canvas from './02_homeHtml2Canvas';
+// import html2canvas from './02_homeHtml2Canvas';
 
-function saveImage() {
-  let w = Math.max(document.documentElement.clientWidth, window.innerWidth);
-  let h = Math.max(document.documentElement.clientHeight, window.innerHeight);
+// function saveImage() {
+//   let w = Math.max(document.documentElement.clientWidth, window.innerWidth);
+//   let h = Math.max(document.documentElement.clientHeight, window.innerHeight);
 
-  html2canvas(document.body, {
-    width: w,
-    height: h,
-  }).then(function(canvas) {
-    var svg = document.getElementById('bauhausShapes');
-    var img = document.querySelector('img');
+//   html2canvas(document.body, {
+//     width: w,
+//     height: h,
+//   }).then(function(canvas) {
+//     var svg = document.getElementById('bauhausShapes');
+//     var img = document.querySelector('img');
 
-    // get svg data
-    var xml = new XMLSerializer().serializeToString(svg);
+//     // get svg data
+//     var xml = new XMLSerializer().serializeToString(svg);
 
-    // make it base64
-    var svg64 = btoa(xml);
-    var b64Start = 'data:image/svg+xml;base64,';
+//     // make it base64
+//     var svg64 = btoa(xml);
+//     var b64Start = 'data:image/svg+xml;base64,';
 
-    // prepend a "header"
-    var image64 = b64Start + svg64;
-    // set it as the source of the img element
-    img.src = image64;
+//     // prepend a "header"
+//     var image64 = b64Start + svg64;
+//     // set it as the source of the img element
+//     img.src = image64;
 
-    // draw the image onto the canvas
-    canvas.getContext('2d').drawImage(img, 0, 0);
+//     // draw the image onto the canvas
+//     canvas.getContext('2d').drawImage(img, 0, 0);
 
-    saveAs(canvas.toDataURL(), 'fff-corp™-2020®.png');
-  });
-}
+//     saveAs(canvas.toDataURL(), 'fff-corp™-2020®.png');
+//   });
+// }
 
 // Homepage Control
 // Remove Shapes

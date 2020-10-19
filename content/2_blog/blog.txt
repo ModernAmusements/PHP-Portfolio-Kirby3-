@@ -1,0 +1,20 @@
+Title: Archive
+
+----
+
+Heading: Test
+
+----
+
+Subheading: 3000
+
+----
+
+Limit: 6
+
+----
+
+Dateformat: d M, Y
+
+----
+

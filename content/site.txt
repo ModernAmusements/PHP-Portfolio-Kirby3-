@@ -1,46 +1,107 @@
-Title: Shady Tawfik
+Title: FFF-Corp
 
 ----
 
-Text:
-
-I´m a multidisciplinary designer constantly exploring different possibilities, working across disciplines
-
-My aim is to communicate complex ideas in their simplest form. Currently living and working in Germany. Feel free to contact for project inquiries.
+Description: Creativity is no longer spontaneous. Find out how our method achieves outstanding strategy and design so as to boost innovation in your company.
 
 ----
 
-Contact:
-
-s.tawfik@info.de
-+31(0)639721282
-instagram
-ShadyType©
+Additionaldescription: At Lúcid the digital product is an important part of the global customer experience, it is their virtual point of contact with the service
 
 ----
 
-Clients:
-
-Typojanchi
-Raycap
-United Standard
-Kitsune
-Crack Magazine
-Kaleidoscope
+Behanceid: FFF-Corp
 
 ----
 
-Phone: 
+Social:
+
+- 
+  platform: Behance
+  link: https://www.behance.net/fnagel1992256a
+- 
+  platform: Instagram
+  link: >
+    https://www.instagram.com/fffcorp/feed/?hl=de
 
 ----
 
-Email: 
+Email: hello@fffcorp.de
 
 ----
 
-Address:
+Emailpress: press@fffcorp.de
 
-s.tawfik@info.de
-+31(0)639721282
-instagram
-ShadyType©
+----
+
+Phone: (+31) 6 46 79 52 91
+
+----
+
+Metaimage:
+
+- 5stoneoflead_still2-960x400.jpg
+
+----
+
+Popupheadline: WORK WITH ME
+
+----
+
+Popupsubheadline01: Entwicklung von Kommunikationskonzepten
+
+----
+
+Popupsubheadline02: Multidisziplinäre Arbeitsweise
+
+----
+
+Popupsubheadline03: Erhalte Antworten auf alle deine Fragen
+
+----
+
+Popupimage:
+
+- dietz_mock_up_02.jpg
+
+----
+
+Altpopup: Moz Keyword Explorer tool for SEO keyword research
+
+----
+
+Succesimage:
+
+- dietz_mock_up_01.jpg
+
+----
+
+Altsucces: Moz Keyword Explorer tool for SEO keyword research
+
+----
+
+Consent: Einwilligungserklärung
+
+----
+
+Consentdeclaration01: Wir geben deine Daten nicht an Dritte weiter.
+
+----
+
+Consentdeclaration02: Wir verwenden deine Daten ausschließlich zu Beratungs- und Informationszwecken über eine Zusammenarbeit mit FFF-Corp.
+
+----
+
+Consentdeclaration03: Du kannst der Kontaktaufnahme jederzeit widersprechen. Am besten per Mail an (link: mailto:info@fff-corp.de text: info@fff-corp.de).
+
+----
+
+Consentdeclaration04: Weitere Informationen zum Datenschutz findest du in unserer (link: /datenschutz text: Datenschutzerklärung).
+
+----
+
+Metaimagetext: Find out how our method achieves outstanding strategy and design so as to boost innovation in your company.
+
+----
+
+Successimagetext: Find out how our method achieves outstanding strategy and design so as to boost innovation in your company.

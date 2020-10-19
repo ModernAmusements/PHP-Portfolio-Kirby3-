@@ -1,0 +1,174 @@
+Title: Imprint
+
+----
+
+Heading: Imprint
+
+----
+
+Subheading: Terms Of Use
+
+----
+
+About:
+
+# Grover Group GmbH
+Holzmarktstraße 11, 10179 Berlin
+Vertreten durch: Michael Cassau 
+
+E-Mail: grover@grover.com
+Telefon: +49 (0)30 30 80 82 51
+
+Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer  Verbraucherschlichtungsstelle teilzunehmen.
+
+----
+
+Info:
+
+## Haftung für Inhalte
+
+Als  Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als  Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.
+
+## Haftung für Links
+
+Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.
+
+----
+
+Cv:
+
+## Urheberrecht
+
+Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.
+ 
+
+Quelle: https://www.e-recht24.de/impressum-generator.html
+
+----
+
+Capabilities:
+
+## Datenschutz
+
+Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.Die Nutzung unserer Webseite ist in der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf unseren Seiten personenbezogene Daten (beispielsweise Name, Anschrift oder E-Mail-Adressen) erhoben werden, erfolgt dies, soweit möglich, stets auf freiwilliger Basis. Diese Daten werden ohne Ihre ausdrückliche Zustimmung nicht an Dritte weitergegeben. Wir weisen darauf hin, dass die Datenübertragung im Internet (z.B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.
+
+----
+
+Cookies:
+
+## Cookies
+
+Die Internetseiten verwenden teilweise so genannte Cookies. Cookies richten auf Ihrem Rechner keinen Schaden an und enthalten keine Viren. Cookies dienen dazu, unser Angebot nutzerfreundlicher, effektiver und sicherer zu machen. Cookies sind kleine Textdateien, die auf Ihrem Rechner abgelegt werden und die Ihr Browser speichert. Die meisten der von uns verwendeten Cookies sind so genannte „Session-Cookies“. Sie werden nach Ende Ihres Besuchs automatisch gelöscht. Andere Cookies bleiben auf Ihrem Endgerät gespeichert, bis Sie diese löschen. Diese Cookies ermöglichen es uns, Ihren Browser beim nächsten Besuch wiederzuerkennen.
+
+Sie können Ihren Browser so einstellen, dass Sie über das Setzen von Cookies informiert werden und Cookies nur im Einzelfall erlauben, die Annahme von Cookies für bestimmte Fälle oder generell ausschließen sowie das automatische Löschen der Cookies beim Schließen des Browser aktivieren. Bei der Deaktivierung von Cookies kann die Funktionalität dieser Website eingeschränkt sein.
+
+----
+
+Googleanalytics:
+
+# Google Analytics
+
+Quelle: Datenschutz-Konfigurator von mein-datenschutzbeauftragter.de
+
+(link: https://tools.google.com/dlpage/gaoptout?hl=de text: Browser-Add-on zur Deaktivierung von Google Analytics)
+
+----
+
+Googleanalyticsconsent:
+
+## Google Analytics „Cookies“
+
+Diese Website benutzt Google Analytics, einen Webanalysedienst der Google Inc. („Google“). Google Analytics verwendet sog. „Cookies“, Textdateien, die auf Ihrem Computer gespeichert werden und die eine Analyse der Benutzung der Website durch Sie ermöglichen. Die durch den Cookie erzeugten Informationen über Ihre Benutzung dieser Website werden in der Regel an einen Server von Google in den USA übertragen und dort gespeichert. Im Falle der Aktivierung der IP-Anonymisierung auf dieser Webseite, wird Ihre IP-Adresse von Google jedoch innerhalb von Mitgliedstaaten der Europäischen Union oder in anderen Vertragsstaaten des Abkommens über den Europäischen Wirtschaftsraum zuvor gekürzt.
+
+Nur in Ausnahmefällen wird die volle IP-Adresse an einen Server von Google in den USA übertragen und dort gekürzt. Im Auftrag des Betreibers dieser Website wird Google diese Informationen benutzen, um Ihre Nutzung der Website auszuwerten, um Reports über die Websiteaktivitäten zusammenzustellen und um weitere mit der Websitenutzung und der Internetnutzung verbundene Dienstleistungen gegenüber dem Websitebetreiber zu erbringen. Die im Rahmen von Google Analytics von Ihrem Browser übermittelte IP-Adresse wird nicht mit anderen Daten von Google zusammengeführt. Sie können die Speicherung der Cookies durch eine entsprechende Einstellung Ihrer Browser-Software verhindern; wir weisen Sie jedoch darauf hin, dass Sie in diesem Fall gegebenenfalls nicht sämtliche Funktionen dieser Website vollumfänglich werden nutzen können.
+
+Sie können darüber hinaus die Erfassung der durch das Cookie erzeugten und auf Ihre Nutzung der Website bezogenen Daten (inkl. Ihrer IP-Adresse) an Google sowie die Verarbeitung dieser Daten durch Google verhindern, indem sie das unter dem folgenden Link verfügbare Browser-Plugin herunterladen und installieren: Browser Add On zur Deaktivierung von Google Analytics.
+ 
+Quelle: Datenschutz-Konfigurator von mein-datenschutzbeauftragter.de
+
+----
+
+Noconsent:
+
+## Widerspruch Werbe-Mails
+
+Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten zur Übersendung von nicht ausdrücklich angeforderter Werbung und Informationsmaterialien wird hiermit widersprochen. Die Betreiber der Seiten behalten sich ausdrücklich rechtliche Schritte im Falle der unverlangten Zusendung von Werbeinformationen, etwa durch Spam-E-Mails, vor.
+
+Quelle: https://www.e-recht24.de/muster-datenschutzerklaerung.html
+
+----
+
+Reason:
+
+## Zweck der Verarbeitung
+
+Wofür verarbeiten wir Ihre Daten (Zweck der Verarbeitung) und auf welcher Rechtsgrundlage?
+Wir verarbeiten personenbezogene Daten im Einklang mit den Bestimmungen der Europäischen Datenschutz-Grundverordnung (DSGVO) und dem Bundesdatenschutzgesetz (BDSG) zu folgenden Zwecken:
+
+Die Verarbeitung personenbezogener Daten (Artikel 4 Nr. 2 DSGVO) erfolgt zur Bereitstellung dieser Webseite und zur Vermarktung der Produkte, insbesondere zum Abschluss und zur Abwicklung von Verträgen, zur Abrechnung, zur Durchführung vorvertraglicher Maßnahmen, zur Beantwortung von Anfragen im Zusammenhang mit unserer Geschäftsbeziehung sowie für alle mit dem Betrieb und der Verwaltung des Unternehmens erforderlichen Tätigkeiten.
+
+2m Rahmen der Interessenabwägung (Art. 6 Abs. 1 S. 1 lit. f DSGVO) Darüber hinaus verarbeiten wir Ihre Daten über die Bereitstellung der Webseite und die eigentliche Erfüllung des Vertrages hinaus zur Wahrung berechtigter Interessen von uns oder Dritten, wie insbesondere in den folgenden Fällen:
+
+Aufgrund Ihrer Einwilligung (Art. 6 Abs. 1 S. 1 lit. a DSGVO)
+
+Soweit Sie uns eine Einwilligung zur Verarbeitung von personenbezogenen Daten für bestimmte Zwecke (z. B. Auswertung oder Nutzung von Daten für Marketingzwecke) erteilt haben, ist die Rechtmäßigkeit dieser Verarbeitung auf Basis Ihrer Einwilligung gegeben. Eine erteilte Einwilligung kann jederzeit widerrufen werden. Dies gilt auch für den Widerruf von Einwilligungserklärungen, die Sie uns vor der Geltung der DSGVO, also vor dem 25. Mai 2018, erteilt haben. Bitte beachten Sie, dass der Widerruf erst für die Zukunft wirkt. Verarbeitungen, die vor dem Widerruf erfolgt sind, sind davon nicht betroffen.
+
+Wer bekommt meine Daten?
+Innerhalb des jeweils verantwortlichen Unternehmens erhalten diejenigen Stellen Zugriff auf Ihre Daten, die diese zur E
+
+Im Falle, dass Ihre Vertragspartnerin die Grover Finance I oder Grover Finance II ist, macht Grover Finance I, bzw. Grover Finance II der Grover Group Ihre Daten zum Abschluss und zur Abwicklung der Vertragsbeziehung sowie zur Bewerbung der eigenen Angebote zugänglich, sofern hierfür eine Rechtsgrundlage besteht.
+
+Darüber hinaus erfolgt eine Weitergabe oder übermittlung Ihrer personenbezogenen Daten, wenn gesetzliche Bestimmungen dies gebieten (Art. 6 Abs. 1 S. 1 lit. c DSGVO) oder Sie eingewilligt haben (Art. 6 Abs. 1 S. 1 lit. a DSGVO).
+
+Wie lange werden meine Daten gespeichert?
+Soweit erforderlich, verarbeiten und speichern wir Ihre personenbezogenen Daten jedenfalls für die Dauer unserer Vertragsbeziehung, was beispielsweise auch die Anbahnung und die Abwicklung eines Vertrages umfasst. Dabei ist zu beachten, dass unsere Vertragsbeziehung meist ein Dauerschuldverhältnis ist.
+
+Logfiles werden grundsätzlich nach dem Ende der jeweiligen Browser-Sitzung gelöscht, spätestens nach sieben Tagen, es sei denn, ihre weitere Speicherung ist ausnahmsweise erforderlich und rechtmäßig. Die Speicherdauer von Cookies hängt vom Einzelfall ab und beträgt in der Regel zwischen zwölf und 24 Monaten.
+
+----
+
+Instagram:
+
+## Instagram
+
+Wir haben auf unseren Internetseiten Komponenten des Dienstes Instagram integriert. Instagram ist ein Dienst, der als audiovisuelle Plattform zu qualifizieren ist und den Nutzern das Teilen von Fotos und Videos und zudem eine Weiterverbreitung solcher Daten in anderen sozialen Netzwerken ermöglicht. Betreibergesellschaft der Dienste von Instagram ist die Instagram LLC, 1 Hacker Way, Building 14 First Floor, Menlo Park, CA, USA.
+
+
+Durch jeden Aufruf einer der Einzelseiten dieser Internetseite, die von uns betrieben wird und auf welcher eine Instagram-Komponente (Insta-Button) integriert wurde, wird der Internetbrowser auf dem informationstechnologischen System der betroffenen Person automatisch durch die jeweilige Instagram-Komponente veranlasst, eine Darstellung der entsprechenden Komponente von Instagram herunterzuladen. Im Rahmen dieses technischen Verfahrens erhält Instagram Kenntnis darüber, welche konkrete Unterseite unserer Internetseite durch die betroffene Person besucht wird.
+
+
+Sofern die betroffene Person gleichzeitig bei Instagram eingeloggt ist, erkennt Instagram mit jedem Aufruf unserer Internetseite durch die betroffene Person und während der gesamten Dauer des jeweiligen Aufenthaltes auf unserer Internetseite, welche konkrete Unterseite die betroffene Person besucht. Diese Informationen werden durch die Instagram-Komponente gesammelt und durch Instagram dem jeweiligen Instagram-Account der betroffenen Person zugeordnet. Betätigt die betroffene Person einen der auf unserer Internetseite integrierten Instagram-Buttons, werden die damit übertragenen Daten und Informationen dem persönlichen Instagram-Benutzerkonto der betroffenen Person zugeordnet und von Instagram gespeichert und verarbeitet.
+
+
+Instagram erhält über die Instagram-Komponente immer dann eine Information darüber, dass die betroffene Person unsere Internetseite besucht hat, wenn die betroffene Person zum Zeitpunkt des Aufrufs unserer Internetseite gleichzeitig bei Instagram eingeloggt ist; dies findet unabhängig davon statt, ob die betroffene Person die Instagram-Komponente anklickt oder nicht. Ist eine derartige Übermittlung dieser Informationen an Instagram von der betroffenen Person nicht gewollt, kann diese die Übermittlung dadurch verhindern, dass sie sich vor einem Aufruf unserer Internetseite aus ihrem Instagram-Account ausloggt.
+
+----
+
+Company: FFF-Corp
+
+----
+
+Street: Lange Straße 2
+
+----
+
+Zip: 32457
+
+----
+
+City: Porta Westfalica
+
+----
+
+Country: Germany
+
+----
+
+Email: hello@fffcorp.de
+
+----
+
+Phone: (+31) 6 46 79 52 91
+
+----
+

@@ -1,48 +1,106 @@
 <?php
-
-/**
- * Templates render the content of your pages. 
- * They contain the markup together with some control structures like loops or if-statements.
- * This template is responsible for rendering all the subpages of the `notes` page.
- * The `$page` variable always refers to the currently active page. 
- * To fetch the content from each field we call the field name as a method on the `$page` object, e.g. `$page->title()`.
- * Snippets like the header and footer contain markup used in multiple templates. They also help to keep templates clean.
- * More about templates: https://getkirby.com/docs/guide/templates/basics
- */
 ?>
-
 <?php snippet('header') ?>
-
-
-
-
-
-    <h1><?= $page->title() ?></h1>
-
-
-
+<main class="work-subpage">
+  <?php if ($cover = $page->cover()->resize(1080)): ?>
+  <section class="cover">
+    <img class="lazy" data-src="<?= $cover->url() ?>" alt="<?= $cover->alt() ?>" />
     <time class=""><?= $page->date()->toDate('d F Y') ?></time>
- 
-
-
-    <div class="text-right">
-      <?php if ($page->tags()->isNotEmpty()) : ?>
-        <p class=""><?= $page->tags() ?>
-        </p>
-      <?php endif ?>
-    </div>
-
-
-    <?php if ($image = $page->cover()->toFile()) : ?>
-      <img src="<?= $image->url() ?>" alt="">
-    <?php endif ?>
-
-
-
-
-
-    <?= $page->description()->kt() ?>
-
-
-
-<?php snippet('footer') ?>
+  </section>
+  <?php endif ?>
+  <section class="work-subpage-content">
+    <article class="subpage-information">
+      <div class="subpage-meta">
+        <p class="first-row">Block A</p>
+        <h2 class="title"><?= $page->title() ?></h2>
+        <p>Tags:</p>
+        <?php foreach ($page->tags()->split() as $tag): ?>
+        <tags class="post-meta">
+          <p class="tags small"><?= $tag ?></p>
+        </tags>
+        <?php endforeach ?>
+        <br />
+        <p>Client:</p>
+        <h3><?= $page->client() ?></h3>
+        <p>Involved:</p>
+        <h3><?= $page->contributors() ?></h3>
+      </div>
+      <div class="subpage-description">
+        <p>Block B</p>
+        <h3 class="large"><?= $page->description() ?></h3>
+      </div>
+      <div class="subpage-concept">
+        <p>Block C</p>
+        <h3 class="large"><?= $page->concept() ?></h3>
+      </div>
+      <div id="barba-wrapper">
+        <div class="barba-container one left" data-namespace="index-page">
+          <div class="subpage-gallery" id="index">
+            <section class="post-gallery">
+              <article class="work-videos">
+                <?php foreach ($page->videos()->template('work-videos') as
+                $image): ?>
+                <div class="video-wrapper post-video" data-state="not-init">
+                  <video loop playsinline preload="metadata" poster="">
+                    <source src="<?= $image->url() ?>" type="video/mp4" />
+                  </video>
+                  <button class="intro-play"><span>Play</span></button>
+                  <div class="vid-controls">
+                    <button class="vid-icon vid-playpause" data-state="play">
+                      Play
+                    </button>
+                    <button class="vid-icon vid-mute" data-state="mute">
+                      Sound
+                    </button>
+                    <button
+                      class="vid-icon vid-fullscreen"
+                      data-state="go-fullscreen"
+                    >
+                      Fullscreen
+                    </button>
+                    <div class="vid-progress-wrap" max="14.53756">
+                      <div
+                        class="vid-progress-bar"
+                        data-value="0"
+                        min="0"
+                      ></div>
+                    </div>
+                  </div>
+                  <hr />
+                  <p class="small">
+                    Exercitation incididunt consectetur culpa ipsum sit eiusmod
+                    enim.
+                  </p>
+                </div>
+                <?php endforeach ?>
+              </article>
+              <article class="work-images">
+                <div class="slider">
+                  <?php if ($image = $page->image()->resize(1080)): ?>
+                  <?php foreach ($page->images()->template('work-image') as
+                  $image): ?>
+                  <img
+                    data-lazy="<?= $image->url() ?>"
+                    alt="<?= $cover->alt() ?>"
+                  />
+                  <?php endforeach ?>
+                  <?php endif ?>
+                </div>
+                <div class="text-counter"></div>
+                <hr />
+                <div class="work-legend">
+                  <p class="small">
+                    Exercitation incididunt consectetur culpa ipsum sit eiusmod
+                    enim.
+                  </p>
+                </div>
+              </article>
+            </section>
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
+</main>
+<?php snippet('subpageFooter/subpage') ?>
+<?php snippet('footer/workFooter') ?>

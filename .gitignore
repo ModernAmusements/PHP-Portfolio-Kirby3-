@@ -9,9 +9,17 @@ Icon
 
 /media/*
 !/media/index.html
+/.id.php
+
+# node_modules
+# ---------------
+
+node_modules
+
 
 # Lock files
 # ---------------
+
 .lock
 
 # -------------SECURITY-------------
@@ -27,8 +35,7 @@ Icon
 # Accounts
 # ---------------
 
-/site/accounts/*
-!/site/accounts/index.html
+# /site/accounts/.logins
 
 # Sessions
 # ---------------
@@ -38,4 +45,6 @@ Icon
 
 # License
 # ---------------
+
 /site/config/.license
+

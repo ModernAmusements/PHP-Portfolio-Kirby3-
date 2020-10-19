@@ -1,15 +1,69 @@
 <?php
-
-/**
- * The config file is optional. It accepts a return array with config options
- * Note: Never include more than one return statement, all options go within this single return array
- * In this example, we set debugging to true, so that errors are displayed onscreen. 
- * This setting must be set to false in production.
- * All config options: https://getkirby.com/docs/reference/system/options
- */
 return [
     'debug' => true,
+    'languages' => true,
     'panel' =>[
       'install' => true
-    ]
+    ],
+    'email' => [
+      'transport' => [
+        'type' => 'smtp',
+        'host' => 'smtp.gmail.com',
+        'port' => 465,
+        'security' => true,
+        'auth' => true,
+        'username' => 'shadynathantawfik@gmail.com',
+        'password' => 'trhrdfogjdsjzrls',
+      ]
+      ],
+    'kirby' => [
+      'blog' => [
+        'date' => 'd M, Y',
+        'pagination' => [
+          'limit' => 6
+        ]
+      ]
+    ],
+    'thumbs' => [
+      'driver' => 'im',
+    ],
+    'routes' => [
+      [
+        'pattern' => 'blog/feed',
+        'action'  => function () {
+          return collection('blog/articles')->limit(10)->feed([
+            'title'       => 'Blog',
+            'description' => 'The latest updates from the blog.',
+            'link'        => 'blog',
+          ]);
+        }
+      ],
+    ],
+  'pedroborges.meta-tags.default' => function ($page, $site) {
+      return [
+          'title' => $site->title(),
+          'meta' => [
+              'description' => $site->description(),
+              'description' => $site->additionalDescription(),
+              'behance:site' => $site->additionalDescription()
+
+              
+          ],
+          'link' => [
+              'canonical' => $page->url()
+          ],
+          'og' => [
+              'image' => $site->image()->url(),
+              'title' => $page->isHomePage()
+                  ? $site->title()
+                  : $page->title(),
+              'type' => 'website',
+              'site_name' => $site->title(),
+              'url' => $page->url()
+          ]
+      ];
+  }
+
+
 ];
+

@@ -25,3 +25,14 @@ npm run lint
 ❯ git branch
 ❯ git checkout -b production
 ❯ git push origin production
+
+
+
+// IONES SET UP 
+
+``` bash
+ssh home719242978.1and1-data.host -l u92059792 -p 22
+
+git --help
+
+```

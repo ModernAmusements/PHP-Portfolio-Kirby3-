@@ -1,19 +1,15 @@
-# Development 
+# Production
 
-## Project setup
 ```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
+git remote add fortrabbit fff-corp-333@deploy.eu2.frbit.com:fff-corp-333.git
 ```
 
-### Compiles and minifies for production
-```git
-npm run build
 ```
+ssh fff-corp-333@deploy.eu2.frbit.com:fff-corp-333.git reset
+```
+
+```
+<<<<<<< HEAD
 
 ### Lints and fixes files
 ```
@@ -35,4 +31,7 @@ ssh home719242978.1and1-data.host -l u92059792 -p 22
 
 git --help
 
+=======
+git push fff-corp-333@deploy.eu2.frbit.com:fff-corp-333.git
+>>>>>>> 72b0fca4fa32142b7fdada06793bdbba3d0f1d61
 ```

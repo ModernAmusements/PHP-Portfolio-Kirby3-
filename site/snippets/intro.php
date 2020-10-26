@@ -7,7 +7,6 @@
  * More about snippets: https://getkirby.com/docs/guide/templates/snippets
  */
 ?>
-
 <header class="intro">
   <h1><?= $page->title() ?></h1>
 </header>

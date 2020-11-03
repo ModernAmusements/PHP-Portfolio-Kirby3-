@@ -12,6 +12,8 @@ Tags: Graphic, Experimental
 
 Description:
 
+## Angewandte Kunst
+
 Founded in 2009, Munich-based design studio ASK has become known for its iconic use of forms focused on products and objects of every scale in industrial, cultural and museum contexts. We were commissioned by Steffen Kehrle and his team to develop their identity with. 
 To determine the studio’s continuous questioning regarding design principles, we made use of what the initials A-S-K stand for and let them stick out graphically on mainly pure white backgrounds, giving space to all images. In addition to all printed matters we designed a modular digital portfolio system our client can put together as desired. The website is coded by.
 
@@ -24,7 +26,11 @@ Apple
 
 ----
 
-Concept: Threw one of the opening parties for imm trade fair 2018 at Museum für Angewandte Kunst Köln (MAKK). They showcased and awarded their selection of best novelties in the field of product design.
+Concept:
+
+## MAKK
+
+Threw one of the opening parties for imm trade fair 2018 at Museum für Angewandte Kunst Köln (MAKK). They showcased and awarded their selection of best novelties in the field of product design.
 
 ----
 

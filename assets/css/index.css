@@ -2081,27 +2081,29 @@ nav.categories-mobile {
 .post-content .work-subpage-link {
   grid-column: 6/9;
   grid-row: 2;
-  align-self: start;
+}
+
+.post-content .work-subpage-link .link {
+  grid-template-columns: 1fr 2fr;
+  grid-column-gap: 10px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
 }
 
 .post-content .work-subpage-link .more {
   display: table;
   margin-right: auto;
-  line-height: 1;
-  font-weight: 400;
+  font-size: large;
   color: var(--foreground-color);
   transform: translateX(10px);
   transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0ms;
 }
 
-.post-content .work-subpage-link .more svg.link-arrow {
+.post-content .work-subpage-link svg {
   display: inline-block;
   vertical-align: middle;
-  width: 25px;
-  height: 25px;
-  stroke-width: 1.5px;
-  transform: rotate(-45deg);
-  transform: scale(0);
+  fill: var(--foreground-color);
   transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0ms;
 }
 
@@ -2121,9 +2123,10 @@ nav.categories-mobile {
   transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0ms;
 }
 
-.work-subpage-link:hover .more svg.link-arrow {
+.work-subpage-link:hover svg {
+  fill: var(--primary-color);
   transform: scale(0.5);
-  transform: rotate(-45deg);
+  transform: translateX(-10px);
   transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0ms;
 }
 
@@ -2623,8 +2626,14 @@ main.work-subpage .work-subpage-content .subpage-information {
   grid-column-gap: 10px;
 }
 
-main.work-subpage .work-subpage-content .subpage-information hr {
-  margin: 0;
+main.work-subpage .work-subpage-content .subpage-information h1,
+main.work-subpage .work-subpage-content .subpage-information h2 {
+  margin-top: calc(var(--lineHeight) * 0.5);
+}
+
+main.work-subpage .work-subpage-content .subpage-information p:not(.tags) {
+  margin-top: calc(var(--lineHeight) * 0.5);
+  margin-bottom: calc(var(--lineHeight) * 0.5);
 }
 
 main.work-subpage .work-subpage-content .subpage-information .subpage-meta {
@@ -2639,7 +2648,6 @@ main.work-subpage .work-subpage-content .subpage-information .subpage-meta p.fir
 }
 
 main.work-subpage .work-subpage-content .subpage-information .subpage-meta p:not(.first-row):not(.tags) {
-  margin-bottom: 2px;
   border-bottom: 1px solid var(--foreground-color);
 }
 
@@ -3137,7 +3145,8 @@ main.work-subpage .work-subpage-content .subpage-information .work-legend {
   padding-bottom: 2em;
 }
 
-.imprint-page .work-subpage-content h1 {
+.imprint-page .work-subpage-content h1,
+.imprint-page .work-subpage-content h2 {
   margin-top: calc(var(--lineHeight) * 0.5);
 }
 

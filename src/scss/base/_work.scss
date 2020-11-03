@@ -64,7 +64,6 @@ nav.categories-mobile {
 .toggle.post-header:before {
   opacity: 0;
 }
-
 .post-header {
   display: grid;
   grid-column-gap: 10px;
@@ -175,7 +174,6 @@ nav.categories-mobile {
     color: var(--background-color);
   }
 }
-
 .post.toggle {
   .post-header {
     height: 8rem;
@@ -187,7 +185,6 @@ nav.categories-mobile {
   font-size: 3.5rem;
   transition: font-size 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
-
 .toggle.post-title {
   white-space: initial;
 }
@@ -235,7 +232,7 @@ nav.categories-mobile {
     grid-row: 1;
     grid-template-columns: 1fr 2fr;
     grid-column-gap: 10px;
-    section{
+    section {
       border-bottom: 1px solid var(--foreground-color);
     }
   }
@@ -262,25 +259,26 @@ nav.categories-mobile {
   .work-subpage-link {
     grid-column: 6 / 9;
     grid-row: 2;
-    align-self: start;
+    .link {
+      grid-template-columns: 1fr 2fr;
+      grid-column-gap: 10px;
+      display: grid;
+      align-items: center;
+      justify-content: center;
+    }
     .more {
       display: table;
       margin-right: auto;
-      line-height: 1;
-      font-weight: 400;
+      font-size: large;
       color: var(--foreground-color);
       transform: translateX(10px);
       transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0ms;
-      svg.link-arrow {
-        display: inline-block;
-        vertical-align: middle;
-        width: 25px;
-        height: 25px;
-        stroke-width: 1.5px;
-        transform: rotate(-45deg);
-        transform: scale(0);
-        transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0ms;
-      }
+    }
+    svg {
+      display: inline-block;
+      vertical-align: middle;
+      fill: var(--foreground-color);
+      transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0ms;
     }
   }
 }
@@ -302,12 +300,11 @@ nav.categories-mobile {
     transform: translateX(0px);
     transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0ms;
   }
-  .more {
-    svg.link-arrow {
-      transform: scale(0.5);
-      transform: rotate(-45deg);
-      transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0ms;
-    }
+  svg {
+    fill: var(--primary-color);
+    transform: scale(0.5);
+    transform: translateX(-10px);
+    transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0ms;
   }
 }
 // Post-Slider Images
@@ -549,7 +546,6 @@ button {
     background-color: rgba(255, 255, 255, 0.25);
   }
 }
-
 @media (min-width: 320px) and (max-width: 877px) {
   // Pre Layout
   // Post Categories

@@ -87,14 +87,15 @@
             </section>
           </article>
           <article class="work-subpage-link">
-            <a class="" href="<?= $work->url() ?>">
+            <a class="link" href="<?= $work->url() ?>">
               <span class="more">Explore Project
-                <svg class="link-arrow">
-                  <use xlink:href="images/icons/icons-16px.svg#btnArrow">
-                </svg>
               </span>
+            <svg viewBox="0 0 402 42" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M397 23.5002H0V18.5002H397V23.5002Z" />
+                <path d="M398.506 17.6775L401.335 20.5059L380.828 41.012L378 38.1836L398.506 17.6775Z" />
+                <path d="M401.335 20.5059L398.506 23.3345L378 2.82843L380.828 0L401.335 20.5059Z" />
+            </svg>
             </a>
-            <hr>
           </article>
           <section class="post-gallery">
             <article class="work-videos">

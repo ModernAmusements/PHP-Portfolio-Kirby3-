@@ -11,8 +11,8 @@
   <section class="work-subpage-content">
     <article class="subpage-information">
       <div class="subpage-meta">
-        <p class="first-row">Block A</p>
-        <h2 class="title"><?= $page->title() ?></h2>
+        <p class="sub-sub-heading small">Block A</p>
+        <h1><?= $page->title() ?></h1>
         <p>Tags:</p>
         <?php foreach ($page->tags()->split() as $tag): ?>
         <tags class="post-meta">
@@ -26,12 +26,12 @@
         <h3><?= $page->contributors() ?></h3>
       </div>
       <div class="subpage-description">
-        <p>Block B</p>
-        <h3 class="large"><?= $page->description() ?></h3>
+      <p class="sub-sub-heading small">Block B</p>
+       <?= $page->description()->kt() ?>
       </div>
       <div class="subpage-concept">
-        <p>Block C</p>
-        <h3 class="large"><?= $page->concept() ?></h3>
+      <p class="sub-sub-heading small">Block C</p>
+        <?= $page->concept()->kt() ?>
       </div>
       <div id="barba-wrapper">
         <div class="barba-container one left" data-namespace="index-page">

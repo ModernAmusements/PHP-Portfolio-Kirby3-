@@ -14,8 +14,13 @@ Icon
 # node_modules
 # ---------------
 
-node_modules
+/node_modules
 
+/storage/*.key
+/vendor
+.env
+.env.backup
+.phpunit.result.cache
 
 # Lock files
 # ---------------

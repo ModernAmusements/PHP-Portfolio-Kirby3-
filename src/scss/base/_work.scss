@@ -229,10 +229,14 @@ nav.categories-mobile {
   grid-column-gap: 10px;
   grid-row-gap: var(--rowGap);
   .work-description {
+    border-top: 1px solid var(--foreground-color);
+    display: grid;
     grid-column: 6 / 9;
     grid-row: 1;
-    p {
-      margin-bottom: 0;
+    grid-template-columns: 1fr 2fr;
+    grid-column-gap: 10px;
+    section{
+      border-bottom: 1px solid var(--foreground-color);
     }
   }
   .post-gallery {

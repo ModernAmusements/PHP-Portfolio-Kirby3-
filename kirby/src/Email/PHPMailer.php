@@ -2,6 +2,7 @@
 
 namespace Kirby\Email;
 
+use Kirby\Exception\InvalidArgumentException;
 use PHPMailer\PHPMailer\PHPMailer as Mailer;
 
 /**
@@ -16,6 +17,13 @@ use PHPMailer\PHPMailer\PHPMailer as Mailer;
  */
 class PHPMailer extends Email
 {
+    /**
+     * Sends email via PHPMailer library
+     *
+     * @param bool $debug
+     * @return bool
+     * @throws \Kirby\Exception\InvalidArgumentException
+     */
     public function send(bool $debug = false): bool
     {
         $mailer = new Mailer(true);
@@ -67,10 +75,21 @@ class PHPMailer extends Email
             $mailer->Port       = $this->transport()['port'] ?? null;
         }
 
+        // accessible phpMailer instance
+        $beforeSend = $this->beforeSend();
+
+        if (empty($beforeSend) === false && is_a($beforeSend, 'Closure') === true) {
+            $mailer = $beforeSend->call($this, $mailer) ?? $mailer;
+
+            if (is_a($mailer, 'PHPMailer\PHPMailer\PHPMailer') === false) {
+                throw new InvalidArgumentException('"beforeSend" option return should be instance of PHPMailer\PHPMailer\PHPMailer class');
+            }
+        }
+
         if ($debug === true) {
             return $this->isSent = true;
         }
 
-        return $this->isSent = $mailer->send();
+        return $this->isSent = $mailer->send(); // @codeCoverageIgnore
     }
 }

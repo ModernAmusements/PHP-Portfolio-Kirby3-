@@ -65,25 +65,25 @@
               <p class="small">Cient:</p>
             </section>
             <section>
-              <p class="medium"><?= $work->client() ?></p>
+              <?= $work->client()->kt() ?>
             </section>
             <section>
               <p class="small">Contributors:</p>
             </section>
             <section>
-              <p class="medium"><?= $work->contributors() ?></p>
+           <?= $work->contributors()->kt() ?>
             </section>
             <section>
               <p class="small">Date:</p>
             </section>
             <section>
-              <p class="medium"><?= $work->date()->toDate() ?></p>
+             <?= $work->date()->toDate() ?>
             </section>
             <section>
               <p class="small">Project:</p>
             </section>
             <section>
-              <p class="medium"><?= $work->description() ?></p>
+          <?= $work->description()->kt()  ?>
             </section>
           </article>
           <article class="work-subpage-link">

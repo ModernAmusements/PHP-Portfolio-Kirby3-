@@ -21,8 +21,8 @@ To determine the studio’s continuous questioning regarding design principles, 
 
 Contributors:
 
-JCOM Identity,
-Apple
+- JCOM Identity
+- Apple
 
 ----
 
@@ -34,4 +34,4 @@ Threw one of the opening parties for imm trade fair 2018 at Museum für Angewand
 
 ----
 
-Client: ASK
+Client: - ASK

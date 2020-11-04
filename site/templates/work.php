@@ -5,7 +5,7 @@
   <?php if ($cover = $page->cover()->resize(1080)): ?>
   <section class="cover">
     <img class="lazy" data-src="<?= $cover->url() ?>" alt="<?= $cover->alt() ?>" />
-    <time class=""><?= $page->date()->toDate('d F Y') ?></time>
+    <time><?= $page->date()->toDate('d F Y') ?></time>
   </section>
   <?php endif ?>
   <section class="work-subpage-content">
@@ -13,24 +13,26 @@
       <div class="subpage-meta">
         <p class="sub-sub-heading small">Block A</p>
         <h1><?= $page->title() ?></h1>
-        <p>Tags:</p>
+        <p class="sub-sub-heading small">Tags:</p>
         <?php foreach ($page->tags()->split() as $tag): ?>
         <tags class="post-meta">
-          <p class="tags small"><?= $tag ?></p>
+          <p class="tags sub-sub-heading small">
+            <?= $tag ?>
+          </p>
         </tags>
         <?php endforeach ?>
         <br />
-        <p>Client:</p>
-        <h3><?= $page->client() ?></h3>
-        <p>Involved:</p>
-        <h3><?= $page->contributors() ?></h3>
+        <p class="sub-sub-heading small" >Client:</p>
+        <?= $page->client()->kt() ?>
+        <p class="sub-sub-heading small">Involved:</p>
+       <?= $page->contributors()->kt() ?>
       </div>
       <div class="subpage-description">
-      <p class="sub-sub-heading small">Block B</p>
-       <?= $page->description()->kt() ?>
+        <p class="sub-sub-heading small">Block B</p>
+        <?= $page->description()->kt() ?>
       </div>
       <div class="subpage-concept">
-      <p class="sub-sub-heading small">Block C</p>
+        <p class="sub-sub-heading small">Block C</p>
         <?= $page->concept()->kt() ?>
       </div>
       <div id="barba-wrapper">
@@ -41,7 +43,7 @@
                 <?php foreach ($page->videos()->template('work-videos') as
                 $image): ?>
                 <div class="video-wrapper post-video" data-state="not-init">
-                  <video loop playsinline preload="metadata" poster="">
+                  <video loop playsinline preload="metadata" alt="<?= $image->alt() ?>" poster="">
                     <source src="<?= $image->url() ?>" type="video/mp4" />
                   </video>
                   <button class="intro-play"><span>Play</span></button>
@@ -52,26 +54,19 @@
                     <button class="vid-icon vid-mute" data-state="mute">
                       Sound
                     </button>
-                    <button
-                      class="vid-icon vid-fullscreen"
-                      data-state="go-fullscreen"
-                    >
+                    <button class="vid-icon vid-fullscreen" data-state="go-fullscreen">
                       Fullscreen
                     </button>
                     <div class="vid-progress-wrap" max="14.53756">
-                      <div
-                        class="vid-progress-bar"
-                        data-value="0"
-                        min="0"
-                      ></div>
+                      <div class="vid-progress-bar" data-value="0" min="0"></div>
                     </div>
                   </div>
-                  <hr />
-                  <p class="small">
-                    Exercitation incididunt consectetur culpa ipsum sit eiusmod
-                    enim.
-                  </p>
                 </div>
+                <?php endforeach ?>
+                <?php foreach ($page->videos()->template('work-videos') as
+                $image): ?>
+                <p class="vid-sub-heading">
+                <?= $image->alt() ?> </p>
                 <?php endforeach ?>
               </article>
               <article class="work-images">
@@ -79,21 +74,13 @@
                   <?php if ($image = $page->image()->resize(1080)): ?>
                   <?php foreach ($page->images()->template('work-image') as
                   $image): ?>
-                  <img
-                    data-lazy="<?= $image->url() ?>"
-                    alt="<?= $cover->alt() ?>"
-                  />
+                  <img data-lazy="<?= $image->url() ?>" alt="<?= $cover->alt() ?>" />
                   <?php endforeach ?>
                   <?php endif ?>
                 </div>
                 <div class="text-counter"></div>
-                <hr />
-                <div class="work-legend">
-                  <p class="small">
-                    Exercitation incididunt consectetur culpa ipsum sit eiusmod
-                    enim.
-                  </p>
-                </div>
+                <p class="vid-sub-heading">
+                <?= $cover->alt() ?> </p>
               </article>
             </section>
           </div>

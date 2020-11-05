@@ -1,0 +1,120 @@
+Title: Architektur im Bild
+
+----
+
+Fullrow:
+
+- 
+  headingc1: FP 001
+  textc1: '# Dadaist und Surrealist'
+  headingc2: Section 001
+  textc2: '# 01'
+  headingc3: Einleitung
+  textc3: |
+    ## Werke und Treiben
+    
+    In Paris engagiert sich Ernst in der Surrealisten-Gruppe um Breton und arbeitet dort mit den Künstlern Picasso, Braque, Miro und Dalí zusammen. 1927 heiratet Max Ernst erneut, Marie-Berthe Aurenche und ihre Ehe hält knapp 9 Jahre. Ende des 30er Jahre lebt er für einige paar Jahre zusammen mit der Malerin und Schriftstellerin Loenora Carrington auf einem Bauernhof in Südfrankreich.
+    
+    Als der Zweite Weltkrieg ausbricht wird er als Ausländer mehrmals verhaftet und verhört und wird für kurze Zeit inhaftiert. Max Ernst schafft es mit Hilfe der Kunstsammlerin und Mäzenen Peggy Guggenheim (1898-1979) in die USA zu fliehen. Hier steht nun seiner Karriere als Künstler nichts mehr im Weg. Für eine kurze Zeit ist er Anfang der vierziger Jahre sogar mit Frau Guggenheim verheiratet. Ein paar Jahre später heiratet er zum vierten Mal, diesmal die Dada-Surrealistische Künstlerin Dorothea Tanning. (1910 geboren).
+  imagebuilder: [ ]
+  imagebuilderalt: ""
+  _key: fullRow
+  line-a: null
+  _uid: fullRow_1604573839004_939
+- 
+  headingc1: FP 002
+  textc1: '# Leben'
+  headingc2: Section 002
+  textc2: '# 02'
+  headingc3: Surrealismus im 20. Jahrhundert.
+  textc3: |
+    ## Lebenswerk
+    
+    Er wird geboren 1891 in Brühl, Nordrein-Westfalen in einer Großfamilie, zusammen mit acht Geschwistern. Im naturalistischen Stil lernt Max Ernst das Zeichnen und Malen von seinem Vater, Philipp Ernst. Mit seinem Vater führte er bereits als Kind viele Spaziergänge und lernte dabei die Natur als Inspirationsquelle kennen und schätzen.
+    
+    1910 zieht Max Ernst nach Bonn, um unter anderem Kunstgeschichte und Philologie zu studieren. Er beendet sein Studium vorzeitig und konzentriert sich stattdessen auf seine Malerei. In Bonn lernt er den Expressionismus und den Maler August Macke kennen, dessen Stil ihn für eine Weile beeinflussen wird. Max Ernst ist nach einiger Zeit der eigenen Erfahrung unzufrieden mit der expressionistischen Ausdrucksweise und beginnt neue Wege zu suchen, die ihm zu Dada und zum Surrealismus führen.
+    
+    Nach seinem 4-jährigen Einsatz im Ersten Weltkrieg gründet er 1918 zusammen mit Hans Arp die Kölner Dada-Gruppe. Im selben Jahr heiratet er Luise Straus (1893 - 1944). Luise ist Kunsthistorikerin, Journalistin und Künstlerin, die er in Bonn kennen gelernt hat. Mit ihr bekommt Max Erst zwei Jahre später einen Sohn – Jimmy Ernst. Er wird später in den USA als surrealistischen Maler bekannt werden.
+  imagebuilder: [ ]
+  imagebuilderalt: ""
+  _key: fullRow
+  line-a: null
+  uniquekey: 0
+  showpreviewinitially: false
+  _uid: fullRow_1604574009553_927
+- 
+  headingc1: FP 003
+  textc1: '# Bibliografie'
+  headingc2: Section 003
+  textc2: '# 03'
+  headingc3: 'Max Ernst - Sein Werk'
+  textc3: |
+    Ab 1953 lebt Max Ernst in Europa. Er beteiligt sich hier an mehreren großen Ausstellungen wie der Documenta-Ausstellungen in Kassel und die Biennale von Venedig. Als Max Ernst 1976 stirbt, wird sein Lebenswerk mit einem der bedeutendsten internationalen Künstlerpreise geehrt: den Goslarer Kaiserring. Der „Verein zur Förderung moderner Kunst Goslar e.V.“ der Stadt Goslar verleiht diese Auszeichnung seit 1975 alljährlich an internationale zeitgenössische Künstler.
+    
+    Als Maler, Bildhauer, Zeichner und Dichter ist Max Ernst ein wichtiger Künstler innerhalb des Dada und des Surrealismus. Viele seiner Werke sind heute im Max Ernst Museum in Brühl zu sehen.
+  imagebuilder:
+    - max-ernst-museum_02.jpg
+  imagebuilderalt: |
+    > Das Max Ernst Museum in Brühl
+    ****
+  _key: fullRow
+  line-a: null
+  uniquekey: 1
+  showpreviewinitially: false
+  _uid: fullRow_1604574105259_1354
+- 
+  headingc1: FP 004
+  textc1: '# Salon des Indépendants'
+  headingc2: Section 004
+  textc2: '# 04'
+  headingc3: Die „Frottage“
+  textc3: |
+    Für die Malerei entwickelte er seine Erfindung weiter und nannte sie „Grattage“ (s.u.). In den späten zwanziger Jahren zeichneten seine Bildzyklen, Motive, wie Vögel, Wald und Muschelblumen. In seinen Arbeiten bezog er den die Fantasie anregenden Zufall in den Schaffensprozess mit ein. Diese künstlerischen Techniken wurden bestimmend für seinen Stilausdruck.
+    
+    Mit der Machtübernahme der Nationalsozialisten 1933 in Deutschland wurde der Künstler MAX ERNST als „entartet“ eingestuft und diffamiert. Auf der Ausstellung „Entartete Kunst“ 1937 in München zeigten die Nationalsozialisten nur zwei Bilder von ihm. Seit 1934 beschäftigte er sich wieder mit der Skulpturenkunst. Es entstanden Dschungelbilder und einige Werke, die versteinerte Städte darstellen.
+    
+    ERNST gehörte ab 1938 dem Vorstand des von deutschen Antifaschisten in Paris gegründeten Freien Künstlerbundes an, dessen Präsident OSKAR KOKOSCHKA (1886–1980) war.
+  imagebuilder:
+    - default.jpg
+  imagebuilderalt: |
+    > Max Ernst, Porträtfoto, um 1929. (Repro: LVR-Zentrum für Medien und Bildung)
+    ****
+  _key: fullRow
+  line-a: null
+  uniquekey: 0
+  showpreviewinitially: false
+  _uid: fullRow_1604577924384_2429
+
+----
+
+Cover:
+
+- m-08-ax.jpg
+
+----
+
+Subheading: ## Eine Ausstellung zwischen Dokumentation und Fantasie
+
+----
+
+Date: 2019-10-11 08:50
+
+----
+
+Pills: Kunst
+
+----
+
+Author: Shady Tawfik, Florian Nagel
+
+----
+
+Tags: Überregional, Kultur
+
+----
+
+Theme: **Konzept**
+
+----
+
+Description: Im Kunsthaus Zürich beleuchtet die aktuelle **Bilderwahl-Ausstellung** die verschiedenen Möglichkeiten, wie Architektur im Bild erscheinen kann. Gast-Kuratorin Manuela Reissmann hat die Schau in vier Kapitel gegliedert – das Konzept geht auf.

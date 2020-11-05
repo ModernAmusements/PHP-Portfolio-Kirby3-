@@ -16,14 +16,12 @@
     <div class="text">
       <div class="blog-article-excerpt-subheadline">
       <?php if ($article->subheading()->isNotEmpty()): ?>
-        <span class="label"><?= $article->subheading() ?></span>
+        <?= $article->subheading()->kt() ?>
         <?php endif ?>
       </div>
-      <h2 class="blog-article-excerpt-title"><?= $article->title() ?></h2>
+      <h1 class="blog-article-excerpt-title"><?= $article->title() ?></h1>
       <?php if (($excerpt ?? true) !== false): ?>
-      <p class="blog-article-excerpt-text">
         <?= $article->description()->blocks()->excerpt(220) ?>
-      </p>
       <?php endif ?>
     </div>
     <span class="tags">Tags: <?= $article->tags() ?></span>

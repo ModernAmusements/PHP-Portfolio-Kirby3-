@@ -1,8 +1,5 @@
 :root {
-  --fontSize: 14px;
-  --sansFont: "neue-haas-unica", "Helvetica Neue", "Helvetica", "Arial",
-    sans-serif;
-  --monoFont: "iaw-mono-var";
+  --fontSize: 15px;
   --lineHeight: calc(var(--fontSize) * 1.5);
   --baseline: calc(var(--lineHeight) / 2);
   --blockSpacingTop: 0px;
@@ -79,30 +76,6 @@
   :root {
     --displayScale: 4;
     --pixel: 0.25px;
-  }
-}
-
-@media (min-width: 35rem) {
-  :root {
-    --ms-0: 0.75rem;
-  }
-}
-
-@media (min-width: 45rem) {
-  :root {
-    --ms-0: 0.9rem;
-  }
-}
-
-@media (min-width: 70rem) {
-  :root {
-    --ms-0: 1.1rem;
-  }
-}
-
-@media (min-width: 95rem) {
-  :root {
-    --ms-0: 1.15rem;
   }
 }
 
@@ -3445,6 +3418,11 @@ ul.grid li {
   border: 1px solid var(--foreground-color);
 }
 
+.blog-article-excerpt h2 {
+  font-size: 1em;
+  line-height: calc(var(--lineHeight) * 1);
+}
+
 .blog-article-excerpt .text {
   padding-top: 1rem;
   position: relative;
@@ -3540,7 +3518,7 @@ ul.grid li {
 .blog-article-excerpt .tags {
   padding-bottom: 1rem;
   border-top: 1px solid var(--foreground-color);
-  font-size: 12px;
+  font-size: 1em;
   text-transform: uppercase;
 }
 
@@ -3740,23 +3718,19 @@ ul.grid li {
   grid-column: 7/9;
   grid-row: 1/2;
   align-self: start;
+  display: grid;
 }
 
-.blog-article-overview .col-2 .sub-heading {
-  font-weight: 400;
+.blog-article-overview .col-2 span {
+  padding: calc(var(--lineHeight) * 0.2) 0;
 }
 
 .blog-article-overview .col-2 p,
 .blog-article-overview .col-2 .text-counter {
-  font-size: 1.2rem;
-  font-weight: 300;
-  line-height: var(--lineHeight);
-  margin: 0;
-  padding: calc(var(--lineHeight) * 0.25) 0;
   border-bottom: 1px solid var(--foreground-color);
 }
 
-.blog-article-overview .col-2 .text-counter {
+.blog-article-overview .col-2 .span-counter {
   border-top: 1px solid var(--foreground-color);
 }
 
@@ -3798,6 +3772,15 @@ ul.grid li {
   grid-column-gap: 10px;
   align-items: end;
   grid-row-gap: var(--rowGap);
+}
+
+.blog-article-content p {
+  line-height: var(--lineHeight);
+  margin: calc(var(--lineHeight) * 0.5) 0;
+}
+
+.blog-article-content h1 {
+  margin: 0;
 }
 
 .blog-article-content .col-1 {
@@ -3859,11 +3842,12 @@ ul.grid li {
   padding: calc(var(--lineHeight) * 0.5) 0;
 }
 
-.footer-tags .blog-footer-tags-heading {
+.footer-tags h2 {
   grid-column: 5/9;
   grid-row: 1;
   border-bottom: 1px solid var(--foreground-color);
   margin-bottom: calc(var(--blockSpacingBottom) * 0.4);
+  font-size: 1.3em;
 }
 
 .footer-tags .blog-article-tags {

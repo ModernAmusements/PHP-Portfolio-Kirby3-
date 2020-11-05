@@ -1,8 +1,5 @@
 :root {
-  --fontSize: 14px;
-  --sansFont: 'neue-haas-unica', 'Helvetica Neue', 'Helvetica', 'Arial',
-    sans-serif;
-  --monoFont: 'iaw-mono-var';
+  --fontSize: 15px;
   --lineHeight: calc(var(--fontSize) * 1.5);
   --baseline: calc(var(--lineHeight) / 2);
   --blockSpacingTop: 0px;
@@ -84,29 +81,29 @@
   }
 }
 
-@media (min-width: 35rem) {
-  :root {
-    --ms-0: 0.75rem;
-  }
-}
+// @media (min-width: 35rem) {
+//   :root {
+//     --ms-0: 0.75rem;
+//   }
+// }
 
-@media (min-width: 45rem) {
-  :root {
-    --ms-0: 0.9rem;
-  }
-}
+// @media (min-width: 45rem) {
+//   :root {
+//     --ms-0: 0.9rem;
+//   }
+// }
 
-@media (min-width: 70rem) {
-  :root {
-    --ms-0: 1.1rem;
-  }
-}
+// @media (min-width: 70rem) {
+//   :root {
+//     --ms-0: 1.1rem;
+//   }
+// }
 
-@media (min-width: 95rem) {
-  :root {
-    --ms-0: 1.15rem;
-  }
-}
+// @media (min-width: 95rem) {
+//   :root {
+//     --ms-0: 1.15rem;
+//   }
+// }
 
 * {
   font: inherit;

@@ -7,49 +7,43 @@ defaultView: preview
 fields:
   headingC1:
     label: H-Col. 1 "Description"
-    type: text
-    width: 1/4
+    type: textarea
   textC1:
     label: T-Col.1
     type: textarea
     minlength: 02
     maxlength: 100
     size: small
-    width: 1/4
-    buttons: false 
+    buttons: true 
   headingC2:
     label: H-Col. 2 "Number"
-    type: text
-    width: 1/4
+    type: textarea
   textC2:
     label: T-Col.2
     type: textarea
     minlength: 02
     maxlength: 100
     size: small
-    width: 1/4
-    buttons: false
+    buttons: true 
   line-a:
     type: line
   headingC3:
     label: Heading Col. 3 "Part"
-    type: text
-    width: 1/4
+    type: textarea
     buttons: true 
   textC3:
     label: Text col.3
     type: textarea
     size: medium
-    width: 3/4
     buttons: true 
   imageBuilder:
       type: files
       multiple: false
   imageBuilderAlt:
       label: Blog Alt Text ((Seo))
-      type: text 
+      type: textarea 
     headline:
-      type: text
+      type: textarea
     description:
       type: textarea
     tags: true  

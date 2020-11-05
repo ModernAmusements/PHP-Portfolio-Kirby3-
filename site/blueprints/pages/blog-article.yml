@@ -40,7 +40,7 @@ columns:
         type: fields
         fields:
           subheading:
-            type: text
+            type: textarea
           date:
             type: date
             time: true
@@ -54,7 +54,7 @@ columns:
             options: query
             query: page.siblings.pluck("tags", ",", true)
           theme:
-            type: text
+            type: textarea
           description:
             type: textarea
             size: medium

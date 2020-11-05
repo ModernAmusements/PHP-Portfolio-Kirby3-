@@ -3,25 +3,28 @@
     <?php if ($data->headingC1()->isNotEmpty()): ?>
     <p class="sub-heading"><?= $data->headingC1() ?></p>
     <?php endif ?>
-    <h1 class="heading"><?= $data->textC1()->kt() ?></h1>
+      <?= $data->textC1()->kt() ?>
   </div>
   <div class="col-2">
     <?php if ($data->headingC2()->isNotEmpty()): ?>
-    <p class="sub-heading"><?= $data->headingC2() ?></p>
+  <p class="sub-heading"><?= $data->headingC2() ?></p>
     <?php endif ?>
-    <h1 class="heading"><?= $data->textC2()->kt() ?></h1>
+      <?= $data->textC2()->kt() ?>
   </div>
   <div class="col-3">
     <?php if ($data->headingC3()->isNotEmpty()): ?>
-    <p class="sub-heading"><?= $data->headingC3() ?></p>
+      <p class="sub-heading"><?= $data->headingC3() ?></p>
     <?php endif ?>
-
     <?php if ($imageBuilder = $data->imageBuilder()->toFile()): ?>
-      <img class="lazy" data-src="<?= $imageBuilder->url() ?>" alt="<?= $data->imageBuilderAlt() ?>" />
+    <img
+      class="lazy"
+      data-src="<?= $imageBuilder->url() ?>"
+      alt="<?= $data->imageBuilderAlt() ?>"
+    />
+    <?= $data->imageBuilderAlt()->kt() ?>
     <?php endif ?>
-
     <?php if ($data->textC3()->isNotEmpty()): ?>
-    <p class="archive-text"><?= $data->textC3() ?></p>
+      <?= $data->textC3()->kt() ?>
     <?php endif ?>
   </div>
 </section>

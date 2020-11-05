@@ -22,24 +22,31 @@
       <div class="col-2">
         <h1><?= $page->title() ?></h1>
         <?php if ($page->subheading()->isNotEmpty()): ?>
-        <h2 class="sub-heading">
-          <em><?= $page->subheading() ?></em>
-        </h2>
+
+        <?= $page->subheading()->kt() ?>
+
         <?php endif ?>
-        <div class="text-counter"></div>
-        <p class="date" datetime="<?= $page->date('c') ?>">
+        <span class="span-counter">
+          Bilder:
+          <div class="text-counter"></div>
+        </span>
+
+        <span datetime="<?= $page->date('c') ?>">
           Datum:
-          <?= $page->date() ?>
-        </p>
-        <p class="credits">
+          <p><?= $page->date() ?></p>
+        </span>
+        <span>
           Credits:
-          <?= $page->author() ?>
-        </p>
-        <p class="theme">
+          <p><?= $page->author() ?></p>
+        </span>
+        <span>
           Thema:
-          <?= $page->theme() ?>
-        </p>
-        <p class="description"><?= $page->description() ?></p>
+          <?= $page->theme()->kt() ?>
+        </span>
+        <span>
+          Beschreibung:
+          <?= $page->description()->kt() ?>
+        </span>
         <div class="blog-subpage-meta">
           <p class="tags">Tags:</p>
           <?php foreach ($page->tags()->split() as $tag): ?>
@@ -52,18 +59,14 @@
     </section>
 
     <?php foreach ($page->fullRow()->toBuilderBlocks() as $block): ?>
-        <?php snippet('blocks/' . $block->_key(), ['data' => $block]) ?>
+    <?php snippet('blocks/' . $block->_key(), ['data' => $block]) ?>
     <?php endforeach ?>
-
-
-
-
   </article>
   <!-- FOOTER BLOG -->
   <!-- TAGS -->
   <?php if (!empty($tags)): ?>
   <div class="footer-tags">
-    <h1 class="medium blog-footer-tags-heading"><?= $page->subheading() ?></h1>
+   <?= $page->subheading()->kt() ?>
     <div class="blog-article-tags">
       <?php foreach ($tags as $tag): ?>
       <a href="<?= url('blog', ['params' => ['tag' => $tag]]) ?>"
@@ -157,7 +160,7 @@
         </div>
         <div class="row-2">
           <span>
-            <p><?= $page->theme() ?></p>
+          <?= $page->theme()->kt() ?>
           </span>
         </div>
       </article>

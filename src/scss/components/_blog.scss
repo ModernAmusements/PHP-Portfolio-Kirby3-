@@ -92,6 +92,10 @@ ul.grid {
   border-radius: 6px;
   background: var(--background-color-elevated);
   border: 1px solid var(--foreground-color);
+  h2{
+    font-size: 1em;
+    line-height: calc(var(--lineHeight) * 1);
+  }
   .text {
     padding-top: 1rem;
     position: relative;
@@ -180,7 +184,7 @@ ul.grid {
   .tags {
     padding-bottom: 1rem;
     border-top: 1px solid var(--foreground-color);
-    font-size: 12px;
+    font-size: 1em;
     text-transform: uppercase;
   }
 }

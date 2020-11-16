@@ -50,8 +50,6 @@
   }
 }
 
-
-
 .pageContent {
   padding: calc(var(--lineHeight) * 1) 0;
   display: grid;
@@ -73,7 +71,7 @@
   .image {
     z-index: 999999;
     transform-style: preserve-3d;
-    transform: rotateX(30deg) rotateY(30deg);
+    transform: rotateX(0deg) rotateY(0deg);
   }
   .screen {
     background-size: contain;
@@ -86,11 +84,16 @@
   line-height: 6vw;
   font-weight: 500;
 }
-.homeSvg {
+.homeSvg,
+.homeSvg-mobile {
   stroke-width: 1px;
   grid-column: 1 / 9;
   grid-row: 1 / 4;
   z-index: -2;
+}
+
+.homeSvg-mobile {
+  display: none;
 }
 .stroke {
   fill: none;
@@ -213,11 +216,16 @@ button.controller:hover {
 }
 
 @media (min-width: 320px) and (max-width: 1150px) {
+  .homeSvg {
+    display: none;
+  }
+
+  .homeSvg-mobile {
+    display: grid;
+  }
   .displayText {
     --h1-size: 6.5vw;
     line-height: 6vw;
     font-weight: 500;
   }
 }
-
-

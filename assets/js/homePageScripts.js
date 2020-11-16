@@ -10995,39 +10995,20 @@ $(function () {
   } else {
     $('#preload-homepage').css('display', 'none');
   }
-});
+}); //Desktop
+
 $(function () {
-  var gyro = false;
+  var card = $('.card');
+  card.on('mousemove', function (e) {
+    // get mouse pos
+    var x = e.clientX - $(this).offset().left + $(window).scrollLeft();
+    var y = e.clientY - $(this).offset().top + $(window).scrollTop(); // update vals
 
-  if (DeviceMotionEvent && typeof DeviceMotionEvent.requestPermission === "function") {
-    DeviceMotionEvent.requestPermission().then(function (response) {
-      if (response == 'granted') {
-        window.addEventListener('devicemotion', function (event) {
-          if (event.rotationRate.alpha || event.rotationRate.beta || event.rotationRate.gamma) gyro = true;
-        });
-      }
-    })["catch"](console.error);
-  }
+    var rY = map(x, 0, $(this).width(), -17, 17);
+    var rX = map(y, 0, $(this).height(), -17, 17); // apply
 
-  var card = $(".card");
-
-  if (gyro) {
-    if (accx != undefined) {
-      globalX = globalX + accx * 2;
-    }
-
-    if (accy != undefined) {
-      globalY = globalY - accy * 2;
-    }
-  } else {
-    card.on("mousemove", function (e) {
-      var x = e.clientX - $(this).offset().left + $(window).scrollLeft();
-      var y = e.clientY - $(this).offset().top + $(window).scrollTop();
-      var rY = map(x, 0, $(this).width(), -17, 17);
-      var rX = map(y, 0, $(this).height(), -17, 17);
-      $(this).children(".image").css("transform", "rotateY(" + rY + "deg)" + " " + "rotateX(" + -rX + "deg)");
-    });
-  }
+    $(this).children('.image').css('transform', 'rotateY(' + rY + 'deg)' + ' ' + 'rotateX(' + -rX + 'deg)');
+  }); // return vals
 
   function map(x, in_min, in_max, out_min, out_max) {
     return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;

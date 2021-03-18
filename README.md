@@ -36,3 +36,9 @@ git --help
 RewriteBase /
 
 git clone -b production https://github.com/ModernAmusements/K-CMS-Master.git
+
+
+'email' => 'fnagel1992@gmail.com',
+    'language' => 'en',
+    'name' => 'Florian Nagel',
+    'role' => 'admin'

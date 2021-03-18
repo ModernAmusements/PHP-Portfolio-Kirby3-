@@ -62,7 +62,7 @@ Popupsubheadline03: Erhalte Antworten auf alle deine Fragen
 
 Popupimage:
 
-- dietz_mock_up_02.jpg
+- abstract11_01.png
 
 ----
 

@@ -24,7 +24,6 @@
     <?= js('assets/js/jquery.js') ?>
     <!-- Typekit Preloader-->
     <link rel="stylesheet preconnect" href="https://use.typekit.net/yxr4ufi.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" async></script>
 
 </head>
 
@@ -66,6 +65,7 @@
                 </label>
             </span>
         </menu>
+        
         <nav id="mobile-nav">
             <div class="navGridMenu">
                 <?php

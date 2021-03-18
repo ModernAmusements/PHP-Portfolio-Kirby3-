@@ -285,7 +285,7 @@ button {
     min-width: max-content;
     display: table;
     margin-left: auto;
-    margin-right: auto
+    margin-right: auto;
   }
   a:not(.close):not(.accept):hover {
     color: var(--background-color);
@@ -528,7 +528,8 @@ textarea:hover,
   font-size: 16px;
   font-weight: 600;
   border-radius: 99em;
-  transition: color 0.3s ease, background 0.3s ease, transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
+  transition: color 0.3s ease, background 0.3s ease, transform 0.3s ease,
+    opacity 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 var(--shadowPos) var(--shadowBlur) 0 var(--shadow-dark);
   transform: translateY(var(--y)) translateZ(0);
   background: var(--primary-color);
@@ -536,14 +537,14 @@ textarea:hover,
 
 .btn-large:hover {
   background: var(--primary-color-hover-light);
-    --y: -1px;
-    --shadowPos: 4px;
-    --shadowBlur: 8px;
+  --y: -1px;
+  --shadowPos: 4px;
+  --shadowBlur: 8px;
 }
 .btn-large:active {
-    --y: 1px;
-    --shadowPos: 1px;
-    --shadowBlur: 3px;
+  --y: 1px;
+  --shadowPos: 1px;
+  --shadowBlur: 3px;
 }
 .btn-normal {
   vertical-align: middle;
@@ -621,10 +622,10 @@ select:-webkit-autofill:focus {
   }
   .parsley-errors-list.expatempl,
   .parsley-errors-list.expattime {
-  display: none;
-  top: 48px;
-   }
-   .parsley-errors-list.expattime {
+    display: none;
+    top: 48px;
+  }
+  .parsley-errors-list.expattime {
     margin-top: 4px;
   }
 }

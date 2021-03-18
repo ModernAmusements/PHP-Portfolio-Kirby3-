@@ -231,7 +231,6 @@ html {
   letter-spacing: -0.01em;
   -webkit-text-size-adjust: 100%;
      -moz-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;
           text-size-adjust: 100%;
   font-variant-ligatures: contextual common-ligatures;
   font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "cv10" 1;
@@ -825,7 +824,6 @@ video {
 }
 
 header:not(.post-header) {
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   left: 0;
@@ -1754,15 +1752,13 @@ button.controller:hover {
 }
 
 .blur-me {
-  -webkit-filter: blur(var(--blur));
-          filter: blur(var(--blur));
+  filter: blur(var(--blur));
   padding: var(--spacing);
   transform: rotate(var(--rotation));
 }
 
 .home-svg-blur {
-  -webkit-filter: saturate(180%);
-          filter: saturate(180%);
+  filter: saturate(180%);
   opacity: 0.6;
 }
 
@@ -2231,11 +2227,8 @@ button {
 .post-video[data-state=initialized] .intro-play {
   opacity: 0;
   visibility: hidden;
-  -webkit-filter: blur(2vw);
   filter: blur(2vw);
-  transition: opacity 0.5s, visibility 0s 0.5s, -webkit-filter 0.5s;
   transition: filter 0.5s, opacity 0.5s, visibility 0s 0.5s;
-  transition: filter 0.5s, opacity 0.5s, visibility 0s 0.5s, -webkit-filter 0.5s;
 }
 
 .post-video[data-controls=false] .vid-controls {
@@ -3483,14 +3476,12 @@ ul.grid li {
   border: 0;
   border-radius: 4px 4px 0 0;
   transform: scale(1);
-  -webkit-filter: saturate(500%) blur(20px);
-          filter: saturate(500%) blur(20px);
+  filter: saturate(500%) blur(20px);
   transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 .blog-article-excerpt:hover .image img {
-  -webkit-filter: saturate(100%) blur(0px);
-          filter: saturate(100%) blur(0px);
+  filter: saturate(100%) blur(0px);
   transform: scale(1.08);
   transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
@@ -4513,8 +4504,7 @@ button {
 }
 
 .modal .close:hover {
-  -webkit-filter: invert(1);
-          filter: invert(1);
+  filter: invert(1);
 }
 
 .form-field {
@@ -4580,10 +4570,6 @@ textarea:hover,
   color: var(--foreground-color);
 }
 
-.form-field::-ms-input-placeholder {
-  color: var(--foreground-color);
-}
-
 .form-field::placeholder {
   color: var(--foreground-color);
 }
@@ -4598,10 +4584,6 @@ textarea:hover,
 }
 
 .form-field:disabled:-ms-input-placeholder {
-  color: var(--background-color-dark);
-}
-
-.form-field:disabled::-ms-input-placeholder {
   color: var(--background-color-dark);
 }
 
@@ -4671,10 +4653,6 @@ textarea:hover,
 }
 
 .form-select select:-ms-input-placeholder {
-  color: var(--background-color-dark);
-}
-
-.form-select select::-ms-input-placeholder {
   color: var(--background-color-dark);
 }
 
